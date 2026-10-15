@@ -1,0 +1,141 @@
+#!/bin/busybox sh
+/bin/busybox --install -s /bin
+mount -t proc proc /proc
+mount -t sysfs sys /sys
+mount -t devtmpfs dev /dev
+mount -t debugfs debugfs /sys/kernel/debug 2>/dev/null
+
+k() { echo "x6e3: $*" > /dev/kmsg; }
+k "booting Linux on Mac16,12"
+k "model=$(cat /proc/device-tree/model 2>/dev/null) kernel=$(uname -r)"
+k "cpus_online=$(cat /sys/devices/system/cpu/online) present=$(cat /sys/devices/system/cpu/present)"
+
+# Let deferred probes (framebuffer at ~10 s on v1) settle before snapshotting.
+while [ "$(cut -d. -f1 /proc/uptime)" -lt 15 ]; do sleep 1; done
+
+# Find OUR ESP: a vfat partition that already holds m1n1/boot.bin. Never touch anything else.
+ESP=
+mkdir -p /esp
+for i in $(seq 1 30); do
+	for p in /dev/nvme0n1p*; do
+		[ -b "$p" ] || continue
+		if mount -t vfat -o ro "$p" /esp 2>/dev/null; then
+			if [ -f /esp/m1n1/boot.bin ]; then ESP=$p; break 2; fi
+			umount /esp
+		fi
+	done
+	sleep 1
+done
+
+if [ -z "$ESP" ]; then
+	k "ESP not found; nvme: $(ls /dev/nvme* 2>/dev/null | tr '\n' ' ')"
+	STATUS="NO ESP - log not saved"
+else
+	# Persistence ladder (v3b). Every step reports its own result; nothing is assumed.
+	R=/tmp/results; : > $R
+	r() { echo "$*" >> $R; k "$*"; }
+	r "esp=$ESP $(blkid $ESP 2>/dev/null | sed 's/^[^:]*: //')"
+	WC=$(cat /sys/block/nvme0n1/queue/write_cache 2>/dev/null)
+	r "write_cache=$WC"
+	if mount -o remount,rw /esp; then r "RW_OK"; else r "RW_FAILED"; fi
+	mkdir -p /esp/x6e3 && r "MKDIR_OK" || r "MKDIR_FAILED"
+	N=$(( $(cat /esp/x6e3/bootcount 2>/dev/null || echo 0) + 1 ))
+	r "bootcount_read=$((N-1))"
+	# Measurements for the fixes under test (v4: framebuffer power-domains).
+	r "variant=$(sed -n 's/.*x6e3.v=\([^ ]*\).*/\1/p' /proc/cmdline)"
+	r "fbcon_at=$(dmesg | grep -m1 'Console: switching to colour' | sed 's/^\[ *\([0-9.]*\)\].*/\1/')"
+	r "fb_probe_timeout=$(dmesg | grep -c 'framebuffer: deferred probe timeout') fb_attach_fail=$(dmesg | grep -c 'pm_domain_attach_by_id')"
+	r "pmgr_fail=$(dmesg | grep -c 'Failed to reach power state')"
+	r "usb=$(ls /sys/bus/usb/devices 2>/dev/null | tr '\n' ' ')"
+	r "typec=$(ls /sys/class/typec 2>/dev/null | tr '\n' ' ')"
+	r "input=$(grep -h '^N: Name=' /proc/bus/input/devices 2>/dev/null | sed 's/^N: Name=//' | tr '\n' ' ')"
+	r "usb_err=$(dmesg | grep -ciE 'dwc3|atcphy|tipd|sn201202x|xhci' | tr -d ' ')/$(dmesg | grep -iE 'dwc3|atcphy|tipd|sn201202x|xhci' | grep -ciE 'fail|error|timeout')"
+
+	# A: fsync path (dd conv=fsync -> fat_file_fsync -> blkdev_issue_flush), then wait out
+	#    apple-nvme's batched FLUSH (flush_interval=1000 ms).
+	{
+		echo "== x6e3 boot $N  uptime=$(cat /proc/uptime)"
+		cat $R
+		echo "== cmdline"; cat /proc/cmdline
+		echo "== cpus online=$(cat /sys/devices/system/cpu/online) present=$(cat /sys/devices/system/cpu/present)"
+		echo "== meminfo"; head -3 /proc/meminfo
+		echo "== devices_deferred"; cat /sys/kernel/debug/devices_deferred 2>&1
+		echo "== pm_genpd_summary"; cat /sys/kernel/debug/pm_genpd/pm_genpd_summary 2>&1
+		echo "== framebuffer devlinks"
+		for l in /sys/class/devlink/*framebuffer*; do [ -e "$l" ] && echo "$(basename $l): $(cat $l/status 2>/dev/null)"; done
+		echo "== waiting_for_supplier"; for f in /sys/bus/platform/devices/*framebuffer*/waiting_for_supplier; do echo "$f: $(cat $f 2>/dev/null)"; done
+		echo "== cpu parts"; grep "CPU part" /proc/cpuinfo | sort | uniq -c
+		echo "== chosen"; ls /proc/device-tree/chosen
+		echo "== interrupts (head)"; head -4 /proc/interrupts
+		echo "== dmesg"; dmesg
+	} > /tmp/boot.txt 2>&1
+	echo $N > /tmp/bootcount
+	echo "X6E3-FSYNC-$N" > /tmp/fsync.txt
+	dd if=/tmp/boot.txt of=/esp/x6e3/boot-$N.txt conv=fsync 2>/dev/null && r "A_LOG_FSYNC_OK" || r "A_LOG_FSYNC_FAILED"
+	dd if=/tmp/bootcount of=/esp/x6e3/bootcount conv=fsync 2>/dev/null && r "A_COUNT_FSYNC_OK" || r "A_COUNT_FSYNC_FAILED"
+	dd if=/tmp/fsync.txt of=/esp/x6e3/fsync-$N.txt conv=fsync 2>/dev/null && r "A_MARK_FSYNC_OK" || r "A_MARK_FSYNC_FAILED"
+	# A must also cover the directory entry: vfat mkdir is only synchronous with DIRSYNC, and a
+	# file fsync does not write its parent's entry. sync + one more fsync = FLUSH over all of it.
+	sync
+	dd if=/tmp/fsync.txt of=/esp/x6e3/.flush conv=fsync 2>/dev/null && r "A_FLUSHED" || r "A_FLUSH_FAILED"
+	sleep 3
+
+	# B: ordinary writeback, written LAST. Nothing below may flush or unmount.
+	echo "X6E3-PLAIN-$N" > /esp/x6e3/plain-$N.txt && r "B_PLAIN_WRITE_OK" || r "B_PLAIN_WRITE_FAILED"
+	sync
+	r "B_SYNC_DONE"
+
+	# Linux-path sanity only (same mount, served from page cache; not persistence).
+	[ "$(cat /esp/x6e3/fsync-$N.txt 2>/dev/null)" = "X6E3-FSYNC-$N" ] && r "READ_A_OK" || r "READ_A_FAILED"
+	[ "$(cat /esp/x6e3/plain-$N.txt 2>/dev/null)" = "X6E3-PLAIN-$N" ] && r "READ_B_OK" || r "READ_B_FAILED"
+	# No umount, no remount, no drop_caches, no later fsync: the power cut is the experiment.
+	r "POWER_CUT_NOW"
+	STATUS="boot $N on $ESP, cache: $WC"
+fi
+
+dmesg -n 1
+printf '\033[2J\033[H' > /dev/tty1
+{
+	echo; echo "  x6e3: booting Linux on Mac16,12"
+	echo "  kernel $(uname -r)   cpus $(cat /sys/devices/system/cpu/online)"
+	echo "  $STATUS"
+	sed 's/^/    /' /tmp/results 2>/dev/null
+} > /dev/tty1
+V=$(sed -n 's/.*x6e3.v=\([^ ]*\).*/\1/p' /proc/cmdline)
+case "$V" in
+3c|4|5)
+	# Persistence runs: tie every power cut to the same on-screen event.
+	for i in 5 4 3 2 1; do echo "    $i" > /dev/tty1; sleep 1; done
+	echo "    >>>>>>>>  CUT  <<<<<<<<   (hold the power button now)" > /dev/tty1 ;;
+*)
+	echo; echo "  Shell below is live if a USB keyboard enumerated (see usb=/input= above)." > /dev/tty1
+	echo "  The log is already saved. Hold the power button to turn off." > /dev/tty1 ;;
+esac
+setsid cttyhack sh </dev/tty1 >/dev/tty1 2>&1 &
+
+# 6q: hotplug watcher. For 150 s, whenever the USB/Type-C state changes, append a snapshot
+# (typec roles/orientation + dmesg tail) to /esp/x6e3/hotplug-N.txt with fsync, so a hotplug test
+# documents itself even if the keyboard never works on that port. /esp is still mounted rw.
+case "$V" in
+6q*)
+	echo "  Hotplug watcher: 150 s. Plug the keyboard now." > /dev/tty1
+	last=; i=0
+	while [ $i -lt 30 ] && [ -n "$N" ]; do
+		cur="$(ls /sys/bus/usb/devices 2>/dev/null | tr '\n' ' ')| $(ls /sys/class/typec 2>/dev/null | tr '\n' ' ')"
+		if [ "$cur" != "$last" ]; then
+			{
+				echo "== t=$(cut -d' ' -f1 /proc/uptime) usb/typec: $cur"
+				for p in /sys/class/typec/port?; do
+					echo "$(basename $p): data_role=$(cat $p/data_role 2>/dev/null) power_role=$(cat $p/power_role 2>/dev/null) orientation=$(cat $p/orientation 2>/dev/null)"
+				done
+				grep -h '^N: Name=' /proc/bus/input/devices 2>/dev/null
+				dmesg | tail -40
+			} >> /tmp/hotplug.txt 2>&1
+			dd if=/tmp/hotplug.txt of=/esp/x6e3/hotplug-$N.txt conv=fsync 2>/dev/null
+			last="$cur"
+		fi
+		sleep 5; i=$((i+1))
+	done
+	echo "  Hotplug watcher done (/esp/x6e3/hotplug-$N.txt)." > /dev/tty1 ;;
+esac
+while true; do sleep 3600; done

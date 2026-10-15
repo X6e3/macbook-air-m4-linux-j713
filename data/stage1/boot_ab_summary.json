@@ -1,0 +1,119 @@
+{
+  "measured_event": "printk timestamp of the first \"Console: switching to colour frame buffer device\" line",
+  "boots": 21,
+  "groups": {
+    "3c": {
+      "boots": [
+        1,
+        2,
+        3
+      ],
+      "n": 3,
+      "console_mean_s": 10.236865,
+      "console_min_s": 10.236833,
+      "console_max_s": 10.236883,
+      "pmgr_fail": [
+        24
+      ]
+    },
+    "4": {
+      "boots": [
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "n": 5,
+      "console_mean_s": 0.060041,
+      "console_min_s": 0.059581,
+      "console_max_s": 0.060629,
+      "pmgr_fail": [
+        20
+      ]
+    },
+    "4ctl": {
+      "boots": [
+        6,
+        7,
+        8
+      ],
+      "n": 3,
+      "console_mean_s": 10.232809,
+      "console_min_s": 10.232801,
+      "console_max_s": 10.232824,
+      "pmgr_fail": [
+        24
+      ]
+    },
+    "5": {
+      "boots": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "n": 4,
+      "console_mean_s": 0.057163,
+      "console_min_s": 0.056024,
+      "console_max_s": 0.058384,
+      "pmgr_fail": [
+        0
+      ]
+    },
+    "6d": {
+      "boots": [
+        16,
+        17,
+        18
+      ],
+      "n": 3,
+      "console_mean_s": 0.056429,
+      "console_min_s": 0.056214,
+      "console_max_s": 0.056856,
+      "pmgr_fail": [
+        0
+      ]
+    },
+    "6q": {
+      "boots": [
+        19,
+        20,
+        21
+      ],
+      "n": 3,
+      "console_mean_s": 0.056991,
+      "console_min_s": 0.056223,
+      "console_max_s": 0.058471,
+      "pmgr_fail": [
+        0
+      ]
+    }
+  },
+  "controlled_pair": {
+    "control": "4ctl",
+    "treatment": "4",
+    "identical_parts": [
+      "m1n1",
+      "kernel+initramfs"
+    ],
+    "differing_part": "dtb"
+  },
+  "ratio_v4ctl_over_v4": 170.4,
+  "pmgr_drop_v4ctl_to_v4": 4,
+  "v4ctl_deferred_probe_timeout_mean_s": 10.212745,
+  "timeout_and_110_by_domain": {
+    "disp_cpu": "6/6",
+    "disp_fe": "0/15"
+  },
+  "from_boot_12": {
+    "pmgr_fail": [
+      0
+    ],
+    "changed_vs_v4": [
+      "dtb",
+      "kernel_initramfs",
+      "m1n1"
+    ]
+  }
+}

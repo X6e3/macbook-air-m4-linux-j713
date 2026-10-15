@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 636" width="960" height="636" role="img" aria-labelledby="t d"><title id="t">One device-tree property moved console start from 10.23 s to 0.060 s</title><desc id="d">Dot plot on a log scale: console start time for 21 boots. With the framebuffer on disp_cpu the console starts at about 10.23 s; with disp_fe at about 0.06 s. In the controlled pair v4ctl and v4, which differ only in the DTB, the difference is 170-fold. Bar chart below: 24 power-domain errors per boot with disp_cpu, 20 with disp_fe, and 0 from boot 12, where the DTB, kernel and initramfs changed together.</desc><rect width="960" height="636" fill="#0d1117"/>
+<text x="76.0" y="26.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" font-weight="600" letter-spacing="1.1">FIG. 1  ·  STAGE 1  ·  FIRST BRING-UP NIGHT, 26–27 SEP 2026</text>
+<text x="76.0" y="52.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="18" fill="#e6edf3" font-weight="600">One device-tree property moved console start from 10.23 s to 0.060 s</text>
+<text x="76.0" y="74.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">Kernel-log time of the first “Console: switching to colour frame buffer device” line, one point per boot.</text>
+<path d="M78.1,110.0 V104.0 H197.9 V110.0" fill="none" stroke="#8b949e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="138.0" y="98.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="600" letter-spacing="0.6">OTHER KERNEL</text>
+<path d="M202.1,110.0 V104.0 H528.6 V110.0" fill="none" stroke="#8b949e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="365.3" y="98.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="600" letter-spacing="0.6">CONTROLLED A/B  ·  ONLY THE DTB DIFFERS</text>
+<path d="M532.7,110.0 V104.0 H941.9 V110.0" fill="none" stroke="#8b949e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="737.3" y="98.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" text-anchor="middle" font-weight="600" letter-spacing="0.6">DTB, KERNEL AND INITRAMFS CHANGED TOGETHER</text>
+<rect x="76.0" y="124.0" width="124.0" height="248.0" fill="#161b22"/>
+<rect x="76.0" y="555.0" width="124.0" height="19.0" fill="#161b22"/>
+<text x="138.0" y="569.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="middle">v3c</text>
+<text x="241.3" y="569.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="middle">v4</text>
+<rect x="282.7" y="124.0" width="124.0" height="248.0" fill="#161b22"/>
+<rect x="282.7" y="555.0" width="124.0" height="19.0" fill="#161b22"/>
+<text x="344.7" y="569.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="middle">v4ctl</text>
+<text x="468.7" y="569.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="middle">v4</text>
+<rect x="530.7" y="124.0" width="165.3" height="248.0" fill="#161b22"/>
+<rect x="530.7" y="555.0" width="165.3" height="19.0" fill="#161b22"/>
+<text x="613.3" y="569.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="middle">v5</text>
+<text x="758.0" y="569.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="middle">v6d</text>
+<rect x="820.0" y="124.0" width="124.0" height="248.0" fill="#161b22"/>
+<rect x="820.0" y="555.0" width="124.0" height="19.0" fill="#161b22"/>
+<text x="882.0" y="569.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="middle">v6q</text>
+<line x1="76.0" y1="372.0" x2="944.0" y2="372.0" stroke="#30363d" stroke-width="1"/>
+<line x1="76.0" y1="351.8" x2="944.0" y2="351.8" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<text x="68.0" y="355.8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" text-anchor="end">0.02 s</text>
+<line x1="76.0" y1="325.1" x2="944.0" y2="325.1" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<text x="68.0" y="329.1" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" text-anchor="end">0.05 s</text>
+<line x1="76.0" y1="305.0" x2="944.0" y2="305.0" stroke="#30363d" stroke-width="1"/>
+<text x="68.0" y="309.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="end">0.1 s</text>
+<line x1="76.0" y1="284.8" x2="944.0" y2="284.8" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<text x="68.0" y="288.8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" text-anchor="end">0.2 s</text>
+<line x1="76.0" y1="258.1" x2="944.0" y2="258.1" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<text x="68.0" y="262.1" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" text-anchor="end">0.5 s</text>
+<line x1="76.0" y1="237.9" x2="944.0" y2="237.9" stroke="#30363d" stroke-width="1"/>
+<text x="68.0" y="241.9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="end">1 s</text>
+<line x1="76.0" y1="217.7" x2="944.0" y2="217.7" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<text x="68.0" y="221.7" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" text-anchor="end">2 s</text>
+<line x1="76.0" y1="191.0" x2="944.0" y2="191.0" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<text x="68.0" y="195.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" text-anchor="end">5 s</text>
+<line x1="76.0" y1="170.9" x2="944.0" y2="170.9" stroke="#30363d" stroke-width="1"/>
+<text x="68.0" y="174.9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" text-anchor="end">10 s</text>
+<line x1="76.0" y1="150.7" x2="944.0" y2="150.7" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<text x="68.0" y="154.7" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" text-anchor="end">20 s</text>
+<line x1="76.0" y1="124.0" x2="944.0" y2="124.0" stroke="#30363d" stroke-width="0.5" opacity="0.7"/>
+<circle cx="96.7" cy="170.2" r="6" fill="#f0715a" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="138.0" cy="170.2" r="6" fill="#f0715a" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="179.3" cy="170.2" r="6" fill="#f0715a" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="220.7" cy="319.5" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2"/>
+<circle cx="262.0" cy="320.0" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2"/>
+<circle cx="303.3" cy="170.2" r="6" fill="#f0715a" stroke="#0d1117" stroke-width="2"/>
+<circle cx="344.7" cy="170.2" r="6" fill="#f0715a" stroke="#0d1117" stroke-width="2"/>
+<circle cx="386.0" cy="170.2" r="6" fill="#f0715a" stroke="#0d1117" stroke-width="2"/>
+<circle cx="427.3" cy="319.6" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2"/>
+<circle cx="468.7" cy="320.0" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2"/>
+<circle cx="510.0" cy="319.9" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2"/>
+<circle cx="551.3" cy="320.6" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="592.7" cy="321.8" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="634.0" cy="321.8" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="675.3" cy="320.7" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="716.7" cy="321.7" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="758.0" cy="321.4" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="799.3" cy="321.7" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="840.7" cy="321.7" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="882.0" cy="321.7" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<circle cx="923.3" cy="320.6" r="6" fill="#6ea8fe" stroke="#0d1117" stroke-width="2" opacity="0.38"/>
+<text x="82.2" y="146.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e" font-weight="600" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">disp_cpu</text>
+<text x="82.2" y="159.2" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">v3c  10.237 s  n=3</text>
+<text x="288.9" y="146.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" fill="#f0715a" font-weight="600" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">disp_cpu</text>
+<text x="288.9" y="159.2" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">v4ctl  10.233 s  n=3</text>
+<text x="412.9" y="343.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" fill="#6ea8fe" font-weight="600" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">disp_fe</text>
+<text x="412.9" y="357.8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#c9d1d9" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">v4  0.0600 s  n=5</text>
+<path d="M406.7,182.2 V307.8" fill="none" stroke="#c9d1d9" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M402.7,300.8 L406.7,307.8 L410.7,300.8" fill="none" stroke="#c9d1d9" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="415.7" y="245.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="600" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">170×</text>
+<text x="415.7" y="260.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">earlier</text>
+<text x="76.0" y="408.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3" font-weight="600">Power-domain errors per boot</text>
+<text x="272.0" y="408.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">lines containing “Failed to reach power state”, same log</text>
+<line x1="76.0" y1="528.0" x2="944.0" y2="528.0" stroke="#30363d" stroke-width="1"/>
+<rect x="85.9" y="438.0" width="21.5" height="90.0" fill="#6e7681" opacity="0.38"/>
+<text x="96.7" y="433.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">24</text>
+<rect x="127.3" y="438.0" width="21.5" height="90.0" fill="#6e7681" opacity="0.38"/>
+<text x="138.0" y="433.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">24</text>
+<rect x="168.6" y="438.0" width="21.5" height="90.0" fill="#6e7681" opacity="0.38"/>
+<text x="179.3" y="433.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">24</text>
+<rect x="209.9" y="453.0" width="21.5" height="75.0" fill="#6e7681"/>
+<text x="220.7" y="448.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">20</text>
+<rect x="251.3" y="453.0" width="21.5" height="75.0" fill="#6e7681"/>
+<text x="262.0" y="448.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">20</text>
+<rect x="292.6" y="438.0" width="21.5" height="90.0" fill="#6e7681"/>
+<text x="303.3" y="433.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">24</text>
+<rect x="333.9" y="438.0" width="21.5" height="90.0" fill="#6e7681"/>
+<text x="344.7" y="433.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">24</text>
+<rect x="375.3" y="438.0" width="21.5" height="90.0" fill="#6e7681"/>
+<text x="386.0" y="433.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">24</text>
+<rect x="416.6" y="453.0" width="21.5" height="75.0" fill="#6e7681"/>
+<text x="427.3" y="448.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">20</text>
+<rect x="457.9" y="453.0" width="21.5" height="75.0" fill="#6e7681"/>
+<text x="468.7" y="448.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">20</text>
+<rect x="499.3" y="453.0" width="21.5" height="75.0" fill="#6e7681"/>
+<text x="510.0" y="448.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">20</text>
+<text x="551.3" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="592.7" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="634.0" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="675.3" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="716.7" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="758.0" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="799.3" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="840.7" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="882.0" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="923.3" y="523.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle" opacity="0.38">0</text>
+<text x="241.3" y="433.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#6ea8fe" text-anchor="middle" font-style="italic">−4 vs v4ctl</text>
+<text x="536.9" y="432.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" font-style="italic">0 from boot 12: DTB, kernel and initramfs changed in one step,</text>
+<text x="536.9" y="446.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#c9d1d9" font-style="italic">so this drop is not attributed to the ATC2/3 change alone.</text>
+<text x="96.7" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">1</text>
+<text x="138.0" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">2</text>
+<text x="179.3" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">3</text>
+<text x="220.7" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">4</text>
+<text x="262.0" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">5</text>
+<text x="303.3" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">6</text>
+<text x="344.7" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">7</text>
+<text x="386.0" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">8</text>
+<text x="427.3" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">9</text>
+<text x="468.7" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">10</text>
+<text x="510.0" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">11</text>
+<text x="551.3" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">12</text>
+<text x="592.7" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">13</text>
+<text x="634.0" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">14</text>
+<text x="675.3" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">15</text>
+<text x="716.7" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">16</text>
+<text x="758.0" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">17</text>
+<text x="799.3" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">18</text>
+<text x="840.7" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">19</text>
+<text x="882.0" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">20</text>
+<text x="923.3" y="545.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#e6edf3" text-anchor="middle">21</text>
+<text x="68.0" y="545.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="end">boot</text>
+<text x="68.0" y="569.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="end">image</text>
+<line x1="76.0" y1="596.0" x2="944.0" y2="596.0" stroke="#30363d" stroke-width="1"/>
+<text x="76.0" y="612.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e">Data  evidence/stage1/logs/boot-1..21.txt, image-parts.csv, dtb/</text>
+<text x="76.0" y="627.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e">Code  analysis/stage1_boot_ab.py → figures/fig01_console_ab.py</text>
+</svg>

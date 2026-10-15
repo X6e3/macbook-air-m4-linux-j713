@@ -1,0 +1,631 @@
+== x6e3 boot 4  uptime=15.17 151.40
+esp=/dev/nvme0n1p4 LABEL="EFI - X6E3-" UUID="0713-0713" TYPE="vfat"
+write_cache=write back
+RW_OK
+MKDIR_OK
+bootcount_read=3
+variant=4
+fbcon_at=0.060629
+fb_probe_timeout=0 fb_attach_fail=0
+pmgr_fail=20
+== cmdline
+nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=4
+== cpus online=0-9 present=0-9
+== meminfo
+MemTotal:       16007504 kB
+MemFree:        15871680 kB
+MemAvailable:   15603536 kB
+== devices_deferred
+402280000.usb	dwc3-apple: Failed to get reset control
+40a280000.usb	dwc3-apple: Failed to get reset control
+regulator-pcie0-port0	platform: wait for supplier /soc/smc@38c600000/gpio
+led-controller	leds_pwm: unable to request PWM for kbd_backlight
+380700000.power-management:power-controller@458	
+380700000.power-management:power-controller@460	
+380700000.power-management:power-controller@468	platform: supplier 380700000.power-management:power-controller@460 not ready
+380700000.power-management:power-controller@478	platform: supplier 380700000.power-management:power-controller@460 not ready
+380700000.power-management:power-controller@498	
+380700000.power-management:power-controller@4a0	
+380700000.power-management:power-controller@4b0	platform: supplier 380700000.power-management:power-controller@4a0 not ready
+380700000.power-management:power-controller@4b8	platform: supplier 380700000.power-management:power-controller@4a0 not ready
+== pm_genpd_summary
+domain                          status          children        performance
+    /device                         runtime status                  managed by
+------------------------------------------------------------------------------
+atc3_usb                        off-0                           0
+atc2_usb                        off-0                           0
+atc3_usb_aon                    off-0                           0
+                                                atc3_usb
+atc2_usb_aon                    off-0                           0
+                                                atc2_usb
+atc1_usb                        on                              0
+    40af00000.iommu                 active                      0           SW
+    40af80000.iommu                 active                      0           SW
+atc0_usb                        on                              0
+    402f00000.iommu                 active                      0           SW
+    402f80000.iommu                 active                      0           SW
+atc1_usb_aon                    on                              0
+                                                atc1_usb
+atc0_usb_aon                    on                              0
+                                                atc0_usb
+debug_switch                    on                              0
+nub_sram                        on                              0
+nub_gpio                        on                              0
+    3881f0000.pinctrl               unsupported                 0           SW
+nub_ocla                        on                              0
+nub_spi0                        on                              0
+nub_spmi_a1                     on                              0
+nub_spmi_a0                     on                              0
+nub_spmi1                       on                              0
+nub_spmi0                       on                              0
+debug_gated                     on                              0
+audio_mca0_m                    off-0                           0
+audio_base_ns_a                 off-0                           0
+audio_p                         off-0                           0
+                                                audio_base_ns_a, audio_mca0_m
+audio_fr                        off-0                           0
+                                                audio_p
+audio_a                         off-0                           0
+                                                audio_fr
+ane_base                        off-0                           0
+ane_td                          off-0                           0
+                                                ane_base
+ane_cpu                         off-0                           0
+ane_mpm                         off-0                           0
+venc_me1                        off-0                           0
+venc_me0                        off-0                           0
+                                                venc_me1
+venc_pipe5                      off-0                           0
+venc_pipe4                      off-0                           0
+venc_dma                        off-0                           0
+                                                venc_pipe4, venc_pipe5, venc_me0
+sep                             on                              0
+avd_sys                         off-0                           0
+jpg                             off-0                           0
+ane_sys                         off-0                           0
+                                                ane_mpm, ane_cpu, ane_td
+msr_ase_core                    off-0                           0
+msr                             off-0                           0
+                                                msr_ase_core
+apcie_phy_sw                    on                              0
+apcie_sys_st                    on                              0
+                                                apcie_phy_sw
+    genpd:1:4c5cc0000.nvme          active                      0           SW
+apcie_st                        on                              0
+                                                apcie_sys_st
+ans                             on                              0
+                                                apcie_st, apcie_sys_st
+    481608000.mbox                  active                      0           SW
+    485c50000.sart                  unsupported                 0           SW
+    genpd:0:4c5cc0000.nvme          active                      0           SW
+dispext1_fe                     on                              0
+dispext1_sys                    on                              0
+                                                dispext1_fe
+apcie_sys_gp                    on                              0
+                                                apcie_phy_sw
+apcie_gp                        on                              0
+                                                apcie_sys_gp
+    490000000.iommu                 suspended                   0           SW
+dpa4                            off-0                           0
+dpa3                            off-0                           0
+pms_sram                        on                              0
+pmp                             on                              0
+atc3_common                     off-0                           0
+                                                atc3_usb
+dpa2                            off-0                           0
+atc2_common                     off-0                           0
+                                                atc2_usb
+atc1_cio_usb                    off-0                           0
+atc1_cio_pcie                   off-0                           0
+atc1_cio                        off-0                           0
+                                                atc1_cio_pcie, atc1_cio_usb
+atc1_pcie                       off-0                           0
+atc1_common                     on                              0
+                                                atc1_pcie, atc1_cio, atc1_usb
+atc0_cio_usb                    off-0                           0
+dpa1                            off-0                           0
+dpa0                            off-0                           0
+uart6                           off-0                           0
+uart5                           off-0                           0
+uart4                           off-0                           0
+uart3                           off-0                           0
+uart2                           off-0                           0
+uart1                           off-0                           0
+uart0                           off-0                           0
+    3ad200000.serial                suspended                   0           SW
+uart_n                          off-0                           0
+dptx_phy                        on                              0
+    genpd:1:103e1c88000.framebuffer  active                      0           SW
+qspi                            off-0                           0
+spi5                            off-0                           0
+atc0_cio_pcie                   off-0                           0
+atc0_cio                        off-0                           0
+                                                atc0_cio_pcie, atc0_cio_usb
+atc0_pcie                       off-0                           0
+trace_fab                       off-0                           0
+spi4                            off-0                           0
+spi3                            off-0                           0
+spi2                            off-0                           0
+atc0_common                     on                              0
+                                                atc0_pcie, atc0_cio, atc0_usb
+spi1                            off-0                           0
+venc_sys                        off-0                           0
+                                                venc_dma
+afiaft                          off-0                           0
+spi0                            off-0                           0
+aes                             off-0                           0
+dpa_p                           on                              0
+                                                dpa0, dpa1, dpa2, dpa3, dpa4
+uart_p                          on                              0
+                                                uart_n, uart0, uart1, uart2, uart3, uart4, uart5, uart6
+spi_p                           on                              0
+                                                spi0, spi1, spi2, spi3, spi4, spi5, qspi
+i2c8                            off-0                           0
+i2c7                            off-0                           0
+i2c6                            off-0                           0
+i2c5                            off-0                           0
+i2c4                            off-0                           0
+i2c3                            off-0                           0
+i2c2                            off-0                           0
+i2c1                            off-0                           0
+i2c0                            off-0                           0
+fpwm2                           off-0                           0
+fpwm1                           off-0                           0
+fpwm0                           off-0                           0
+sio_cpu                         off-0                           0
+gfx                             off-0                           0
+disp_fe                         on                              0
+    genpd:0:103e1c88000.framebuffer  active                      0           SW
+disp_sys                        on                              0
+                                                disp_fe
+scodec_streaming                off-0                           0
+scodec                          off-0                           0
+                                                scodec_streaming
+dispext0_fe                     on                              0
+dispext0_sys                    on                              0
+                                                dispext0_fe
+ap_tmm                          off-0                           0
+pmgr_soc_ocla                   off-0                           0
+soc_dpe                         on                              0
+soc_rc                          off-0                           0
+pms_c1ppt                       off-0                           0
+pms_fpwm4                       off-0                           0
+pms_fpwm3                       off-0                           0
+pms_fpwm2                       off-0                           0
+pms_fpwm1                       off-0                           0
+pms_fpwm0                       off-0                           0
+pmc                             on                              0
+gpio                            on                              0
+    39a000000.pinctrl               unsupported                 0           SW
+dwi                             off-0                           0
+aic                             on                              0
+msg                             off-0                           0
+== framebuffer devlinks
+genpd:genpd:0:103e1c88000.framebuffer--platform:103e1c88000.framebuffer: not tracked
+genpd:genpd:1:103e1c88000.framebuffer--platform:103e1c88000.framebuffer: not tracked
+platform:380700000.power-management:power-controller@248--platform:103e1c88000.framebuffer: active
+platform:380700000.power-management:power-controller@3c8--platform:103e1c88000.framebuffer: active
+== waiting_for_supplier
+/sys/bus/platform/devices/*framebuffer*/waiting_for_supplier: 
+== cpu parts
+      6 CPU part	: 0x052
+      4 CPU part	: 0x053
+== chosen
+#address-cells
+#size-cells
+asahi,iboot1-version
+asahi,iboot2-version
+asahi,kblang-code
+asahi,m1n1-stage1-version
+asahi,m1n1-stage2-version
+asahi,os-fw-version
+asahi,system-fw-version
+bootargs
+framebuffer@103e1c88000
+gravity,efi-system-partition
+kaslr-seed
+linux,initrd-end
+linux,initrd-start
+name
+ranges
+stdout-path
+== interrupts (head)
+           CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       CPU8       CPU9       
+ 33:          0          0          0          0          0          0          0          0          0          0  AIC-FIQ   6 Level     vgic
+ 34:          0          0          0          0          0          0          0          0          0          0      KVM   0 Level     kvm guest ptimer
+ 35:          0          0          0          0          0          0          0          0          0          0      KVM   1 Level     kvm guest vtimer
+== dmesg
+[    0.000000] Booting Linux on physical CPU 0x0000010100 [0x611f0531]
+[    0.000000] Linux version 7.1.13-x6e3-g3b85d81f656a-dirty (x6e3@lima-j713) (gcc (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2), GNU ld version 2.46.1-1.fc44) #6 SMP PREEMPT Sun Sep 27 00:05:26 +03 2026
+[    0.000000] KASLR enabled
+[    0.000000] random: crng init done
+[    0.000000] Machine model: Apple MacBook Air (13-inch, M4, 2025)
+[    0.000000] printk: debug: ignoring loglevel setting.
+[    0.000000] efi: UEFI not found.
+[    0.000000] OF: reserved mem: 0x00000103e1be8000..0x00000103e5b57fff (64960 KiB) nomap non-reusable framebuffer@103e1be8000
+[    0.000000] OF: reserved mem: 0x00000103df228000..0x00000103e0227fff (16384 KiB) nomap non-reusable asc-firmware@103df228000
+[    0.000000] OF: reserved mem: 0x0000010004b10000..0x0000010004b33fff (144 KiB) nomap non-reusable asc-firmware@10004b10000
+[    0.000000] OF: reserved mem: 0x00000103e0228000..0x00000103e054ffff (3232 KiB) nomap non-reusable asc-firmware@103e0228000
+[    0.000000] OF: reserved mem: 0x00000103e0550000..0x00000103e154ffff (16384 KiB) nomap non-reusable asc-firmware@103e0550000
+[    0.000000] OF: reserved mem: 0x0000010004aec000..0x0000010004b0ffff (144 KiB) nomap non-reusable asc-firmware@10004aec000
+[    0.000000] OF: reserved mem: 0x00000103e1550000..0x00000103e1877fff (3232 KiB) nomap non-reusable asc-firmware@103e1550000
+[    0.000000] OF: reserved mem: 0x00000103e5b58000..0x00000103e5c17fff (768 KiB) nomap non-reusable region95@103e5b58000
+[    0.000000] OF: reserved mem: 0x00000103e5c18000..0x00000103e5c1bfff (16 KiB) nomap non-reusable region94@103e5c18000
+[    0.000000] OF: reserved mem: 0x00000103e5c1c000..0x00000103e6c1bfff (16384 KiB) nomap non-reusable region57@103e5c1c000
+[    0.000000] OF: reserved mem: 0x00000103e1878000..0x00000103e1b9ffff (3232 KiB) nomap non-reusable dcp_data@103e1878000
+[    0.000000] OF: reserved mem: 0x00000100002a8000..0x0000010000aaffff (8224 KiB) nomap non-reusable asc-firmware@100002a8000
+[    0.000000] OF: reserved mem: 0x00000103dd1b4000..0x00000103dd1b7fff (16 KiB) map non-reusable flash@103dd1b4000
+[    0.000000] OF: reserved mem: 0x00000100048c4000..0x0000010004937fff (464 KiB) map non-reusable flash@100048c4000
+[    0.000000] NUMA: Faking a node at [mem 0x0000010002780000-0x00000103dd1b7fff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x103dc99ce40-0x103dc99f63f]
+[    0.000000] cma: Reserved 32 MiB at 0x000001000b000000
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000010002780000-0x00000103dd1b7fff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000010002780000-0x0000010004aebfff]
+[    0.000000]   node   0: [mem 0x0000010004aec000-0x0000010004b33fff]
+[    0.000000]   node   0: [mem 0x0000010004b34000-0x00000103dd1affff]
+[    0.000000]   node   0: [mem 0x00000103dd1b4000-0x00000103dd1b7fff]
+[    0.000000] Initmem setup node 0 [mem 0x0000010002780000-0x00000103dd1b7fff]
+[    0.000000] On node 0, zone DMA: 2528 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 2962 pages in unavailable ranges
+[    0.000000] percpu: Embedded 7 pages/cpu s67800 r8192 d38696 u114688
+[    0.000000] pcpu-alloc: s67800 r8192 d38696 u114688 alloc=7*16384
+[    0.000000] pcpu-alloc: [0] 00 [0] 01 [0] 02 [0] 03 [0] 04 [0] 05 [0] 06 [0] 07 
+[    0.000000] pcpu-alloc: [0] 08 [0] 09 
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: SYS_ID_AA64ISAR2_EL1[3:0]: forced to 0
+[    0.000000] CPU features: detected: Address authentication (IMP DEF algorithm)
+[    0.000000] CPU features: detected: HCRX_EL2 register
+[    0.000000] CPU features: detected: Virtualization Host Extensions
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=4
+[    0.000000] printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+[    0.000000] Dentry cache hash table entries: 2097152 (order: 10, 16777216 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 1048576 (order: 9, 8388608 bytes, linear)
+[    0.000000] software IO TLB: SWIOTLB bounce buffer size adjusted to 15MB
+[    0.000000] software IO TLB: area num 16.
+[    0.000000] software IO TLB: SWIOTLB bounce buffer size roundup to 16MB
+[    0.000000] software IO TLB: mapped [mem 0x00000103da064000-0x00000103db064000] (16MB)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1010317
+[    0.000000] Policy zone: DMA
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=10, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=10.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=10
+[    0.000000] RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=10.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: aic_handle_irq
+[    0.000000] Root FIQ handler: aic_handle_fiq
+[    0.000000] irq_apple_aic: Using Fast IPIs
+[    0.000000] irq_apple_aic: Initialized with 2048/4096 IRQs * 1/2 die(s), 7 FIQs, 32 vIPIs
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.000000] arch_timer: cp15 timer running at 1000.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0x1fffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000000] sched_clock: 61 bits at 1000MHz, resolution 1ns, wraps every 4398046511103ns
+[    0.000289] Console: colour dummy device 80x25
+[    0.000292] printk: legacy console [tty0] enabled
+[    0.000384] Calibrating delay loop (skipped), value calculated using timer frequency.. 2000.00 BogoMIPS (lpj=4000000)
+[    0.000388] pid_max: default: 32768 minimum: 301
+[    0.000445] Mount-cache hash table entries: 32768 (order: 4, 262144 bytes, linear)
+[    0.000451] Mountpoint-cache hash table entries: 32768 (order: 4, 262144 bytes, linear)
+[    0.000492] VFS: Finished mounting rootfs on nullfs
+[    0.000793] rcu: Hierarchical SRCU implementation.
+[    0.000795] rcu: 	Max phase no-delay instances is 1000.
+[    0.000819] Timer migration: 2 hierarchy levels; 8 children per group; 2 crossnode level
+[    0.001253] EFI services will not be available.
+[    0.001300] smp: Bringing up secondary CPUs ...
+[    0.001367] Detected PIPT I-cache on CPU1
+[    0.001437] CPU1: Booted secondary processor 0x0000000000 [0x611f0521]
+[    0.001584] Detected PIPT I-cache on CPU2
+[    0.001641] CPU2: Booted secondary processor 0x0000000001 [0x611f0521]
+[    0.001759] Detected PIPT I-cache on CPU3
+[    0.001817] CPU3: Booted secondary processor 0x0000000002 [0x611f0521]
+[    0.001939] Detected PIPT I-cache on CPU4
+[    0.001999] CPU4: Booted secondary processor 0x0000000003 [0x611f0521]
+[    0.002117] Detected PIPT I-cache on CPU5
+[    0.002178] CPU5: Booted secondary processor 0x0000000004 [0x611f0521]
+[    0.002300] Detected PIPT I-cache on CPU6
+[    0.002361] CPU6: Booted secondary processor 0x0000000005 [0x611f0521]
+[    0.002476] Detected PIPT I-cache on CPU7
+[    0.002505] CPU7: Booted secondary processor 0x0000010101 [0x611f0531]
+[    0.002586] Detected PIPT I-cache on CPU8
+[    0.002615] CPU8: Booted secondary processor 0x0000010102 [0x611f0531]
+[    0.002689] Detected PIPT I-cache on CPU9
+[    0.002717] CPU9: Booted secondary processor 0x0000010103 [0x611f0531]
+[    0.002743] smp: Brought up 1 node, 10 CPUs
+[    0.002759] SMP: Total of 10 processors activated.
+[    0.002760] CPU: All CPU(s) started at EL2
+[    0.002762] CPU features: detected: Branch Target Identification
+[    0.002764] CPU features: detected: ARMv8.4 Translation Table Level
+[    0.002765] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.002767] CPU features: detected: Common not Private translations
+[    0.002768] CPU features: detected: CRC32 instructions
+[    0.002769] CPU features: detected: Data independent timing control (DIT)
+[    0.002771] CPU features: detected: E0PD
+[    0.002772] CPU features: detected: Enhanced Counter Virtualization
+[    0.002773] CPU features: detected: Enhanced Privileged Access Never
+[    0.002774] CPU features: detected: Enhanced Virtualization Traps
+[    0.002776] CPU features: detected: Fine Grained Traps
+[    0.002777] CPU features: detected: Generic authentication (IMP DEF algorithm)
+[    0.002779] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.002781] CPU features: detected: LSE atomic instructions
+[    0.002782] CPU features: detected: Privileged Access Never
+[    0.002784] CPU features: detected: RAS Extension Support
+[    0.002785] CPU features: detected: Speculation barrier (SB)
+[    0.002786] CPU features: detected: Stage-2 Force Write-Back
+[    0.002787] CPU features: detected: TLB range maintenance instructions
+[    0.002789] CPU features: detected: XNX
+[    0.002790] CPU features: detected: Scalable Matrix Extension
+[    0.002792] CPU features: detected: SME2
+[    0.002824] alternatives: applying system-wide alternatives
+[    0.003899] CPU features: detected: ACTLR virtualization (architectural?)
+[    0.003903] CPU features: detected: ICV_DIR_EL1 trapping
+[    0.003905] SME: minimum available vector length 64 bytes per vector
+[    0.003907] SME: maximum available vector length 64 bytes per vector
+[    0.003908] SME: default vector length 64 bytes per vector
+[    0.004208] Memory: 15959840K/16165072K available (19392K kernel code, 5282K rwdata, 14848K rodata, 3776K init, 809K bss, 162848K reserved, 32768K cma-reserved)
+[    0.004377] devtmpfs: initialized
+[    0.006174] posixtimers hash table entries: 8192 (order: 3, 131072 bytes, linear)
+[    0.006192] futex hash table entries: 4096 (262144 bytes on 1 NUMA nodes, total 256 KiB, linear).
+[    0.006214] 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    0.006215] 0 pages in range for non-PLT usage
+[    0.006216] 128288 pages in range for PLT usage
+[    0.006583] DMI: not present or invalid.
+[    0.007125] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.007422] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.007429] audit: initializing netlink subsys (disabled)
+[    0.007465] audit: type=2000 audit(0.004:1): state=initialized audit_enabled=0 res=1
+[    0.007793] thermal_sys: Registered thermal governor 'step_wise'
+[    0.007794] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.007810] cpuidle: using governor menu
+[    0.007838] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.007908] ASID allocator initialised with 65536 entries
+[    0.008245] Serial: AMBA PL011 UART driver
+[    0.009279] /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/phy@403000000
+[    0.009285] /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/usb@402280000
+[    0.009290] /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    0.009294] /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    0.009298] /soc/usb@402280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    0.009302] /soc/usb@402280000: Fixed dependency cycle(s) with /soc/phy@403000000
+[    0.009308] /soc/phy@403000000: Fixed dependency cycle(s) with /soc/usb@402280000
+[    0.009311] /soc/phy@403000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    0.009315] /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    0.009318] /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    0.009324] /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    0.009327] /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    0.009333] /soc/pcie@1cb0000000: Fixed dependency cycle(s) with /soc/pcie@1cb0000000
+[    0.009336] /soc/pcie@1cb0000000/pci@0,0: Fixed dependency cycle(s) with /soc/pcie@1cb0000000/pci@0,0
+[    0.015240] /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/phy@403000000
+[    0.015245] /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/usb@402280000
+[    0.015249] /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    0.015253] /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    0.015337] /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/usb@402280000
+[    0.015347] /soc/usb@402280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    0.015351] /soc/usb@402280000: Fixed dependency cycle(s) with /soc/phy@403000000
+[    0.015489] /soc/usb@402280000: Fixed dependency cycle(s) with /soc/phy@403000000
+[    0.015497] /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/phy@403000000
+[    0.015507] /soc/phy@403000000: Fixed dependency cycle(s) with /soc/usb@402280000
+[    0.015514] /soc/phy@403000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    0.015584] /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    0.015592] /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    0.015596] /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    0.015734] /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    0.015743] /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    0.015750] /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    0.015758] /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    0.015884] /soc/pcie@1cb0000000: Fixed dependency cycle(s) with /soc/pcie@1cb0000000
+[    0.015894] /soc/pcie@1cb0000000/pci@0,0: Fixed dependency cycle(s) with /soc/pcie@1cb0000000/pci@0,0
+[    0.016312] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.016315] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.016317] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.016318] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.016320] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.016321] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.016721] ACPI: Interpreter disabled.
+[    0.017611] iommu: Default domain type: Translated
+[    0.017612] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.017816] SCSI subsystem initialized
+[    0.017848] libata version 3.00 loaded.
+[    0.017876] usbcore: registered new interface driver usbfs
+[    0.017881] usbcore: registered new interface driver hub
+[    0.017886] usbcore: registered new device driver usb
+[    0.018176] pps_core: LinuxPPS API ver. 1 registered
+[    0.018177] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.018180] PTP clock support registered
+[    0.018215] EDAC MC: Ver: 3.0.0
+[    0.018278] scmi_core: SCMI protocol bus registered
+[    0.018533] FPGA manager framework
+[    0.018702] vgaarb: loaded
+[    0.018781] clocksource: Switched to clocksource arch_sys_counter
+[    0.018825] VFS: Disk quotas dquot_6.6.0
+[    0.018830] VFS: Dquot-cache hash table entries: 2048 (order 0, 16384 bytes)
+[    0.018890] pnp: PnP ACPI: disabled
+[    0.020087] NET: Registered PF_INET protocol family
+[    0.020130] IP idents hash table entries: 262144 (order: 7, 2097152 bytes, linear)
+[    0.022764] tcp_listen_portaddr_hash hash table entries: 8192 (order: 3, 131072 bytes, linear)
+[    0.022778] Table-perturb hash table entries: 65536 (order: 4, 262144 bytes, linear)
+[    0.022781] TCP established hash table entries: 131072 (order: 6, 1048576 bytes, linear)
+[    0.022866] TCP bind hash table entries: 65536 (order: 7, 2097152 bytes, linear)
+[    0.022975] TCP: Hash tables configured (established 131072 bind 65536)
+[    0.022989] UDP hash table entries: 8192 (order: 5, 524288 bytes, linear)
+[    0.023058] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.023135] RPC: Registered named UNIX socket transport module.
+[    0.023137] RPC: Registered udp transport module.
+[    0.023138] RPC: Registered tcp transport module.
+[    0.023139] RPC: Registered tcp-with-tls transport module.
+[    0.023141] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.023144] PCI: CLS 0 bytes, default 64
+[    0.023179] Unpacking initramfs...
+[    0.023394] Freeing initrd memory: 1504K
+[    0.023801] kvm [1]: nv: 570 coarse grained trap handlers
+[    0.023873] kvm [1]: nv: 710 fine grained trap handlers
+[    0.023916] kvm [1]: IPA Size Limit: 42 bits
+[    0.023924] kvm [1]: Non-architectural vgic, tainting kernel
+[    0.023926] kvm [1]: GICv3: no GICV resource entry
+[    0.023928] kvm [1]: disabling GICv2 emulation
+[    0.023929] kvm [1]: GICv3 with broken locally generated SEI
+[    0.023930] kvm [1]: GICv3 sysreg trapping enabled ([G0G1D], reduced performance)
+[    0.023959] kvm [1]: GIC system register CPU interface enabled
+[    0.023963] kvm [1]: vgic interrupt IRQ33
+[    0.023982] kvm [1]: VHE mode initialized successfully
+[    0.024252] Initialise system trusted keyrings
+[    0.024284] workingset: timestamp_bits=42 (anon: 38) max_order=20 bucket_order=0 (anon: 0)
+[    0.024349] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.024406] NFS: Registering the id_resolver key type
+[    0.024409] Key type id_resolver registered
+[    0.024411] Key type id_legacy registered
+[    0.024414] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.024415] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.024443] 9p: Installing v9fs 9p2000 file system support
+[    0.024469] Key type asymmetric registered
+[    0.024470] Asymmetric key parser 'x509' registered
+[    0.024478] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.024480] io scheduler mq-deadline registered
+[    0.024482] io scheduler kyber registered
+[    0.024490] io scheduler bfq registered
+[    0.029677] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.038563] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.038680] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.038860] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.038977] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.039702] apple-pmgr-pwrstate 388280000.power-management:power-controller@80: always-on domain nub_spi0 is not on at boot
+[    0.039729] apple-pmgr-pwrstate 388280000.power-management:power-controller@88: always-on domain nub_ocla is not on at boot
+[    0.042143] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.042921] msm_serial: driver initialized
+[    0.043122] 3ad200000.serial: ttySAC0 at MMIO 0x3ad200000 (irq = 54, base_baud = 0) is a APPLE S5L
+[    0.043171] SuperH (H)SCI(F) driver initialized
+[    0.043257] STM32 USART driver initialized
+[    0.044158] apple-dart 30a300000.iommu: Limiting DMA range to 0x0000010000000000..0x0000010fffffffff
+[    0.044219] platform soc:display-subsystem: Adding to iommu group 0
+[    0.044302] apple-dart 30a300000.iommu: Limited to ias=36 due to lock
+[    0.044379] apple-dart 30a300000.iommu: DART [pagesize 4000, 32 streams, bypass support: 1, bypass forced: 0, locked: 1, AS 42 -> 42] initialized
+[    0.044515] apple-dart 402f00000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    0.044625] platform 402280000.usb: Adding to iommu group 1
+[    0.044648] apple-dart 402f80000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    0.044737] apple-dart 40af00000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    0.044851] platform 40a280000.usb: Adding to iommu group 2
+[    0.044872] apple-dart 40af80000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    0.044963] apple-dart 490000000.iommu: DART [pagesize 4000, 19 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    0.045103] [drm] Initialized simpledrm 1.0.0 for 103e1c88000.framebuffer on minor 0
+[    0.060629] Console: switching to colour frame buffer device 320x100
+[    0.067980] simple-framebuffer 103e1c88000.framebuffer: [drm] fb0: simpledrmdrmfb frame buffer device
+[    0.069019] loop: module loaded
+[    0.069287] megasas: 07.734.00.00-rc1
+[    0.071206] tun: Universal TUN/TAP device driver, 1.6
+[    0.071540] thunder_xcv, ver 1.0
+[    0.071548] thunder_bgx, ver 1.0
+[    0.071554] nicpf, ver 1.0
+[    0.071950] e1000: Intel(R) PRO/1000 Network Driver
+[    0.071954] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.071963] e1000e: Intel(R) PRO/1000 Network Driver
+[    0.071966] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    0.071976] igb: Intel(R) Gigabit Ethernet Network Driver
+[    0.071980] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    0.071988] igbvf: Intel(R) Gigabit Virtual Function Network Driver
+[    0.071992] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    0.072100] sky2: driver version 1.30
+[    0.072568] VFIO - User Level meta-driver version: 0.3
+[    0.073766] usbcore: registered new interface driver usb-storage
+[    0.074760] i2c_dev: i2c /dev entries driver
+[    0.079087] usbcore: registered new interface driver usbhid
+[    0.079134] usbhid: USB HID core driver
+[    0.081817] NET: Registered PF_INET6 protocol family
+[    0.081978] Segment Routing with IPv6
+[    0.082007] In-situ OAM (IOAM) with IPv6
+[    0.082043] NET: Registered PF_PACKET protocol family
+[    0.082089] 9pnet: Installing 9P2000 support
+[    0.082122] Key type dns_resolver registered
+[    0.083589] registered taskstats version 1
+[    0.083632] Loading compiled-in X.509 certificates
+[    0.084802] Demotion targets for Node 0: null
+[    0.087213] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.087474] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.087891] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.088148] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.088888] nvme-apple 4c5cc0000.nvme: RTKit: Initializing (protocol version 12)
+[    0.089576] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.089954] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.090424] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.090738] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.091735] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.092048] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.092509] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.092829] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[    0.093188] clk: Disabling unused clocks
+[    0.093219] PM: genpd: Disabling unused power domains
+[    0.106756] nvme-apple 4c5cc0000.nvme: RTKit: syslog message: asi.c:180: asi0: asi CMD size chosen is: 0
+[    0.106802] nvme-apple 4c5cc0000.nvme: RTKit: syslog message: asi.c:180: asi1: asi CMD size chosen is: 0
+[    0.109929] nvme-apple 4c5cc0000.nvme: RTKit: syslog message: cmd.c:8550: boot: mode normal
+[    0.110294] nvme-apple 4c5cc0000.nvme: RTKit: syslog message: power_budget.c:1001: PowerBudget: set on boot setByHost=1, is_warm_boot=0
+[    0.110749] nvme-apple 4c5cc0000.nvme: RTKit: syslog message: power_budget.c:269: PowerBudget: num dies horizontal change 1 -> 1
+[    0.110833] nvme nvme0: passthrough uses implicit buffer lengths
+[    0.112416]  nvme0n1: p1 p2 p3 p4 p5
+[    0.130950] nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    0.131441] Freeing unused kernel memory: 3776K
+[    0.131491] Run /init as init process
+[    0.131515]   with arguments:
+[    0.131534]     /init
+[    0.131549]   with environment:
+[    0.131568]     HOME=/
+[    0.131583]     TERM=linux
+[    0.135859] x6e3: booting Linux on Mac16,12
+[    0.136373] x6e3: model=Apple MacBook Air (13-inch, M4, 2025) kernel=7.1.13-x6e3-g3b85d81f656a-dirty
+[    0.136838] x6e3: cpus_online=0-9 present=0-9
+[   10.215548] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[   10.215807] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: PS atc2_common: Failed to reach power state 0xf (now: 0x200f)
+[   10.216218] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[   10.216474] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: PS atc3_common: Failed to reach power state 0xf (now: 0x200f)
+[   10.216697] platform 402280000.usb: deferred probe pending: dwc3-apple: Failed to get reset control
+[   10.216708] platform 40a280000.usb: deferred probe pending: dwc3-apple: Failed to get reset control
+[   10.216716] platform regulator-pcie0-port0: deferred probe pending: platform: wait for supplier /soc/smc@38c600000/gpio
+[   10.217085] platform led-controller: deferred probe pending: leds_pwm: unable to request PWM for kbd_backlight
+[   10.217390] platform 380700000.power-management:power-controller@458: deferred probe pending: (reason unknown)
+[   10.217692] platform 380700000.power-management:power-controller@460: deferred probe pending: (reason unknown)
+[   10.217986] platform 380700000.power-management:power-controller@468: deferred probe pending: platform: supplier 380700000.power-management:power-controller@460 not ready
+[   10.218282] platform 380700000.power-management:power-controller@478: deferred probe pending: platform: supplier 380700000.power-management:power-controller@460 not ready
+[   10.218569] platform 380700000.power-management:power-controller@498: deferred probe pending: (reason unknown)
+[   10.218855] platform 380700000.power-management:power-controller@4a0: deferred probe pending: (reason unknown)
+[   10.219133] platform 380700000.power-management:power-controller@4b0: deferred probe pending: platform: supplier 380700000.power-management:power-controller@4a0 not ready
+[   10.219414] platform 380700000.power-management:power-controller@4b8: deferred probe pending: platform: supplier 380700000.power-management:power-controller@4a0 not ready
+[   10.219693] apple-pmgr-pwrstate 380700000.power-management:power-controller@1e0: sync_state() pending due to 286e00000.dcp
+[   10.219976] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: sync_state() pending due to 380700000.power-management:power-controller@458
+[   10.220258] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: sync_state() pending due to 380700000.power-management:power-controller@460
+[   10.220537] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: sync_state() pending due to 380700000.power-management:power-controller@498
+[   10.220815] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: sync_state() pending due to 380700000.power-management:power-controller@4a0
+[   10.221089] apple-pmgr-pwrstate 380700000.power-management:power-controller@4e8: sync_state() pending due to 48ae00000.dcp
+[   10.221362] apple-pmgr-pwrstate 380700000.power-management:power-controller@378: sync_state() pending due to 388280000.power-management
+[   10.221630] apple-pmgr-pwrstate 380700000.power-management:power-controller@428: sync_state() pending due to 388280000.power-management
+[   10.221896] apple-pmgr-pwrstate 380700000.power-management:power-controller@450: sync_state() pending due to 388280000.power-management
+[   10.222159] apple-pmgr-pwrstate 380700000.power-management:power-controller@480: sync_state() pending due to 388280000.power-management
+[   10.222420] apple-pmgr-pwrstate 380700000.power-management:power-controller@278: sync_state() pending due to 3ad044000.pwm
+[   10.222677] apple-pmgr-pwrstate 388280000.power-management:power-controller@68: sync_state() pending due to 388908000.spmi
+[   10.222937] apple-pmgr-pwrstate 388280000.power-management:power-controller@70: sync_state() pending due to 388a08000.spmi
+[   10.223189] apple-pmgr-pwrstate 388280000.power-management:power-controller@c0: sync_state() pending due to 402280000.usb
+[   10.223440] apple-pmgr-pwrstate 388280000.power-management:power-controller@c0: sync_state() pending due to 403000000.phy
+[   10.223687] apple-pmgr-pwrstate 388280000.power-management:power-controller@c8: sync_state() pending due to 40a280000.usb
+[   10.223931] apple-pmgr-pwrstate 388280000.power-management:power-controller@c8: sync_state() pending due to 40b000000.phy
+[   10.224171] apple-pmgr-pwrstate 380700000.power-management:power-controller@550: sync_state() pending due to 1cb0000000.pcie
+[   15.149181] x6e3: esp=/dev/nvme0n1p4 LABEL="EFI - X6E3-" UUID="0713-0713" TYPE="vfat"
+[   15.150869] x6e3: write_cache=write back
+[   15.152244] FAT-fs (nvme0n1p4): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[   15.153343] x6e3: RW_OK
+[   15.154752] x6e3: MKDIR_OK
+[   15.156425] x6e3: bootcount_read=3
+[   15.157800] x6e3: variant=4
+[   15.161204] x6e3: fbcon_at=0.060629
+[   15.168158] x6e3: fb_probe_timeout=0 fb_attach_fail=0
+[   15.172152] x6e3: pmgr_fail=20

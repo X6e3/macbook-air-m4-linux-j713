@@ -1,0 +1,37 @@
+== v3c/v4ctl -> v4: c35fabb6.dtb -> 7dab1c02.dtb
+changes in meaning: 1
+  /chosen/framebuffer@0:power-domains
+      &/soc/power-management@380700000/power-controller@10000 (label disp_cpu), &/soc/power-management@380700000/power-controller@3c8 (label dptx_phy)
+   -> &/soc/power-management@380700000/power-controller@248 (label disp_fe), &/soc/power-management@380700000/power-controller@3c8 (label dptx_phy)
+phandle renumbering only: 5
+  /led-controller/led-0:pwms 0x97 0x0 0x9c40 -> 0x96 0x0 0x9c40 (same target /soc/pwm@3ad044000)
+  /regulator-pcie0-port0:gpio 0x96 0x13 0x0 -> 0x95 0x13 0x0 (same target /soc/smc@38c600000/gpio)
+  /soc/power-management@380700000/power-controller@10000: phandle 0x95 -> -
+  /soc/pwm@3ad044000: phandle 0x97 -> 0x96
+  /soc/smc@38c600000/gpio: phandle 0x96 -> 0x95
+
+== v4 -> v5: 7dab1c02.dtb -> 82886b6e.dtb
+changes in meaning: 22
+  /soc/iommu@412f00000:status  (absent) -> 'disabled'
+  /soc/iommu@412f80000:status  (absent) -> 'disabled'
+  /soc/iommu@41af00000:status  (absent) -> 'disabled'
+  /soc/iommu@41af80000:status  (absent) -> 'disabled'
+  /soc/phy@413000000:status  (absent) -> 'disabled'
+  /soc/phy@41b000000:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@450:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@458:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@460:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@468:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@478:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@480:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@498:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@4a0:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@4b0:status  (absent) -> 'disabled'
+  /soc/power-management@380700000/power-controller@4b8:status  (absent) -> 'disabled'
+  /soc/power-management@388280000/power-controller@d0:status  (absent) -> 'disabled'
+  /soc/power-management@388280000/power-controller@d8:status  (absent) -> 'disabled'
+  /soc/power-management@388280000/power-controller@e0:status  (absent) -> 'disabled'
+  /soc/power-management@388280000/power-controller@e8:status  (absent) -> 'disabled'
+  /soc/usb@412280000:status  (absent) -> 'disabled'
+  /soc/usb@41a280000:status  (absent) -> 'disabled'
+phandle renumbering only: 0
