@@ -3,8 +3,9 @@
 Every figure in this repository is drawn through this module, so all of them share:
   - one width (960 user units, about GitHub's README width) and one type scale,
   - GitHub's own system font stacks (no web fonts, nothing to install),
-  - one colour logic: a series colour means one thing everywhere; context data is drawn faded,
-  - one header ("FIG. n · STAGE s · context"), a title that states the finding, and one source line,
+  - one colour logic: a series colour means one thing everywhere; context data is drawn lighter,
+  - GitHub's own Primer red and blue, checked for colour-vision deficiency and contrast in both themes,
+  - a plain descriptive title; the finding, definitions and source paths go in the README caption,
   - a light and a dark variant of the same layout, for GitHub's two themes.
 
 A figure is a function draw(fig) that only places marks; numbers come from data/ files written by
@@ -18,13 +19,13 @@ MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mo
 
 # type scale (user units; at README width 1 unit is about 0.86 px)
 SIZE = {"title": 18, "subtitle": 13, "panel": 12.5, "label": 12, "small": 11, "overline": 11}
-CONTEXT_OPACITY = 0.38   # boots/points outside the comparison a figure is making
+CONTEXT_OPACITY = 0.55   # boots/points outside the comparison a figure is making: behind, still readable
 
 THEMES = {
     "light": {"bg": "#ffffff", "ink": "#1f2328", "soft": "#424a53", "muted": "#6e7781", "rule": "#d8dee4",
-              "band": "#f6f8fa", "red": "#c4452b", "blue": "#2257a5", "grey": "#8c959f"},
+              "band": "#f6f8fa", "red": "#d1242f", "blue": "#0969da", "grey": "#8c959f"},
     "dark": {"bg": "#0d1117", "ink": "#e6edf3", "soft": "#c9d1d9", "muted": "#8b949e", "rule": "#30363d",
-             "band": "#161b22", "red": "#f0715a", "blue": "#6ea8fe", "grey": "#6e7681"},
+             "band": "#161b22", "red": "#f85149", "blue": "#4493f8", "grey": "#6e7681"},
 }
 # What each series colour means across all figures. A new figure reuses these before adding any.
 MEANING = {"red": "the failing / original configuration", "blue": "the fixed / changed configuration",
@@ -90,22 +91,6 @@ class Figure:
         p = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
         self.marks.append(f'<polyline points="{p}" fill="none" stroke="{self.c(role)}" stroke-width="{width}" '
                           'stroke-linejoin="round"/>')
-
-    # ---- shared furniture -------------------------------------------------------------------------
-    def header(self, fig, stage, context, title, subtitle, left):
-        self.text(left, 26, f"FIG. {fig}  ·  STAGE {stage}  ·  {context.upper()}", "overline", "muted", weight=600,
-                  spacing=1.1)
-        self.text(left, 52, title, "title", "ink", weight=600)
-        self.text(left, 74, subtitle, "subtitle", "soft")
-
-    def bracket(self, x0, x1, y, label):
-        self.path(f"M{x0:.1f},{y + 6:.1f} V{y:.1f} H{x1:.1f} V{y + 6:.1f}", "muted", 1)
-        self.text((x0 + x1) / 2, y - 6, label, "small", "soft", "middle", weight=600, spacing=0.6)
-
-    def source(self, y, left, data, code):
-        self.line(left, y - 16, WIDTH - 16, y - 16, "rule")
-        self.text(left, y, f"Data  {data}", "small", "muted", mono=True)
-        self.text(left, y + 15, f"Code  {code}", "small", "muted", mono=True)
 
     def svg(self):
         head = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {self.h}" width="{WIDTH}" '
