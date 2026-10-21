@@ -93,6 +93,15 @@
       "published_sha256": "64003b53ec10b05c20022f9597a70fb56190925cf093707a3d24d6c5f374ac62",
       "line_count": 9,
       "redactions": {}
+    },
+    {
+      "file": "notebook-20260929.md",
+      "kind": "transcription of a handwritten notebook page; the photograph is kept private",
+      "source_label": "Notebook page photographed 21 October 2026 (IMG_0240)",
+      "original_sha256": "433c549a0601d672d2b141fbbcfe9aa260734860ef3f2c64bf556b443263630e",
+      "published_sha256": "ad1dce6941b3938a98448ca926009e2e98350fae6d660e93596956a08afc95a9",
+      "line_count": 14,
+      "redactions": {}
     }
   ]
 }

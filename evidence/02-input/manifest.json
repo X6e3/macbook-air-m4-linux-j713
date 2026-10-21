@@ -130,5 +130,12 @@
         "machine_id": 2
       }
     }
-  ]
+  ],
+  "notebook": {
+    "file": "notebook-20260928.md",
+    "kind": "transcription of a handwritten notebook page; the photograph is kept private",
+    "source_label": "Notebook page photographed 21 October 2026 (IMG_0239)",
+    "original_sha256": "ad599b56603ef311ca68811bb24eecc31cc4ae4d39232ff967d174c134e2e36e",
+    "published_sha256": "c247b940bfff20126a87f99d9b60162810060f9bb66fcf914de0f9291c7dd258"
+  }
 }
