@@ -1,0 +1,10 @@
+wifi-fw-identity1 payload (J713 / BCM4388 C2 / module-instance garden). Prepared on macOS 27.0 (26A428), 2 Oct 2026.
+brcmfmac4388c0-pcie.bin = exact, unmodified bytes of /usr/share/firmware/wifi/C-4388__s-C2/guam.trx
+  (garden.trx -> guam.trx), 1857979 bytes, sha256 157342936222282f3f08b068b1b00b2131f2aaa4200ebd646f58508f5defc364
+  <FW-TAG>4388c2-roml/config_pcie_perf_udm Version=23.10.1039.0.41.51.239 Date=2026-07-02T00:52:50Z FWID=01-974167da
+Evidence: J713 ADT /arm-io/wlan module-instance=garden, antenna sku X3, wifi-calibration-msf 5888 B;
+  macOS AppleBCMWLAN on this J713: ChipInfo s=C2, ModuleInfo M=WLMT m=4.9 V=a, FirmwareVersion ... FWID 01-974167da;
+  Linux (wifi-pcie1) requests brcm/brcmfmac4388c0-pcie.bin for BCM4388/6 (BRCMF_FW_ENTRY 4388, rev mask 0xFFFFFFF0).
+  Unmodified Gravity installer 6420623289fe emits the same bytes as brcm/brcmfmac4388c2-pcie.apple,garden.bin.
+Not used: j773g alias paradise.trx (sakhalin, _nosar, FWID 01-40b8d11f) - does not match this J713.
+Not included on purpose: .sig, NVRAM .txt, .clm_blob, .txcap_blob, regulatory.db.

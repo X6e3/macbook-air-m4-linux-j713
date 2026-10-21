@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "scope": "Archived trackpad firmware/HID investigation, September–October 2026; no new hardware test",
+  "copy_policy": "Full selected archive files retain every line. Identity substitutions only within retained text. No firmware bytes are included.",
+  "redaction_policy": {
+    "uuid": {
+      "pattern": "(?i)\\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\\b",
+      "replacement": "[UUID]"
+    },
+    "hostname": {
+      "pattern": "(?<=\\] )x6e3-j713-fedora(?= )",
+      "replacement": "[HOST]"
+    },
+    "build_identity": {
+      "pattern": "\\(x6e3@lima-j713\\)",
+      "replacement": "([BUILD-IDENTITY])"
+    },
+    "home": {
+      "pattern": "/home/x6e3\\b",
+      "replacement": "/home/[USER]"
+    },
+    "sudo_user": {
+      "pattern": "(?<=: )    x6e3(?= :)",
+      "replacement": "    [USER]"
+    },
+    "boot_label": {
+      "pattern": "(?<=# boot )1e0e0f33\\b",
+      "replacement": "[BOOT-ID]"
+    }
+  },
+  "files": [
+    {
+      "file": "journal-timeline.txt",
+      "kind": "archived selected journal timeline; not full journals",
+      "source_label": "mtp-afe-timeline-2026-09-29.txt",
+      "original_sha256": "25b3808cff50f61e89738f4e34425f33242cdff4213664a2821de78544d8555a",
+      "published_sha256": "ab07f31f69279e3356bd02820b75866da3960378a1f180a619a5376054ed4c03",
+      "line_count": 126,
+      "redactions": {
+        "home": 10,
+        "sudo_user": 10
+      }
+    },
+    {
+      "file": "b3-config.diff",
+      "kind": "complete archived configuration diff",
+      "source_label": "config-B2-to-B3b.diff",
+      "original_sha256": "3cb4604661b4c7e1165a4df904e09bf824510b41511557ea13dd5ed47d0f6c47",
+      "published_sha256": "3cb4604661b4c7e1165a4df904e09bf824510b41511557ea13dd5ed47d0f6c47",
+      "line_count": 8,
+      "redactions": {}
+    },
+    {
+      "file": "b3-manifest.txt",
+      "kind": "complete archived build manifest; recorded hashes are not a new boot-image verification",
+      "source_label": "MANIFEST",
+      "original_sha256": "341ed06c5d6cc1ea958235b425c38c6958ab7b231312f82fb234484c9b4def08",
+      "published_sha256": "def706297cce2ba3715b30dfe9090643d5b3ca10ea583e12a1db74e15d0e9bd8",
+      "line_count": 19,
+      "redactions": {
+        "uuid": 1,
+        "build_identity": 1
+      }
+    },
+    {
+      "file": "afe-fail-20261007.txt",
+      "kind": "complete archived selected kernel export; boot-origin label is historical user observation",
+      "source_label": "mtp-firstboot-afe-fail-20261007.txt",
+      "original_sha256": "d1882a4d7f29954beed4ff5820e65d9d1ccfe1ed85e3bb4dd74c4b2a6c467546",
+      "published_sha256": "18082dfedc5e3fc8b744b4e20ecfd86ff67a18ef5bfa1dda79b22ec5fa209590",
+      "line_count": 122,
+      "redactions": {
+        "hostname": 121,
+        "boot_label": 1
+      }
+    },
+    {
+      "file": "afe-ready-20261007.txt",
+      "kind": "complete archived selected kernel export",
+      "source_label": "kernel-current-selected.log",
+      "original_sha256": "6d91a542b748fca09694ee92a2d5f654f977ce910c5c3671c22eee664578ea57",
+      "published_sha256": "3fa1314cff3c4b7791ba19e20c330ac4abdd99fe273b9ef004e00a8368c0ff0e",
+      "line_count": 112,
+      "redactions": {
+        "hostname": 112
+      }
+    },
+    {
+      "file": "firmware-extraction.txt",
+      "kind": "selected verbatim tool-output lines; private Preboot path replaced; no firmware payload",
+      "source_label": "Preserved result record, 2026-09-28T14:32:51.513Z",
+      "original_sha256": "59fe6b010feb35cecde687731e7f82b0f28d325309acb25f51547bae63b6f707",
+      "published_sha256": "64003b53ec10b05c20022f9597a70fb56190925cf093707a3d24d6c5f374ac62",
+      "line_count": 9,
+      "redactions": {}
+    }
+  ]
+}

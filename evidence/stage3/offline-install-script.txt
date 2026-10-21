@@ -1,0 +1,40 @@
+#!/bin/sh
+# J713 Fedora 44: offline install of the Wi-Fi userspace (NetworkManager, NetworkManager-wifi, wpa_supplicant and their
+# 4 dependencies, resolved against this rootfs's own RPM database), then start NetworkManager and show the Wi-Fi state.
+# No Wi-Fi password or SSID is stored here.
+#   sudo mount -L GUAM4388 /mnt && sudo sh /mnt/j713-final/install-network-userspace.sh
+# Then connect yourself (type the password at the prompt):
+#   nmcli --ask dev wifi connect "<SSID>"
+set -eu
+[ "$(id -u)" = 0 ] || { echo "run with sudo"; exit 1; }
+TOP=$(cd "$(dirname "$0")" && pwd)
+D=$TOP/network-rpms
+cd "$D"
+echo "== verifying RPM hashes and Fedora signatures"
+sha256sum -c --quiet SHA256SUMS || { echo "STOP: RPM hash mismatch"; exit 1; }
+rpm -K ./*.rpm || { echo "STOP: RPM signature check failed"; exit 1; }
+if rpm -q NetworkManager NetworkManager-wifi wpa_supplicant > /dev/null 2>&1; then
+	echo "== already installed"
+else
+	echo "== installing offline (all repositories disabled)"
+	dnf install -y --disable-repo='*' --setopt=install_weak_deps=False ./*.rpm
+fi
+rpm -q NetworkManager NetworkManager-wifi wpa_supplicant NetworkManager-libnm libndp iw wireless-regdb
+echo "== starting NetworkManager"
+systemctl enable --now NetworkManager
+nm-online -s -q --timeout=20 || true
+systemctl --no-pager --lines=5 status NetworkManager || true
+echo "== nmcli radio wifi on"
+nmcli radio wifi on || true
+echo "== nmcli dev"
+nmcli dev || true
+echo "== nmcli dev wifi rescan"
+nmcli dev wifi rescan || true
+sleep 5
+echo "== nmcli dev wifi list"
+nmcli dev wifi list || true
+echo
+echo "Next, connect (you type the Wi-Fi password at the prompt):"
+echo "  nmcli --ask dev wifi connect \"<SSID>\""
+echo "Then check IP / route / ping / DNS / HTTPS:"
+echo "  sudo sh $TOP/j713-final-check.sh net"

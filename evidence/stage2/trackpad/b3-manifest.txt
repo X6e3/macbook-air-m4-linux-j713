@@ -1,0 +1,19 @@
+boot-mtp-dapf-b3b-3526355a.bin image=3526355ab776e795b0d3970c11adab54da51a52daa82ab790883ca777692d887 m1n1=d744d65713314564aed413a0abfc7b54aaf99b193b260daa57296b6429960d9d dtb=59e400d680abbf6aed790f7d22f18d05fd7deedc33e394c1ebe0a48641d48145 kernel=19877142607d3737e05bec6d02a2764c7b5fa3eef86705a0ddb3e2ce555d312f initramfs=b7084b078a32c0814131a7877149a88aec3cfd70bdc9ff832c7cf395953686bb bootargs="nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=mtp-dapf-b3b x6e3.k=19877142 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target"
+variant:         B3b = exact B2 source + CONFIG_HID_MAGICMOUSE=y + CONFIG_HID_APPLE=y (nothing else)
+base commit:     0196caa938be7c2dccee67af1875df0d4c005093 (x6e3/mtp-dapf-w2 = B2; label branch x6e3/mtp-dapf-b3b, no new commit)
+built from:      Lima j713 ~/linux-mtp-dapf-w2 (clean), O=~/kbuild-mtp-dapf-b3b, script ../build-mtp-dapf-b3b.sh, fragment ../b3b.config
+kernel release:  7.1.13-x6e3-g0196caa938be
+kernel version:  Linux version 7.1.13-x6e3-g0196caa938be ([BUILD-IDENTITY]) (gcc (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2), GNU ld version 2.46.1-1.fc44) #1 SMP PREEMPT Tue Sep 29 03:07:26 +03 2026
+kernel Image.gz: 19877142607d3737e05bec6d02a2764c7b5fa3eef86705a0ddb3e2ce555d312f
+config sha256:   7d9617922e566774fccedd3bc4b707d7fa88a02b6f3895aff43427dd6e78ac16  (B2 9728124e5848785029c25e07523a861cf6e6cfd456702d03779e0589d372aa49)
+DTB sha256:      59e400d680abbf6aed790f7d22f18d05fd7deedc33e394c1ebe0a48641d48145  (= B2, cmp-checked)
+m1n1, initramfs: byte copies extracted from boot-mtp-dapf-w2-09768ae6.bin
+config diff B2->B3b (config-B2-to-B3b.diff):
+  7416c7416
+  < # CONFIG_HID_APPLE is not set
+  ---
+  > CONFIG_HID_APPLE=y
+  7469c7469
+  < # CONFIG_HID_MAGICMOUSE is not set
+  ---
+  > CONFIG_HID_MAGICMOUSE=y

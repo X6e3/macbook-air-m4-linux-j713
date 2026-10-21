@@ -1,24 +1,38 @@
-# J713 bring-up record
+# Linux on the M4 MacBook Air (J713)
 
-I wanted Linux running directly on my M4 MacBook Air. On the first night, the initramfs printed `shell on tty1`
-at 0.08 s on the kernel clock. The console it was writing to appeared ten seconds later.
+This repository documents my work on Linux support for the 13-inch
+M4 MacBook Air (2025, J713/T8132). It contains hardware investigations,
+test results, and the logs and scripts behind them. The device-tree and
+driver changes are in [`X6e3/j713-linux`](https://github.com/X6e3/j713-linux).
 
-That gap was the first problem J713 — the MacBook Air 13" (M4, 2025), SoC T8132 — gave me, and this repository
-starts there, on 26 September 2026. There was no ready way to install Linux on it: GravityLinux's installer did not
-list the machine, and its board device tree was a 35-line stub on top of the shared M4 laptop tree. The work builds
-on Asahi Linux's m1n1, kernel drivers and documentation, and on GravityLinux's M4 kernel, installer and Mesa.
+I started on 26 September 2026, building on Asahi Linux's m1n1, kernel
+drivers and documentation, and GravityLinux's M4 kernel, installer
+and Mesa.
 
-As of 15 October 2026, all ten ARM64 cores (four performance, six efficiency) come online, and Fedora 44 runs from an ext4 root filesystem
-on the internal NVMe, with KDE Plasma on the internal display. KWin composites on the M4 GPU (its own renderer
-report: `Apple M4 (G16G B1)`). The internal keyboard and trackpad, Wi-Fi and Bluetooth work. When idle, the CPUs
-enter WFI through a J713 path added to Asahi's cpuidle-apple driver. The display controller (DCP), suspend and audio
-don't work yet. The records behind these later results will be added as their own stages; Stage 1 below covers only
-the first night.
+As of 19 October 2026, Fedora 44 runs from the internal NVMe with all
+ten CPU cores online. KDE Plasma uses the M4 GPU for compositing,
+and the display controller (DCP) drives the internal display at
+2560×1600, 60 Hz. The full glmark2 suite completes, and games run with
+hardware acceleration. The internal keyboard and trackpad, Wi-Fi,
+Bluetooth and both woofers also work.
+
+Suspend, power-off, the headphone jack, the microphones and the camera
+do not work yet. The full list is in
+[`docs/publication-status.md`](docs/publication-status.md).
+
+This is a development record, not an installer or a supported distribution.
 
 Each stage below says what I observed, what I changed and held constant, how I tested it, and what the result does
 and does not show. The logs, device trees and scripts behind every figure are in this repository.
 
-This is not an installer or a supported distribution.
+For the first-night evidence, start with the [boot comparison](data/stage1/boot_ab_summary.json),
+[device-tree comparison](data/stage1/dtb_diff.txt), [image-part hashes](evidence/stage1/image-parts.csv)
+and [original boot logs](evidence/stage1/logs/). The [A1/B1/B2 MTP startup records](docs/stage2-mtp.md)
+follow as Stage 2, with the [trackpad firmware and HID investigation](docs/stage2-trackpad.md).
+Records for the GPU, the native display, audio and idle remain to be added.
+
+The [Wi-Fi account](docs/stage3-wifi.md) follows as Stage 3: PCIe/configuration, J713 firmware identity,
+the early-firmware layer and a real connection from Fedora.
 
 ## Stage 1 — First boot (26–27 September 2026)
 
@@ -91,6 +105,41 @@ so that drop is not attributed to ATC2/3 alone.
 Reproduce: `make fig01` (Python 3, standard library only).
 <!-- fig01:end -->
 
+## Stage 2 — MTP startup (28 September 2026)
+
+I traced the failing internal-input path through A1 (read-only DAPF snapshot), B1 (program the board's
+rules) and B2 (remove the experimental RUN-to-wake delay). The [full account](docs/stage2-mtp.md)
+links each observation to the retained kernel exports and the corresponding source changes.
+
+| Record | DAPF readback | MTP result |
+| --- | --- | --- |
+| [A1](evidence/stage2/logs/a1-kernel.txt) | 0/9 before programming | Endpoint-map timeout; wake -62; IRQ count 100005 at return |
+| [B1](evidence/stage2/logs/b1-kernel.txt) and [repeat](evidence/stage2/logs/b1-repeat-kernel.txt) | 8/9 after programming | Protocol v12, then IOP power ACK timeout; wake -62 |
+| [B2](evidence/stage2/logs/b2-kernel.txt) | 8/9 after programming | Wake 0, MTP Says Hello, keyboard ready; trackpad firmware still missing in this boot |
+
+These are complete archived kernel-export copies with identity substitutions, not newly run tests.
+The [manifest](evidence/stage2/manifest.json) records original/published hashes and the redactions.
+The [analysis](analysis/stage2_mtp.py) derives the [summary](data/stage2/mtp_summary.json) from the logs.
+Reproduce with `make mtp`; verify with `make check`.
+
+### Trackpad firmware and HID (28–29 September, with October follow-up)
+
+I prepared the J713 firmware through the existing Gravity converter, then enabled the existing MTP HID
+decoder and keyboard driver in a two-symbol configuration experiment. A later boot of that same artifact
+produced physically confirmed internal-trackpad cursor movement. Intermittent AFE startup remained a separate
+problem. The [full account](docs/stage2-trackpad.md) distinguishes retained journal records, archived build
+metadata and my own observations at the machine. It includes the later reset-retry attempt and its limits; the
+AFE fix of 18 October will follow with its own record.
+Reproduce the [selected timeline](data/stage2/trackpad_summary.json) with `make trackpad`; verify with `make check`.
+
+## Stage 3 — Internal Wi-Fi (2 October 2026)
+
+I followed the device from PCIe enumeration through the bin-only failure and the successful complete J713
+firmware environment. I made that environment available during early boot, incorporated Michael Reeves's
+join-preference fallback, and provisioned the missing networking userspace. Retained photos show a connection,
+DHCP routing, DNS and package downloads. The [full account](docs/stage3-wifi.md) links the failure/success records,
+archived build metadata and identifier-free photo observations. Regenerate its summary with `make wifi`.
+
 ## How this repository is organised
 
 ```
@@ -99,18 +148,22 @@ analysis/   scripts that turn evidence into data; they check the evidence and st
 data/       the numbers and diffs the figures use
 figures/    one script per figure, plus style.py shared by all of them; output in figures/out/
 tools/      rasterising, README captions, the identity/secret scan
+docs/       current support, known limits and the scope of the two repositories
 ```
 
 `make fig01` rebuilds Fig. 1 from `evidence/`. `make check` runs before every commit: it refuses
-device identifiers and secrets, and checks that the evidence logs are byte-identical to the originals.
+device identifiers and secrets, checks that Stage 1 logs match the original bytes, and verifies the
+Stage 2 published hashes, source lineage and derived summary.
 Boot images are not published: later initramfs layers contain vendor firmware. Their part hashes are
 in `evidence/stage1/image-parts.csv`.
 
 ## License
 
 - Code (`analysis/`, `figures/*.py`, `tools/`, `Makefile`, `evidence/stage1/init-busybox-v6`): MIT, see `LICENSE`.
-- Text, data, figures and photos (`README.md`, `data/`, `figures/out/`, `evidence/stage1/photos/`,
+- Text, data, figures and photos (`README.md`, `docs/`, `data/`, `figures/out/`, `evidence/stage1/photos/`,
   `evidence/stage1/image-parts.csv`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - The DTBs in `evidence/stage1/dtb/` are compiled from the GravityLinux and Asahi Linux device-tree sources for T8132
   and J713 (SPDX: `GPL-2.0+ OR MIT`), with the J713 changes described in Stage 1. They are not relicensed here.
 - The boot logs in `evidence/stage1/logs/` are the machine's console output, published unchanged as evidence.
+- Stage 2 logs are identity-redacted evidence copies with original/published hashes in their manifest. The source
+  excerpt in `evidence/stage2/bootloader-context.txt` retains its original MIT license.

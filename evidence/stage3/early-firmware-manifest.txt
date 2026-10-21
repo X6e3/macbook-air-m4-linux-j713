@@ -1,0 +1,9 @@
+J713 BCM4388 C2 early-firmware layer (wifi-persist1). cpio path /lib/firmware/brcm/, uid/gid 0/0, mtime 0, mode 0100644.
+Apple source dir: /usr/share/firmware/wifi/C-4388__s-C2/ (macOS 27.0 26A428 on this J713; tree mtime 1788431650 = 2026-09-03 13:34:10 +0300, kept here as provenance only)
+Selection evidence: ADT /arm-io/wlan module-instance=garden, antenna X3; macOS AppleBCMWLAN ChipInfo s=C2, M=WLMT m=4.9 V=a, FWID 01-974167da = guam.trx FW-TAG; Linux wifi-fwset1 runtime FWID 01-974167da.
+lib/firmware/brcm/brcmfmac4388c0-pcie.bin  1857979 B  sha256 157342936222282f3f08b068b1b00b2131f2aaa4200ebd646f58508f5defc364  <- /usr/share/firmware/wifi/C-4388__s-C2/garden.trx -> guam.trx
+lib/firmware/brcm/brcmfmac4388c0-pcie.txt  24870 B  sha256 a3cf85bdd68083f40e47e9a029e77a4e14b32047bb9251a46e6b04e2232591f6  <- /usr/share/firmware/wifi/C-4388__s-C2/P-garden-X3_M-WLMT_V-a__m-4.9.txt -> P-garden_M-WLMT_V-a__m-4.9.txt
+lib/firmware/brcm/brcmfmac4388c0-pcie.sig  204 B  sha256 f88b8393535118527854aa46b75fc49ad3971a4355b81784f83dcbfc08a9ff61  <- /usr/share/firmware/wifi/C-4388__s-C2/garden.sig -> guam.sig
+lib/firmware/brcm/brcmfmac4388c0-pcie.clm_blob  79547 B  sha256 1155c08756d3b420ba1cbbae2ef23bc6fa0935e9ab2844c745d1778a298157a7  <- /usr/share/firmware/wifi/C-4388__s-C2/garden-X3.clmb -> garden.clmb
+lib/firmware/brcm/brcmfmac4388c0-pcie.txcap_blob  1371 B  sha256 65a09e0eeeb3cf643889f058377fda760c60290a2b2beb8d4b303372f6efc5f9  <- /usr/share/firmware/wifi/C-4388__s-C2/garden-X3.txcb -> garden.txcb
+Not included: calibration (ADT -> m1n1 -> DT), regulatory.db, trackpad, GPU, audio.

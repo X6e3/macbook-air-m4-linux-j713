@@ -1,0 +1,24 @@
+boot-wifi-persist1-9c2153da.bin image=9c2153dace97401ff58685768b33713ac66d649b9edd071d9f71b793a080537a m1n1=d744d65713314564aed413a0abfc7b54aaf99b193b260daa57296b6429960d9d dtb=59e400d680abbf6aed790f7d22f18d05fd7deedc33e394c1ebe0a48641d48145 kernel=b711373d6c219f4789118f3752b5076d6142673741bf5c79a44024ddc910e748 initramfs=37d758f0248eb65113981332bc2ddb2f0f2bfb4a6b2d9c9103a25ac7ad4eacc8 bootargs="nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=wifi-persist1 x6e3.k=b711373d root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target"
+experiment:      wifi-persist1 — two deliberate variables relative to wifi-pcie1 (a9caf696; itself mtp-hid-b3 + Wi-Fi Kconfig):
+                 1. deterministic J713 BCM4388 early-firmware L2 layer (second newc archive after the unchanged base cpio)
+                 2. BCM4388 RSSI-only join_pref fallback (IntegralPilot/linux PR #1 patch 03, author Michael Reeves)
+                 Nothing else: kernel config, DTB, m1n1, base initramfs content and bootargs (except x6e3.v/x6e3.k) unchanged.
+source:          720f3005b19d100057dc1bae6a1d504a158c2624 (branch x6e3/wifi-persist1, worktree ~/linux-wifi-persist1)
+                 parent 0196caa938be7c2dccee67af1875df0d4c005093 (= B2 / mtp-hid-b3 / wifi-pcie1 source)
+                 commit: 'wifi: brcmfmac: Fall back to RSSI-only default join preferences', author Michael Reeves, committer Can Koç,
+                 applied with git am from ~/j713/prior-art/integralpilot-pr1/03.patch (5b7341f5…); changed file: brcmfmac/common.c (+4)
+kernel release:  7.1.13-x6e3-g720f3005b19d
+kernel version:  Linux version 7.1.13-x6e3-g720f3005b19d ([BUILD-IDENTITY]) (gcc (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2), GNU ld version 2.46.1-1.fc44) #1 SMP PREEMPT Fri Oct  2 08:50:47 +03 2026
+Image.gz:        b711373d6c219f4789118f3752b5076d6142673741bf5c79a44024ddc910e748
+config:          81aa59c0185e8e2fa9d5349daeda0dc478360d2c662eb31f47e07f77de74f816  (byte-identical to wifi-pcie1, cmp-checked)
+DTB:             59e400d680abbf6aed790f7d22f18d05fd7deedc33e394c1ebe0a48641d48145  (= wifi-pcie1 = mtp-hid-b3, cmp-checked)
+m1n1:            d744d65713314564aed413a0abfc7b54aaf99b193b260daa57296b6429960d9d  (byte copy from wifi-pcie1 image)
+base initramfs:  gzip b7084b078a32c0814131a7877149a88aec3cfd70bdc9ff832c7cf395953686bb -> cpio 1564160 B dbb5f206e01bfc09aef92c4032366b829bede0d11c3a195758720c51c8ccdc9b
+vendor cpio:     1965568 B 41cb98698eb583a38d0d442049b8d900e45775b3b64242e8562394acb5cb69ea
+combined initrd: 3529728 B 11337e717d6fc9e89e598306d9b79ba453bc2dfcf0efc404d288d91ff86bb469  (first 1564160 B == base cpio: verified)
+outer gzip:      1922977 B 37d758f0248eb65113981332bc2ddb2f0f2bfb4a6b2d9c9103a25ac7ad4eacc8  (GNU gzip 1.14 -9 -n; header flags 0 mtime 0)
+boot image:      19340399 B 9c2153dace97401ff58685768b33713ac66d649b9edd071d9f71b793a080537a
+tools:           ../build-wifi-persist1.sh, ../mk-wifi-persist1-initramfs.py, ../mkboot-variant.py
+firmware manifest: initramfs/FIRMWARE-MANIFEST.txt
+lineage:         B2 (09768ae6, 0196caa93) -> mtp-hid-b3 (3526355a, +HID_MAGICMOUSE/HID_APPLE) -> wifi-pcie1 (a9caf696, +Wi-Fi Kconfig)
+                 -> wifi-persist1 (9c2153da, +720f3005b19d +L2 layer). NOT DEPLOYED.

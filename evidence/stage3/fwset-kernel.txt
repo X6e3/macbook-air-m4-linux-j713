@@ -1,0 +1,7 @@
+[  201.407977] brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac4388c0-pcie for chip BCM4388/6
+[  202.989662] brcmfmac: brcmf_c_process_txcap_blob: TxCap blob found, loading
+[  202.991973] brcmfmac: brcmf_c_process_cal_blob: Calibration blob provided by platform, loading
+[  203.007623] brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4388/6 wl0: Jul  2 2026 00:44:50 version 23.10.1039.0.41.51.239 FWID 01-974167da
+[  203.013187] ieee80211 phy1: brcmf_c_set_joinpref_default: Set join_pref error (-52)
+[  203.272915] ieee80211 phy1: brcmf_c_set_joinpref_default: Set join_pref error (-52)
+[  203.343444] brcmfmac 0000:01:00.0 wld0: renamed from wlan0

@@ -1,0 +1,10 @@
+236:[    1.075049] [HOST] kernel: Unpacking initramfs...
+237:[    1.075068] [HOST] kernel: Freeing initrd memory: 3440K
+430:[    1.102843] [HOST] kernel: brcmfmac 0000:01:00.0: enabling device (0000 -> 0002)
+431:[    1.102853] [HOST] kernel: brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac4388c0-pcie for chip BCM4388/6
+497:[    1.111236] [HOST] kernel: faux_driver regulatory: Direct firmware load for regulatory.db failed with error -2
+550:[    1.117283] [HOST] kernel: Run /init as init process
+733:[    1.976022] [HOST] kernel: brcmfmac: brcmf_c_process_txcap_blob: TxCap blob found, loading
+734:[    1.976038] [HOST] kernel: brcmfmac: brcmf_c_process_cal_blob: Calibration blob provided by platform, loading
+735:[    1.992004] [HOST] kernel: brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4388/6 wl0: Jul  2 2026 00:44:50 version 23.10.1039.0.41.51.239 FWID 01-974167da
+740:[    2.344006] [HOST] kernel: brcmfmac 0000:01:00.0 wld0: renamed from wlan0

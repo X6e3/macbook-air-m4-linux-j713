@@ -1,0 +1,667 @@
+[    2.664805] [HOST] kernel: Booting Linux on physical CPU 0x0000010100 [0x611f0531]
+[    2.664856] [HOST] kernel: Linux version 7.1.13-x6e3-g6fe561aa9c3b ([BUILD-IDENTITY]) (gcc (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2), GNU ld version 2.46.1-1.fc44) #1 SMP PREEMPT Mon Sep 28 16:00:49 +03 2026
+[    2.664880] [HOST] kernel: KASLR enabled
+[    2.664897] [HOST] kernel: random: crng init done
+[    2.664914] [HOST] kernel: Machine model: Apple MacBook Air (13-inch, M4, 2025)
+[    2.664930] [HOST] kernel: printk: debug: ignoring loglevel setting.
+[    2.664950] [HOST] kernel: efi: UEFI not found.
+[    2.664966] [HOST] kernel: OF: reserved mem: 0x00000103e1be8000..0x00000103e5b57fff (64960 KiB) nomap non-reusable framebuffer@103e1be8000
+[    2.664989] [HOST] kernel: OF: reserved mem: 0x00000103df228000..0x00000103e0227fff (16384 KiB) nomap non-reusable asc-firmware@103df228000
+[    2.665006] [HOST] kernel: OF: reserved mem: 0x000001000552c000..0x000001000554ffff (144 KiB) nomap non-reusable asc-firmware@1000552c000
+[    2.665023] [HOST] kernel: OF: reserved mem: 0x00000103e0228000..0x00000103e054ffff (3232 KiB) nomap non-reusable asc-firmware@103e0228000
+[    2.665039] [HOST] kernel: OF: reserved mem: 0x00000103e0550000..0x00000103e154ffff (16384 KiB) nomap non-reusable asc-firmware@103e0550000
+[    2.665055] [HOST] kernel: OF: reserved mem: 0x0000010005508000..0x000001000552bfff (144 KiB) nomap non-reusable asc-firmware@10005508000
+[    2.665071] [HOST] kernel: OF: reserved mem: 0x00000103e1550000..0x00000103e1877fff (3232 KiB) nomap non-reusable asc-firmware@103e1550000
+[    2.665091] [HOST] kernel: OF: reserved mem: 0x00000103e5b58000..0x00000103e5c17fff (768 KiB) nomap non-reusable region95@103e5b58000
+[    2.665108] [HOST] kernel: OF: reserved mem: 0x00000103e5c18000..0x00000103e5c1bfff (16 KiB) nomap non-reusable region94@103e5c18000
+[    2.665124] [HOST] kernel: OF: reserved mem: 0x00000103e5c1c000..0x00000103e6c1bfff (16384 KiB) nomap non-reusable region57@103e5c1c000
+[    2.665140] [HOST] kernel: OF: reserved mem: 0x00000103e1878000..0x00000103e1b9ffff (3232 KiB) nomap non-reusable dcp_data@103e1878000
+[    2.665159] [HOST] kernel: OF: reserved mem: 0x00000100002a8000..0x0000010000aaffff (8224 KiB) nomap non-reusable asc-firmware@100002a8000
+[    2.665176] [HOST] kernel: OF: reserved mem: 0x00000103dd1b4000..0x00000103dd1b7fff (16 KiB) map non-reusable flash@103dd1b4000
+[    2.665192] [HOST] kernel: OF: reserved mem: 0x00000100052e0000..0x0000010005353fff (464 KiB) map non-reusable flash@100052e0000
+[    2.665208] [HOST] kernel: NUMA: Faking a node at [mem 0x0000010002780000-0x00000103dd1b7fff]
+[    2.665226] [HOST] kernel: NODE_DATA(0) allocated [mem 0x103dc99a300-0x103dc99caff]
+[    2.665242] [HOST] kernel: cma: Reserved 32 MiB at 0x0000010003000000
+[    2.665257] [HOST] kernel: Zone ranges:
+[    2.665273] [HOST] kernel:   DMA      [mem 0x0000010002780000-0x00000103dd1b7fff]
+[    2.665288] [HOST] kernel:   DMA32    empty
+[    2.665304] [HOST] kernel:   Normal   empty
+[    2.665323] [HOST] kernel: Movable zone start for each node
+[    2.665338] [HOST] kernel: Early memory node ranges
+[    2.665354] [HOST] kernel:   node   0: [mem 0x0000010002780000-0x0000010005507fff]
+[    2.665370] [HOST] kernel:   node   0: [mem 0x0000010005508000-0x000001000554ffff]
+[    2.665385] [HOST] kernel:   node   0: [mem 0x0000010005550000-0x00000103dd1affff]
+[    2.665400] [HOST] kernel:   node   0: [mem 0x00000103dd1b4000-0x00000103dd1b7fff]
+[    2.665416] [HOST] kernel: Initmem setup node 0 [mem 0x0000010002780000-0x00000103dd1b7fff]
+[    2.665431] [HOST] kernel: On node 0, zone DMA: 2528 pages in unavailable ranges
+[    2.665447] [HOST] kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+[    2.665462] [HOST] kernel: On node 0, zone DMA: 2962 pages in unavailable ranges
+[    2.665478] [HOST] kernel: percpu: Embedded 7 pages/cpu s67800 r8192 d38696 u114688
+[    2.665493] [HOST] kernel: pcpu-alloc: s67800 r8192 d38696 u114688 alloc=7*16384
+[    2.665514] [HOST] kernel: pcpu-alloc: [0] 00 [0] 01 [0] 02 [0] 03 [0] 04 [0] 05 [0] 06 [0] 07 
+[    2.665530] [HOST] kernel: pcpu-alloc: [0] 08 [0] 09 
+[    2.665545] [HOST] kernel: Detected PIPT I-cache on CPU0
+[    2.665561] [HOST] kernel: CPU features: SYS_ID_AA64ISAR2_EL1[3:0]: forced to 0
+[    2.665577] [HOST] kernel: CPU features: detected: Address authentication (IMP DEF algorithm)
+[    2.665593] [HOST] kernel: CPU features: detected: HCRX_EL2 register
+[    2.665609] [HOST] kernel: CPU features: detected: Virtualization Host Extensions
+[    2.665624] [HOST] kernel: CPU features: detected: Spectre-v4
+[    2.665639] [HOST] kernel: CPU features: detected: Spectre-BHB
+[    2.665655] [HOST] kernel: alternatives: applying boot alternatives
+[    2.665677] [HOST] kernel: Kernel command line: nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=mtp-dapf-r1 x6e3.k=f0f72369 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target
+[    2.665694] [HOST] kernel: Unknown kernel command line parameters "selinux=0", will be passed to user space.
+[    2.665710] [HOST] kernel: printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+[    2.665727] [HOST] kernel: Dentry cache hash table entries: 2097152 (order: 10, 16777216 bytes, linear)
+[    2.665745] [HOST] kernel: Inode-cache hash table entries: 1048576 (order: 9, 8388608 bytes, linear)
+[    2.665760] [HOST] kernel: software IO TLB: SWIOTLB bounce buffer size adjusted to 15MB
+[    2.665776] [HOST] kernel: software IO TLB: area num 16.
+[    2.665792] [HOST] kernel: software IO TLB: SWIOTLB bounce buffer size roundup to 16MB
+[    2.665808] [HOST] kernel: software IO TLB: mapped [mem 0x00000103da060000-0x00000103db060000] (16MB)
+[    2.665823] [HOST] kernel: Fallback order for Node 0: 0 
+[    2.665838] [HOST] kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1010317
+[    2.665854] [HOST] kernel: Policy zone: DMA
+[    2.665869] [HOST] kernel: mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    2.665885] [HOST] kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=10, Nodes=1
+[    2.665900] [HOST] kernel: rcu: Preemptible hierarchical RCU implementation.
+[    2.665917] [HOST] kernel: rcu:         RCU event tracing is enabled.
+[    2.665933] [HOST] kernel: rcu:         RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=10.
+[    2.665949] [HOST] kernel:         Trampoline variant of Tasks RCU enabled.
+[    2.665965] [HOST] kernel:         Tracing variant of Tasks RCU enabled.
+[    2.665981] [HOST] kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    2.665996] [HOST] kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=10
+[    2.666012] [HOST] kernel: RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=10.
+[    2.666028] [HOST] kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    2.666045] [HOST] kernel: Root IRQ handler: aic_handle_irq
+[    2.666061] [HOST] kernel: Root FIQ handler: aic_handle_fiq
+[    2.666076] [HOST] kernel: irq_apple_aic: Using Fast IPIs
+[    2.666092] [HOST] kernel: irq_apple_aic: Initialized with 2048/4096 IRQs * 1/2 die(s), 7 FIQs, 32 vIPIs
+[    2.666108] [HOST] kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    2.666123] [HOST] kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    2.666139] [HOST] kernel: arch_timer: cp15 timer running at 1000.00MHz (phys).
+[    2.666155] [HOST] kernel: clocksource: arch_sys_counter: mask: 0x1fffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    2.666171] [HOST] kernel: sched_clock: 61 bits at 1000MHz, resolution 1ns, wraps every 4398046511103ns
+[    2.666187] [HOST] kernel: Console: colour dummy device 80x25
+[    2.666205] [HOST] kernel: printk: legacy console [tty0] enabled
+[    2.666223] [HOST] kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 2000.00 BogoMIPS (lpj=4000000)
+[    2.666240] [HOST] kernel: pid_max: default: 32768 minimum: 301
+[    2.666259] [HOST] kernel: Mount-cache hash table entries: 32768 (order: 4, 262144 bytes, linear)
+[    2.666276] [HOST] kernel: Mountpoint-cache hash table entries: 32768 (order: 4, 262144 bytes, linear)
+[    2.666295] [HOST] kernel: VFS: Finished mounting rootfs on nullfs
+[    2.666312] [HOST] kernel: rcu: Hierarchical SRCU implementation.
+[    2.666329] [HOST] kernel: rcu:         Max phase no-delay instances is 1000.
+[    2.666346] [HOST] kernel: Timer migration: 2 hierarchy levels; 8 children per group; 2 crossnode level
+[    2.666364] [HOST] kernel: EFI services will not be available.
+[    2.666381] [HOST] kernel: smp: Bringing up secondary CPUs ...
+[    2.666398] [HOST] kernel: Detected PIPT I-cache on CPU1
+[    2.666416] [HOST] kernel: CPU1: Booted secondary processor 0x0000000000 [0x611f0521]
+[    2.666433] [HOST] kernel: Detected PIPT I-cache on CPU2
+[    2.666450] [HOST] kernel: CPU2: Booted secondary processor 0x0000000001 [0x611f0521]
+[    2.666467] [HOST] kernel: Detected PIPT I-cache on CPU3
+[    2.666484] [HOST] kernel: CPU3: Booted secondary processor 0x0000000002 [0x611f0521]
+[    2.666505] [HOST] kernel: Detected PIPT I-cache on CPU4
+[    2.666523] [HOST] kernel: CPU4: Booted secondary processor 0x0000000003 [0x611f0521]
+[    2.666540] [HOST] kernel: Detected PIPT I-cache on CPU5
+[    2.666557] [HOST] kernel: CPU5: Booted secondary processor 0x0000000004 [0x611f0521]
+[    2.666574] [HOST] kernel: Detected PIPT I-cache on CPU6
+[    2.666591] [HOST] kernel: CPU6: Booted secondary processor 0x0000000005 [0x611f0521]
+[    2.666608] [HOST] kernel: Detected PIPT I-cache on CPU7
+[    2.666625] [HOST] kernel: CPU7: Booted secondary processor 0x0000010101 [0x611f0531]
+[    2.666642] [HOST] kernel: Detected PIPT I-cache on CPU8
+[    2.666659] [HOST] kernel: CPU8: Booted secondary processor 0x0000010102 [0x611f0531]
+[    2.666676] [HOST] kernel: Detected PIPT I-cache on CPU9
+[    2.666693] [HOST] kernel: CPU9: Booted secondary processor 0x0000010103 [0x611f0531]
+[    2.666710] [HOST] kernel: smp: Brought up 1 node, 10 CPUs
+[    2.666727] [HOST] kernel: SMP: Total of 10 processors activated.
+[    2.666744] [HOST] kernel: CPU: All CPU(s) started at EL2
+[    2.666761] [HOST] kernel: CPU features: detected: Branch Target Identification
+[    2.666779] [HOST] kernel: CPU features: detected: ARMv8.4 Translation Table Level
+[    2.666796] [HOST] kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    2.666817] [HOST] kernel: CPU features: detected: Common not Private translations
+[    2.666835] [HOST] kernel: CPU features: detected: CRC32 instructions
+[    2.666855] [HOST] kernel: CPU features: detected: Data independent timing control (DIT)
+[    2.666872] [HOST] kernel: CPU features: detected: E0PD
+[    2.666890] [HOST] kernel: CPU features: detected: Enhanced Counter Virtualization
+[    2.666907] [HOST] kernel: CPU features: detected: Enhanced Privileged Access Never
+[    2.666924] [HOST] kernel: CPU features: detected: Enhanced Virtualization Traps
+[    2.666942] [HOST] kernel: CPU features: detected: Fine Grained Traps
+[    2.666960] [HOST] kernel: CPU features: detected: Generic authentication (IMP DEF algorithm)
+[    2.666977] [HOST] kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+[    2.666994] [HOST] kernel: CPU features: detected: LSE atomic instructions
+[    2.667011] [HOST] kernel: CPU features: detected: Privileged Access Never
+[    2.667028] [HOST] kernel: CPU features: detected: RAS Extension Support
+[    2.667046] [HOST] kernel: CPU features: detected: Speculation barrier (SB)
+[    2.667063] [HOST] kernel: CPU features: detected: Stage-2 Force Write-Back
+[    2.667081] [HOST] kernel: CPU features: detected: TLB range maintenance instructions
+[    2.667098] [HOST] kernel: CPU features: detected: XNX
+[    2.667115] [HOST] kernel: CPU features: detected: Scalable Matrix Extension
+[    2.667133] [HOST] kernel: CPU features: detected: SME2
+[    2.667150] [HOST] kernel: alternatives: applying system-wide alternatives
+[    2.667167] [HOST] kernel: CPU features: detected: ACTLR virtualization (architectural?)
+[    2.667185] [HOST] kernel: CPU features: detected: ICV_DIR_EL1 trapping
+[    2.667202] [HOST] kernel: SME: minimum available vector length 64 bytes per vector
+[    2.667219] [HOST] kernel: SME: maximum available vector length 64 bytes per vector
+[    2.667236] [HOST] kernel: SME: default vector length 64 bytes per vector
+[    2.667255] [HOST] kernel: Memory: 15959744K/16165072K available (19456K kernel code, 5298K rwdata, 14896K rodata, 3776K init, 809K bss, 162944K reserved, 32768K cma-reserved)
+[    2.667273] [HOST] kernel: devtmpfs: initialized
+[    2.667290] [HOST] kernel: posixtimers hash table entries: 8192 (order: 3, 131072 bytes, linear)
+[    2.667308] [HOST] kernel: futex hash table entries: 4096 (262144 bytes on 1 NUMA nodes, total 256 KiB, linear).
+[    2.667326] [HOST] kernel: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    2.667347] [HOST] kernel: 0 pages in range for non-PLT usage
+[    2.667364] [HOST] kernel: 128284 pages in range for PLT usage
+[    2.667381] [HOST] kernel: DMI: not present or invalid.
+[    2.667398] [HOST] kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    2.667416] [HOST] kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    2.667433] [HOST] kernel: audit: initializing netlink subsys (disabled)
+[    2.667455] [HOST] kernel: audit: type=2000 audit(0.004:1): state=initialized audit_enabled=0 res=1
+[    2.667474] [HOST] kernel: thermal_sys: Registered thermal governor 'step_wise'
+[    2.667491] [HOST] kernel: thermal_sys: Registered thermal governor 'power_allocator'
+[    2.667508] [HOST] kernel: cpuidle: using governor menu
+[    2.667525] [HOST] kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    2.667543] [HOST] kernel: ASID allocator initialised with 65536 entries
+[    2.667559] [HOST] kernel: Serial: AMBA PL011 UART driver
+[    2.667577] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/phy@403000000
+[    2.667594] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/usb@402280000
+[    2.667612] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    2.667629] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    2.667647] [HOST] kernel: /soc/usb@402280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    2.667665] [HOST] kernel: /soc/usb@402280000: Fixed dependency cycle(s) with /soc/phy@403000000
+[    2.667682] [HOST] kernel: /soc/phy@403000000: Fixed dependency cycle(s) with /soc/usb@402280000
+[    2.667699] [HOST] kernel: /soc/phy@403000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    2.667716] [HOST] kernel: /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    2.667734] [HOST] kernel: /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    2.667751] [HOST] kernel: /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    2.667769] [HOST] kernel: /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    2.667786] [HOST] kernel: /soc/pcie@1cb0000000: Fixed dependency cycle(s) with /soc/pcie@1cb0000000
+[    2.667804] [HOST] kernel: /soc/pcie@1cb0000000/pci@0,0: Fixed dependency cycle(s) with /soc/pcie@1cb0000000/pci@0,0
+[    2.667822] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/phy@403000000
+[    2.667840] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/usb@402280000
+[    2.667857] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    2.667875] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    2.667892] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/usb@402280000
+[    2.667909] [HOST] kernel: /soc/usb@402280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    2.667926] [HOST] kernel: /soc/usb@402280000: Fixed dependency cycle(s) with /soc/phy@403000000
+[    2.667944] [HOST] kernel: /soc/usb@402280000: Fixed dependency cycle(s) with /soc/phy@403000000
+[    2.667961] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/phy@403000000
+[    2.667978] [HOST] kernel: /soc/phy@403000000: Fixed dependency cycle(s) with /soc/usb@402280000
+[    2.667995] [HOST] kernel: /soc/phy@403000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@c/connector
+[    2.668026] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    2.668044] [HOST] kernel: /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    2.668061] [HOST] kernel: /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    2.668078] [HOST] kernel: /soc/usb@40a280000: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    2.668095] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    2.668112] [HOST] kernel: /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    2.668129] [HOST] kernel: /soc/phy@40b000000: Fixed dependency cycle(s) with /soc/spmi@388908000/usb-pd@a/connector
+[    2.668149] [HOST] kernel: /soc/pcie@1cb0000000: Fixed dependency cycle(s) with /soc/pcie@1cb0000000
+[    2.668167] [HOST] kernel: /soc/pcie@1cb0000000/pci@0,0: Fixed dependency cycle(s) with /soc/pcie@1cb0000000/pci@0,0
+[    2.668184] [HOST] kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    2.668201] [HOST] kernel: HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    2.668219] [HOST] kernel: HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    2.668236] [HOST] kernel: HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    2.668253] [HOST] kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    2.668270] [HOST] kernel: HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    2.668287] [HOST] kernel: ACPI: Interpreter disabled.
+[    2.668304] [HOST] kernel: iommu: Default domain type: Translated
+[    2.668321] [HOST] kernel: iommu: DMA domain TLB invalidation policy: strict mode
+[    2.668338] [HOST] kernel: SCSI subsystem initialized
+[    2.668356] [HOST] kernel: libata version 3.00 loaded.
+[    2.668373] [HOST] kernel: usbcore: registered new interface driver usbfs
+[    2.668390] [HOST] kernel: usbcore: registered new interface driver hub
+[    2.668411] [HOST] kernel: usbcore: registered new device driver usb
+[    2.668428] [HOST] kernel: pps_core: LinuxPPS API ver. 1 registered
+[    2.668445] [HOST] kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    2.668462] [HOST] kernel: PTP clock support registered
+[    2.668479] [HOST] kernel: EDAC MC: Ver: 3.0.0
+[    2.668497] [HOST] kernel: scmi_core: SCMI protocol bus registered
+[    2.668514] [HOST] kernel: FPGA manager framework
+[    2.668531] [HOST] kernel: vgaarb: loaded
+[    2.668549] [HOST] kernel: clocksource: Switched to clocksource arch_sys_counter
+[    2.668565] [HOST] kernel: VFS: Disk quotas dquot_6.6.0
+[    2.668583] [HOST] kernel: VFS: Dquot-cache hash table entries: 2048 (order 0, 16384 bytes)
+[    2.668600] [HOST] kernel: pnp: PnP ACPI: disabled
+[    2.668617] [HOST] kernel: NET: Registered PF_INET protocol family
+[    2.668635] [HOST] kernel: IP idents hash table entries: 262144 (order: 7, 2097152 bytes, linear)
+[    2.668653] [HOST] kernel: tcp_listen_portaddr_hash hash table entries: 8192 (order: 3, 131072 bytes, linear)
+[    2.668670] [HOST] kernel: Table-perturb hash table entries: 65536 (order: 4, 262144 bytes, linear)
+[    2.668687] [HOST] kernel: TCP established hash table entries: 131072 (order: 6, 1048576 bytes, linear)
+[    2.668705] [HOST] kernel: TCP bind hash table entries: 65536 (order: 7, 2097152 bytes, linear)
+[    2.668722] [HOST] kernel: TCP: Hash tables configured (established 131072 bind 65536)
+[    2.668740] [HOST] kernel: UDP hash table entries: 8192 (order: 5, 524288 bytes, linear)
+[    2.668757] [HOST] kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    2.668777] [HOST] kernel: RPC: Registered named UNIX socket transport module.
+[    2.668795] [HOST] kernel: RPC: Registered udp transport module.
+[    2.668812] [HOST] kernel: RPC: Registered tcp transport module.
+[    2.668829] [HOST] kernel: RPC: Registered tcp-with-tls transport module.
+[    2.668846] [HOST] kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    2.668863] [HOST] kernel: PCI: CLS 0 bytes, default 64
+[    2.668880] [HOST] kernel: Unpacking initramfs...
+[    2.668897] [HOST] kernel: Freeing initrd memory: 1520K
+[    2.668914] [HOST] kernel: kvm [1]: nv: 570 coarse grained trap handlers
+[    2.668931] [HOST] kernel: kvm [1]: nv: 710 fine grained trap handlers
+[    2.668948] [HOST] kernel: kvm [1]: IPA Size Limit: 42 bits
+[    2.668965] [HOST] kernel: kvm [1]: Non-architectural vgic, tainting kernel
+[    2.668982] [HOST] kernel: kvm [1]: GICv3: no GICV resource entry
+[    2.668999] [HOST] kernel: kvm [1]: disabling GICv2 emulation
+[    2.669016] [HOST] kernel: kvm [1]: GICv3 with broken locally generated SEI
+[    2.669033] [HOST] kernel: kvm [1]: GICv3 sysreg trapping enabled ([G0G1D], reduced performance)
+[    2.669050] [HOST] kernel: kvm [1]: GIC system register CPU interface enabled
+[    2.669068] [HOST] kernel: kvm [1]: vgic interrupt IRQ33
+[    2.669085] [HOST] kernel: kvm [1]: VHE mode initialized successfully
+[    2.669101] [HOST] kernel: Initialise system trusted keyrings
+[    2.669119] [HOST] kernel: workingset: timestamp_bits=42 (anon: 38) max_order=20 bucket_order=0 (anon: 0)
+[    2.669136] [HOST] kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.669153] [HOST] kernel: NFS: Registering the id_resolver key type
+[    2.669170] [HOST] kernel: Key type id_resolver registered
+[    2.669187] [HOST] kernel: Key type id_legacy registered
+[    2.669205] [HOST] kernel: nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    2.669222] [HOST] kernel: nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    2.669239] [HOST] kernel: 9p: Installing v9fs 9p2000 file system support
+[    2.669256] [HOST] kernel: Key type asymmetric registered
+[    2.669273] [HOST] kernel: Asymmetric key parser 'x509' registered
+[    2.669290] [HOST] kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    2.669308] [HOST] kernel: io scheduler mq-deadline registered
+[    2.669325] [HOST] kernel: io scheduler kyber registered
+[    2.669341] [HOST] kernel: io scheduler bfq registered
+[    2.669702] [HOST] kernel: platform 403000000.phy: devices misses supplier 402280000.usb
+[    2.669999] [HOST] kernel: platform 40b000000.phy: devices misses supplier 40a280000.usb
+[    2.670025] [HOST] kernel: ledtrig-cpu: registered to indicate activity on CPUs
+[    2.670129] [HOST] kernel: apple-pmgr-pwrstate 388280000.power-management:power-controller@80: always-on domain nub_spi0 is not on at boot
+[    2.670232] [HOST] kernel: apple-pmgr-pwrstate 388280000.power-management:power-controller@88: always-on domain nub_ocla is not on at boot
+[    2.670253] [HOST] kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    2.670271] [HOST] kernel: msm_serial: driver initialized
+[    2.670288] [HOST] kernel: 3ad200000.serial: ttySAC0 at MMIO 0x3ad200000 (irq = 57, base_baud = 0) is a APPLE S5L
+[    2.670305] [HOST] kernel: SuperH (H)SCI(F) driver initialized
+[    2.670322] [HOST] kernel: STM32 USART driver initialized
+[    2.670590] [HOST] kernel: apple-dart 30a300000.iommu: Limiting DMA range to 0x0000010000000000..0x0000010fffffffff
+[    2.670858] [HOST] kernel: platform soc:display-subsystem: Adding to iommu group 0
+[    2.671114] [HOST] kernel: apple-dart 30a300000.iommu: Limited to ias=36 due to lock
+[    2.671363] [HOST] kernel: apple-dart 30a300000.iommu: DART [pagesize 4000, 32 streams, bypass support: 1, bypass forced: 0, locked: 1, AS 42 -> 42] initialized
+[    2.671630] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-reset: t=40605us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0x0
+[    2.671890] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-reset: sid0 tcr=0x1 ttbr0=0x0
+[    2.672157] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-reset: sid1 tcr=0x1 ttbr0=0x18223400
+[    2.672410] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-reset: sid2 tcr=0x1 ttbr0=0x24632060
+[    2.672662] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-reset: sid3 tcr=0x1 ttbr0=0x844d4
+[    2.672913] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-disable: t=40657us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0x0
+[    2.673188] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-disable: sid0 tcr=0x0 ttbr0=0x0
+[    2.673455] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-disable: sid1 tcr=0x0 ttbr0=0x18223400
+[    2.673719] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-disable: sid2 tcr=0x0 ttbr0=0x24632060
+[    2.673988] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-disable: sid3 tcr=0x0 ttbr0=0x844d4
+[    2.674252] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-ttbr-clear: t=40702us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0x0
+[    2.674522] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-ttbr-clear: sid0 tcr=0x0 ttbr0=0x0
+[    2.674786] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-ttbr-clear: sid1 tcr=0x0 ttbr0=0x0
+[    2.675050] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-ttbr-clear: sid2 tcr=0x0 ttbr0=0x0
+[    2.675315] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-ttbr-clear: sid3 tcr=0x0 ttbr0=0x0
+[    2.675584] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-remap: t=40733us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0x0
+[    2.675859] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-remap: sid0 tcr=0x0 ttbr0=0x0
+[    2.676201] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-remap: sid1 tcr=0x80 ttbr0=0x0
+[    2.676474] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-remap: sid2 tcr=0x80 ttbr0=0x0
+[    2.676741] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-remap: sid3 tcr=0x80 ttbr0=0x0
+[    2.677008] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-enable-streams: t=40763us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.677286] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-enable-streams: sid0 tcr=0x0 ttbr0=0x0
+[    2.677561] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-enable-streams: sid1 tcr=0x80 ttbr0=0x0
+[    2.677827] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-enable-streams: sid2 tcr=0x80 ttbr0=0x0
+[    2.678106] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-enable-streams: sid3 tcr=0x80 ttbr0=0x0
+[    2.678369] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-error-clear: t=40793us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.678631] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-error-clear: sid0 tcr=0x0 ttbr0=0x0
+[    2.678897] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-error-clear: sid1 tcr=0x80 ttbr0=0x0
+[    2.679156] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-error-clear: sid2 tcr=0x80 ttbr0=0x0
+[    2.679414] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-error-clear: sid3 tcr=0x80 ttbr0=0x0
+[    2.679683] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-unmask: t=40822us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.679947] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-unmask: sid0 tcr=0x0 ttbr0=0x0
+[    2.680202] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-unmask: sid1 tcr=0x80 ttbr0=0x0
+[    2.680367] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-unmask: sid2 tcr=0x80 ttbr0=0x0
+[    2.680503] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-unmask: sid3 tcr=0x80 ttbr0=0x0
+[    2.680634] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-reset: t=40871us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.680764] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-reset: sid0 tcr=0x0 ttbr0=0x0
+[    2.680892] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-reset: sid1 tcr=0x80 ttbr0=0x0
+[    2.681020] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-reset: sid2 tcr=0x80 ttbr0=0x0
+[    2.681147] [HOST] kernel: apple-dart 394800000.iommu: x6e3 post-reset: sid3 tcr=0x80 ttbr0=0x0
+[    2.681274] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-request-irq: t=40899us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.681399] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-request-irq: sid0 tcr=0x0 ttbr0=0x0
+[    2.681529] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-request-irq: sid1 tcr=0x80 ttbr0=0x0
+[    2.681664] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-request-irq: sid2 tcr=0x80 ttbr0=0x0
+[    2.681792] [HOST] kernel: apple-dart 394800000.iommu: x6e3 pre-request-irq: sid3 tcr=0x80 ttbr0=0x0
+[    2.681940] [HOST] kernel: platform 394600000.mtp: Adding to iommu group 1
+[    2.682090] [HOST] kernel: platform 394b28000.input: Adding to iommu group 1
+[    2.682231] [HOST] kernel: apple-dart 394800000.iommu: x6e3 trace: TTBR0 set paddr=0x000001000e314000 sidmap=0x1 t=41014us irqs=0
+[    2.682365] [HOST] kernel: apple-dart 394800000.iommu: x6e3 trace: TCR translate-enable tcr=0x9 sidmap=0x1 t=41022us irqs=0
+[    2.682506] [HOST] kernel: apple-dart 394800000.iommu: x6e3 trace: TTBR0 set paddr=0x000001000e314000 sidmap=0x1 t=41033us irqs=0
+[    2.682637] [HOST] kernel: apple-dart 394800000.iommu: x6e3 trace: TCR translate-enable tcr=0x9 sidmap=0x1 t=41041us irqs=0
+[    2.682765] [HOST] kernel: apple-dart 394800000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    2.682899] [HOST] kernel: apple-dart 402f00000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    2.683035] [HOST] kernel: platform 402280000.usb: Adding to iommu group 2
+[    2.683167] [HOST] kernel: apple-dart 402f80000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    2.683300] [HOST] kernel: apple-dart 40af00000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    2.683429] [HOST] kernel: platform 40a280000.usb: Adding to iommu group 3
+[    2.683565] [HOST] kernel: apple-dart 40af80000.iommu: DART [pagesize 4000, 16 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    2.683697] [HOST] kernel: apple-dart 490000000.iommu: DART [pagesize 4000, 19 streams, bypass support: 1, bypass forced: 0, locked: 0, AS 42 -> 42] initialized
+[    2.683707] [HOST] kernel: [drm] Initialized simpledrm 1.0.0 for 103e1c88000.framebuffer on minor 0
+[    2.683716] [HOST] kernel: Console: switching to colour frame buffer device 320x100
+[    2.683842] [HOST] kernel: simple-framebuffer 103e1c88000.framebuffer: [drm] fb0: simpledrmdrmfb frame buffer device
+[    2.683853] [HOST] kernel: loop: module loaded
+[    2.683861] [HOST] kernel: megasas: 07.734.00.00-rc1
+[    2.683869] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/phy@403000000
+[    2.683878] [HOST] kernel: /soc/spmi@388908000/usb-pd@c/connector: Fixed dependency cycle(s) with /soc/usb@402280000
+[    2.683886] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/phy@40b000000
+[    2.683893] [HOST] kernel: /soc/spmi@388908000/usb-pd@a/connector: Fixed dependency cycle(s) with /soc/usb@40a280000
+[    2.683901] [HOST] kernel: tun: Universal TUN/TAP device driver, 1.6
+[    2.683909] [HOST] kernel: thunder_xcv, ver 1.0
+[    2.683916] [HOST] kernel: thunder_bgx, ver 1.0
+[    2.683924] [HOST] kernel: nicpf, ver 1.0
+[    2.683931] [HOST] kernel: e1000: Intel(R) PRO/1000 Network Driver
+[    2.683939] [HOST] kernel: e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    2.683947] [HOST] kernel: e1000e: Intel(R) PRO/1000 Network Driver
+[    2.683959] [HOST] kernel: e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    2.683967] [HOST] kernel: igb: Intel(R) Gigabit Ethernet Network Driver
+[    2.683975] [HOST] kernel: igb: Copyright (c) 2007-2014 Intel Corporation.
+[    2.683982] [HOST] kernel: igbvf: Intel(R) Gigabit Virtual Function Network Driver
+[    2.683990] [HOST] kernel: igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    2.683998] [HOST] kernel: sky2: driver version 1.30
+[    2.684011] [HOST] kernel: VFIO - User Level meta-driver version: 0.3
+[    2.684019] [HOST] kernel: usbcore: registered new interface driver usb-storage
+[    2.684028] [HOST] kernel: i2c_dev: i2c /dev entries driver
+[    2.684036] [HOST] kernel: usbcore: registered new interface driver usbhid
+[    2.684044] [HOST] kernel: usbhid: USB HID core driver
+[    2.684052] [HOST] kernel: NET: Registered PF_INET6 protocol family
+[    2.684061] [HOST] kernel: Segment Routing with IPv6
+[    2.684069] [HOST] kernel: In-situ OAM (IOAM) with IPv6
+[    2.684077] [HOST] kernel: NET: Registered PF_PACKET protocol family
+[    2.684084] [HOST] kernel: 9pnet: Installing 9P2000 support
+[    2.684092] [HOST] kernel: Key type dns_resolver registered
+[    2.684100] [HOST] kernel: registered taskstats version 1
+[    2.684108] [HOST] kernel: Loading compiled-in X.509 certificates
+[    2.684116] [HOST] kernel: Demotion targets for Node 0: null
+[    2.684248] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: rtkit-helper probe entry t=115056us irqs=0
+[    2.684379] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1: reading dart-mtp DAPF @0x394810000, 9 entries, no writes
+[    2.684509] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[0] r0=0x0 r4=0x0 start=0x425000010c end=0x4b0830d00b r20=0x221 DIFF
+[    2.684638] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[1] r0=0x20 r4=0x0 start=0x22405037a8c end=0x41741003 r20=0x2764 DIFF
+[    2.684768] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[2] r0=0x0 r4=0x0 start=0xc00b108e00 end=0x408800307 r20=0x100 DIFF
+[    2.684898] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[3] r0=0x0 r4=0x0 start=0x18e10882310 end=0x1008001a7 r20=0x0 DIFF
+[    2.685028] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[4] r0=0x0 r4=0x0 start=0x20080010400 end=0x13a80801417 r20=0x40 DIFF
+[    2.685157] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[5] r0=0x0 r4=0x0 start=0x3090100480c end=0x200800812b r20=0x0 DIFF
+[    2.685290] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[6] r0=0x100 r4=0x0 start=0x1080005140 end=0x87c480083 r20=0x400 DIFF
+[    2.685421] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[7] r0=0x0 r4=0x0 start=0x12444898 end=0x26815c083 r20=0x400 DIFF
+[    2.685549] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1 dapf[8] r0=0x100 r4=0x0 start=0x862110004 end=0x8001002803 r20=0x0 DIFF
+[    2.685681] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1: reads done
+[    2.685819] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 A1: RESULT DIFF (0/9 entries match ADT)
+[    2.685948] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: CPU_CONTROL before RUN = 0x0 t=115501us irqs=0
+[    2.686076] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: CPU_CONTROL after RUN = 0x10 t=115515us irqs=0
+[    2.686204] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: t=115737us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.686329] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid0 tcr=0x9 ttbr0=0x1000e315
+[    2.686454] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid1 tcr=0x80 ttbr0=0x0
+[    2.686579] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid2 tcr=0x80 ttbr0=0x0
+[    2.686706] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid3 tcr=0x80 ttbr0=0x0
+[    2.686832] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq #1 error=0x0 addr=0x0
+[    2.686959] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: t=115814us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.687083] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid0 tcr=0x9 ttbr0=0x1000e315
+[    2.687207] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid1 tcr=0x80 ttbr0=0x0
+[    2.687330] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid2 tcr=0x80 ttbr0=0x0
+[    2.687452] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid3 tcr=0x80 ttbr0=0x0
+[    2.687576] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq #2 error=0x0 addr=0x0
+[    2.687701] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: t=115887us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.687826] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid0 tcr=0x9 ttbr0=0x1000e315
+[    2.687949] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid1 tcr=0x80 ttbr0=0x0
+[    2.688078] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid2 tcr=0x80 ttbr0=0x0
+[    2.688204] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-first: sid3 tcr=0x80 ttbr0=0x0
+[    2.688327] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq #3 error=0x0 addr=0x0
+[    2.688453] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: t=115988us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.688586] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid0 tcr=0x9 ttbr0=0x1000e315
+[    2.688711] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid1 tcr=0x80 ttbr0=0x0
+[    2.688842] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid2 tcr=0x80 ttbr0=0x0
+[    2.688971] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid3 tcr=0x80 ttbr0=0x0
+[    2.689112] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: t=120661us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.689249] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid0 tcr=0x9 ttbr0=0x1000e315
+[    2.689383] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid1 tcr=0x80 ttbr0=0x0
+[    2.689506] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid2 tcr=0x80 ttbr0=0x0
+[    2.689631] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid3 tcr=0x80 ttbr0=0x0
+[    2.689759] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: 10 ms after RUN, before wake: CPU_CONTROL = 0x10 t=135134us irqs=4488
+[    2.689886] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: apple_rtkit_wake() call t=135413us irqs=4566
+[    2.690014] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: mbox TX #1 ep=0x0 msg=0x60000000000220 t=135680us irqs=4640
+[    2.690139] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: t=315392us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.690263] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid0 tcr=0x9 ttbr0=0x1000e315
+[    2.690386] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid1 tcr=0x80 ttbr0=0x0
+[    2.690511] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid2 tcr=0x80 ttbr0=0x0
+[    2.690634] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid3 tcr=0x80 ttbr0=0x0
+[    2.690759] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: t=514017us error=0x0 mask=0x0 err_streams=0x0 lock=0x1a enable=0xffff
+[    2.690885] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid0 tcr=0x9 ttbr0=0x1000e315
+[    2.691009] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid1 tcr=0x80 ttbr0=0x0
+[    2.691135] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid2 tcr=0x80 ttbr0=0x0
+[    2.691257] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq-count: sid3 tcr=0x80 ttbr0=0x0
+[    2.691383] [HOST] kernel: apple-dart 394800000.iommu: x6e3 irq #99999 error=0x0 addr=0x0
+[    2.691393] [HOST] kernel: irq 59: nobody cared (try booting with the "irqpoll" option)
+[    2.691401] [HOST] kernel: CPU: 0 UID: 0 PID: 0 Comm: swapper/0 Tainted: G S                  7.1.13-x6e3-g6fe561aa9c3b #1 PREEMPT 
+[    2.691409] [HOST] kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+[    2.691417] [HOST] kernel: Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+[    2.691425] [HOST] kernel: Call trace:
+[    2.691432] [HOST] kernel:  show_stack+0x18/0x24 (C)
+[    2.691440] [HOST] kernel:  dump_stack_lvl+0x60/0x80
+[    2.691448] [HOST] kernel:  dump_stack+0x18/0x24
+[    2.691455] [HOST] kernel:  __report_bad_irq+0x4c/0xe4
+[    2.691464] [HOST] kernel:  note_interrupt+0x348/0x394
+[    2.691471] [HOST] kernel:  handle_irq_event+0x94/0xbc
+[    2.691479] [HOST] kernel:  handle_fasteoi_irq+0xec/0x198
+[    2.691486] [HOST] kernel:  handle_irq_desc+0x34/0x60
+[    2.691494] [HOST] kernel:  generic_handle_domain_irq+0x18/0x24
+[    2.691502] [HOST] kernel:  aic_handle_irq+0xb8/0x160
+[    2.691510] [HOST] kernel:  call_on_irq_stack+0x30/0x48
+[    2.691517] [HOST] kernel:  do_interrupt_handler+0x80/0x8c
+[    2.691525] [HOST] kernel:  el1_interrupt+0x38/0x60
+[    2.691532] [HOST] kernel:  el1h_64_irq_handler+0x18/0x24
+[    2.691539] [HOST] kernel:  el1h_64_irq+0x6c/0x70
+[    2.691547] [HOST] kernel:  cpu_idle_poll.isra.0+0x34/0x68 (P)
+[    2.691555] [HOST] kernel:  do_idle+0x6c/0x2c0
+[    2.691563] [HOST] kernel:  cpu_startup_entry+0x38/0x40
+[    2.691570] [HOST] kernel:  rest_init+0xdc/0xe0
+[    2.691577] [HOST] kernel:  start_kernel+0x77c/0x788
+[    2.691584] [HOST] kernel:  __primary_switched+0x88/0x90
+[    2.691592] [HOST] kernel: handlers:
+[    2.691599] [HOST] kernel: [<000000007375d110>] apple_dart_irq
+[    2.691607] [HOST] kernel: Disabling IRQ #59
+[    2.691738] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: timed out waiting for endpoint map: -62
+[    2.691868] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: apple_rtkit_wake() returned -62 t=1152241us irqs=100005
+[    2.691995] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: mbox TX #2 ep=0x0 msg=0xb0000000000010 t=1152475us irqs=100005
+[    2.692127] [HOST] kernel: rtkit-helper 394600000.mtp: Coprocessor shutdown failed: -62; DMA must remain mapped
+[    2.692254] [HOST] kernel: rtkit-helper 394600000.mtp: error -ETIME: Failed to wake up coprocessor
+[    2.692386] [HOST] kernel: rtkit-helper 394600000.mtp: probe with driver rtkit-helper failed with error -62
+[    2.692509] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: Initializing (protocol version 12)
+[    2.692631] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: asi.c:180: asi0: asi CMD size chosen is: 0
+[    2.692753] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: asi.c:180: asi1: asi CMD size chosen is: 0
+[    2.692874] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: cmd.c:8550: boot: mode normal
+[    2.693000] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: power_budget.c:1001: PowerBudget: set on boot setByHost=1, is_warm_boot=0
+[    2.693120] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: power_budget.c:269: PowerBudget: num dies horizontal change 1 -> 1
+[    2.693233] [HOST] kernel: nvme nvme0: passthrough uses implicit buffer lengths
+[    2.693248] [HOST] kernel:  nvme0n1: p1 p2 p3 p4 p5 p6
+[    2.693256] [HOST] kernel: clk: Disabling unused clocks
+[    2.693263] [HOST] kernel: PM: genpd: Disabling unused power domains
+[    2.693386] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.693395] [HOST] kernel: Freeing unused kernel memory: 3776K
+[    2.693403] [HOST] kernel: Run /init as init process
+[    2.693410] [HOST] kernel:   with arguments:
+[    2.693418] [HOST] kernel:     /init
+[    2.693426] [HOST] kernel:   with environment:
+[    2.693434] [HOST] kernel:     HOME=/
+[    2.693441] [HOST] kernel:     TERM=linux
+[    2.693449] [HOST] kernel:     selinux=0
+[    2.693458] [HOST] x6e3-fedora-init: waiting for UUID=[UUID]
+[    2.693580] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.693700] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.693710] [HOST] x6e3-fedora-init: mounting /dev/nvme0n1p5 read-only
+[    2.693718] [HOST] kernel: EXT4-fs (nvme0n1p5): Supports (experimental) DIO atomic writes awu_min: 4096, awu_max: 4096
+[    2.693726] [HOST] kernel: EXT4-fs (nvme0n1p5): orphan cleanup on readonly fs
+[    2.693735] [HOST] kernel: EXT4-fs (nvme0n1p5): mounted filesystem [UUID] ro with ordered data mode. Quota mode: none.
+[    2.693744] [HOST] systemd[1]: System time advanced to built-in epoch: Mon 2026-09-14 03:00:00 +03
+[    2.693756] [HOST] systemd[1]: systemd 259.9-1.fc44 running in system mode (+PAM +AUDIT +SELINUX -APPARMOR +IMA +IPE +SMACK +SECCOMP -GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF +XKBCOMMON +UTMP +SYSVINIT +LIBARCHIVE)
+[    2.693765] [HOST] systemd[1]: Detected architecture arm64.
+[    2.693774] [HOST] systemd[1]: Hostname set to <x6e3-j713-fedora>.
+[    2.693782] [HOST] systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+[    2.693790] [HOST] systemd[1]: Queued start job for default target multi-user.target.
+[    2.693799] [HOST] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[    2.693808] [HOST] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[    2.693816] [HOST] systemd[1]: Created slice user.slice - User and Session Slice.
+[    2.693824] [HOST] systemd[1]: Started systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch.
+[    2.693833] [HOST] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[    2.693842] [HOST] systemd[1]: proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point skipped, unmet condition check ConditionPathExists=/proc/sys/fs/binfmt_misc
+[    2.693850] [HOST] systemd[1]: Reached target imports.target - Image Downloads.
+[    2.693860] [HOST] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[    2.693869] [HOST] systemd[1]: Reached target network-online.target - Network is Online.
+[    2.693878] [HOST] systemd[1]: Reached target paths.target - Path Units.
+[    2.693886] [HOST] systemd[1]: Reached target remote-cryptsetup.target - Remote Encrypted Volumes.
+[    2.693894] [HOST] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[    2.693902] [HOST] systemd[1]: Reached target remote-veritysetup.target - Remote Verity Protected Volumes.
+[    2.693911] [HOST] systemd[1]: Reached target slices.target - Slice Units.
+[    2.693919] [HOST] systemd[1]: Reached target swap.target - Swaps.
+[    2.693927] [HOST] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[    2.693936] [HOST] systemd[1]: Listening on systemd-ask-password.socket - Query the User Interactively for a Password.
+[    2.693944] [HOST] systemd[1]: Listening on systemd-coredump.socket - Process Core Dump Socket.
+[    2.693953] [HOST] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[    2.693961] [HOST] systemd[1]: Listening on systemd-factory-reset.socket - Factory Reset Management.
+[    2.693970] [HOST] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.
+[    2.693978] [HOST] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[    2.693986] [HOST] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[    2.693995] [HOST] systemd[1]: Listening on systemd-mute-console.socket - Console Output Muting Service Socket.
+[    2.694003] [HOST] systemd[1]: systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket skipped, unmet condition check ConditionPathExists=/proc/pressure/memory
+[    2.694012] [HOST] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[    2.694020] [HOST] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[    2.694029] [HOST] systemd[1]: Listening on systemd-repart.socket - Disk Repartitioning Service Socket.
+[    2.694038] [HOST] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[    2.694046] [HOST] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[    2.694054] [HOST] systemd[1]: Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+[    2.694063] [HOST] systemd[1]: Listening on systemd-userdbd.socket - User Database Manager Socket.
+[    2.694071] [HOST] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[    2.694080] [HOST] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[    2.694089] [HOST] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[    2.694097] [HOST] systemd[1]: sys-kernel-tracing.mount - Kernel Trace File System skipped, unmet condition check ConditionPathExists=/sys/kernel/tracing
+[    2.694106] [HOST] systemd[1]: tmp.mount: x-systemd.graceful-option=usrquota specified, but option is not available, suppressing.
+[    2.694116] [HOST] systemd[1]: Mounting tmp.mount - Temporary Directory /tmp...
+[    2.694125] [HOST] systemd[1]: fips-crypto-policy-overlay.service - Bind-mount FIPS crypto-policy in FIPS mode skipped, unmet condition check ConditionKernelCommandLine=fips=1
+[    2.694133] [HOST] systemd[1]: kmod-static-nodes.service - Create List of Static Device Nodes skipped, unmet condition check ConditionFileNotEmpty=/lib/modules/7.1.13-x6e3-g6fe561aa9c3b/modules.devname
+[    2.694141] [HOST] systemd[1]: modprobe@configfs.service - Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[    2.694150] [HOST] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[    2.694158] [HOST] systemd[1]: modprobe@drm.service - Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[    2.694167] [HOST] systemd[1]: modprobe@efi_pstore.service - Load Kernel Module efi_pstore skipped, unmet condition check ConditionKernelModuleLoaded=!efi_pstore
+[    2.694175] [HOST] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[    2.694184] [HOST] systemd[1]: systemd-boot-clear-sysfail.service - Clear SysFail Entry If The Boot Is Successful skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/LoaderEntrySysFail-[UUID]
+[    2.694193] [HOST] systemd[1]: Starting systemd-fsck-root.service - File System Check on Root Device...
+[    2.694202] [HOST] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-[UUID]
+[    2.694210] [HOST] systemd[1]: Starting systemd-journald.service - Journal Service...
+[    2.694218] [HOST] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[    2.694226] [HOST] systemd[1]: Starting systemd-network-generator.service - Generate Network Units from Kernel Command Line...
+[    2.694235] [HOST] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[    2.694243] [HOST] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[    2.694252] [HOST] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[    2.694260] [HOST] systemd[1]: systemd-pcrnvdone.service - TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionPathExists=/etc/initrd-release
+[    2.694268] [HOST] systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+[    2.694276] [HOST] systemd[1]: systemd-pcrproduct.service - TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[    2.694285] [HOST] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[    2.694293] [HOST] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[    2.694302] [HOST] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[    2.694310] [HOST] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[    2.694318] [HOST] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[    2.694327] [HOST] systemd[1]: Mounted tmp.mount - Temporary Directory /tmp.
+[    2.694335] [HOST] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[    2.694343] [HOST] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    2.694352] [HOST] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[    2.694360] [HOST] systemd[1]: Finished systemd-fsck-root.service - File System Check on Root Device.
+[    2.694368] [HOST] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[    2.694376] [HOST] systemd[1]: Finished systemd-network-generator.service - Generate Network Units from Kernel Command Line.
+[    2.694386] [HOST] systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[    2.694394] [HOST] systemd[1]: Reached target network-pre.target - Preparation for Network.
+[    2.694403] [HOST] systemd[1]: sys-fs-fuse-connections.mount - FUSE Control File System skipped, unmet condition check ConditionPathExists=/sys/fs/fuse/connections
+[    2.694428] [HOST] systemd-journald[174]: Collecting audit messages is enabled.
+[    2.694449] [HOST] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[    2.694458] [HOST] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[    2.694466] [HOST] kernel: audit: type=1334 audit(1789344000.340:2): prog-id=16 op=LOAD
+[    2.694474] [HOST] kernel: audit: type=1334 audit(1789344000.340:3): prog-id=17 op=LOAD
+[    2.694481] [HOST] kernel: audit: type=1334 audit(1789344000.340:4): prog-id=18 op=LOAD
+[    2.694489] [HOST] systemd[1]: Starting systemd-userdbd.service - User Database Manager...
+[    2.694497] [HOST] systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+[    2.694506] [HOST] kernel: audit: type=1130 audit(1789344000.348:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.694630] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.694750] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.694760] [HOST] systemd[1]: Started systemd-userdbd.service - User Database Manager.
+[    2.694769] [HOST] kernel: audit: type=1130 audit(1789344000.368:6): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-userdbd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.696007] [HOST] systemd[1]: Started systemd-journald.service - Journal Service.
+[    2.700682] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.700831] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.700958] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701089] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701219] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701345] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701468] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701590] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701713] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701838] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.701961] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702084] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702206] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702331] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702454] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702576] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702700] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702822] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.702944] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.703066] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.703188] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    2.732005] [HOST] kernel: audit: type=1130 audit(1789344000.404:7): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.736103] [HOST] kernel: EXT4-fs (nvme0n1p5): re-mounted [UUID] r/w.
+[    2.736116] [HOST] kernel: audit: type=1130 audit(1789344000.408:8): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.782698] [HOST] systemd-journald[174]: Received client request to flush runtime journal.
+[    2.782951] [HOST] kernel: audit: type=1130 audit(1789344000.424:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.783079] [HOST] systemd-journald[174]: /var/log/journal/[MACHINE-ID]/system.journal: Realtime clock jumped backwards relative to last journal entry, rotating.
+[    2.783182] [HOST] systemd-journald[174]: Rotating system journal.
+[    2.783284] [HOST] kernel: audit: type=1130 audit(1789344000.428:10): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev-early comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.783361] [HOST] kernel: xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.783790] [HOST] kernel: xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    2.784088] [HOST] kernel: xhci-hcd xhci-hcd.0.auto: hcc params 0x0238ffcd hci version 0x110 quirks 0x0000808000000010
+[    2.784363] [HOST] kernel: xhci-hcd xhci-hcd.0.auto: irq 90, io mem 0x40a280000
+[    2.784697] [HOST] kernel: xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    2.784959] [HOST] kernel: xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    2.785229] [HOST] kernel: xhci-hcd xhci-hcd.0.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    2.785496] [HOST] kernel: hub 1-0:1.0: USB hub found
+[    2.785967] [HOST] kernel: hub 1-0:1.0: 1 port detected
+[    2.786308] [HOST] kernel: usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.786673] [HOST] kernel: hub 2-0:1.0: USB hub found
+[    2.787020] [HOST] kernel: hub 2-0:1.0: 1 port detected
+[    3.029131] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.029978] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.030274] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.030556] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.033074] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.033490] [HOST] kernel: usb 1-1: new full-speed USB device number 2 using xhci-hcd
+[    3.033895] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.036048] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.036434] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.041008] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.041375] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.041664] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.041929] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.042569] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.044460] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.044931] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.050470] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.050845] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.051154] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.051457] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.051729] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.052037] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.056180] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.056409] [HOST] kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: util.c:4198: attempting to read element=PANICLOG not yet written, returning ERR_ABORT
+[    3.180084] [HOST] kernel: input: LEKU Lucky65 V3 as /devices/platform/soc/40a280000.usb/xhci-hcd.0.auto/usb1/1-1/1-1:1.0/0003:342D:E538.0001/input/input0
+[    3.332007] [HOST] kernel: hid-generic 0003:342D:E538.0001: input: USB HID v1.11 Keyboard [LEKU Lucky65 V3] on usb-xhci-hcd.0.auto-1/input0
+[    3.332234] [HOST] kernel: hid-generic 0003:342D:E538.0002: device has no listeners, quitting
+[    3.332424] [HOST] kernel: input: LEKU Lucky65 V3 Mouse as /devices/platform/soc/40a280000.usb/xhci-hcd.0.auto/usb1/1-1/1-1:1.2/0003:342D:E538.0003/input/input1
+[    3.336006] [HOST] kernel: input: LEKU Lucky65 V3 System Control as /devices/platform/soc/40a280000.usb/xhci-hcd.0.auto/usb1/1-1/1-1:1.2/0003:342D:E538.0003/input/input2
+[    3.396007] [HOST] kernel: input: LEKU Lucky65 V3 Consumer Control as /devices/platform/soc/40a280000.usb/xhci-hcd.0.auto/usb1/1-1/1-1:1.2/0003:342D:E538.0003/input/input3
+[    3.400004] [HOST] kernel: input: LEKU Lucky65 V3 Keyboard as /devices/platform/soc/40a280000.usb/xhci-hcd.0.auto/usb1/1-1/1-1:1.2/0003:342D:E538.0003/input/input4
+[    3.468005] [HOST] kernel: hid-generic 0003:342D:E538.0003: input: USB HID v1.11 Mouse [LEKU Lucky65 V3] on usb-xhci-hcd.0.auto-1/input2
+[    3.692025] [HOST] kernel: FAT-fs (nvme0n1p4): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    8.836010] [HOST] kernel: kauditd_printk_skb: 25 callbacks suppressed
+[    8.836033] [HOST] kernel: audit: type=1101 audit(1789344006.508:36): pid=324 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=x6e3-j713-fedora addr=? terminal=/dev/tty1 res=success'
+[    8.836046] [HOST] kernel: audit: type=1103 audit(1789344006.508:37): pid=324 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_env,pam_unix acct="root" exe="/usr/bin/login" hostname=x6e3-j713-fedora addr=? terminal=/dev/tty1 res=success'
+[    8.836057] [HOST] kernel: audit: type=1006 audit(1789344006.508:38): pid=324 uid=0 old-auid=4294967295 auid=0 tty=tty1 old-ses=4294967295 ses=1 res=1
+[    8.836075] [HOST] kernel: audit: type=1300 audit(1789344006.508:38): arch=c00000b7 syscall=64 success=yes exit=1 a0=3 a1=7fffeffe7310 a2=1 a3=0 items=0 ppid=1 pid=324 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=tty1 ses=1 comm="login" exe="/usr/bin/login" key=(null)
+[    8.836086] [HOST] kernel: audit: type=1327 audit(1789344006.508:38): proctitle=2F62696E2F6C6F67696E002D66002D2D
+[    8.872007] [HOST] kernel: audit: type=1130 audit(1789344006.544:39): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    8.884013] [HOST] kernel: audit: type=1101 audit(1789344006.556:40): pid=335 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_unix acct="root" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=success'
+[    8.884049] [HOST] kernel: audit: type=1103 audit(1789344006.556:41): pid=335 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=? acct="root" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=failed'
+[    8.884084] [HOST] kernel: audit: type=1006 audit(1789344006.556:42): pid=335 uid=0 old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=2 res=1
+[    8.884176] [HOST] kernel: audit: type=1300 audit(1789344006.556:42): arch=c00000b7 syscall=64 success=yes exit=1 a0=7 a1=7fffd3be7ae0 a2=1 a3=0 items=0 ppid=1 pid=335 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2 comm="(systemd)" exe="/usr/lib/systemd/systemd-executor" key=(null)

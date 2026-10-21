@@ -1,0 +1,9 @@
+source img4:      [PRIVATE PREBOOT PATH]/usr/standalone/firmware/FUD/Multitouch.img4
+source img4 size: 118962 bytes, sha256 e1d897a345eee46afb4f2d228c6b7ab6d5ed5371f1a283306ecab535f507e9f3
+macOS:            ProductName: macOS ProductVersion: 27.0 BuildVersion: 26A428
+IM4P:             type=mtfw description=1 size=111535 sha256=f27e6714b952598ec525581029e33524d235a8e3c8d361fa6a142b5984dce53f
+IM4P payload:     mtfw XML plist, 111510 bytes, sha256 ffca2c14c778ab9c4b275450d42891c58e170f74ba469ea6bc8cbcd2f330e796
+IM4M:             not extracted (personalized manifest)
+converter:        gravity_firmware.multitouch.MultitouchFWCollection @ installer 6420623289fe7544cb8589b658355e57f0290fcc (gravity_firmware unmodified)
+output:           apple/tpmtfw-j713.bin 80524 bytes sha256 9fcbef0cff6a3b7733a4df626c9eba859b66c8e5053557924b8020a67ef48b17
+---

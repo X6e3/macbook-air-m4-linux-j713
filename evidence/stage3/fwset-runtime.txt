@@ -1,0 +1,20 @@
+== wifi-fwset1 2026-09-14 03:03:20 boot_id=[UUID]
+uname: 7.1.13-x6e3-g0196caa938be #1 SMP PREEMPT Fri Oct  2 05:50:18 +03 2026
+cmdline: nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=wifi-pcie1 x6e3.k=b5ed17f4 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target
+payload: /mnt/wifi-fwset1
+installed /usr/lib/firmware/brcm/brcmfmac4388c0-pcie.bin sha256=157342936222282f3f08b068b1b00b2131f2aaa4200ebd646f58508f5defc364
+installed /usr/lib/firmware/brcm/brcmfmac4388c0-pcie.txt sha256=a3cf85bdd68083f40e47e9a029e77a4e14b32047bb9251a46e6b04e2232591f6
+installed /usr/lib/firmware/brcm/brcmfmac4388c0-pcie.clm_blob sha256=1155c08756d3b420ba1cbbae2ef23bc6fa0935e9ab2844c745d1778a298157a7
+installed /usr/lib/firmware/brcm/brcmfmac4388c0-pcie.txcap_blob sha256=65a09e0eeeb3cf643889f058377fda760c60290a2b2beb8d4b303372f6efc5f9
+installed /usr/lib/firmware/brcm/brcmfmac4388c0-pcie.sig sha256=f88b8393535118527854aa46b75fc49ad3971a4355b81784f83dcbfc08a9ff61
+tpmtfw present, hash OK (untouched)
+regulatory.db: 
+pci 0000:01:00.0 id=0x14e4:0x4434
+NetworkManager before: inactive
+net before: lo 
+bind rc=0
+after 2s: driver=brcmfmac wlan=wld0
+wlan wld0 operstate=down (MAC not recorded)
+net after: lo wld0 
+FLAG OTP/FWID: 1 line(s)
+FLAG NVRAM/cal/CLM/txcap: 2 line(s)

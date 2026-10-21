@@ -1,0 +1,40 @@
+Archived bootloader source context
+
+Tree: Gravity m1n1, commit 950e6b7f268e71cf77889f27a760782bf898b651
+The quoted code retains its original SPDX-License-Identifier: MIT.
+The original license text is in LICENSE.m1n1.MIT alongside this file.
+The line ranges and hashes identify the archived source files, not current upstream main.
+These are source excerpts, not a boot log or firmware dump.
+
+src/kboot.c, lines 2878-2888
+Full-file SHA-256: 9d966ef288caad3b4f1864cc872c953cbdc23fd76c6c27539d17f9f189bf8809
+
+int kboot_boot(void *kernel)
+{
+    mcc_enable_cache();
+    tunables_apply_static();
+    clk_init();
+
+    usb_init();
+    pcie_init();
+    /* HACK: DAPF init raises an SError on T8132. */
+    if (chip_id != T8132)
+        dapf_init_all();
+
+src/dapf.c, lines 72-85
+Full-file SHA-256: 10551c1d6b53e8ed5b2f849dc2ed7325e1af616141598bbe5041281841d8db4f
+
+static int dapf_init_t8110a(u64 base, struct dapf_t8110_config *config, u32 length)
+{
+    int count = length / sizeof(*config);
+
+    for (int i = 0; i < count; i++) {
+        write32(base + 0x04, config[i].r4);
+        write64(base + 0x08, config[i].start);
+        write64(base + 0x10, config[i].end);
+        write32(base + 0x00, (config[i].r0_hi << 4) | config[i].r0_lo);
+        write32(base + 0x20, config[i].r20);
+        base += 0x40;
+    }
+    return 0;
+}

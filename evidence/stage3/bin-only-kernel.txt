@@ -1,0 +1,42 @@
+[  175.267820] brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac4388c0-pcie for chip BCM4388/6
+[  181.306504] brcmfmac 0000:01:00.0: brcmf_pcie_download_fw_nvram: FW failed to initialize
+[  181.306513] brcmfmac 0000:01:00.0: brcmf_pcie_setup: Dongle setup failed
+[  181.306517] ieee80211 phy1: brcmf_fw_crashed: Firmware has halted or crashed
+[  181.306542] ------------[ cut here ]------------
+[  181.306545] WARNING: kernel/workqueue.c:4327 at __flush_work+0x330/0x360, CPU#2: kworker/2:2/331
+[  181.306556] Modules linked in:
+[  181.306562] CPU: 2 UID: 0 PID: 331 Comm: kworker/2:2 Tainted: G S      W           7.1.13-x6e3-g0196caa938be #1 PREEMPT 
+[  181.306570] Tainted: [S]=CPU_OUT_OF_SPEC, [W]=WARN
+[  181.306573] Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+[  181.306576] Workqueue: events request_firmware_work_func
+[  181.306586] pstate: 01400009 (nzcv daif +PAN -UAO -TCO +DIT -SSBS BTYPE=--)
+[  181.306591] pc : __flush_work+0x330/0x360
+[  181.306595] lr : __flush_work+0x48/0x360
+[  181.306599] sp : ffffc00085d87a60
+[  181.306601] x29: ffffc00085d87ac0 x28: 0000000000000000 x27: 0000000000000000
+[  181.306608] x26: 00000000fffffffe x25: 0000000000000000 x24: 0000000000000001
+[  181.306614] x23: ffffe6a1407789b0 x22: ffffe6a140673168 x21: 0000000000000001
+[  181.306619] x20: ffff80001265b3f0 x19: ffff80001265b3f0 x18: 000000000000000a
+[  181.306623] x17: 742064656c696166 x16: 205746203a6d6172 x15: 0000000000000000
+[  181.306628] x14: 0000000000000000 x13: ffff80000ce3a5f8 x12: 0000000000000000
+[  181.306633] x11: ffff8000028c5310 x10: ffffe6a13f6f88c0 x9 : 1ffff00003829781
+[  181.306638] x8 : ffffc00085d87ab8 x7 : 0000000000000000 x6 : 0000000000000001
+[  181.306642] x5 : ffff80001c14bc08 x4 : 0000000000000000 x3 : 0000000000000000
+[  181.306647] x2 : 0000000000000008 x1 : 0000000000000000 x0 : 0000000000000000
+[  181.306652] Call trace:
+[  181.306654]  __flush_work+0x330/0x360 (P)
+[  181.306660]  cancel_work_sync+0x6c/0x90
+[  181.306665]  brcmf_bus_cancel_reset_work+0x38/0x54
+[  181.306672]  brcmf_pcie_remove+0x64/0x130
+[  181.306677]  pci_device_remove+0x48/0xe8
+[  181.306683]  device_remove+0x4c/0x80
+[  181.306691]  device_release_driver_internal+0x1c4/0x21c
+[  181.306695]  device_release_driver+0x18/0x24
+[  181.306699]  brcmf_pcie_setup+0x60/0xf2c
+[  181.306704]  brcmf_fw_request_done+0x168/0x1bc
+[  181.306710]  request_firmware_work_func+0x60/0xf0
+[  181.306717]  process_one_work+0x15c/0x29c
+[  181.306721]  worker_thread+0x18c/0x2e0
+[  181.306725]  kthread+0x11c/0x13c
+[  181.306733]  ret_from_fork+0x10/0x20
+[  181.306740] ---[ end trace 0000000000000000 ]---

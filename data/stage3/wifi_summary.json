@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "scope": "Historical observations; no new hardware test",
+  "first_boot": {
+    "pcie_link": [
+      {
+        "line": 387,
+        "groups": [],
+        "seconds": "1.034456"
+      }
+    ],
+    "wifi_pci": [
+      {
+        "line": 402,
+        "groups": [],
+        "seconds": "1.036467"
+      }
+    ],
+    "wifi_firmware_missing": [
+      {
+        "line": 433,
+        "groups": [
+          "-2"
+        ],
+        "seconds": "1.040717"
+      }
+    ],
+    "run_init": [
+      {
+        "line": 591,
+        "groups": [],
+        "seconds": "1.055217"
+      }
+    ],
+    "root_mount": [
+      {
+        "line": 607,
+        "groups": [],
+        "seconds": "1.055912"
+      }
+    ],
+    "firmware_request_precedes_init_and_root": true
+  },
+  "bin_only": {
+    "request": [
+      {
+        "line": 1,
+        "groups": [],
+        "seconds": "175.267820"
+      }
+    ],
+    "initialization_failure": [
+      {
+        "line": 2,
+        "groups": [],
+        "seconds": "181.306504"
+      }
+    ],
+    "runtime_outcome": [
+      {
+        "line": 12,
+        "groups": [
+          "6",
+          "none",
+          "none"
+        ]
+      }
+    ]
+  },
+  "complete_firmware_environment": {
+    "firmware": [
+      {
+        "line": 4,
+        "groups": [
+          "01-974167da"
+        ],
+        "seconds": "203.007623"
+      }
+    ],
+    "interface": [
+      {
+        "line": 7,
+        "groups": [],
+        "seconds": "203.343444"
+      }
+    ],
+    "join_preference_errors": [
+      {
+        "line": 5,
+        "groups": [
+          "-52"
+        ],
+        "seconds": "203.013187"
+      },
+      {
+        "line": 6,
+        "groups": [
+          "-52"
+        ],
+        "seconds": "203.272915"
+      }
+    ],
+    "runtime_outcome": [
+      {
+        "line": 16,
+        "groups": [
+          "2",
+          "brcmfmac",
+          "wld0"
+        ]
+      }
+    ]
+  },
+  "normal_boot": {
+    "firmware": [
+      {
+        "line": 9,
+        "groups": [
+          "01-974167da"
+        ],
+        "seconds": "1.992004",
+        "original_journal_line": 735
+      }
+    ],
+    "interface": [
+      {
+        "line": 10,
+        "groups": [],
+        "seconds": "2.344006",
+        "original_journal_line": 740
+      }
+    ],
+    "regulatory_missing": [
+      {
+        "line": 5,
+        "groups": [
+          "-2"
+        ],
+        "seconds": "1.111236",
+        "original_journal_line": 497
+      }
+    ],
+    "checks": [
+      {
+        "line": 23,
+        "groups": [
+          "no brcm firmware ENOENT"
+        ]
+      },
+      {
+        "line": 25,
+        "groups": [
+          "no FW failed to initialize"
+        ]
+      },
+      {
+        "line": 26,
+        "groups": [
+          "no 'Set join_pref error'"
+        ]
+      },
+      {
+        "line": 27,
+        "groups": [
+          "wireless interface present (wld0)"
+        ]
+      }
+    ]
+  },
+  "matching_macos_and_linux_fwid": "01-974167da",
+  "connection_evidence": "Direct inspection of three retained private photos, transcribed in photo-observations.md; original pixels are not published",
+  "limits": [
+    "No successful ping captured; command missing",
+    "No dedicated curl/TLS result captured",
+    "No throughput, 6 GHz, roaming or suspend/resume claim",
+    "Missing regulatory.db is a separate failure from missing Broadcom firmware"
+  ]
+}

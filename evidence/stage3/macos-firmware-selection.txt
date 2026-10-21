@@ -1,0 +1,4 @@
+"FirmwareVersion" = "wl0: Jul  2 2026 00:44:50 version 23.10.1039.0.41.51.239 FWID 01-974167da"
+"ModuleDictionary" = {"ManufacturerID"=5348,"ModuleInfo"="M=WLMT m=4.9   V=a","subsystem-vendor-id"=4203,"ChipInfo"="s=C2","ProductID"=17460}
+"ModuleInfo" = "chip='s=C2' module='M=WLMT m=4.9   V=a' prod='17460' manuf='5348'"
+"PlatformConfigFileName" = "garden-PlatformConfig.plist"

@@ -1,0 +1,573 @@
+{
+  "schema": 1,
+  "scope": "Archived MTP startup observations; not a new hardware test",
+  "logs": [
+    {
+      "id": "a1",
+      "file": "logs/a1-kernel.txt",
+      "line_count": 667,
+      "kernel": {
+        "release": "7.1.13-x6e3-g6fe561aa9c3b",
+        "line": 2
+      },
+      "variant": {
+        "value": "mtp-dapf-r1",
+        "line": 51
+      },
+      "dapf_before": {
+        "matches": 0,
+        "entries": 9,
+        "result_line": 385,
+        "rules": [
+          {
+            "index": 0,
+            "match": false,
+            "line": 375
+          },
+          {
+            "index": 1,
+            "match": false,
+            "line": 376
+          },
+          {
+            "index": 2,
+            "match": false,
+            "line": 377
+          },
+          {
+            "index": 3,
+            "match": false,
+            "line": 378
+          },
+          {
+            "index": 4,
+            "match": false,
+            "line": 379
+          },
+          {
+            "index": 5,
+            "match": false,
+            "line": 380
+          },
+          {
+            "index": 6,
+            "match": false,
+            "line": 381
+          },
+          {
+            "index": 7,
+            "match": false,
+            "line": 382
+          },
+          {
+            "index": 8,
+            "match": false,
+            "line": 383
+          }
+        ]
+      },
+      "dapf_after": null,
+      "rule7_end_written": null,
+      "rule7_end_readback": null,
+      "wake": {
+        "return": -62,
+        "trace_time_us": 1152241,
+        "dart_irq_count": 100005,
+        "line": 460
+      },
+      "mtp_protocol": null,
+      "timeout": {
+        "line": 459,
+        "groups": [
+          "endpoint map",
+          "-62"
+        ]
+      },
+      "delay_trace": {
+        "line": 416,
+        "groups": []
+      },
+      "mtp_hello": null,
+      "keyboard_input": null,
+      "keyboard_ready": null,
+      "trackpad_firmware_error": null,
+      "multitouch_ready": null
+    },
+    {
+      "id": "b1",
+      "file": "logs/b1-kernel.txt",
+      "line_count": 646,
+      "kernel": {
+        "release": "7.1.13-x6e3-gfb942ac4976a",
+        "line": 2
+      },
+      "variant": {
+        "value": "mtp-dapf-w1",
+        "line": 51
+      },
+      "dapf_before": {
+        "matches": 0,
+        "entries": 9,
+        "result_line": 383,
+        "rules": [
+          {
+            "index": 0,
+            "match": false,
+            "line": 374
+          },
+          {
+            "index": 1,
+            "match": false,
+            "line": 375
+          },
+          {
+            "index": 2,
+            "match": false,
+            "line": 376
+          },
+          {
+            "index": 3,
+            "match": false,
+            "line": 377
+          },
+          {
+            "index": 4,
+            "match": false,
+            "line": 378
+          },
+          {
+            "index": 5,
+            "match": false,
+            "line": 379
+          },
+          {
+            "index": 6,
+            "match": false,
+            "line": 380
+          },
+          {
+            "index": 7,
+            "match": false,
+            "line": 381
+          },
+          {
+            "index": 8,
+            "match": false,
+            "line": 382
+          }
+        ]
+      },
+      "dapf_after": {
+        "matches": 8,
+        "entries": 9,
+        "result_line": 404,
+        "rules": [
+          {
+            "index": 0,
+            "match": true,
+            "line": 395
+          },
+          {
+            "index": 1,
+            "match": true,
+            "line": 396
+          },
+          {
+            "index": 2,
+            "match": true,
+            "line": 397
+          },
+          {
+            "index": 3,
+            "match": true,
+            "line": 398
+          },
+          {
+            "index": 4,
+            "match": true,
+            "line": 399
+          },
+          {
+            "index": 5,
+            "match": true,
+            "line": 400
+          },
+          {
+            "index": 6,
+            "match": true,
+            "line": 401
+          },
+          {
+            "index": 7,
+            "match": false,
+            "line": 402
+          },
+          {
+            "index": 8,
+            "match": true,
+            "line": 403
+          }
+        ]
+      },
+      "rule7_end_written": {
+        "line": 392,
+        "groups": [
+          "0x390eee000"
+        ]
+      },
+      "rule7_end_readback": {
+        "line": 402,
+        "groups": [
+          "0x390eee003"
+        ]
+      },
+      "wake": {
+        "return": -62,
+        "trace_time_us": 1152281,
+        "dart_irq_count": 0,
+        "line": 415
+      },
+      "mtp_protocol": {
+        "line": 407,
+        "groups": [
+          "12"
+        ]
+      },
+      "timeout": {
+        "line": 414,
+        "groups": [
+          "IOP power ACK (state 0x20)",
+          "-62"
+        ]
+      },
+      "delay_trace": {
+        "line": 412,
+        "groups": []
+      },
+      "mtp_hello": null,
+      "keyboard_input": null,
+      "keyboard_ready": null,
+      "trackpad_firmware_error": null,
+      "multitouch_ready": null
+    },
+    {
+      "id": "b1-repeat",
+      "file": "logs/b1-repeat-kernel.txt",
+      "line_count": 651,
+      "kernel": {
+        "release": "7.1.13-x6e3-gfb942ac4976a",
+        "line": 2
+      },
+      "variant": {
+        "value": "mtp-dapf-w1",
+        "line": 51
+      },
+      "dapf_before": {
+        "matches": 0,
+        "entries": 9,
+        "result_line": 383,
+        "rules": [
+          {
+            "index": 0,
+            "match": false,
+            "line": 374
+          },
+          {
+            "index": 1,
+            "match": false,
+            "line": 375
+          },
+          {
+            "index": 2,
+            "match": false,
+            "line": 376
+          },
+          {
+            "index": 3,
+            "match": false,
+            "line": 377
+          },
+          {
+            "index": 4,
+            "match": false,
+            "line": 378
+          },
+          {
+            "index": 5,
+            "match": false,
+            "line": 379
+          },
+          {
+            "index": 6,
+            "match": false,
+            "line": 380
+          },
+          {
+            "index": 7,
+            "match": false,
+            "line": 381
+          },
+          {
+            "index": 8,
+            "match": false,
+            "line": 382
+          }
+        ]
+      },
+      "dapf_after": {
+        "matches": 8,
+        "entries": 9,
+        "result_line": 404,
+        "rules": [
+          {
+            "index": 0,
+            "match": true,
+            "line": 395
+          },
+          {
+            "index": 1,
+            "match": true,
+            "line": 396
+          },
+          {
+            "index": 2,
+            "match": true,
+            "line": 397
+          },
+          {
+            "index": 3,
+            "match": true,
+            "line": 398
+          },
+          {
+            "index": 4,
+            "match": true,
+            "line": 399
+          },
+          {
+            "index": 5,
+            "match": true,
+            "line": 400
+          },
+          {
+            "index": 6,
+            "match": true,
+            "line": 401
+          },
+          {
+            "index": 7,
+            "match": false,
+            "line": 402
+          },
+          {
+            "index": 8,
+            "match": true,
+            "line": 403
+          }
+        ]
+      },
+      "rule7_end_written": {
+        "line": 392,
+        "groups": [
+          "0x390eee000"
+        ]
+      },
+      "rule7_end_readback": {
+        "line": 402,
+        "groups": [
+          "0x390eee003"
+        ]
+      },
+      "wake": {
+        "return": -62,
+        "trace_time_us": 1152283,
+        "dart_irq_count": 0,
+        "line": 415
+      },
+      "mtp_protocol": {
+        "line": 407,
+        "groups": [
+          "12"
+        ]
+      },
+      "timeout": {
+        "line": 414,
+        "groups": [
+          "IOP power ACK (state 0x20)",
+          "-62"
+        ]
+      },
+      "delay_trace": {
+        "line": 412,
+        "groups": []
+      },
+      "mtp_hello": null,
+      "keyboard_input": null,
+      "keyboard_ready": null,
+      "trackpad_firmware_error": null,
+      "multitouch_ready": null
+    },
+    {
+      "id": "b2",
+      "file": "logs/b2-kernel.txt",
+      "line_count": 707,
+      "kernel": {
+        "release": "7.1.13-x6e3-g0196caa938be",
+        "line": 2
+      },
+      "variant": {
+        "value": "mtp-dapf-w2",
+        "line": 51
+      },
+      "dapf_before": {
+        "matches": 0,
+        "entries": 9,
+        "result_line": 383,
+        "rules": [
+          {
+            "index": 0,
+            "match": false,
+            "line": 374
+          },
+          {
+            "index": 1,
+            "match": false,
+            "line": 375
+          },
+          {
+            "index": 2,
+            "match": false,
+            "line": 376
+          },
+          {
+            "index": 3,
+            "match": false,
+            "line": 377
+          },
+          {
+            "index": 4,
+            "match": false,
+            "line": 378
+          },
+          {
+            "index": 5,
+            "match": false,
+            "line": 379
+          },
+          {
+            "index": 6,
+            "match": false,
+            "line": 380
+          },
+          {
+            "index": 7,
+            "match": false,
+            "line": 381
+          },
+          {
+            "index": 8,
+            "match": false,
+            "line": 382
+          }
+        ]
+      },
+      "dapf_after": {
+        "matches": 8,
+        "entries": 9,
+        "result_line": 404,
+        "rules": [
+          {
+            "index": 0,
+            "match": true,
+            "line": 395
+          },
+          {
+            "index": 1,
+            "match": true,
+            "line": 396
+          },
+          {
+            "index": 2,
+            "match": true,
+            "line": 397
+          },
+          {
+            "index": 3,
+            "match": true,
+            "line": 398
+          },
+          {
+            "index": 4,
+            "match": true,
+            "line": 399
+          },
+          {
+            "index": 5,
+            "match": true,
+            "line": 400
+          },
+          {
+            "index": 6,
+            "match": true,
+            "line": 401
+          },
+          {
+            "index": 7,
+            "match": false,
+            "line": 402
+          },
+          {
+            "index": 8,
+            "match": true,
+            "line": 403
+          }
+        ]
+      },
+      "rule7_end_written": {
+        "line": 392,
+        "groups": [
+          "0x390eee000"
+        ]
+      },
+      "rule7_end_readback": {
+        "line": 402,
+        "groups": [
+          "0x390eee003"
+        ]
+      },
+      "wake": {
+        "return": 0,
+        "trace_time_us": 120974,
+        "dart_irq_count": 0,
+        "line": 413
+      },
+      "mtp_protocol": {
+        "line": 409,
+        "groups": [
+          "12"
+        ]
+      },
+      "timeout": null,
+      "delay_trace": null,
+      "mtp_hello": {
+        "line": 414,
+        "groups": []
+      },
+      "keyboard_input": {
+        "line": 464,
+        "groups": []
+      },
+      "keyboard_ready": {
+        "line": 477,
+        "groups": []
+      },
+      "trackpad_firmware_error": {
+        "line": 664,
+        "groups": [
+          "-2"
+        ]
+      },
+      "multitouch_ready": null
+    }
+  ]
+}

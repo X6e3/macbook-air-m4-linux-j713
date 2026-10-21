@@ -33,6 +33,10 @@ MAC_PROPS = {"mac-address", "local-mac-address"}
 ID_PROPS = {"serial-number", "ecid", "apple,ecid"}
 # (label, matched text) -> reason it is fine
 ALLOW = {
+    ("e-mail", "modprobe@configfs.service"): "systemd template unit name in archived boot output, not an e-mail address",
+    ("e-mail", "modprobe@drm.service"): "systemd template unit name in archived boot output, not an e-mail address",
+    ("e-mail", "modprobe@efi_pstore.service"): "systemd template unit name in archived boot output, not an e-mail address",
+    ("e-mail", "modprobe@fuse.service"): "systemd template unit name in archived boot output, not an e-mail address",
     ("e-mail", "giometti@linux.it"): "kernel pps_core copyright banner in dmesg, public text",
 }
 

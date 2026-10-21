@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "scope": "Historical J713 Wi-Fi investigation",
+  "copy_policy": "Complete archived exports retain every line with identity substitutions. Selected excerpts, authored photo observations and derived metadata are separately labelled. No firmware, NVRAM contents, calibration bytes, credentials or original photographs are included.",
+  "chronology": "Some device-generated wall-clock headers predate their kernel build. They are preserved, not corrected; experiment lineage, monotonic boot times and contemporaneous records establish the sequence.",
+  "redaction_policy": {
+    "uuid": {
+      "pattern": "(?i)\\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\\b",
+      "replacement": "[UUID]"
+    },
+    "mac": {
+      "pattern": "(?i)\\b(?:[0-9a-f]{2}:){5}[0-9a-f]{2}\\b",
+      "replacement": "[MAC]"
+    },
+    "hostname": {
+      "pattern": "(?<=\\] )x6e3-j713-fedora(?= )",
+      "replacement": "[HOST]"
+    },
+    "build_identity": {
+      "pattern": "\\(x6e3@lima-j713\\)",
+      "replacement": "([BUILD-IDENTITY])"
+    },
+    "machine_id": {
+      "pattern": "(?i)(/var/log/journal/)[0-9a-f]{32}(?=/)",
+      "replacement": "\\1[MACHINE-ID]"
+    },
+    "home": {
+      "pattern": "/home/x6e3\\b",
+      "replacement": "/home/[USER]"
+    }
+  },
+  "files": [
+    {
+      "file": "pcie-config.diff",
+      "kind": "complete archived config diff",
+      "source_label": "config-mtp-hid-b3-to-wifi-pcie1.diff",
+      "original_sha256": "0a9e08c64e11fd4d002ad6bb58db48ab57f22f29405ce097076713fb97308279",
+      "published_sha256": "0a9e08c64e11fd4d002ad6bb58db48ab57f22f29405ce097076713fb97308279",
+      "line_count": 39,
+      "redactions": {}
+    },
+    {
+      "file": "pcie-build-manifest.txt",
+      "kind": "complete archived build manifest",
+      "source_label": "MANIFEST",
+      "original_sha256": "3816b5910ce22a40397d4c8c7896d294a5a879ecc187f7a3281cfa5d03ca0f16",
+      "published_sha256": "cb98264ecf2347bfda497bb6389bece6b9409e031747776b46b131108fa88335",
+      "line_count": 52,
+      "redactions": {
+        "uuid": 1,
+        "build_identity": 1
+      }
+    },
+    {
+      "file": "pcie-firstboot.txt",
+      "kind": "complete archived kernel export",
+      "source_label": "wifi-pcie1-firstboot.txt",
+      "original_sha256": "82ad50b8df846c92f571babac589d9a55c0e98a8ff456649ad72c780ea0a0a53",
+      "published_sha256": "3151fdd989c274ac441cdc51e2eda55ad193c0a0283181c0cee2b0d0deb4bc9f",
+      "line_count": 822,
+      "redactions": {
+        "uuid": 6,
+        "hostname": 822,
+        "build_identity": 1,
+        "machine_id": 2,
+        "home": 2
+      }
+    },
+    {
+      "file": "firmware-identity.txt",
+      "kind": "complete archived firmware provenance note",
+      "source_label": "SOURCE.txt",
+      "original_sha256": "71865df97c549abacc99e2b3138e37bc174d80ff9655cdae479f7f879b570e5b",
+      "published_sha256": "71865df97c549abacc99e2b3138e37bc174d80ff9655cdae479f7f879b570e5b",
+      "line_count": 10,
+      "redactions": {}
+    },
+    {
+      "file": "bin-only-runtime.txt",
+      "kind": "complete archived experiment runtime report",
+      "source_label": "wifi-fw-identity1-runtime.txt",
+      "original_sha256": "f7ae75b331acd496eed92396751feada67dd3e5309e95090277b88523731a455",
+      "published_sha256": "e35b035e9a898253bedc249a3f9093d871bed2d07c459f3514ee09933dad5b43",
+      "line_count": 14,
+      "redactions": {
+        "uuid": 2
+      }
+    },
+    {
+      "file": "bin-only-kernel.txt",
+      "kind": "complete archived selected kernel export",
+      "source_label": "wifi-fw-identity1-kernel.txt",
+      "original_sha256": "d1489eaa7b002d485e2eeb4bf4e977f8e1d5258e10656b174332d7a6c02f34fc",
+      "published_sha256": "d1489eaa7b002d485e2eeb4bf4e977f8e1d5258e10656b174332d7a6c02f34fc",
+      "line_count": 42,
+      "redactions": {}
+    },
+    {
+      "file": "fwset-runtime.txt",
+      "kind": "complete archived experiment runtime report",
+      "source_label": "wifi-fwset1-runtime.txt",
+      "original_sha256": "21f511289ba69f4150f8f3691de3ec2d0297f55ea10086814771d2778ac8dcc3",
+      "published_sha256": "6cc6eb7f3fa4c62364f5208e9acac8577b206046af45c930028e44aa2a5efa66",
+      "line_count": 20,
+      "redactions": {
+        "uuid": 2
+      }
+    },
+    {
+      "file": "fwset-kernel.txt",
+      "kind": "complete archived selected kernel export",
+      "source_label": "wifi-fwset1-kernel.txt",
+      "original_sha256": "4acfbfbb3285c7ce8eeb7ed6cfef0f37c4ef415399b47fc32183fa5417cbcc80",
+      "published_sha256": "4acfbfbb3285c7ce8eeb7ed6cfef0f37c4ef415399b47fc32183fa5417cbcc80",
+      "line_count": 7,
+      "redactions": {}
+    },
+    {
+      "file": "early-firmware-manifest.txt",
+      "kind": "complete archived firmware metadata manifest; no payload",
+      "source_label": "FIRMWARE-MANIFEST.txt",
+      "original_sha256": "e266e231007231664f59535e6b92e6fc17f3090b3a4bfe3ed53f454832efeb92",
+      "published_sha256": "e266e231007231664f59535e6b92e6fc17f3090b3a4bfe3ed53f454832efeb92",
+      "line_count": 9,
+      "redactions": {}
+    },
+    {
+      "file": "persist-build-manifest.txt",
+      "kind": "complete archived pre-deployment build manifest; NOT DEPLOYED label is historical",
+      "source_label": "MANIFEST",
+      "original_sha256": "a4bfeec05ba55e50bd12825a9f475450535e37a4a67fc92a0397f7d38ae351f6",
+      "published_sha256": "8c63a6298af4511fa0c0aef6f3eb8798060a12a8d1873b9269ea1e742cf86dcb",
+      "line_count": 24,
+      "redactions": {
+        "uuid": 1,
+        "build_identity": 1
+      }
+    },
+    {
+      "file": "normalboot-wifi-order.txt",
+      "kind": "complete archived selected journal lines; leading numbers refer to original journal line positions",
+      "source_label": "wifi-order.txt",
+      "original_sha256": "9ccbafb5b283f0c9c795bb1cd95be4183cbebb7b96fc318bfe043257d4aae82d",
+      "published_sha256": "a236333dc411bb0057bdf62599a288309f1f022fc0bef5f9a37fa86cc530f0c8",
+      "line_count": 10,
+      "redactions": {
+        "hostname": 10
+      }
+    },
+    {
+      "file": "normalboot-report.txt",
+      "kind": "complete archived pre-connection check report; includes separate trackpad failure",
+      "source_label": "report-check.txt",
+      "original_sha256": "56803e3d453cfd807ac4c3c3c0492ee1be74083b8d2501723a48479c349fd185",
+      "published_sha256": "702a6c62cb847fd1e17fd34ba82b4303e7774a99b3222e75a93ba421ef8b6135",
+      "line_count": 31,
+      "redactions": {
+        "uuid": 4
+      }
+    },
+    {
+      "file": "offline-package-hashes.txt",
+      "kind": "complete archived RPM checksum list; packages not redistributed",
+      "source_label": "SHA256SUMS",
+      "original_sha256": "0fbc7779a5d03e81ce6167ac3490cf5dec5eaa6f3bcc61d5fbc16075cdb10559",
+      "published_sha256": "0fbc7779a5d03e81ce6167ac3490cf5dec5eaa6f3bcc61d5fbc16075cdb10559",
+      "line_count": 7,
+      "redactions": {}
+    },
+    {
+      "file": "offline-install-script.txt",
+      "kind": "complete archived provisioning script, retained as evidence",
+      "source_label": "install-network-userspace.sh",
+      "original_sha256": "4f581201f5b3e42081a2a253c9c56babf9a3e04317469b37507853ce2f5cfda1",
+      "published_sha256": "4f581201f5b3e42081a2a253c9c56babf9a3e04317469b37507853ce2f5cfda1",
+      "line_count": 40,
+      "redactions": {}
+    },
+    {
+      "file": "macos-firmware-selection.txt",
+      "kind": "selected original metadata lines; unrelated device fields omitted",
+      "source_label": "Preserved J713 macOS driver metadata",
+      "original_sha256": "f2b9a0b9b65b7aa7f0f01c930afdbdab8c4a4acba2f2204e1672ea4753f16730",
+      "published_sha256": "a2953373be6448a969e24eeca4fcb452bb250a494924a9e0154e06ef7dfbca46",
+      "line_count": 4,
+      "redactions": {}
+    },
+    {
+      "file": "photo-observations.md",
+      "kind": "authored identifier-free transcription from directly inspected private photos",
+      "inputs": [
+        {
+          "file": "IMG_0201.HEIC",
+          "sha256": "2e27b50ec5f040ae91a06b2d2feced5b28acf321922d97eda2a2087ecd4c8e93"
+        },
+        {
+          "file": "IMG_0202.HEIC",
+          "sha256": "4d5b96c4ed2a19e621f838f405e3cb046bb5e7d6e0d0904359d7a0c0467daf46"
+        },
+        {
+          "file": "IMG_0203.HEIC",
+          "sha256": "e185e399c811f02ff8cfddd995fdc362b80fa407267a8beda2bde776db3f4e5c"
+        }
+      ],
+      "published_sha256": "cc6dfe18579c4bd8ea0b26338ffd25a283b2b04897857df0fd75cc3938f2d404",
+      "line_count": 15
+    },
+    {
+      "file": "early-layer-verification.json",
+      "kind": "derived metadata from read-only inspection of existing private binary archives",
+      "published_sha256": "e133a8a5373162c8858ae491da6e7bce4838c0cb39b7f0df92001a17c361794f",
+      "line_count": 105,
+      "inputs": [
+        {
+          "file": "base.cpio",
+          "bytes": 1564160,
+          "sha256": "dbb5f206e01bfc09aef92c4032366b829bede0d11c3a195758720c51c8ccdc9b"
+        },
+        {
+          "file": "j713-wifi-fw.cpio",
+          "bytes": 1965568,
+          "sha256": "41cb98698eb583a38d0d442049b8d900e45775b3b64242e8562394acb5cb69ea"
+        },
+        {
+          "file": "combined.cpio",
+          "bytes": 3529728,
+          "sha256": "11337e717d6fc9e89e598306d9b79ba453bc2dfcf0efc404d288d91ff86bb469"
+        },
+        {
+          "file": "initramfs-wifi-persist1.gz",
+          "bytes": 1922977,
+          "sha256": "37d758f0248eb65113981332bc2ddb2f0f2bfb4a6b2d9c9103a25ac7ad4eacc8"
+        }
+      ]
+    }
+  ]
+}

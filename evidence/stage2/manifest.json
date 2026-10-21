@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "source": "Archived journal kernel exports from the 28 September 2026 MTP experiments",
+  "archive": "J713-SOURCE-REVIEW-20261015-v2.zip",
+  "copy_policy": "Complete kernel-export files, with identity substitutions only. No lines omitted, inserted or reordered. These exports contain some initramfs/systemd messages as originally captured.",
+  "redaction_policy": {
+    "boot_id": "32-digit journal boot identifiers replaced with [BOOT-ID]",
+    "uuid": "All UUID-shaped strings replaced with [UUID], including filesystem UUIDs and fixed UEFI GUIDs",
+    "journal_hostname": "Journal hostname replaced with [HOST]",
+    "build_identity": "Compiler user/host tuple replaced with [BUILD-IDENTITY]",
+    "machine_id": "Journal-directory machine identifier replaced with [MACHINE-ID]"
+  },
+  "logs": [
+    {
+      "id": "a1",
+      "file": "logs/a1-kernel.txt",
+      "kernel_release": "7.1.13-x6e3-g6fe561aa9c3b",
+      "original_source_commit_prefix": "6fe561aa9c3b",
+      "command_line_variant": "mtp-dapf-r1",
+      "original_sha256": "282892ea1a52680cb3c09bec4e4249bee8ccaf5bbc7edb282fe88b852b6dbd1e",
+      "published_sha256": "49a762bae9f8c759100c056c95f13509fccee63ce3c3788477406705e21384ec",
+      "line_count": 667,
+      "redactions": {
+        "boot_id": 0,
+        "uuid": 6,
+        "journal_hostname": 667,
+        "build_identity": 1,
+        "machine_id": 1
+      }
+    },
+    {
+      "id": "b1",
+      "file": "logs/b1-kernel.txt",
+      "kernel_release": "7.1.13-x6e3-gfb942ac4976a",
+      "original_source_commit_prefix": "fb942ac4976a",
+      "command_line_variant": "mtp-dapf-w1",
+      "original_sha256": "b9487f4627454fad14d4221836d6048f26b71e83c2db8a65b16fc17f366d40e5",
+      "published_sha256": "d0aeb4592ac52c4f5be551bd5ef65aab171fdad30d51f3f75aa57af2099a8f1b",
+      "line_count": 646,
+      "redactions": {
+        "boot_id": 0,
+        "uuid": 6,
+        "journal_hostname": 646,
+        "build_identity": 1,
+        "machine_id": 1
+      }
+    },
+    {
+      "id": "b1-repeat",
+      "file": "logs/b1-repeat-kernel.txt",
+      "kernel_release": "7.1.13-x6e3-gfb942ac4976a",
+      "original_source_commit_prefix": "fb942ac4976a",
+      "command_line_variant": "mtp-dapf-w1",
+      "original_sha256": "31672b816298db6bee7db3090d7607ffa89048a12cc0fc11d2ffa558edb2dc0f",
+      "published_sha256": "4e4246311a646282c0260b1bec79a19cf38af8e81128e4d6a9cf2ae58de6eb94",
+      "line_count": 651,
+      "redactions": {
+        "boot_id": 0,
+        "uuid": 6,
+        "journal_hostname": 651,
+        "build_identity": 1,
+        "machine_id": 1
+      }
+    },
+    {
+      "id": "b2",
+      "file": "logs/b2-kernel.txt",
+      "kernel_release": "7.1.13-x6e3-g0196caa938be",
+      "original_source_commit_prefix": "0196caa938be",
+      "command_line_variant": "mtp-dapf-w2",
+      "original_sha256": "9c75cc88e077243725f9412d2531944b77362642102d0ce8d6a8557e78a02a94",
+      "published_sha256": "c0c3fc82e5c396113ab13d466ac75352b5638d1165fd0522eaa4f72f29ff9a71",
+      "line_count": 707,
+      "redactions": {
+        "boot_id": 0,
+        "uuid": 6,
+        "journal_hostname": 707,
+        "build_identity": 1,
+        "machine_id": 1
+      }
+    }
+  ]
+}

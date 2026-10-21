@@ -1,0 +1,14 @@
+== wifi-fw-identity1 2026-09-14 03:02:54 boot_id=[UUID]
+uname: 7.1.13-x6e3-g0196caa938be #1 SMP PREEMPT Fri Oct  2 05:50:18 +03 2026
+cmdline: nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=wifi-pcie1 x6e3.k=b5ed17f4 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target
+payload: /mnt/wifi-fw-identity1
+payload firmware sha256=157342936222282f3f08b068b1b00b2131f2aaa4200ebd646f58508f5defc364
+installed /usr/lib/firmware/brcm/brcmfmac4388c0-pcie.bin sha256=157342936222282f3f08b068b1b00b2131f2aaa4200ebd646f58508f5defc364
+pci 0000:01:00.0 id=0x14e4:0x4434
+device unbound after the boot-time probe, as expected
+NetworkManager before: inactive
+net before: lo 
+bind rc=0
+after 6s: driver=none wlan=none
+net after: lo 
+FLAG NVRAM/cal/CLM/txcap: 1 line(s)

@@ -1,0 +1,31 @@
+== J713 final check 2026-09-14 03:02:36 boot_id=[UUID]
+kernel: 7.1.13-x6e3-ga75a277a6603 #1 SMP PREEMPT Fri Oct  2 12:09:19 +03 2026
+cmdline: nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=wifi-persist1-tp1-root2 x6e3.k=c8bc2701 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target
+root: /dev/nvme0n1p3 uuid=[UUID] opts=rw,relatime runrootdev=/dev/nvme0n1p3
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3 ext4   20G  2.4G   18G  12% /
+OK    / is /dev/nvme0n1p3
+OK    root UUID [UUID]
+OK    / mounted rw
+OK    old root nvme0n1p6 not mounted
+os: Fedora Linux 44 (Forty Four)
+OK    10 CPUs online
+OK    boot image wifi-persist1-tp1-root2
+OK    kwin_wayland running
+OK    framebuffer (simpledrm)
+backlight: 
+trackpad resets retried: 2, AFE attach failures: 3
+FAIL  multi-touch READY
+OK    keyboard READY
+FAIL  no multi-touch start timeout
+initrd: Freeing initrd memory: 3440K (wifi-pcie1 was 1520K)
+Firmware: Firmware: BCM4388/6 wl0: Jul  2 2026 00:44:50 version 23.10.1039.0.41.51.239 FWID 01-974167da
+OK    no brcm firmware ENOENT
+OK    FWID 01-974167da
+OK    no FW failed to initialize
+OK    no 'Set join_pref error'
+OK    wireless interface present (wld0)
+NetworkManager: inactive
+band count (no SSIDs recorded): 2.4: 0  5: 0  6: 0
+now: nmcli --ask dev wifi connect "<SSID>"   then: sudo sh /mnt/j713-final/j713-final-check.sh net
+check by hand: trackpad cursor + click (haptic), keyboard, brightness keys, USB device

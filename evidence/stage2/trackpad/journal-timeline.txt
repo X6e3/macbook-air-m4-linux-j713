@@ -1,0 +1,126 @@
+== boot -10 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.762741] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.763307] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0003/input/input3
+[    1.120008] kernel: DCHID: Starting interface multi-touch
+[    1.120397] kernel: DCHID: Direct firmware load for apple/tpmtfw-j713.bin failed with error -2
+== boot -9 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.658995] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.659005] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0003/input/input3
+[    1.056011] kernel: DCHID: Starting interface multi-touch
+[    1.056393] kernel: DCHID: Direct firmware load for apple/tpmtfw-j713.bin failed with error -2
+[   59.712017] kernel: DCHID: Starting interface multi-touch
+[   59.712439] kernel: DCHID: Direct firmware load for apple/tpmtfw-j713.bin failed with error -2
+[   59.744101] kwin_wayland[507]: Failed to open /dev/input/event0 device (No such file or directory)
+== boot -8 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.751570] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.752127] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0003/input/input3
+[    1.124008] kernel: DCHID: Starting interface multi-touch
+[    1.124544] kernel: DCHID: Direct firmware load for apple/tpmtfw-j713.bin failed with error -2
+[   14.640015] kernel: DCHID: Starting interface multi-touch
+[   14.640401] kernel: DCHID: Direct firmware load for apple/tpmtfw-j713.bin failed with error -2
+[   14.656098] kwin_wayland[463]: Failed to open /dev/input/event0 device (No such file or directory)
+[  677.480420] sudo[1262]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/install -D -m 0644 -o root -g root ' /mnt/fw/tmptfw-713.bin' ' /lib/firmware/apple/tpmtfw-j713.bin'
+[  856.176874] sudo[1350]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/install -D -m 0644 -o root -g root /mnt/fw/tpmtfw=j713.bin /lib/firmware/apple/tpmtfw-j713.bin
+[  870.670838] sudo[1392]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/install -D -m 0644 -o root -g root /mnt/fw/tpmtfw-j713.bin /lib/firmware/apple/tpmtfw-j713.bin
+== boot -7 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.632210] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.634606] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0003/input/input3
+[    1.032200] kernel: DCHID: Starting interface multi-touch
+[    1.033253] kernel: DCHID: Sending firmware for multi-touch
+[    1.033590] kernel: DCHID: Resetting multi-touch
+[    1.140784] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.268075] kernel: MTP: touch_pwr_mgr.c:219: [TPM] Mac Power Manager State Machine Started
+[    1.268547] kernel: DCHID: Interface multi-touch is now ready
+[    1.268875] kernel: MTP: touch_iface.c:407: Touch interface ready
+[    1.276015] kernel: MTP: touch_iface.c:424: Touch MT ready
+[  555.304184] sudo[1290]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/sh -c 'cat /sys/kernel/debug/debug/hid/0019:05AC:035B:035B.0002/rdesc > /root/b2-tpmtfw-rdesc.txt'
+[  569.666948] sudo[1339]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/sh -c 'cat /sys/kernel/debug/hid/0019:05AC:035B:035B.0002/rdesc > /root/b2-tpmtfw-rdesc.txt'
+[  620.555682] sudo[1392]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/sh -c 'cat /sys/kernel/debug/hid/0019:05AC:035B.0002/rdesc > /root/b2-tpmtfw-rdesc.txt'
+[  684.654022] sudo[1452]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/sh -c 'timeout 15 cat /sys/kernel/debug/hid/0019:05AC:035B.0002/rdesc > /root/b2-tpmtfw-events.txt'
+[  729.922203] sudo[1516]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/wc -l /root/b2-tpmtfw-events.txt
+[  764.931227] sudo[1565]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/wc -l /root/b2-tpmtfw-events.txt sudo tail -n 20 /root/b2-tpmtfw-events.txt
+[  774.912486] sudo[1597]:     [USER] : TTY=pts/1 ; PWD=/home/[USER] ; USER=root ; COMMAND=/usr/sbin/tail -n 20 /root/b2-tpmtfw-events.txt
+== boot -6 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.752031] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0003/input/input3
+[    0.752040] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    1.112070] kernel: DCHID: Starting interface multi-touch
+[    1.113273] kernel: DCHID: Sending firmware for multi-touch
+[    1.113554] kernel: DCHID: Resetting multi-touch
+[    1.167021] systemd-logind[285]: Watching system buttons on /dev/input/event0 (Apple MTP keyboard Keyboard)
+[    1.220021] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.328029] kernel: MTP: afe_bl_trp_hbpp.c:174: Failed to attach to AFE (-6)
+[    1.328232] kernel: MTP: afe_bl_trp_hbpp.c:175: AFE Chip Boot Failure for HBPP[0]: No HINT_L
+[    1.328393] kernel: MTP: afe_pwr.c:676: AFE[0] bootload failed: 1
+[    3.328016] kernel: DCHID: iface multi-touch start timed out
+[    9.860010] kernel: DCHID: Interface multi-touch is already starting
+== boot -5 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.769649] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.771015] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0003/input/input3
+[    1.124339] kernel: DCHID: Starting interface multi-touch
+[    1.126138] kernel: DCHID: Sending firmware for multi-touch
+[    1.126499] kernel: DCHID: Resetting multi-touch
+[    1.232008] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.364071] kernel: MTP: touch_pwr_mgr.c:219: [TPM] Mac Power Manager State Machine Started
+[    1.364544] kernel: DCHID: Interface multi-touch is now ready
+[    1.364860] kernel: MTP: touch_iface.c:407: Touch interface ready
+[    1.365154] kernel: MTP: touch_iface.c:424: Touch MT ready
+== boot -4 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.782209] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0005/input/input0
+[    0.782880] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0006/input/input3
+[    1.152045] kernel: DCHID: Starting interface multi-touch
+[    1.153006] kernel: DCHID: Sending firmware for multi-touch
+[    1.153209] kernel: DCHID: Resetting multi-touch
+[    1.264017] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.364234] kernel: MTP: afe_bl_trp_hbpp.c:174: Failed to attach to AFE (-6)
+[    1.364669] kernel: MTP: afe_bl_trp_hbpp.c:175: AFE Chip Boot Failure for HBPP[0]: No HINT_L
+[    1.364983] kernel: MTP: afe_pwr.c:676: AFE[0] bootload failed: 1
+[    3.392009] kernel: DCHID: iface multi-touch start timed out
+== boot -3 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.784932] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.786690] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0004/input/input3
+[    1.144087] kernel: DCHID: Starting interface multi-touch
+[    1.147142] kernel: DCHID: Sending firmware for multi-touch
+[    1.147321] kernel: DCHID: Resetting multi-touch
+[    1.256054] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.384072] kernel: MTP: touch_pwr_mgr.c:219: [TPM] Mac Power Manager State Machine Started
+[    1.384549] kernel: DCHID: Interface multi-touch is now ready
+[    1.384889] kernel: MTP: touch_iface.c:407: Touch interface ready
+[    1.388021] kernel: MTP: touch_iface.c:424: Touch MT ready
+== boot -2 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.769568] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.770925] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0004/input/input3
+[    1.144185] kernel: DCHID: Starting interface multi-touch
+[    1.145230] kernel: DCHID: Sending firmware for multi-touch
+[    1.146101] kernel: DCHID: Resetting multi-touch
+[    1.256008] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.381217] kernel: MTP: touch_pwr_mgr.c:219: [TPM] Mac Power Manager State Machine Started
+[    1.381693] kernel: DCHID: Interface multi-touch is now ready
+[    1.382016] kernel: MTP: touch_iface.c:407: Touch interface ready
+[    1.382312] kernel: MTP: touch_iface.c:424: Touch MT ready
+== boot -1 x6e3.v=mtp-dapf-w2 x6e3.k=05bd5379
+[    0.795093] kernel: input: Apple MTP multi-touch Mouse as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.796442] kernel: input: Apple MTP keyboard Keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0004/input/input3
+[    1.156081] kernel: DCHID: Starting interface multi-touch
+[    1.156529] kernel: DCHID: Sending firmware for multi-touch
+[    1.156844] kernel: DCHID: Resetting multi-touch
+[    1.264133] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.392064] kernel: MTP: touch_pwr_mgr.c:219: [TPM] Mac Power Manager State Machine Started
+[    1.392513] kernel: DCHID: Interface multi-touch is now ready
+[    1.392833] kernel: MTP: touch_iface.c:407: Touch interface ready
+[    1.393133] kernel: MTP: touch_iface.c:424: Touch MT ready
+== boot 0 x6e3.v=mtp-dapf-b3b x6e3.k=19877142
+[    0.764370] kernel: input: Apple MTP multi-touch as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    0.765462] kernel: input: Apple MTP keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0003/input/input1
+[    1.168008] kernel: DCHID: Starting interface multi-touch
+[    1.168839] kernel: DCHID: Sending firmware for multi-touch
+[    1.169036] kernel: DCHID: Resetting multi-touch
+[    1.284340] kernel: MTP: bootloader.c:522: (*)New AFE[0] cbor image received
+[    1.284778] kernel: MTP: afe_bl_trp_hbpp.c:174: Failed to attach to AFE (-10)
+[    1.285101] kernel: MTP: afe_bl_trp_hbpp.c:175: AFE Chip Boot Failure for HBPP[0]: No HINT_L
+[    1.285449] kernel: MTP: afe_pwr.c:676: AFE[0] bootload failed: 1
+[    3.296010] kernel: DCHID: iface multi-touch start timed out
+[    3.352010] kernel: DCHID: Interface multi-touch is already starting
+[    3.424009] kernel: DCHID: Interface multi-touch is already starting
+[   11.984012] kernel: DCHID: Interface multi-touch is already starting
+[   12.012116] kwin_wayland[451]: Failed to open /dev/input/event0 device (Operation now in progress)
+[ 1354.716012] kernel: DCHID: Interface multi-touch is already starting
