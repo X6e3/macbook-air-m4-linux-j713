@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Stage 1: the first-night boot series (21 boots) as data.
+"""First boot: the first-night boot series (21 boots) as data.
 
-Inputs (all in evidence/stage1/):
+Inputs (all in evidence/01-first-boot/):
   logs/boot-N.txt   one log per boot, written to the ESP by the x6e3 initramfs (init-busybox-v6)
   image-parts.csv   SHA-256 of the m1n1, DTB and kernel+initramfs parts of each boot image
 
-Outputs (data/stage1/):
+Outputs (data/01-first-boot/):
   boot_ab.csv            one row per boot
   boot_ab_summary.json   the numbers the figure and its caption use
 
@@ -14,7 +14,7 @@ The measured event is the kernel-log (printk) timestamp of the first
 "fbcon_at=" field (init-busybox-v6, line 46); this script re-reads the same line from the dmesg
 section of each log and stops if the two disagree.
 
-    python3 analysis/stage1_boot_ab.py
+    python3 analysis/boot_ab.py
 """
 import csv
 import json
@@ -23,11 +23,11 @@ from pathlib import Path
 from statistics import mean
 
 ROOT = Path(__file__).resolve().parent.parent
-EV, OUT = ROOT / "evidence/stage1", ROOT / "data/stage1"
+EV, OUT = ROOT / "evidence/01-first-boot", ROOT / "data/01-first-boot"
 CONSOLE = "Console: switching to colour frame buffer device"
 TIMEOUT = "framebuffer: deferred probe timeout"
 ATTACH_FAIL = "pm_domain_attach_by_id(0) failed: -110"
-DISP_CPU_DTB = "c35fabb6"  # see data/stage1/dtb_diff.txt: framebuffer power-domains -> disp_cpu
+DISP_CPU_DTB = "c35fabb6"  # see data/01-first-boot/dtb_diff.txt: framebuffer power-domains -> disp_cpu
 
 parts = {r["variant"]: r for r in csv.DictReader((EV / "image-parts.csv").open())}
 

@@ -1,16 +1,16 @@
-# Stage 2 continued — From missing firmware to a moving trackpad cursor
+# 2.2 From missing firmware to a moving trackpad cursor
 
 28–29 September 2026, with AFE follow-up from 2–7 October. MacBook Air 13-inch M4 / J713 / T8132.
 
-After the [B2 MTP startup experiment](stage2-mtp.md), I could use the internal keyboard, but the trackpad still did not move the KDE cursor. I followed the remaining path in stages: the board-specific firmware, raw HID reports, the driver that decodes those reports, and the interface's READY/open lifecycle.
+After the [B2 MTP startup experiment](02-input-mtp.md), I could use the internal keyboard, but the trackpad still did not move the KDE cursor. I followed the remaining path in stages: the board-specific firmware, raw HID reports, the driver that decodes those reports, and the interface's READY/open lifecycle.
 
 The evidence is not all the same kind. The retained journal timeline shows firmware requests, reset, READY and AFE errors. Archived build files identify the configuration experiment. Raw-report changes, sysfs bindings and the physical cursor movement are my own observations at the machine; their raw output was not kept.
 
 ## 1. Give the driver the firmware it actually requests
 
-The early B2 export requests `apple/tpmtfw-j713.bin` and [fails with error -2](../evidence/stage2/logs/b2-kernel.txt#L664). Creating a multi-touch HID device was not enough to make its firmware start.
+The early B2 export requests `apple/tpmtfw-j713.bin` and [fails with error -2](../evidence/02-input/logs/b2-kernel.txt#L664). Creating a multi-touch HID device was not enough to make its firmware start.
 
-I obtained the source from this J713's own macOS Preboot FUD `Multitouch.img4`. I used the existing, unmodified Gravity `MultitouchFWCollection` converter from installer commit `6420623289fe7544cb8589b658355e57f0290fcc`. The [preserved extraction receipt](../evidence/stage2/trackpad/firmware-extraction.txt) records:
+I obtained the source from this J713's own macOS Preboot FUD `Multitouch.img4`. I used the existing, unmodified Gravity `MultitouchFWCollection` converter from installer commit `6420623289fe7544cb8589b658355e57f0290fcc`. The [preserved extraction receipt](../evidence/02-input/trackpad/firmware-extraction.txt) records:
 
 | Item | Recorded result |
 | --- | --- |
@@ -26,7 +26,7 @@ I installed the generated file at `/lib/firmware/apple/tpmtfw-j713.bin` in the F
 
 ## 2. Establish that the firmware and raw data path are alive
 
-With the same B2 kernel and the firmware added, the [archived journal timeline](../evidence/stage2/trackpad/journal-timeline.txt#L25) shows successful boots progressing through:
+With the same B2 kernel and the firmware added, the [archived journal timeline](../evidence/02-input/trackpad/journal-timeline.txt#L25) shows successful boots progressing through:
 
 ```text
 Starting interface multi-touch
@@ -52,9 +52,9 @@ CONFIG_HID_APPLE=y
 CONFIG_HID_MAGICMOUSE=y
 ```
 
-The [archived B2-to-B3 diff](../evidence/stage2/trackpad/b3-config.diff) contains exactly those two symbol changes. Comparing the full archived configurations confirms that two-symbol delta, and the retained B2 and B3 DTBs are byte-for-byte equal.
+The [archived B2-to-B3 diff](../evidence/02-input/trackpad/b3-config.diff) contains exactly those two symbol changes. Comparing the full archived configurations confirms that two-symbol delta, and the retained B2 and B3 DTBs are byte-for-byte equal.
 
-I called the experiment **mtp-hid-b3**. Its internal artifact name was `mtp-dapf-b3b`; it did not introduce another DAPF change. The [archived build manifest](../evidence/stage2/trackpad/b3-manifest.txt) records the same source commit as B2, `0196caa938be7c2dccee67af1875df0d4c005093`, and the unchanged m1n1/initramfs parts. Their equality is recorded in the manifest; this page does not claim a fresh verification of every original boot-image part.
+I called the experiment **mtp-hid-b3**. Its internal artifact name was `mtp-dapf-b3b`; it did not introduce another DAPF change. The [archived build manifest](../evidence/02-input/trackpad/b3-manifest.txt) records the same source commit as B2, `0196caa938be7c2dccee67af1875df0d4c005093`, and the unchanged m1n1/initramfs parts. Their equality is recorded in the manifest; this page does not claim a fresh verification of every original boot-image part.
 
 | Artifact | Recorded SHA-256 |
 | --- | --- |
@@ -72,7 +72,7 @@ The first B3 boot still had no pointer. libinput reported `Operation now in prog
 
 I traced the open path through evdev, input, `magicmouse_open`, `hid_hw_open`, `dchid_open` and `dchid_start_interface` in the [B2 DockChannel HID source](https://github.com/X6e3/j713-linux/blob/48100bc278cf81b30c33aa501a40662e39473ebc/drivers/hid/dockchannel-hid/dockchannel-hid.c). The last function returns `-EINPROGRESS` when `iface->starting` is already set. That explained the userspace error, but not why the interface had failed to become ready.
 
-The [journal comparison](../evidence/stage2/trackpad/journal-timeline.txt#L115) supplied the earlier failure:
+The [journal comparison](../evidence/02-input/trackpad/journal-timeline.txt#L115) supplied the earlier failure:
 
 ```text
 Firmware sent and reset
@@ -100,7 +100,7 @@ This established working internal keyboard and trackpad input on the successful 
 
 On 2 October I added a bounded [multi-touch reset retry](https://github.com/X6e3/j713-linux/commit/8bfa2f66c594c9cb375f819704ead7ff971e23fd): up to three READY wait windows, with the existing reset states 0 then 2 repeated between attempts. On 4 October I added [logging for interface GPIO declarations](https://github.com/X6e3/j713-linux/commit/148143f31346657372aef00ef211273a6b5fd0c7), to investigate what the firmware announced. That diagnostic change did not add a host GPIO reset.
 
-The [7 October failure export](../evidence/stage2/trackpad/afe-fail-20261007.txt#L105) still shows AFE attach failure, both retries and the final timeout. A [successful export from the same day](../evidence/stage2/trackpad/afe-ready-20261007.txt#L104) reaches READY and `Touch MT ready`. Their kernels differ, so I do not present them as a single-variable controlled experiment; source comparison shows changes in the board's GPU node and GPU driver files, with no changes to the MTP/DockChannel/RTKit helper path.
+The [7 October failure export](../evidence/02-input/trackpad/afe-fail-20261007.txt#L105) still shows AFE attach failure, both retries and the final timeout. A [successful export from the same day](../evidence/02-input/trackpad/afe-ready-20261007.txt#L104) reaches READY and `Touch MT ready`. Their kernels differ, so I do not present them as a single-variable controlled experiment; source comparison shows changes in the board's GPU node and GPU driver files, with no changes to the MTP/DockChannel/RTKit helper path.
 
 The retries were an attempted recovery, not a cure. On 18 October I traced the first-boot failure to the AFE state macOS leaves behind; applying the power sequence from the device's ADT before sending firmware fixed it in both cold boots after macOS that I tested that day. That work will follow as its own record. The separate `Crtk` crash report at shutdown remains open.
 
@@ -108,4 +108,4 @@ The retries were an attempted recovery, not a cure. On 18 October I traced the f
 
 Apple authored the firmware. The firmware collection/conversion machinery and HID decoders were existing work; Josh Rodd's MTP changes provided incorporated driver support. My contribution was identifying the J713 requirements, preparing and validating its firmware, isolating the driver configuration, tracing failed opens back to AFE startup, testing the complete path on the machine, and retaining both successful and failed outcomes.
 
-Run `make trackpad` to regenerate the [derived timeline](../data/stage2/trackpad_summary.json), and `make check` to verify the retained evidence hashes and stored results. The [manifest](../evidence/stage2/trackpad/manifest.json) lists each retained file with its original and published hash. The originals remain private and unchanged; this repository contains no firmware binary or personalized manifest.
+Run `make trackpad` to regenerate the [derived timeline](../data/02-input/trackpad_summary.json), and `make check` to verify the retained evidence hashes and stored results. The [manifest](../evidence/02-input/trackpad/manifest.json) lists each retained file with its original and published hash. The originals remain private and unchanged; this repository contains no firmware binary or personalized manifest.

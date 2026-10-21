@@ -8,8 +8,8 @@ from decimal import Decimal
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent.parent
-EV=ROOT/'evidence/stage3'
-OUT=ROOT/'data/stage3/wifi_summary.json'
+EV=ROOT/'evidence/03-wifi'
+OUT=ROOT/'data/03-wifi/wifi_summary.json'
 
 
 def derive():
@@ -74,7 +74,7 @@ def main():
         print(f'Wi-Fi: {n} evidence hashes, line counts, firmware timing/FWID and saved summary match')
     else:
         OUT.parent.mkdir(parents=True,exist_ok=True);OUT.write_text(json.dumps(result,indent=2)+'\n')
-        print('Wrote data/stage3/wifi_summary.json')
+        print('Wrote data/03-wifi/wifi_summary.json')
 
 
 if __name__=='__main__':main()

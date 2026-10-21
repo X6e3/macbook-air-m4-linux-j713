@@ -5,16 +5,16 @@ Last updated: 21 October 2026.
 ## The two repositories
 
 - **macbook-air-m4-linux-j713** (this repository) is the record: logs, device trees, analysis scripts and figures,
-  one stage at a time. It contains no kernel source, no boot images and no firmware.
+  one subsystem at a time. It contains no kernel source, no boot images and no firmware.
 - **[j713-linux](https://github.com/X6e3/j713-linux)** holds the kernel changes behind these records, as a commit
   series on top of GravityLinux's M4 kernel (base `3b85d81f656a`). Commits by other authors keep their original
   authorship and messages.
 
 ## System status (through 19 October 2026)
 
-Kernel `7.1.13-x6e3-s2` on Fedora 44, built from the tip of the j713-linux series. Stage 1, the
-[MTP startup records](stage2-mtp.md), the [trackpad continuation](stage2-trackpad.md) and the
-[Wi-Fi account](stage3-wifi.md) are recorded here; the GPU, display, audio and idle records will follow.
+Kernel `7.1.13-x6e3-s2` on Fedora 44, built from the tip of the j713-linux series. The first boot, the
+[MTP startup records](02-input-mtp.md), the [trackpad continuation](02-input-trackpad.md) and the
+[Wi-Fi account](03-wifi.md) are recorded here; the GPU, display, audio and idle records will follow.
 
 | Area | Status | Notes |
 |---|---|---|

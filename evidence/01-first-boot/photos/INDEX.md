@@ -1,4 +1,4 @@
-# Stage 1 photos
+# First-boot photos
 
 Phone photos of the J713 screen, taken during the first bring-up night. Copies are re-encoded at
 1600 px with every metadata segment removed (`tools/import_photos.py`); `SOURCES.tsv` keeps each

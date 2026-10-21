@@ -8,8 +8,8 @@ from decimal import Decimal
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-EV = ROOT / 'evidence/stage2/trackpad'
-OUT = ROOT / 'data/stage2/trackpad_summary.json'
+EV = ROOT / 'evidence/02-input/trackpad'
+OUT = ROOT / 'data/02-input/trackpad_summary.json'
 
 
 def derive():
@@ -76,7 +76,7 @@ def main():
         print(f'Trackpad: {n} evidence hashes, line counts and derived timeline match')
     else:
         OUT.write_text(json.dumps(result,indent=2)+'\n')
-        print('Wrote data/stage2/trackpad_summary.json')
+        print('Wrote data/02-input/trackpad_summary.json')
 
 
 if __name__ == '__main__':

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Derive the A1/B1/B2 results and source line references from Stage 2 logs.
+"""Derive the A1/B1/B2 results and source line references from the MTP startup logs.
 
-python3 -I analysis/stage2_mtp.py          writes data/stage2/mtp_summary.json
-python3 -I analysis/stage2_mtp.py --check  verifies hashes, lineage and saved results
+python3 -I analysis/mtp.py          writes data/02-input/mtp_summary.json
+python3 -I analysis/mtp.py --check  verifies hashes, lineage and saved results
 
 Only MTP's RTKit instance is used for protocol/wake events. NVMe has a
 separate RTKit instance and must not be counted as MTP initialization.
@@ -14,8 +14,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-EV = ROOT / 'evidence/stage2'
-OUT = ROOT / 'data/stage2/mtp_summary.json'
+EV = ROOT / 'evidence/02-input'
+OUT = ROOT / 'data/02-input/mtp_summary.json'
 MTP = 'rtkit-helper 394600000.mtp:'
 HID = 'dockchannel-hid 394b28000.input:'
 
@@ -102,12 +102,12 @@ def main():
               'logs': [summarize(x) for x in manifest['logs']]}
     if args.check:
         if json.loads(OUT.read_text()) != result:
-            raise ValueError('Saved Stage 2 summary is stale; run make mtp')
-        print('Stage 2: 4 log hashes, lineage, DAPF readback counts and saved summary match')
+            raise ValueError('Saved MTP summary is stale; run make mtp')
+        print('MTP: 4 log hashes, lineage, DAPF readback counts and saved summary match')
     else:
         OUT.parent.mkdir(parents=True, exist_ok=True)
         OUT.write_text(json.dumps(result, indent=2) + '\n')
-        print('Wrote data/stage2/mtp_summary.json')
+        print('Wrote data/02-input/mtp_summary.json')
 
 
 if __name__ == '__main__':

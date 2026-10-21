@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fig. 1: framebuffer console attachment across the 21 boots of the first bring-up night.
 
-Reads data/stage1/boot_ab.csv and boot_ab_summary.json (written by analysis/stage1_boot_ab.py) and
+Reads data/01-first-boot/boot_ab.csv and boot_ab_summary.json (written by analysis/boot_ab.py) and
 writes figures/out/fig01-light.svg, fig01-dark.svg and fig01-caption.md. Layout only: every number
 shown is read from those two files. The controlled A/B is one shaded region across both panels; the
 result, the definitions and the source paths are in the caption, not in the image.
@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "figures"))
 import style  # noqa: E402
 
-DATA = ROOT / "data/stage1"
+DATA = ROOT / "data/01-first-boot"
 rows = list(csv.DictReader((DATA / "boot_ab.csv").open()))
 S = json.loads((DATA / "boot_ab_summary.json").read_text())
 G = S["groups"]
@@ -140,15 +140,15 @@ c = f"""<picture>
 **Fig. 1 — Framebuffer console attachment across {N} boots, first bring-up night (26–27 Sep 2026).**
 Each point is one boot ({N} in total). The measured event is the printk timestamp of the first
 `Console: switching to colour frame buffer device` line: the moment the kernel console attaches to the
-framebuffer, not a full boot time. The initramfs wrote it into each log (`evidence/stage1/init-busybox-v6`,
-line 46); `analysis/stage1_boot_ab.py` re-reads it from the log's own dmesg and stops if the two disagree.
+framebuffer, not a full boot time. The initramfs wrote it into each log (`evidence/01-first-boot/init-busybox-v6`,
+line 46); `analysis/boot_ab.py` re-reads it from the log's own dmesg and stops if the two disagree.
 The time axis is logarithmic. Power-domain errors are the lines containing `Failed to reach power state` in
 the same log.
 
 **Controlled comparison.** v4ctl (boots {', '.join(map(str, ctl['boots']))}, n={ctl['n']}) and v4
 (boots {', '.join(map(str, ab['boots']))}, n={ab['n']}) carry byte-identical m1n1 and kernel+initramfs
-(`evidence/stage1/image-parts.csv`). The only DTB difference in meaning is
-`/chosen/framebuffer@0 power-domains`: `disp_cpu` → `disp_fe` (`data/stage1/dtb_diff.txt`). Mean console start
+(`evidence/01-first-boot/image-parts.csv`). The only DTB difference in meaning is
+`/chosen/framebuffer@0 power-domains`: `disp_cpu` → `disp_fe` (`data/01-first-boot/dtb_diff.txt`). Mean console start
 went from {ctl['console_mean_s']:.3f} s to {ab['console_mean_s']:.4f} s, {S['ratio_v4ctl_over_v4']}× earlier, and power-domain
 errors from {ctl['pmgr_fail'][0]} to {ab['pmgr_fail'][0]}. In {S['timeout_and_110_by_domain']['disp_cpu']} disp_cpu boots
 the log shows the framebuffer giving up on its power domain at the deferred-probe timeout (v4ctl mean
@@ -160,8 +160,8 @@ kernel build. From boot {min(G['5']['boots'])} (v5) the DTB disables {ATC_NODES}
 is {later['pmgr_fail'][0]}, but the kernel+initramfs changed in the same step (and m1n1 from boot {min(G['6d']['boots'])}),
 so that drop is not attributed to ATC2/3 alone.
 
-Data: `evidence/stage1/logs/boot-1..21.txt`, `evidence/stage1/image-parts.csv`, `evidence/stage1/dtb/`.
-Code: `analysis/stage1_boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
+Data: `evidence/01-first-boot/logs/boot-1..21.txt`, `evidence/01-first-boot/image-parts.csv`, `evidence/01-first-boot/dtb/`.
+Code: `analysis/boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
 library only).
 """
 (ROOT / "figures/out/fig01-caption.md").write_text(c)

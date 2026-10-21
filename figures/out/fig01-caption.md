@@ -6,15 +6,15 @@
 **Fig. 1 — Framebuffer console attachment across 21 boots, first bring-up night (26–27 Sep 2026).**
 Each point is one boot (21 in total). The measured event is the printk timestamp of the first
 `Console: switching to colour frame buffer device` line: the moment the kernel console attaches to the
-framebuffer, not a full boot time. The initramfs wrote it into each log (`evidence/stage1/init-busybox-v6`,
-line 46); `analysis/stage1_boot_ab.py` re-reads it from the log's own dmesg and stops if the two disagree.
+framebuffer, not a full boot time. The initramfs wrote it into each log (`evidence/01-first-boot/init-busybox-v6`,
+line 46); `analysis/boot_ab.py` re-reads it from the log's own dmesg and stops if the two disagree.
 The time axis is logarithmic. Power-domain errors are the lines containing `Failed to reach power state` in
 the same log.
 
 **Controlled comparison.** v4ctl (boots 6, 7, 8, n=3) and v4
 (boots 4, 5, 9, 10, 11, n=5) carry byte-identical m1n1 and kernel+initramfs
-(`evidence/stage1/image-parts.csv`). The only DTB difference in meaning is
-`/chosen/framebuffer@0 power-domains`: `disp_cpu` → `disp_fe` (`data/stage1/dtb_diff.txt`). Mean console start
+(`evidence/01-first-boot/image-parts.csv`). The only DTB difference in meaning is
+`/chosen/framebuffer@0 power-domains`: `disp_cpu` → `disp_fe` (`data/01-first-boot/dtb_diff.txt`). Mean console start
 went from 10.233 s to 0.0600 s, 170.4× earlier, and power-domain
 errors from 24 to 20. In 6/6 disp_cpu boots
 the log shows the framebuffer giving up on its power domain at the deferred-probe timeout (v4ctl mean
@@ -26,6 +26,6 @@ kernel build. From boot 12 (v5) the DTB disables 22 ATC2/3 port nodes and the er
 is 0, but the kernel+initramfs changed in the same step (and m1n1 from boot 16),
 so that drop is not attributed to ATC2/3 alone.
 
-Data: `evidence/stage1/logs/boot-1..21.txt`, `evidence/stage1/image-parts.csv`, `evidence/stage1/dtb/`.
-Code: `analysis/stage1_boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
+Data: `evidence/01-first-boot/logs/boot-1..21.txt`, `evidence/01-first-boot/image-parts.csv`, `evidence/01-first-boot/dtb/`.
+Code: `analysis/boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
 library only).

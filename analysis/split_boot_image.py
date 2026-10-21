@@ -5,7 +5,7 @@ An x6e3 boot image is: m1n1 stage 2 binary, zero padding, a text payload config
 ("chosen.bootargs=..."), the DTB, then Image.gz and the initramfs. The images themselves are not
 published (later initramfs layers carry vendor firmware), so this script's output is committed instead.
 
-    python3 analysis/split_boot_image.py <image.bin>... > evidence/stage1/image-parts.csv
+    python3 analysis/split_boot_image.py <image.bin>... > evidence/01-first-boot/image-parts.csv
 """
 import csv
 import hashlib

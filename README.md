@@ -22,19 +22,19 @@ do not work yet. The full list is in
 
 This is a development record, not an installer or a supported distribution.
 
-Each stage below says what I observed, what I changed and held constant, how I tested it, and what the result does
+Each section below says what I observed, what I changed and held constant, how I tested it, and what the result does
 and does not show. The logs, device trees and scripts behind every figure are in this repository.
 
-For the first-night evidence, start with the [boot comparison](data/stage1/boot_ab_summary.json),
-[device-tree comparison](data/stage1/dtb_diff.txt), [image-part hashes](evidence/stage1/image-parts.csv)
-and [original boot logs](evidence/stage1/logs/). The [A1/B1/B2 MTP startup records](docs/stage2-mtp.md)
-follow as Stage 2, with the [trackpad firmware and HID investigation](docs/stage2-trackpad.md).
+For the first-night evidence, start with the [boot comparison](data/01-first-boot/boot_ab_summary.json),
+[device-tree comparison](data/01-first-boot/dtb_diff.txt), [image-part hashes](evidence/01-first-boot/image-parts.csv)
+and [original boot logs](evidence/01-first-boot/logs/). The [A1/B1/B2 MTP startup records](docs/02-input-mtp.md)
+follow in section 2, with the [trackpad firmware and HID investigation](docs/02-input-trackpad.md).
 Records for the GPU, the native display, audio and idle remain to be added.
 
-The [Wi-Fi account](docs/stage3-wifi.md) follows as Stage 3: PCIe/configuration, J713 firmware identity,
+The [Wi-Fi account](docs/03-wifi.md) follows in section 3: PCIe/configuration, J713 firmware identity,
 the early-firmware layer and a real connection from Fedora.
 
-## Stage 1 — First boot (26–27 September 2026)
+## 1. First boot (26–27 September 2026)
 
 I started working on J713 because I wanted Linux running directly on my M4 MacBook Air, not inside a virtual machine.
 There wasn't a ready-to-use Linux installation path for this particular machine in the projects I was working with.
@@ -84,15 +84,15 @@ results, and the limitations of what each test actually demonstrates.
 **Fig. 1 — Framebuffer console attachment across 21 boots, first bring-up night (26–27 Sep 2026).**
 Each point is one boot (21 in total). The measured event is the printk timestamp of the first
 `Console: switching to colour frame buffer device` line: the moment the kernel console attaches to the
-framebuffer, not a full boot time. The initramfs wrote it into each log (`evidence/stage1/init-busybox-v6`,
-line 46); `analysis/stage1_boot_ab.py` re-reads it from the log's own dmesg and stops if the two disagree.
+framebuffer, not a full boot time. The initramfs wrote it into each log (`evidence/01-first-boot/init-busybox-v6`,
+line 46); `analysis/boot_ab.py` re-reads it from the log's own dmesg and stops if the two disagree.
 The time axis is logarithmic. Power-domain errors are the lines containing `Failed to reach power state` in
 the same log.
 
 **Controlled comparison.** v4ctl (boots 6, 7, 8, n=3) and v4
 (boots 4, 5, 9, 10, 11, n=5) carry byte-identical m1n1 and kernel+initramfs
-(`evidence/stage1/image-parts.csv`). The only DTB difference in meaning is
-`/chosen/framebuffer@0 power-domains`: `disp_cpu` → `disp_fe` (`data/stage1/dtb_diff.txt`). Mean console start
+(`evidence/01-first-boot/image-parts.csv`). The only DTB difference in meaning is
+`/chosen/framebuffer@0 power-domains`: `disp_cpu` → `disp_fe` (`data/01-first-boot/dtb_diff.txt`). Mean console start
 went from 10.233 s to 0.0600 s, 170.4× earlier, and power-domain
 errors from 24 to 20. In 6/6 disp_cpu boots
 the log shows the framebuffer giving up on its power domain at the deferred-probe timeout (v4ctl mean
@@ -104,44 +104,46 @@ kernel build. From boot 12 (v5) the DTB disables 22 ATC2/3 port nodes and the er
 is 0, but the kernel+initramfs changed in the same step (and m1n1 from boot 16),
 so that drop is not attributed to ATC2/3 alone.
 
-Data: `evidence/stage1/logs/boot-1..21.txt`, `evidence/stage1/image-parts.csv`, `evidence/stage1/dtb/`.
-Code: `analysis/stage1_boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
+Data: `evidence/01-first-boot/logs/boot-1..21.txt`, `evidence/01-first-boot/image-parts.csv`, `evidence/01-first-boot/dtb/`.
+Code: `analysis/boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
 library only).
 <!-- fig01:end -->
 
-## Stage 2 — MTP startup (28 September 2026)
+## 2. Keyboard and trackpad (28 September – 7 October 2026)
+
+### 2.1 MTP startup (28 September)
 
 I traced the failing internal-input path through A1 (read-only DAPF snapshot), B1 (program the board's
-rules) and B2 (remove the experimental RUN-to-wake delay). The [full account](docs/stage2-mtp.md)
+rules) and B2 (remove the experimental RUN-to-wake delay). The [full account](docs/02-input-mtp.md)
 links each observation to the retained kernel exports and the corresponding source changes.
 
 | Record | DAPF readback | MTP result |
 | --- | --- | --- |
-| [A1](evidence/stage2/logs/a1-kernel.txt) | 0/9 before programming | Endpoint-map timeout; wake -62; IRQ count 100005 at return |
-| [B1](evidence/stage2/logs/b1-kernel.txt) and [repeat](evidence/stage2/logs/b1-repeat-kernel.txt) | 8/9 after programming | Protocol v12, then IOP power ACK timeout; wake -62 |
-| [B2](evidence/stage2/logs/b2-kernel.txt) | 8/9 after programming | Wake 0, MTP Says Hello, keyboard ready; trackpad firmware still missing in this boot |
+| [A1](evidence/02-input/logs/a1-kernel.txt) | 0/9 before programming | Endpoint-map timeout; wake -62; IRQ count 100005 at return |
+| [B1](evidence/02-input/logs/b1-kernel.txt) and [repeat](evidence/02-input/logs/b1-repeat-kernel.txt) | 8/9 after programming | Protocol v12, then IOP power ACK timeout; wake -62 |
+| [B2](evidence/02-input/logs/b2-kernel.txt) | 8/9 after programming | Wake 0, MTP Says Hello, keyboard ready; trackpad firmware still missing in this boot |
 
 These are complete archived kernel-export copies with identity substitutions, not newly run tests.
-The [manifest](evidence/stage2/manifest.json) records original/published hashes and the redactions.
-The [analysis](analysis/stage2_mtp.py) derives the [summary](data/stage2/mtp_summary.json) from the logs.
+The [manifest](evidence/02-input/manifest.json) records original/published hashes and the redactions.
+The [analysis](analysis/mtp.py) derives the [summary](data/02-input/mtp_summary.json) from the logs.
 Reproduce with `make mtp`; verify with `make check`.
 
-### Trackpad firmware and HID (28–29 September, with October follow-up)
+### 2.2 Trackpad firmware and HID (28–29 September, with October follow-up)
 
 I prepared the J713 firmware through the existing Gravity converter, then enabled the existing MTP HID
 decoder and keyboard driver in a two-symbol configuration experiment. A later boot of that same artifact
 produced physically confirmed internal-trackpad cursor movement. Intermittent AFE startup remained a separate
-problem. The [full account](docs/stage2-trackpad.md) distinguishes retained journal records, archived build
+problem. The [full account](docs/02-input-trackpad.md) distinguishes retained journal records, archived build
 metadata and my own observations at the machine. It includes the later reset-retry attempt and its limits; the
 AFE fix of 18 October will follow with its own record.
-Reproduce the [selected timeline](data/stage2/trackpad_summary.json) with `make trackpad`; verify with `make check`.
+Reproduce the [selected timeline](data/02-input/trackpad_summary.json) with `make trackpad`; verify with `make check`.
 
-## Stage 3 — Internal Wi-Fi (2 October 2026)
+## 3. Wi-Fi (2 October 2026)
 
 I followed the device from PCIe enumeration through the bin-only failure and the successful complete J713
 firmware environment. I made that environment available during early boot, incorporated Michael Reeves's
 join-preference fallback, and provisioned the missing networking userspace. Retained photos show a connection,
-DHCP routing, DNS and package downloads. The [full account](docs/stage3-wifi.md) links the failure/success records,
+DHCP routing, DNS and package downloads. The [full account](docs/03-wifi.md) links the failure/success records,
 archived build metadata and identifier-free photo observations. Regenerate its summary with `make wifi`.
 
 ## How this repository is organised
@@ -156,18 +158,18 @@ docs/       current support, known limits and the scope of the two repositories
 ```
 
 `make fig01` rebuilds Fig. 1 from `evidence/`. `make check` runs before every commit: it refuses
-device identifiers and secrets, checks that Stage 1 logs match the original bytes, and verifies the
-Stage 2 published hashes, source lineage and derived summary.
+device identifiers and secrets, checks that the first-boot logs match the original bytes, and verifies the
+published hashes, source lineage and derived summaries of sections 2 and 3.
 Boot images are not published: later initramfs layers contain vendor firmware. Their part hashes are
-in `evidence/stage1/image-parts.csv`.
+in `evidence/01-first-boot/image-parts.csv`.
 
 ## License
 
-- Code (`analysis/`, `figures/*.py`, `tools/`, `Makefile`, `evidence/stage1/init-busybox-v6`): MIT, see `LICENSE`.
-- Text, data, figures and photos (`README.md`, `docs/`, `data/`, `figures/out/`, `evidence/stage1/photos/`,
-  `evidence/stage1/image-parts.csv`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-- The DTBs in `evidence/stage1/dtb/` are compiled from the GravityLinux and Asahi Linux device-tree sources for T8132
-  and J713 (SPDX: `GPL-2.0+ OR MIT`), with the J713 changes described in Stage 1. They are not relicensed here.
-- The boot logs in `evidence/stage1/logs/` are the machine's console output, published unchanged as evidence.
-- Stage 2 logs are identity-redacted evidence copies with original/published hashes in their manifest. The source
-  excerpt in `evidence/stage2/bootloader-context.txt` retains its original MIT license.
+- Code (`analysis/`, `figures/*.py`, `tools/`, `Makefile`, `evidence/01-first-boot/init-busybox-v6`): MIT, see `LICENSE`.
+- Text, data, figures and photos (`README.md`, `docs/`, `data/`, `figures/out/`, `evidence/01-first-boot/photos/`,
+  `evidence/01-first-boot/image-parts.csv`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- The DTBs in `evidence/01-first-boot/dtb/` are compiled from the GravityLinux and Asahi Linux device-tree sources for T8132
+  and J713 (SPDX: `GPL-2.0+ OR MIT`), with the J713 changes described in section 1. They are not relicensed here.
+- The boot logs in `evidence/01-first-boot/logs/` are the machine's console output, published unchanged as evidence.
+- The section 2 logs are identity-redacted evidence copies with original/published hashes in their manifest. The source
+  excerpt in `evidence/02-input/bootloader-context.txt` retains its original MIT license.

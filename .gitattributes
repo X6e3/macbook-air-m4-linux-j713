@@ -1,7 +1,7 @@
 # Preserve original trailing spaces in these captured evidence records.
 # Other whitespace checks, and checks on authored documents/code, remain enabled.
-evidence/stage3/pcie-firstboot.txt whitespace=-blank-at-eol
-evidence/stage3/bin-only-kernel.txt whitespace=-blank-at-eol
-evidence/stage3/bin-only-runtime.txt whitespace=-blank-at-eol
-evidence/stage3/fwset-runtime.txt whitespace=-blank-at-eol
-evidence/stage3/normalboot-report.txt whitespace=-blank-at-eol
+evidence/03-wifi/pcie-firstboot.txt whitespace=-blank-at-eol
+evidence/03-wifi/bin-only-kernel.txt whitespace=-blank-at-eol
+evidence/03-wifi/bin-only-runtime.txt whitespace=-blank-at-eol
+evidence/03-wifi/fwset-runtime.txt whitespace=-blank-at-eol
+evidence/03-wifi/normalboot-report.txt whitespace=-blank-at-eol

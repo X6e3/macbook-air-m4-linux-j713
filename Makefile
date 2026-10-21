@@ -5,42 +5,42 @@ SHA ?= shasum -a 256
 
 all: fig01
 
-data/stage1/dtb_diff.txt: analysis/stage1_dtb_diff.py analysis/fdt.py $(wildcard evidence/stage1/dtb/*.dtb)
-	$(PY) analysis/stage1_dtb_diff.py > /dev/null
+data/01-first-boot/dtb_diff.txt: analysis/dtb_diff.py analysis/fdt.py $(wildcard evidence/01-first-boot/dtb/*.dtb)
+	$(PY) analysis/dtb_diff.py > /dev/null
 
-data/stage1/boot_ab_summary.json: analysis/stage1_boot_ab.py $(wildcard evidence/stage1/logs/boot-*.txt) evidence/stage1/image-parts.csv
-	$(PY) analysis/stage1_boot_ab.py > /dev/null
+data/01-first-boot/boot_ab_summary.json: analysis/boot_ab.py $(wildcard evidence/01-first-boot/logs/boot-*.txt) evidence/01-first-boot/image-parts.csv
+	$(PY) analysis/boot_ab.py > /dev/null
 
-fig01: data/stage1/dtb_diff.txt data/stage1/boot_ab_summary.json figures/fig01_console_ab.py figures/style.py
+fig01: data/01-first-boot/dtb_diff.txt data/01-first-boot/boot_ab_summary.json figures/fig01_console_ab.py figures/style.py
 	$(PY) figures/fig01_console_ab.py
 	$(PY) tools/rasterize.py figures/out/fig01-light.svg figures/out/fig01-light@2x.png 1920
 	$(PY) tools/rasterize.py figures/out/fig01-dark.svg figures/out/fig01-dark@2x.png 1920
 	$(PY) tools/update_readme.py fig01
 
-# Before every commit: identity scan, original Stage 1 bytes and Stage 2 publication integrity.
-data/stage2/mtp_summary.json: analysis/stage2_mtp.py evidence/stage2/manifest.json $(wildcard evidence/stage2/logs/*.txt)
-	$(PY) analysis/stage2_mtp.py
+# Before every commit: identity scan, original first-boot bytes and the published evidence of sections 2 and 3.
+data/02-input/mtp_summary.json: analysis/mtp.py evidence/02-input/manifest.json $(wildcard evidence/02-input/logs/*.txt)
+	$(PY) analysis/mtp.py
 
-mtp: data/stage2/mtp_summary.json
+mtp: data/02-input/mtp_summary.json
 
-data/stage2/trackpad_summary.json: analysis/stage2_trackpad.py evidence/stage2/trackpad/manifest.json $(wildcard evidence/stage2/trackpad/*.txt) $(wildcard evidence/stage2/trackpad/*.md) evidence/stage2/trackpad/b3-config.diff
-	$(PY) analysis/stage2_trackpad.py
+data/02-input/trackpad_summary.json: analysis/trackpad.py evidence/02-input/trackpad/manifest.json $(wildcard evidence/02-input/trackpad/*.txt) $(wildcard evidence/02-input/trackpad/*.md) evidence/02-input/trackpad/b3-config.diff
+	$(PY) analysis/trackpad.py
 
-trackpad: data/stage2/trackpad_summary.json
+trackpad: data/02-input/trackpad_summary.json
 
-data/stage3/wifi_summary.json: analysis/stage3_wifi.py evidence/stage3/manifest.json $(wildcard evidence/stage3/*.txt) $(wildcard evidence/stage3/*.md) evidence/stage3/early-layer-verification.json
-	$(PY) analysis/stage3_wifi.py
+data/03-wifi/wifi_summary.json: analysis/wifi.py evidence/03-wifi/manifest.json $(wildcard evidence/03-wifi/*.txt) $(wildcard evidence/03-wifi/*.md) evidence/03-wifi/early-layer-verification.json
+	$(PY) analysis/wifi.py
 
-wifi: data/stage3/wifi_summary.json
+wifi: data/03-wifi/wifi_summary.json
 
 check:
 	$(PY) tools/scan_identifiers.py
-	cd evidence/stage1/logs && $(SHA) -c SHA256SUMS.original
-	cd evidence/stage2 && $(SHA) -c SHA256SUMS
-	$(PY) analysis/stage2_mtp.py --check
-	cd evidence/stage2/trackpad && $(SHA) -c SHA256SUMS
-	$(PY) analysis/stage2_trackpad.py --check
-	cd evidence/stage3 && $(SHA) -c SHA256SUMS
-	$(PY) analysis/stage3_wifi.py --check
+	cd evidence/01-first-boot/logs && $(SHA) -c SHA256SUMS.original
+	cd evidence/02-input && $(SHA) -c SHA256SUMS
+	$(PY) analysis/mtp.py --check
+	cd evidence/02-input/trackpad && $(SHA) -c SHA256SUMS
+	$(PY) analysis/trackpad.py --check
+	cd evidence/03-wifi && $(SHA) -c SHA256SUMS
+	$(PY) analysis/wifi.py --check
 
 .PHONY: all fig01 mtp trackpad wifi check
