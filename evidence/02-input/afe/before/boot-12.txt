@@ -1,0 +1,121 @@
+[    3.677078] [HOST] kernel: Kernel command line: idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=n1-dcp-root2 x6e3.k=dbc9a52a root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target cpuidle_apple.j713_deepwfi=1 x6e3.esplog
+[    3.677087] [HOST] kernel: Unknown kernel command line parameters "selinux=0", will be passed to user space.
+[    3.686586] [HOST] kernel: platform 394600000.mtp: Adding to iommu group 2
+[    3.695542] [HOST] kernel: apple-dcp 30ae00000.dcp: RTKit: syslog message: ipeDCP_H16GSC.cpp:12859: set_run_mode_safe: deferring: 2 -> 4
+[    3.710397] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: rtkit-helper probe entry t=1056907us irqs=0
+[    3.710533] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[0] r0=0x0 r4=0x0 start=0x425000100c end=0x90832500b r20=0x21 DIFF
+[    3.710672] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[1] r0=0x0 r4=0x0 start=0x22405037a8c end=0x1741003 r20=0x6774 DIFF
+[    3.710806] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[2] r0=0x200 r4=0x0 start=0xc08b348c00 end=0x408800107 r20=0xd00 DIFF
+[    3.710937] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[3] r0=0x0 r4=0x0 start=0x18e40802310 end=0x800507 r20=0x0 DIFF
+[    3.711070] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[4] r0=0x20 r4=0x0 start=0x84090400 end=0x2280808417 r20=0x40 DIFF
+[    3.711200] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[5] r0=0x200 r4=0x0 start=0x30101005008 end=0x200800812b r20=0x0 DIFF
+[    3.711331] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[6] r0=0x100 r4=0x0 start=0x1080005140 end=0x87c480083 r20=0x0 DIFF
+[    3.711465] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[7] r0=0x0 r4=0x0 start=0x920449d8 end=0x26804c083 r20=0x408 DIFF
+[    3.711595] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write dapf[8] r0=0x0 r4=0x0 start=0xce2110004 end=0x180280b r20=0x0 DIFF
+[    3.711727] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: pre-write RESULT DIFF (0/9 entries match ADT)
+[    3.711860] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: writing 9 ADT DAPF rules @0x394810000 in m1n1 dapf_init_t8110a order
+[    3.711995] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[0] r4=0x0 start=0x38828c000 end=0x38828c06f r0=0x31 r20=0x1
+[    3.712128] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[1] r4=0x0 start=0x38829c800 end=0x38829c9a7 r0=0x31 r20=0x1
+[    3.712263] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[2] r4=0x0 start=0x3882d0018 end=0x3882d0113 r0=0x31 r20=0x1
+[    3.712394] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[3] r4=0x0 start=0x3882bc020 end=0x3882bc023 r0=0x31 r20=0x1
+[    3.712541] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[4] r4=0x0 start=0x388240324 end=0x388240327 r0=0x31 r20=0x1
+[    3.712671] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[5] r4=0x0 start=0x39060c110 end=0x39060c81f r0=0x31 r20=0x1
+[    3.712801] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[6] r4=0x0 start=0x390668000 end=0x390668003 r0=0x31 r20=0x1
+[    3.712939] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[7] r4=0x0 start=0x390eec000 end=0x390eee000 r0=0x31 r20=0x1
+[    3.713071] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: write rule[8] r4=0x0 start=0x3881f006c end=0x3881f007b r0=0x31 r20=0x1
+[    3.713202] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: writes done
+[    3.713334] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[0] r0=0x31 r4=0x0 start=0x38828c000 end=0x38828c06f r20=0x1 MATCH
+[    3.713465] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[1] r0=0x31 r4=0x0 start=0x38829c800 end=0x38829c9a7 r20=0x1 MATCH
+[    3.713595] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[2] r0=0x31 r4=0x0 start=0x3882d0018 end=0x3882d0113 r20=0x1 MATCH
+[    3.713724] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[3] r0=0x31 r4=0x0 start=0x3882bc020 end=0x3882bc023 r20=0x1 MATCH
+[    3.713855] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[4] r0=0x31 r4=0x0 start=0x388240324 end=0x388240327 r20=0x1 MATCH
+[    3.713985] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[5] r0=0x31 r4=0x0 start=0x39060c110 end=0x39060c81f r20=0x1 MATCH
+[    3.714119] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[6] r0=0x31 r4=0x0 start=0x390668000 end=0x390668003 r20=0x1 MATCH
+[    3.714247] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[7] r0=0x31 r4=0x0 start=0x390eec000 end=0x390eee003 r20=0x1 DIFF
+[    3.714379] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write dapf[8] r0=0x31 r4=0x0 start=0x3881f006c end=0x3881f007b r20=0x1 MATCH
+[    3.714515] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 B1: post-write RESULT DIFF (8/9 entries match ADT)
+[    3.714648] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: CPU_CONTROL before RUN = 0x0 t=1064431us irqs=0
+[    3.714776] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: CPU_CONTROL after RUN = 0x10 t=1064655us irqs=0
+[    3.714908] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: apple_rtkit_wake() call t=1064874us irqs=0
+[    3.715040] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Initializing (protocol version 12)
+[    3.715168] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: mbox TX #1 ep=0x0 msg=0x60000000000220 t=1065099us irqs=0
+[    3.715302] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: mbox TX #2 ep=0x0 msg=0x200000000c000c t=1065900us irqs=0
+[    3.715432] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: mbox TX #3 ep=0x0 msg=0x88000000000000 t=1066947us irqs=0
+[    3.715562] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: mbox TX #4 ep=0x0 msg=0x50000100000002 t=1067748us irqs=0
+[    3.715695] [HOST] kernel: rtkit-helper 394600000.mtp: x6e3 trace: apple_rtkit_wake() returned 0 t=1069438us irqs=0
+[    3.715828] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: main.c:245: MTP Says Hello
+[    3.716099] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: main.c:245: Version: AppleMTPFirmwareMac-5340.61.4~502
+[    3.716360] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: main.c:245: Personality: MTP_SYS
+[    3.716618] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: main.c:245: SDK: 25G74
+[    3.716870] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: main.c:245: Built on: 2026-07-31__19:50:45
+[    3.717136] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Unknown oslog message: 3ff006e3d1ee38a
+[    3.717388] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Unknown oslog message: 40000208d31b0b3
+[    3.717639] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Unknown oslog message: 40000404912949d
+[    3.717897] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Unknown oslog message: 40000607324f42d
+[    3.718148] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Unknown oslog message: 50672694670744d
+[    3.718406] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Unknown oslog message: 56500657261776d
+[    3.718782] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: kb_transport.c:271: IPD HIDSPI attached
+[    3.719030] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_pwr_mgr.c:198: [TPM] Mac Power Manager State Machine Initialized (0)
+[    3.719282] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: act_mgr.c:551: Called act_mgr_init()
+[    3.719533] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: comm.c:199: Initializing comm interface <0- "comm">
+[    3.719661] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: comm.c:199: Initializing comm interface <1- "multi-touch">
+[    3.719786] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: comm.c:199: Initializing comm interface <2- "keyboard">
+[    3.719915] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: comm.c:199: Initializing comm interface <3- "stm">
+[    3.720049] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: comm.c:199: Initializing comm interface <4- "actuator">
+[    3.720178] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: comm.c:199: Initializing comm interface <5- "tp-accel">
+[    3.720309] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: comm.c:199: Initializing comm interface <6- "mtp">
+[    3.720561] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: stm.c:75: ST IF complete enumeration: SENT (0x0)
+[    3.720811] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_iface.c:171: Grape interface initializing
+[    3.721069] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_iface.c:179: Grape interface initialized
+[    3.721198] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_mgr.c:65: Touch IF complete enumeration: SENT
+[    3.721333] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: keyboard.c:63: Keyboard initialized
+[    3.721862] [HOST] kernel: dockchannel-hid 394b28000.input: Initialized, awaiting packets
+[    3.722004] [HOST] kernel: dockchannel-hid 394b28000.input: Product name for stm: Apple Internal Keyboard / Trackpad
+[    3.722144] [HOST] kernel: dockchannel-hid 394b28000.input: New interface stm
+[    3.722284] [HOST] kernel: dockchannel-hid 394b28000.input: Product name for multi-touch: Apple Internal Keyboard / Trackpad
+[    3.722414] [HOST] kernel: dockchannel-hid 394b28000.input: Product name for keyboard: Apple Internal Keyboard / Trackpad
+[    3.722545] [HOST] kernel: dockchannel-hid 394b28000.input: Product name for tp-accel: Apple Internal Keyboard / Trackpad
+[    3.722674] [HOST] kernel: dockchannel-hid 394b28000.input: Product name for actuator: Apple Internal Keyboard / Trackpad
+[    3.722807] [HOST] kernel: dockchannel-hid 394b28000.input: Product name for mtp: Apple Internal Keyboard / Trackpad
+[    3.722938] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: stm_cr.c:93: ST management interface configuration completed
+[    3.723069] [HOST] kernel: dockchannel-hid 394b28000.input: Interface stm is now ready
+[    3.723491] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: stm.c:89: ST management ready
+[    3.724511] [HOST] kernel: dockchannel-hid 394b28000.input: New interface multi-touch
+[    3.724652] [HOST] kernel: dockchannel-hid 394b28000.input: New interface keyboard
+[    3.724796] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_iface.c:370: Grape interface configuration completed
+[    3.724806] [HOST] kernel: input: Apple MTP multi-touch as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0002/input/input0
+[    3.724940] [HOST] kernel: dockchannel-hid 394b28000.input: New interface actuator
+[    3.725082] [HOST] kernel: magicmouse 0019:05AC:035B.0002: input: HOST HID v5.20 Mouse [Apple MTP multi-touch] on 394b28000.input.1 (multi-touch)
+[    3.725212] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: actuator_cr.c:84: Actuator interface configuration completed
+[    3.725348] [HOST] kernel: dockchannel-hid 394b28000.input: Interface actuator is now ready
+[    3.725479] [HOST] kernel: dockchannel-hid 394b28000.input: New interface tp-accel
+[    3.725611] [HOST] kernel: dockchannel-hid 394b28000.input: New interface mtp
+[    3.725742] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: actuator.c:71: Actuator ready
+[    3.725873] [HOST] kernel: dockchannel-hid 394b28000.input: Interface keyboard is now ready
+[    3.725885] [HOST] kernel: input: Apple MTP keyboard as /devices/platform/soc/394b14000.fifo/394b28000.input/0019:05AC:035B.0004/input/input1
+[    3.726017] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: keyboard_cr.c:73: Keyboard interface configuration completed
+[    3.726152] [HOST] kernel: dockchannel-hid 394b28000.input: Interface tp-accel is now ready
+[    3.726283] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: keyboard.c:77: Keyboard ready
+[    3.726414] [HOST] kernel: dockchannel-hid 394b28000.input: Interface mtp is now ready
+[    3.726547] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: accel_cr.c:73: Accel interface configuration completed
+[    3.726681] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: accel.c:71: Accel ready
+[    3.726810] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: mtp_cr.c:268: MTP interface is ready
+[    3.726956] [HOST] kernel: apple 0019:05AC:035B.0004: input: HOST HID v5.20 Keyboard [Apple MTP keyboard] on 394b28000.input.2 (keyboard)
+[    3.727088] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: mtp_cr.c:275: MTP management interface configuration completed
+[    3.733966] [HOST] systemd[1]: Starting systemd-network-generator.service - Generate Network Units from Kernel Command Line...
+[    3.734328] [HOST] systemd[1]: Finished systemd-network-generator.service - Generate Network Units from Kernel Command Line.
+[    4.188844] [HOST] kernel: dockchannel-hid 394b28000.input: Starting interface multi-touch
+[    4.189456] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: hal.c:170: Registering DRAM Shared Buffer #0. Addr=3ffffc00000, Size=2097152
+[    4.189770] [HOST] kernel: dockchannel-hid 394b28000.input: Sending firmware for multi-touch
+[    4.192007] [HOST] kernel: dockchannel-hid 394b28000.input: Resetting multi-touch
+[    4.300043] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: bootloader.c:522: (*)New AFE[0] cbor image received
+[    4.428065] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_pwr_mgr.c:219: [TPM] Mac Power Manager State Machine Started
+[    4.428464] [HOST] kernel: dockchannel-hid 394b28000.input: Interface multi-touch is now ready
+[    4.428805] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_iface.c:407: Touch interface ready
+[    4.429126] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_iface.c:424: Touch MT ready
+[    4.429438] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: syslog message: touch_pwr_mgr_fsm.c:291: Sending Cumulus Report to enter Dependent Mode (9A)
+[   20.376024] [HOST] kernel: audit: type=1130 audit(1792336162.282:101): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=j713-mtp-boot-capture comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   20.376084] [HOST] kernel: audit: type=1131 audit(1792336162.282:102): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=j713-mtp-boot-capture comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  120.300078] [HOST] kernel: audit: type=1130 audit(1792337997.658:192): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=j713-mtp-boot-capture-late comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  120.300103] [HOST] kernel: audit: type=1131 audit(1792337997.658:193): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=j713-mtp-boot-capture-late comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  148.564025] [HOST] kernel: rtkit-helper 394600000.mtp: RTKit: Unknown oslog message: 20000000000318e

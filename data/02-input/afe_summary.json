@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "scope": "Archived boots and photographs; not a new hardware test",
+  "before": {
+    "boots": [
+      {
+        "file": "before/boot-01.txt",
+        "variant": "audio0-i2c3-wfi5-root2",
+        "new_image": false,
+        "outcome": "ready"
+      },
+      {
+        "file": "before/boot-02.txt",
+        "variant": "dcp2-diag4-root2",
+        "new_image": true,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-03.txt",
+        "variant": "dcp2-diag4-root2",
+        "new_image": false,
+        "outcome": "ready"
+      },
+      {
+        "file": "before/boot-04.txt",
+        "variant": "audio0-i2c3-wfi5-root2",
+        "new_image": true,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-05.txt",
+        "variant": "audio0-i2c3-wfi5-root2",
+        "new_image": false,
+        "outcome": "ready"
+      },
+      {
+        "file": "before/boot-06.txt",
+        "variant": "dcp2-diag5-root2",
+        "new_image": true,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-07.txt",
+        "variant": "dcp2-diag6-root2",
+        "new_image": true,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-08.txt",
+        "variant": "dcp2-diag7-root2",
+        "new_image": true,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-09.txt",
+        "variant": "dcp2-diag8-root2",
+        "new_image": true,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-10.txt",
+        "variant": "dcp2-diag8-root2",
+        "new_image": false,
+        "outcome": "ready"
+      },
+      {
+        "file": "before/boot-11.txt",
+        "variant": "n1-dcp-root2",
+        "new_image": true,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-12.txt",
+        "variant": "n1-dcp-root2",
+        "new_image": false,
+        "outcome": "ready"
+      },
+      {
+        "file": "before/boot-13.txt",
+        "variant": "n1-dcp-root2",
+        "new_image": false,
+        "outcome": "afe-failure"
+      },
+      {
+        "file": "before/boot-14.txt",
+        "variant": "n1-dcp-root2",
+        "new_image": false,
+        "outcome": "ready"
+      },
+      {
+        "file": "before/boot-15.txt",
+        "variant": "n1-dcp-root2",
+        "new_image": false,
+        "outcome": "afe-failure"
+      }
+    ],
+    "new_image": {
+      "ready": 0,
+      "afe_failure": 7
+    },
+    "same_image": {
+      "ready": 6,
+      "afe_failure": 2
+    }
+  },
+  "photos": [
+    {
+      "photo": "IMG_0181",
+      "outcome": "afe-failure",
+      "start_to_firmware_ms": 28.0,
+      "ready_s": null
+    },
+    {
+      "photo": "IMG_0182",
+      "outcome": "ready",
+      "start_to_firmware_ms": 26.9,
+      "ready_s": 4.563136
+    },
+    {
+      "photo": "IMG_0183",
+      "outcome": "ready",
+      "start_to_firmware_ms": 123.8,
+      "ready_s": 4.696308
+    },
+    {
+      "photo": "IMG_0184",
+      "outcome": "ready",
+      "start_to_firmware_ms": 111.6,
+      "ready_s": 4.661978
+    }
+  ]
+}

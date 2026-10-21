@@ -33,6 +33,11 @@ data/03-wifi/wifi_summary.json: analysis/wifi.py evidence/03-wifi/manifest.json 
 
 wifi: data/03-wifi/wifi_summary.json
 
+data/02-input/afe_summary.json: analysis/afe.py evidence/02-input/afe/manifest.json $(wildcard evidence/02-input/afe/before/*.txt) evidence/02-input/afe/photo-transcriptions.md
+	$(PY) analysis/afe.py
+
+afe: data/02-input/afe_summary.json
+
 check:
 	$(PY) tools/scan_identifiers.py
 	cd evidence/01-first-boot/logs && $(SHA) -c SHA256SUMS.original
@@ -40,7 +45,9 @@ check:
 	$(PY) analysis/mtp.py --check
 	cd evidence/02-input/trackpad && $(SHA) -c SHA256SUMS
 	$(PY) analysis/trackpad.py --check
+	cd evidence/02-input/afe && $(SHA) -c SHA256SUMS
+	$(PY) analysis/afe.py --check
 	cd evidence/03-wifi && $(SHA) -c SHA256SUMS
 	$(PY) analysis/wifi.py --check
 
-.PHONY: all fig01 mtp trackpad wifi check
+.PHONY: all fig01 mtp trackpad afe wifi check

@@ -1,0 +1,11 @@
+J713 ADT, multi-touch node (IODeviceTree, read on macOS). Only these properties are quoted.
+
+"function-afe-reset" = <d500000034574b706331506700000100>
+"PowerMethod" = 2
+"reset-sequence" = <66756e6374696f6e2d6166652d72657365740032000100>
+"power-sequence" = <66756e6374696f6e2d6166652d72657365740000320001>
+
+Reading:
+function-afe-reset  SMC (phandle 0xd5), key "gP1c" (bytes 63 31 50 67, little-endian), flags 0x00010000
+power-sequence      "function-afe-reset" NUL, then 00 32 00 01: level 0, wait 0x32 = 50 ms, level 1
+reset-sequence      "function-afe-reset" NUL, then 32 00 01 00

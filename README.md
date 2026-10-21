@@ -134,9 +134,17 @@ I prepared the J713 firmware through the existing Gravity converter, then enable
 decoder and keyboard driver in a two-symbol configuration experiment. A later boot of that same artifact
 produced physically confirmed internal-trackpad cursor movement. Intermittent AFE startup remained a separate
 problem. The [full account](docs/02-input-trackpad.md) distinguishes retained journal records, archived build
-metadata and my own observations at the machine. It includes the later reset-retry attempt and its limits; the
-AFE fix of 18 October will follow with its own record.
+metadata and my own observations at the machine. It includes the later reset-retry attempt and its limits.
 Reproduce the [selected timeline](data/02-input/trackpad_summary.json) with `make trackpad`; verify with `make check`.
+
+### 2.3 AFE power sequence (18 October)
+
+On the first boot after macOS the trackpad's analog front end (AFE) did not start; after a Linux reboot it did.
+Every boot that followed an image change, and so followed macOS, failed: 7 of 7. The reset line, the startup chime
+and cold power were each ruled out. macOS power-cycles the AFE for 50 ms before every bootload, and the J713 ADT
+describes the same `power-sequence`. With that sequence in the driver, the trackpad started on the first attempt
+on the first boot after macOS. The [full account](docs/02-input-afe.md) lists what the evidence does and does
+not show.
 
 ## 3. Wi-Fi (2 October 2026)
 

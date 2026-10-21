@@ -79,7 +79,7 @@ both retries while another [reached READY](../evidence/02-input/trackpad/afe-rea
 not a controlled pair.
 
 For three weeks my workaround was a quick forced reboot after the first boot; on the second boot the trackpad
-came up. That turned out to be the clue. The fix of 18 October will follow as section 2.3.
+came up. That turned out to be the clue; the fix is [section 2.3](02-input-afe.md).
 
 ## What this does and does not show
 
