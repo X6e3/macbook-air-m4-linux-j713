@@ -569,5 +569,55 @@
       },
       "multitouch_ready": null
     }
+  ],
+  "wide1": [
+    {
+      "id": "wide1-1",
+      "file": "logs/wide1-1-dmesg.txt",
+      "run_to_first_irq_us": 221,
+      "first_irq_to_tx1_us": 10376,
+      "irqs_at_10ms_checkpoint": 2117,
+      "wake_return": -62,
+      "irqs_at_wake_return": 100005,
+      "lines": {
+        "run": 385,
+        "first_irq": 386,
+        "checkpoint_10ms": 414,
+        "tx1": 416,
+        "wake_return": 458
+      }
+    },
+    {
+      "id": "wide1-2",
+      "file": "logs/wide1-2-dmesg.txt",
+      "run_to_first_irq_us": 223,
+      "first_irq_to_tx1_us": 10405,
+      "irqs_at_10ms_checkpoint": 2099,
+      "wake_return": -62,
+      "irqs_at_wake_return": 100005,
+      "lines": {
+        "run": 385,
+        "first_irq": 386,
+        "checkpoint_10ms": 414,
+        "tx1": 416,
+        "wake_return": 458
+      }
+    },
+    {
+      "id": "wide1-3",
+      "file": "logs/wide1-3-dmesg.txt",
+      "run_to_first_irq_us": 223,
+      "first_irq_to_tx1_us": 10414,
+      "irqs_at_10ms_checkpoint": 2055,
+      "wake_return": -62,
+      "irqs_at_wake_return": 100005,
+      "lines": {
+        "run": 385,
+        "first_irq": 386,
+        "checkpoint_10ms": 414,
+        "tx1": 416,
+        "wake_return": 458
+      }
+    }
   ]
 }

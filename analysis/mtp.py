@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Derive the A1/B1/B2 results and source line references from the MTP startup logs.
+"""Derive the A1/B1/B2 results and source line references from the MTP startup logs, and the
+RUN-to-interrupt timing from the three earlier wide1 boots.
 
 python3 -I analysis/mtp.py          writes data/02-input/mtp_summary.json
 python3 -I analysis/mtp.py --check  verifies hashes, lineage and saved results
@@ -18,6 +19,7 @@ EV = ROOT / 'evidence/02-input'
 OUT = ROOT / 'data/02-input/mtp_summary.json'
 MTP = 'rtkit-helper 394600000.mtp:'
 HID = 'dockchannel-hid 394b28000.input:'
+DART = 'apple-dart 394800000.iommu:'
 
 
 def only(matches, label, required=False):
@@ -91,6 +93,39 @@ def summarize(entry):
     }
 
 
+def survey(entry):
+    """wide1: when the DART interrupts start relative to RUN and to the first mailbox message."""
+    data = (EV / entry['file']).read_bytes()
+    if hashlib.sha256(data).hexdigest() != entry['published_sha256']:
+        raise ValueError(f"{entry['id']}: published checksum mismatch")
+    lines = data.decode('utf-8').splitlines()
+    if len(lines) != entry['line_count']:
+        raise ValueError(f"{entry['id']}: line count mismatch")
+
+    def first(pattern, device):
+        for n, text in enumerate(lines, 1):
+            match = re.search(pattern, text) if device in text else None
+            if match:
+                return n, match
+        raise ValueError(f"{entry['id']}: missing {pattern}")
+
+    if first(r'Linux version (\S+)', 'Linux version')[1][1] != entry['kernel_release'] or \
+            first(r'\bx6e3\.v=(\S+)', 'Kernel command line')[1][1] != entry['command_line_variant']:
+        raise ValueError(f"{entry['id']}: kernel/variant lineage mismatch")
+    run_line, run = first(r'CPU_CONTROL after RUN = 0x10 t=(\d+)us', MTP)
+    irq_line, irq = first(r'x6e3 irq-first: t=(\d+)us', DART)
+    delay_line, delay = first(r'10 ms after RUN, before wake: .* irqs=(\d+)', MTP)
+    tx_line, tx = first(r'mbox TX #1 .* t=(\d+)us', MTP)
+    wake_line, wake = first(r'apple_rtkit_wake\(\) returned (-?\d+) t=\d+us irqs=(\d+)', MTP)
+    if not int(run[1]) < int(irq[1]) < int(tx[1]):
+        raise ValueError(f"{entry['id']}: interrupts do not start between RUN and the first mailbox message")
+    return {'id': entry['id'], 'file': entry['file'],
+            'run_to_first_irq_us': int(irq[1]) - int(run[1]), 'first_irq_to_tx1_us': int(tx[1]) - int(irq[1]),
+            'irqs_at_10ms_checkpoint': int(delay[1]), 'wake_return': int(wake[1]), 'irqs_at_wake_return': int(wake[2]),
+            'lines': {'run': run_line, 'first_irq': irq_line, 'checkpoint_10ms': delay_line, 'tx1': tx_line,
+                      'wake_return': wake_line}}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
@@ -99,11 +134,13 @@ def main():
     if [x['id'] for x in manifest['logs']] != ['a1', 'b1', 'b1-repeat', 'b2']:
         raise ValueError('Unexpected experiment selection/order')
     result = {'schema': 1, 'scope': 'Archived MTP startup observations; not a new hardware test',
-              'logs': [summarize(x) for x in manifest['logs']]}
+              'logs': [summarize(x) for x in manifest['logs']],
+              'wide1': [survey(x) for x in manifest['survey_logs']]}
     if args.check:
         if json.loads(OUT.read_text()) != result:
             raise ValueError('Saved MTP summary is stale; run make mtp')
-        print('MTP: 4 log hashes, lineage, DAPF readback counts and saved summary match')
+        n = len(manifest['logs']) + len(manifest['survey_logs'])
+        print(f'MTP: {n} log hashes, lineage, DAPF readback counts, wide1 timing and saved summary match')
     else:
         OUT.parent.mkdir(parents=True, exist_ok=True)
         OUT.write_text(json.dumps(result, indent=2) + '\n')

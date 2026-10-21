@@ -8,7 +8,7 @@
     "uuid": "All UUID-shaped strings replaced with [UUID], including filesystem UUIDs and fixed UEFI GUIDs",
     "journal_hostname": "Journal hostname replaced with [HOST]",
     "build_identity": "Compiler user/host tuple replaced with [BUILD-IDENTITY]",
-    "machine_id": "Journal-directory machine identifier replaced with [MACHINE-ID]"
+    "machine_id": "Journal-directory machine identifier replaced with [MACHINE-ID]; in the survey logs, the journal directory name"
   },
   "logs": [
     {
@@ -77,6 +77,57 @@
         "journal_hostname": 707,
         "build_identity": 1,
         "machine_id": 1
+      }
+    }
+  ],
+  "survey_source": "Kernel ring buffer (dmesg) saved at boot by the survey service on the first Fedora root, under /var/lib/x6e3/survey/ for kernel 851a36fc: three wide1 boots, the later and complete of the two records of each. Recovered read-only on 21 October 2026 from the verified 14 October partition image of that root (SHA-256 ddb70ffbaa546ff22f89ba1311447a48c896db5e4b562d59fbcd0cb7cfa0bde5). The kernel carries the 10 ms RUN-to-wake delay that B2 removed.",
+  "survey_logs": [
+    {
+      "id": "wide1-1",
+      "file": "logs/wide1-1-dmesg.txt",
+      "kernel_release": "7.1.13-x6e3-g322371b095ad",
+      "original_source_commit_prefix": "322371b095ad",
+      "command_line_variant": "wide1",
+      "original_sha256": "97b246b32b5503e3b1393385817d92a91c86ab4f2ca3673305c80ac448718f2a",
+      "published_sha256": "47671fae4cb9756900ad84cd81d4d4a5dcf891d34dba1437d2fb5d5a96b8d630",
+      "line_count": 697,
+      "redactions": {
+        "uuid": 6,
+        "journal_hostname": 12,
+        "build_identity": 1,
+        "machine_id": 1
+      }
+    },
+    {
+      "id": "wide1-2",
+      "file": "logs/wide1-2-dmesg.txt",
+      "kernel_release": "7.1.13-x6e3-g322371b095ad",
+      "original_source_commit_prefix": "322371b095ad",
+      "command_line_variant": "wide1",
+      "original_sha256": "173b4e768bee14adba127c90b263ed1c521e77abcb8af039491610af898b0873",
+      "published_sha256": "af61f6cba0548d395bcda43b210cca05de1ab3cc5c5cb2c82383acfd7fbd53c7",
+      "line_count": 701,
+      "redactions": {
+        "uuid": 6,
+        "journal_hostname": 5,
+        "build_identity": 1,
+        "machine_id": 2
+      }
+    },
+    {
+      "id": "wide1-3",
+      "file": "logs/wide1-3-dmesg.txt",
+      "kernel_release": "7.1.13-x6e3-g322371b095ad",
+      "original_source_commit_prefix": "322371b095ad",
+      "command_line_variant": "wide1",
+      "original_sha256": "97c7b7b3de079de16d42734a04adf862c8abc5d2521bf1a040a27b699fd26ae8",
+      "published_sha256": "f1a9b05027d89e322c4723f3759f1c7159447c7068cda0d700ea4deeea71361f",
+      "line_count": 701,
+      "redactions": {
+        "uuid": 6,
+        "journal_hostname": 5,
+        "build_identity": 1,
+        "machine_id": 2
       }
     }
   ]
