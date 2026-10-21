@@ -23,16 +23,20 @@ rather than confirm it. Most of it did not hold. My research then led to the m1n
 for dart-mtp. Nobody was programming them. The [frozen bootloader excerpts](../evidence/02-input/bootloader-context.txt)
 record that guard and m1n1's existing write order.
 
-Three earlier boots of the same kernel family (wide1) had timing traces. In all three the DART interrupts
-started 221–223 µs after RUN, about 10.4 ms before Linux sent MTP its first
-mailbox message ([1](../evidence/02-input/logs/wide1-1-dmesg.txt#L386), [2](../evidence/02-input/logs/wide1-2-dmesg.txt#L386), [3](../evidence/02-input/logs/wide1-3-dmesg.txt#L386)).
-The storm was not a reply to anything Linux said. MTP stopped on its own, right after it started.
+Three earlier boots of the same kernel family (wide1) had timing traces. These kernels wait 10 ms between RUN
+and the RTKit wake call, a delay I had added to pull the two apart. Across the three boots, the DART interrupt
+storm began 221–223 µs after ASC RUN, approximately 10.4 ms before the first logged host-to-MTP mailbox
+transmission ([1](../evidence/02-input/logs/wide1-1-dmesg.txt#L386), [2](../evidence/02-input/logs/wide1-2-dmesg.txt#L386), [3](../evidence/02-input/logs/wide1-3-dmesg.txt#L386)).
+So the storm started before Linux's first logged mailbox message, which rules that message out as what set it
+off. It does not rule out the mailbox mechanism as a whole, and on its own it does not show why MTP never
+answered. The DART interrupts and the mailbox messages are separate events. In every interrupt the trace
+dumped, the DART's error register read 0, so the trace does not show what raised them.
 
 ## A1: read before writing
 
 I read the nine dart-mtp DAPF entries [without writing anything](https://github.com/X6e3/j713-linux/commit/e52913a79073ebf881ca3b3c2c3752675849a109).
-[0 of 9](../evidence/02-input/logs/a1-kernel.txt#L385) matched the ADT. After RUN, MTP raised
-100,005 DART interrupts, timed out waiting for its endpoint map, and
+[0 of 9](../evidence/02-input/logs/a1-kernel.txt#L385) matched the ADT. After RUN, the
+DART's interrupt line fired 100,005 times, Linux timed out waiting for MTP's endpoint map, and
 [wake returned -62](../evidence/02-input/logs/a1-kernel.txt#L460).
 
 ## B1: write the board's own rules
