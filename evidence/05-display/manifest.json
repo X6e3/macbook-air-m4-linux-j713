@@ -1,0 +1,162 @@
+{
+  "prepared": "2026-10-24",
+  "files": [
+    {
+      "file": "d4-kernel.txt",
+      "kind": "redacted copy",
+      "source_label": "dmesg-dcp2-diag4-root2.txt",
+      "original_sha256": "1db1f2f43ca8cce8fc02e5f8ca024e92527d31617942a5639b448176db498a2c",
+      "published_sha256": "9164f61ad99c55f22dfcc3c7300efcf4574c824e1a75b244e094182397057ba7",
+      "published_lines": 803,
+      "redactions": [
+        {
+          "kind": "UUID",
+          "count": 3
+        },
+        {
+          "kind": "host name",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "file": "d5-kernel.txt",
+      "kind": "redacted copy",
+      "source_label": "dmesg-dcp2-diag5-root2.txt",
+      "original_sha256": "aaa9a9ff92493f66daa3ff88d8bc3140f661c1707481f74192715e2cfa40d906",
+      "published_sha256": "8c1135f347284fc3a0f9a6941e882992f433aead649d35f35222b201fcb83176",
+      "published_lines": 801,
+      "redactions": [
+        {
+          "kind": "UUID",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "file": "d6-kernel.txt",
+      "kind": "redacted copy",
+      "source_label": "dmesg-dcp2-diag6-root2.txt",
+      "original_sha256": "836b16ea9db2e0b137c7a47e6eeb74f69bd347074d9d16addf5e48aed3b30eb8",
+      "published_sha256": "392f8c105c6ff05cb003d4a80c6565563320d1ebf9b8d09b0b59d196b1982591",
+      "published_lines": 802,
+      "redactions": [
+        {
+          "kind": "UUID",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "file": "d7-kernel.txt",
+      "kind": "redacted copy",
+      "source_label": "dmesg-dcp2-diag7-root2.txt",
+      "original_sha256": "f7c4b9889a47185d557428c5d336b64d5ea95079acd0b60edbb80c83301162f4",
+      "published_sha256": "660b072a7b34e5566d3ff937f63508ff9859c9030bfc68d36149642a82f4e4bc",
+      "published_lines": 796,
+      "redactions": [
+        {
+          "kind": "UUID",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "file": "d8-kernel.txt",
+      "kind": "redacted copy",
+      "source_label": "dmesg-dcp2-diag8-root2.txt",
+      "original_sha256": "1e79c792f8be9667c5810aab9aceaec8d13555b2be5b4c9d832a2f5d3339821c",
+      "published_sha256": "2335b08cfe9aeb491ca132c1173d0a65d415c9229cac1d6da2f043e1fd65de84",
+      "published_lines": 800,
+      "redactions": [
+        {
+          "kind": "UUID",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "file": "n1-kernel-selected.txt",
+      "kind": "selected original lines",
+      "source_label": "dmesg-n1-dcp-root2.txt",
+      "original_sha256": "41e9a6f13bdaeb7a4874d379c29d8f192f6d746bd8036420e485fb2a8c21f0a3",
+      "published_sha256": "be821fcb043d7e6bea894f80b1b799d22ed31c901b6c44994a128d82fce0c141",
+      "published_lines": 5,
+      "redactions": [],
+      "original_line_numbers": [
+        427,
+        434,
+        435,
+        442,
+        480
+      ]
+    },
+    {
+      "file": "n1-stk.log",
+      "kind": "selected original lines",
+      "source_label": "n1-third-run.log",
+      "original_sha256": "f8316e42cdb5f826e05ac19869925e21ca1fb02200ca9328c237b73f3fce2b6b",
+      "published_sha256": "f8408d44d90ff72aae211c037af1a434abe5fb3520adcb1875e6ec42b5a849f1",
+      "published_lines": 13,
+      "redactions": [
+        {
+          "kind": "home path",
+          "count": 2
+        }
+      ],
+      "original_line_numbers": [
+        39,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        150,
+        196,
+        197,
+        232,
+        233
+      ]
+    },
+    {
+      "file": "image-parts.json",
+      "kind": "prepared analysis metadata",
+      "published_sha256": "11ec21d726e22f935795acf14a9417447300e3e0015800d80e2d4c6f7fab65dd",
+      "published_lines": 42,
+      "prepared": "2026-10-24",
+      "redactions": []
+    },
+    {
+      "file": "observations.md",
+      "kind": "engineering note or photograph transcription",
+      "published_sha256": "93d70b797a69952297fe02eb7fa10caf0a72117be90fa7accc5c4a1a9fa1e5dd",
+      "published_lines": 18,
+      "prepared": "2026-10-24",
+      "redactions": [],
+      "private_photographs": [
+        {
+          "file": "IMG_0164.HEIC",
+          "sha256": "dd587f11cc597cdc97c1b77e9c1db38ba10f150da1df70b1982810c82598538c"
+        },
+        {
+          "file": "IMG_0167.HEIC",
+          "sha256": "f2f7234120d1794303026a21c763ec30bd4b3ba103750a926ddc47a8eda39f01"
+        }
+      ],
+      "updated": "2026-10-26"
+    },
+    {
+      "file": "source-notes.md",
+      "kind": "engineering note or photograph transcription",
+      "published_sha256": "1be0df1c770ddd9d661c179f06e726f160cdb0ce4f6f99fd377b4e6ef84a0151",
+      "published_lines": 36,
+      "prepared": "2026-10-24",
+      "redactions": [],
+      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged",
+      "updated": "2026-10-26"
+    }
+  ],
+  "updated": "2026-10-26"
+}

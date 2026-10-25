@@ -5,3 +5,14 @@ evidence/03-wifi/bin-only-kernel.txt whitespace=-blank-at-eol
 evidence/03-wifi/bin-only-runtime.txt whitespace=-blank-at-eol
 evidence/03-wifi/fwset-runtime.txt whitespace=-blank-at-eol
 evidence/03-wifi/normalboot-report.txt whitespace=-blank-at-eol
+
+# Archived machine output and source diffs retain their original whitespace.
+# Integrity is checked by the evidence manifests, not whitespace normalization.
+evidence/04-gpu/ag2-sensors.txt -whitespace
+evidence/04-gpu/mesa-103-apple9-compression.patch -whitespace
+evidence/05-display/d4-kernel.txt -whitespace
+evidence/05-display/d5-kernel.txt -whitespace
+evidence/05-display/d6-kernel.txt -whitespace
+evidence/05-display/d7-kernel.txt -whitespace
+evidence/05-display/d8-kernel.txt -whitespace
+evidence/05-display/n1-stk.log -whitespace

@@ -1,0 +1,5 @@
+L427: [    0.108745] apple-dcp 30ae00000.dcp: DCP booted
+L434: [    0.217642] apple-dcp 30ae00000.dcp: select_mode(color:1 timing:2) "2560x1600": 60 277042 2560 2568 2600 2640 1600 1633 1705 1749 0x48 0x0
+L435: [    0.217645] apple-dcp 30ae00000.dcp: select_mode() color mode depth:8 format:0 colorimetry:16 eotf:0 range:0 vrr:0
+L442: [    0.252752] apple-drm soc:display-subsystem: [drm] fb0: appledrmfb frame buffer device
+L480: [    0.303053] cpuidle-apple cpuidle-apple: J713 opt-in register-saving WFI (no CYC_OVRD write)

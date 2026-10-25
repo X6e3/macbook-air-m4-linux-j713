@@ -161,8 +161,7 @@ is {later['pmgr_fail'][0]}, but the kernel+initramfs changed in the same step (a
 so that drop is not attributed to ATC2/3 alone.
 
 Data: `evidence/01-first-boot/logs/boot-1..21.txt`, `evidence/01-first-boot/image-parts.csv`, `evidence/01-first-boot/dtb/`.
-Code: `analysis/boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
-library only).
+Code: `analysis/boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3 plus the PNG renderer described in [reproduction notes](docs/reproducing.md)).
 """
 (ROOT / "figures/out/fig01-caption.md").write_text(c)
 print(f"fig01: {N} boots, H={H}, ratio {S['ratio_v4ctl_over_v4']}")

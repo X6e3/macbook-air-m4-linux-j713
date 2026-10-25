@@ -1,0 +1,4 @@
+[  236.746001] asahi_m4 302600000.gpu: G16: AG1 power budget 7000 mW
+[  357.261472] asahi_m4 302600000.gpu: G16: AG1 power budget 26250 mW
+[  476.720141] asahi_m4 302600000.gpu: G16: AG1 power budget 3500 mW
+[  597.175204] asahi_m4 302600000.gpu: G16: AG1 power budget 26250 mW

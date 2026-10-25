@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "renderer": "Apple M4 (G16G B1)",
+  "backend": "DRM",
+  "seconds": 180,
+  "kwin_pid": "4731",
+  "first_bytes": 282886144,
+  "last_bytes": 427851776,
+  "max_sample_bytes": 454180864,
+  "gpu_errors": [],
+  "driver_sha256": "75ef3ba0063a917d63ea4a9cd236c26fb51839b06521b8f511710192b890d36f",
+  "started": "2026-10-06 09:00:22",
+  "finished": "2026-10-06T09:03:45.443934"
+}

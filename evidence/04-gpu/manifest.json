@@ -1,0 +1,452 @@
+{
+  "prepared": "2026-10-24",
+  "files": [
+    {
+      "file": "probe.txt",
+      "kind": "selected original lines",
+      "source_label": "6b0918b69c514a76af0799dcd5d4e1e8.txt",
+      "original_sha256": "64cec837b7fab069c2acfde0ae580bc137bb3d58f5307fd681b29c3d36d7434c",
+      "published_sha256": "322c1caae9b31b69b322b05ad997ac3b943efd9746cf9f41d2b112ce286a56f0",
+      "published_lines": 11,
+      "redactions": [
+        {
+          "kind": "UUID",
+          "count": 1
+        },
+        {
+          "kind": "host name",
+          "count": 11
+        }
+      ],
+      "original_line_numbers": [
+        60,
+        500,
+        502,
+        504,
+        506,
+        508,
+        510,
+        512,
+        514,
+        516,
+        518
+      ]
+    },
+    {
+      "file": "baseline-repro.log",
+      "kind": "redacted copy",
+      "source_label": "baseline-repro.log",
+      "original_sha256": "83247fdec2f197b691586f9b3fbf5ebf4261ac1f4221da32534143370f7ee0b1",
+      "published_sha256": "83247fdec2f197b691586f9b3fbf5ebf4261ac1f4221da32534143370f7ee0b1",
+      "published_lines": 17,
+      "redactions": []
+    },
+    {
+      "file": "patched-repro.log",
+      "kind": "redacted copy",
+      "source_label": "patched-repro.log",
+      "original_sha256": "50c850b60741859e183fd27f4b33502c43abccf81ca7c44ca176e775055ddf24",
+      "published_sha256": "50c850b60741859e183fd27f4b33502c43abccf81ca7c44ca176e775055ddf24",
+      "published_lines": 20,
+      "redactions": []
+    },
+    {
+      "file": "cold-session-result.json",
+      "kind": "redacted copy",
+      "source_label": "cold-session-result.json",
+      "original_sha256": "b8288586308ee2bf08f508ffe02b0f59bba754b049ce8f90dac3142d96416844",
+      "published_sha256": "b8288586308ee2bf08f508ffe02b0f59bba754b049ce8f90dac3142d96416844",
+      "published_lines": 14,
+      "redactions": []
+    },
+    {
+      "file": "presentation-probe.txt",
+      "kind": "redacted copy",
+      "source_label": "probe.txt",
+      "original_sha256": "5a4bdab5769f856296fcd230416680c7753129c1cc79eab8f9a483753bb0b85b",
+      "published_sha256": "5a4bdab5769f856296fcd230416680c7753129c1cc79eab8f9a483753bb0b85b",
+      "published_lines": 956,
+      "redactions": []
+    },
+    {
+      "file": "presentation-kwin-renderer.txt",
+      "kind": "redacted copy",
+      "source_label": "kwin-renderer.txt",
+      "original_sha256": "14667f84862bdd1877805e2ee27f658ba9728c31fe4ebce0b7a1bbd89ea749ec",
+      "published_sha256": "14667f84862bdd1877805e2ee27f658ba9728c31fe4ebce0b7a1bbd89ea749ec",
+      "published_lines": 3,
+      "redactions": []
+    },
+    {
+      "file": "lim2-sensors.txt",
+      "kind": "complete numeric table",
+      "source_label": "sensors.txt",
+      "original_sha256": "b196021553272feea38778fcfb8b89bf36b400347b0be9e1ac6c6ec91890e1e7",
+      "published_sha256": "b196021553272feea38778fcfb8b89bf36b400347b0be9e1ac6c6ec91890e1e7",
+      "published_lines": 1290,
+      "redactions": []
+    },
+    {
+      "file": "lim2-load-start.txt",
+      "kind": "redacted copy",
+      "source_label": "load-start.txt",
+      "original_sha256": "3eeff63ef1d5bfdb4af623da377b594ad4c67808d624b735accaa9b430eb46e5",
+      "published_sha256": "3eeff63ef1d5bfdb4af623da377b594ad4c67808d624b735accaa9b430eb46e5",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "lim2-load.txt",
+      "kind": "redacted copy",
+      "source_label": "load.txt",
+      "original_sha256": "d50ed7f7c6cec7d5e3bfae625332c27f2be6b5fa9b2ddc8c8ecf1e3d207ead2e",
+      "published_sha256": "d50ed7f7c6cec7d5e3bfae625332c27f2be6b5fa9b2ddc8c8ecf1e3d207ead2e",
+      "published_lines": 123,
+      "redactions": []
+    },
+    {
+      "file": "ag2-phases.txt",
+      "kind": "redacted copy",
+      "source_label": "phases.txt",
+      "original_sha256": "6ece0be6e694395f58b1d2baf9dc3b65fdfecd57c13f51ebd11f14c6d9cc719c",
+      "published_sha256": "6ece0be6e694395f58b1d2baf9dc3b65fdfecd57c13f51ebd11f14c6d9cc719c",
+      "published_lines": 7,
+      "redactions": []
+    },
+    {
+      "file": "ag2-sensors.txt",
+      "kind": "redacted copy",
+      "source_label": "sensors.txt",
+      "original_sha256": "dcd94ead97bf81cbc625dfb5e968294d7f9cb35e0590266320a61fee10895d63",
+      "published_sha256": "dcd94ead97bf81cbc625dfb5e968294d7f9cb35e0590266320a61fee10895d63",
+      "published_lines": 690,
+      "redactions": []
+    },
+    {
+      "file": "ag2-load.txt",
+      "kind": "redacted copy",
+      "source_label": "load.txt",
+      "original_sha256": "85323d3ed72d4f4c1911f98086b706500bef831adf3d2f6cb693e8cfc1d50886",
+      "published_sha256": "85323d3ed72d4f4c1911f98086b706500bef831adf3d2f6cb693e8cfc1d50886",
+      "published_lines": 66,
+      "redactions": []
+    },
+    {
+      "file": "ag2-dmesg-ag2.txt",
+      "kind": "redacted copy",
+      "source_label": "dmesg-ag2.txt",
+      "original_sha256": "85268f4c581f2af0ac16dcec7f639e59c451e5f6f9adcf154c4c73f309b21ca3",
+      "published_sha256": "85268f4c581f2af0ac16dcec7f639e59c451e5f6f9adcf154c4c73f309b21ca3",
+      "published_lines": 2,
+      "redactions": []
+    },
+    {
+      "file": "stress-load.c",
+      "kind": "archived test source",
+      "source_label": "gl-burn.c",
+      "original_sha256": "867b04a48fb04f082d6c2b6218dba3465497ecd4aaa3ed7b468fd61f86ccd933",
+      "published_sha256": "867b04a48fb04f082d6c2b6218dba3465497ecd4aaa3ed7b468fd61f86ccd933",
+      "published_lines": 151,
+      "redactions": []
+    },
+    {
+      "file": "macos-smc.txt",
+      "kind": "selected columns, original units",
+      "source_label": "smc.txt",
+      "columns": [
+        "t",
+        "TVS1",
+        "TCMz",
+        "Tp0f"
+      ],
+      "original_sha256": "4ce3f15aef70ab6b66a139188f09171f81b362a2b40e17fb31a0466849a53c84",
+      "published_sha256": "c411383c624b77ead0d12b39d0493847b5184b966d6ec740935d5328bb479e62",
+      "published_lines": 991,
+      "redactions": []
+    },
+    {
+      "file": "macos-agx.txt",
+      "kind": "selected columns, original units",
+      "source_label": "agx.txt",
+      "columns": [
+        "t",
+        "MaxGPUAbsolutePower",
+        "FilteredGPUPower",
+        "CLTMPerfMax"
+      ],
+      "original_sha256": "7c6656bb3fe03e6e4d660e0151fa5626de2c11e5113e38134309f7a9822edb07",
+      "published_sha256": "3a8bed307f9d1481be9fecaa8786ed3ff9a4ad65a3934e5dd313130410828513",
+      "published_lines": 991,
+      "redactions": []
+    },
+    {
+      "file": "source-notes.md",
+      "kind": "engineering note or photograph transcription",
+      "published_sha256": "044cce94128d43cc19ce245922681855075973c615b2f14575dc244f6046652f",
+      "published_lines": 87,
+      "prepared": "2026-10-24",
+      "redactions": [],
+      "updated": "2026-10-26",
+      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged; 26 Oct: Mesa context-priority note added"
+    },
+    {
+      "file": "adt-performance.json",
+      "kind": "numeric property extraction",
+      "source_label": "J713 IODeviceTree sgx",
+      "original_sha256": "b85d464a61bcd5b64d6c5fc539b345c1f75d9fd487b1d15c0b8796088b7f4cee",
+      "published_sha256": "e70a55c03e0fa4ae7c1bb0d8d9c1ce40ac1937c202597ce1057eb46ec7d1674c",
+      "published_lines": 106,
+      "redactions": [],
+      "selection": "Numeric GPU properties only"
+    },
+    {
+      "file": "mesa-103-apple9-compression.patch",
+      "kind": "unchanged archived source patch",
+      "source_label": "mesa-103-apple9-compression.patch",
+      "original_sha256": "2bf0aef0e534d00a735cbba49373608883ef5153383be06b7c0d7e0e335c6ad9",
+      "published_sha256": "2bf0aef0e534d00a735cbba49373608883ef5153383be06b7c0d7e0e335c6ad9",
+      "published_lines": 98,
+      "redactions": [],
+      "selection": "Entire archived patch"
+    },
+    {
+      "file": "bootloader-gpu1.patch",
+      "kind": "selected file diff",
+      "source_label": "m1n1-gpu1-vs-950e6b7.diff",
+      "original_sha256": "22bbe6cbe212e7abe976dbd60d9ba9277f0c718666972524830d95684804fde0",
+      "published_sha256": "ed5599e922e9f17c27c8f2d79c3d735ed3f2acbdf96b29778bb77c451e5e5e28",
+      "published_lines": 55,
+      "redactions": [],
+      "selection": "src/kboot_gpu.c hunks only"
+    },
+    {
+      "file": "tg1-sensors.txt",
+      "kind": "complete numeric table",
+      "source_label": "sensors.txt",
+      "run": "Linux, no thermal limit, TG1 sensor image",
+      "run_started": "2026-10-22 14:12:55 +03",
+      "archive_path": "X63-R j713-diag/tg1/result-20261022-141255",
+      "original_sha256": "f584b7afb28f6d747474949226680ee0ccb31bcc4b3e7bde392d4cca437ae792",
+      "published_sha256": "f584b7afb28f6d747474949226680ee0ccb31bcc4b3e7bde392d4cca437ae792",
+      "published_lines": 1748,
+      "redactions": []
+    },
+    {
+      "file": "tg1-load.txt",
+      "kind": "unchanged copy",
+      "source_label": "load.txt",
+      "run": "Linux, no thermal limit, TG1 sensor image",
+      "run_started": "2026-10-22 14:12:55 +03",
+      "archive_path": "X63-R j713-diag/tg1/result-20261022-141255",
+      "original_sha256": "2f9c5fc384640d48050974ed4baf1220d5c63bd7b7b4acbb73d233c2b2bfc43b",
+      "published_sha256": "2f9c5fc384640d48050974ed4baf1220d5c63bd7b7b4acbb73d233c2b2bfc43b",
+      "published_lines": 182,
+      "redactions": []
+    },
+    {
+      "file": "ag1-sensors.txt",
+      "kind": "complete numeric table",
+      "source_label": "sensors.txt",
+      "run": "Linux, AG1 power-budget test",
+      "run_started": "2026-10-22 19:34:12 +03",
+      "archive_path": "X63-R j713-diag/ag1/result-20261022-193412",
+      "original_sha256": "74a98e11521fa3b8c974e80b029bd3313a4d07c1bf30f2c5d216075f027605f6",
+      "published_sha256": "74a98e11521fa3b8c974e80b029bd3313a4d07c1bf30f2c5d216075f027605f6",
+      "published_lines": 674,
+      "redactions": []
+    },
+    {
+      "file": "ag1-phases.txt",
+      "kind": "unchanged copy",
+      "source_label": "phases.txt",
+      "run": "Linux, AG1 power-budget test",
+      "run_started": "2026-10-22 19:34:12 +03",
+      "archive_path": "X63-R j713-diag/ag1/result-20261022-193412",
+      "original_sha256": "a7dce591521d88265380271cd79dd8f20082e4e0bdd7fa87a48c2f98b00a2735",
+      "published_sha256": "a7dce591521d88265380271cd79dd8f20082e4e0bdd7fa87a48c2f98b00a2735",
+      "published_lines": 5,
+      "redactions": []
+    },
+    {
+      "file": "ag1-load.txt",
+      "kind": "unchanged copy",
+      "source_label": "load.txt",
+      "run": "Linux, AG1 power-budget test",
+      "run_started": "2026-10-22 19:34:12 +03",
+      "archive_path": "X63-R j713-diag/ag1/result-20261022-193412",
+      "original_sha256": "e4951bcb521ab9fe273560e3d8cf69ce030b017555445280c219e69f0541d705",
+      "published_sha256": "e4951bcb521ab9fe273560e3d8cf69ce030b017555445280c219e69f0541d705",
+      "published_lines": 63,
+      "redactions": []
+    },
+    {
+      "file": "ag1-load-start.txt",
+      "kind": "unchanged copy",
+      "source_label": "load-start.txt",
+      "run": "Linux, AG1 power-budget test",
+      "run_started": "2026-10-22 19:34:12 +03",
+      "archive_path": "X63-R j713-diag/ag1/result-20261022-193412",
+      "original_sha256": "d7b68002037587ecb0002b86ba6ae408fb3e4c5fa9ff3a4d485090cba4557763",
+      "published_sha256": "d7b68002037587ecb0002b86ba6ae408fb3e4c5fa9ff3a4d485090cba4557763",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "ag1-dmesg-ag1.txt",
+      "kind": "unchanged copy",
+      "source_label": "dmesg-ag1.txt",
+      "run": "Linux, AG1 power-budget test",
+      "run_started": "2026-10-22 19:34:12 +03",
+      "archive_path": "X63-R j713-diag/ag1/result-20261022-193412",
+      "original_sha256": "4f618706ff72fa3f45f458d0cbd6d4d0e89639794a9f9240d5775be8d26c7b26",
+      "published_sha256": "4f618706ff72fa3f45f458d0cbd6d4d0e89639794a9f9240d5775be8d26c7b26",
+      "published_lines": 4,
+      "redactions": []
+    },
+    {
+      "file": "ag2-load-start.txt",
+      "kind": "unchanged copy",
+      "source_label": "load-start.txt",
+      "run": "Linux, AG2 P-state limit test",
+      "run_started": "2026-10-22 20:25:33 +03",
+      "archive_path": "X63-R j713-diag/ag1/result-ag2-20261022-202533",
+      "original_sha256": "5c5cf5505204dbbac6eb34c856ed93bfa81b60300c13336f4f861cf1377054d9",
+      "published_sha256": "5c5cf5505204dbbac6eb34c856ed93bfa81b60300c13336f4f861cf1377054d9",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "stk-bench.txt",
+      "kind": "unchanged copy",
+      "source_label": "bench.txt",
+      "run": "Linux, SuperTuxKart benchmark loop, no thermal limit",
+      "run_started": "2026-10-22 16:59:27 +03",
+      "archive_path": "X63-R j713-diag/stk1/result-20261022-165927",
+      "original_sha256": "23f929f14e34fad459c8568aa4ca94df32c6b45fbc2873688b85beef8a79b88f",
+      "published_sha256": "23f929f14e34fad459c8568aa4ca94df32c6b45fbc2873688b85beef8a79b88f",
+      "published_lines": 13,
+      "redactions": []
+    },
+    {
+      "file": "stk-sensors.txt",
+      "kind": "complete numeric table",
+      "source_label": "sensors.txt",
+      "run": "Linux, SuperTuxKart benchmark loop, no thermal limit",
+      "run_started": "2026-10-22 16:59:27 +03",
+      "archive_path": "X63-R j713-diag/stk1/result-20261022-165927",
+      "original_sha256": "714c2b5a565974686c478c2c2a27d904aacc5d97e9059beb6a02beb63a01a71a",
+      "published_sha256": "714c2b5a565974686c478c2c2a27d904aacc5d97e9059beb6a02beb63a01a71a",
+      "published_lines": 530,
+      "redactions": []
+    },
+    {
+      "file": "stk-start.txt",
+      "kind": "unchanged copy",
+      "source_label": "start",
+      "run": "Linux, SuperTuxKart benchmark loop, no thermal limit",
+      "run_started": "2026-10-22 16:59:27 +03",
+      "archive_path": "X63-R j713-diag/stk1/result-20261022-165927",
+      "original_sha256": "f5c46cd025443884a39da07968283b47d6beaee94b97074c2af2aaa9fb9e0368",
+      "published_sha256": "f5c46cd025443884a39da07968283b47d6beaee94b97074c2af2aaa9fb9e0368",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "lim1-sensors.txt",
+      "kind": "complete numeric table",
+      "source_label": "sensors.txt",
+      "run": "Linux, first limiter (cooling down to P1)",
+      "run_started": "2026-10-23 01:13:58 +03",
+      "archive_path": "X63-R j713-diag/lim1/result-20261023-011358",
+      "original_sha256": "46eaaf9a49bbc5f6a33ccec544f6cf117887c419140a30a187e49f6dd861ee02",
+      "published_sha256": "46eaaf9a49bbc5f6a33ccec544f6cf117887c419140a30a187e49f6dd861ee02",
+      "published_lines": 1291,
+      "redactions": []
+    },
+    {
+      "file": "lim1-load.txt",
+      "kind": "unchanged copy",
+      "source_label": "load.txt",
+      "run": "Linux, first limiter (cooling down to P1)",
+      "run_started": "2026-10-23 01:13:58 +03",
+      "archive_path": "X63-R j713-diag/lim1/result-20261023-011358",
+      "original_sha256": "9eaf8ae91387c8afd2af96a63fbe257b889298861bf361229da3889f4df7d6ef",
+      "published_sha256": "9eaf8ae91387c8afd2af96a63fbe257b889298861bf361229da3889f4df7d6ef",
+      "published_lines": 123,
+      "redactions": []
+    },
+    {
+      "file": "lim1-load-start.txt",
+      "kind": "unchanged copy",
+      "source_label": "load-start.txt",
+      "run": "Linux, first limiter (cooling down to P1)",
+      "run_started": "2026-10-23 01:13:58 +03",
+      "archive_path": "X63-R j713-diag/lim1/result-20261023-011358",
+      "original_sha256": "0756cd146c6c41a6e1ea11253cd13a0e134803e4991a6b5e158bccefa779f324",
+      "published_sha256": "0756cd146c6c41a6e1ea11253cd13a0e134803e4991a6b5e158bccefa779f324",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "macos-load.txt",
+      "kind": "unchanged copy",
+      "source_label": "load.txt",
+      "run": "macOS 27.0 on J713, agx1 test",
+      "run_started": "2026-10-22 18:10:16 +03",
+      "archive_path": "X63-R j713-diag/agx1/result-20261022-181016",
+      "original_sha256": "5e4facfadc6de3a38722257cada7ba65b9fd1bfb2dc3d30ce8a7882c766a89f1",
+      "published_sha256": "5e4facfadc6de3a38722257cada7ba65b9fd1bfb2dc3d30ce8a7882c766a89f1",
+      "published_lines": 2,
+      "redactions": []
+    },
+    {
+      "file": "macos-load-start.txt",
+      "kind": "unchanged copy",
+      "source_label": "load-start.txt",
+      "run": "macOS 27.0 on J713, agx1 test",
+      "run_started": "2026-10-22 18:10:16 +03",
+      "archive_path": "X63-R j713-diag/agx1/result-20261022-181016",
+      "original_sha256": "0fff28e9d0da238bd8e02f2357f4ac101c1dcd7fc37ed414724c4ce614a84bc2",
+      "published_sha256": "0fff28e9d0da238bd8e02f2357f4ac101c1dcd7fc37ed414724c4ce614a84bc2",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "macos-1h-smc.txt",
+      "kind": "complete numeric table",
+      "source_label": "smc.txt",
+      "run": "macOS 27.0 on J713, one-hour Metal load on AC power",
+      "run_started": "2026-10-21 18:58:16 +03",
+      "archive_path": "J713-BUILD share/gpu-power/result-20261021-185816",
+      "original_sha256": "9631bfedbfe8282caee105d56b9934b38e3f029612fa8d04628b7169ade33057",
+      "published_sha256": "9631bfedbfe8282caee105d56b9934b38e3f029612fa8d04628b7169ade33057",
+      "published_lines": 3616,
+      "redactions": []
+    },
+    {
+      "file": "macos-1h-load.txt",
+      "kind": "unchanged copy",
+      "source_label": "load.txt",
+      "run": "macOS 27.0 on J713, one-hour Metal load on AC power",
+      "run_started": "2026-10-21 18:58:16 +03",
+      "archive_path": "J713-BUILD share/gpu-power/result-20261021-185816",
+      "original_sha256": "3c6585360e373dad7b120351c05f54afc5b4b2b613aa5b94074b14c8cde5be32",
+      "published_sha256": "3c6585360e373dad7b120351c05f54afc5b4b2b613aa5b94074b14c8cde5be32",
+      "published_lines": 2,
+      "redactions": []
+    },
+    {
+      "file": "macos-1h-run.sh",
+      "kind": "archived test source",
+      "source_label": "gpu-power-j713.sh",
+      "run": "macOS 27.0 on J713, one-hour Metal load on AC power",
+      "run_started": "2026-10-21 18:58:16 +03",
+      "archive_path": "J713-BUILD share/gpu-power/",
+      "original_sha256": "e313165f7da7be81a8e3b6a297be860386ff377cccc115e1dcffa296cd89517e",
+      "published_sha256": "e313165f7da7be81a8e3b6a297be860386ff377cccc115e1dcffa296cd89517e",
+      "published_lines": 31,
+      "redactions": []
+    }
+  ],
+  "updated": "2026-10-26"
+}

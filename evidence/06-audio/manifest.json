@@ -1,0 +1,95 @@
+{
+  "prepared": "2026-10-24",
+  "files": [
+    {
+      "file": "ceiling-dvc.txt",
+      "kind": "redacted copy",
+      "source_label": "ceiling-dvc.txt",
+      "original_sha256": "073e76bf71cc57f70af2694291185174229c37c0837662fc7cfb84e3c9b56641",
+      "published_sha256": "073e76bf71cc57f70af2694291185174229c37c0837662fc7cfb84e3c9b56641",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "alsa-cards.txt",
+      "kind": "redacted copy",
+      "source_label": "alsa-cards.txt",
+      "original_sha256": "e40b2793e74ce82569a478d0d11ac715dde5a0a82dc4c8a2e9a7c85dadc6ce66",
+      "published_sha256": "e40b2793e74ce82569a478d0d11ac715dde5a0a82dc4c8a2e9a7c85dadc6ce66",
+      "published_lines": 2,
+      "redactions": []
+    },
+    {
+      "file": "alsa-pcm.txt",
+      "kind": "redacted copy",
+      "source_label": "alsa-pcm.txt",
+      "original_sha256": "e0144cb6b5c8b8d5de5602aa5300bfd10db968c5a9d27ad4fcd09fedceaf55e9",
+      "published_sha256": "e0144cb6b5c8b8d5de5602aa5300bfd10db968c5a9d27ad4fcd09fedceaf55e9",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "pactl-sinks.json",
+      "kind": "redacted copy",
+      "source_label": "pactl-sinks.json",
+      "original_sha256": "c475daf46ed8a4a784d1e5d4fbaef3b1cc73fa0a63c1b46cd448aa3499cb0856",
+      "published_sha256": "c475daf46ed8a4a784d1e5d4fbaef3b1cc73fa0a63c1b46cd448aa3499cb0856",
+      "published_lines": 1,
+      "redactions": []
+    },
+    {
+      "file": "observations.md",
+      "kind": "engineering note or photograph transcription",
+      "published_sha256": "50f0eaf5556f4921cbb62aa603351d872dfa62188d3cd8754c3b56774538e360",
+      "published_lines": 28,
+      "prepared": "2026-10-24",
+      "redactions": [],
+      "private_photographs": [
+        {
+          "file": "IMG_0191.HEIC",
+          "sha256": "8265041aeeb60cfdae36fa2f5fd02550ba824356a9313e50bc5e188441fcc561"
+        },
+        {
+          "file": "IMG_0192.HEIC",
+          "sha256": "9833d6d3ff574844cd7dd3320cf6fd44760d05bbf4e83056088462d4a884f555"
+        },
+        {
+          "file": "IMG_0193.HEIC",
+          "sha256": "d9ebd66917dfb22025aca86feb467aa9b856519fbc553d424ccd6904db241dfd"
+        },
+        {
+          "file": "IMG_0194.HEIC",
+          "sha256": "6fe98f3f9c3e2a3ca6da99f716383bb2bfa3ab433a4ec7f6ca62d8ef184f94ba"
+        },
+        {
+          "file": "IMG_0195.HEIC",
+          "sha256": "359e37a0daf93d98a6b57b16e3dede0ed1bba7432dd6d0e6b9f826ad3e7f33f3"
+        },
+        {
+          "file": "IMG_0196.HEIC",
+          "sha256": "77739adc2dceae76a5378d8f2d82568a7bf44859e4c16898a9b4afb93eed3cc9"
+        },
+        {
+          "file": "IMG_0203 2.HEIC",
+          "sha256": "953d785db9d32b143c7d7aee6ad8fa2ef233d39576a911f09975d752fa650473"
+        },
+        {
+          "file": "IMG_0204.HEIC",
+          "sha256": "e2e6a955972e5e28320bae7ca229f3e747e81ce16dba10fef94da020cc498920"
+        }
+      ],
+      "updated": "2026-10-26"
+    },
+    {
+      "file": "source-notes.md",
+      "kind": "engineering note or photograph transcription",
+      "published_sha256": "a74f7b7c0a1ec7cf029bf7879d57969dae4340384ed408ffe0aad1aeafc9cc8d",
+      "published_lines": 36,
+      "prepared": "2026-10-24",
+      "redactions": [],
+      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged",
+      "updated": "2026-10-26"
+    }
+  ],
+  "updated": "2026-10-26"
+}

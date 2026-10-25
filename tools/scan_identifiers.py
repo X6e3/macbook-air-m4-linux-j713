@@ -33,6 +33,7 @@ MAC_PROPS = {"mac-address", "local-mac-address"}
 ID_PROPS = {"serial-number", "ecid", "apple,ecid"}
 # (label, matched text) -> reason it is fine
 ALLOW = {
+    ("e-mail", "sonnyj608@gmail.com"): "public Mesa copyright notice retained with the source patch; not a device identifier",
     ("e-mail", "modprobe@configfs.service"): "systemd template unit name in archived boot output, not an e-mail address",
     ("e-mail", "modprobe@drm.service"): "systemd template unit name in archived boot output, not an e-mail address",
     ("e-mail", "modprobe@efi_pstore.service"): "systemd template unit name in archived boot output, not an e-mail address",

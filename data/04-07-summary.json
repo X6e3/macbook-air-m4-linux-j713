@@ -1,0 +1,403 @@
+{
+  "adt": {
+    "rows": 16,
+    "voltage_groups": 10,
+    "groups": [
+      {
+        "indices": [
+          0
+        ],
+        "min_MHz": 0,
+        "max_MHz": 0
+      },
+      {
+        "indices": [
+          1
+        ],
+        "min_MHz": 338,
+        "max_MHz": 338
+      },
+      {
+        "indices": [
+          2
+        ],
+        "min_MHz": 618,
+        "max_MHz": 618
+      },
+      {
+        "indices": [
+          3
+        ],
+        "min_MHz": 796,
+        "max_MHz": 796
+      },
+      {
+        "indices": [
+          4,
+          5
+        ],
+        "min_MHz": 836,
+        "max_MHz": 928
+      },
+      {
+        "indices": [
+          6,
+          7
+        ],
+        "min_MHz": 952,
+        "max_MHz": 1056
+      },
+      {
+        "indices": [
+          8,
+          9
+        ],
+        "min_MHz": 1053,
+        "max_MHz": 1170
+      },
+      {
+        "indices": [
+          10,
+          11
+        ],
+        "min_MHz": 1152,
+        "max_MHz": 1278
+      },
+      {
+        "indices": [
+          12,
+          13
+        ],
+        "min_MHz": 1204,
+        "max_MHz": 1338
+      },
+      {
+        "indices": [
+          14,
+          15
+        ],
+        "min_MHz": 1326,
+        "max_MHz": 1470
+      }
+    ]
+  },
+  "macos": {
+    "first_budget_change_t": 1792682335.0,
+    "initial_budget": 26250.0,
+    "changed_budget": 6246.0,
+    "same_second_TVS1_C": 45.02,
+    "CLTMPerfMax_values": [
+      65536.0
+    ],
+    "first_budget_change_after_load_start_s": 488.0,
+    "limited_samples": 417,
+    "limited_budget_mW": {
+      "min": 3479.0,
+      "median": 7026.0,
+      "max": 24155.0
+    },
+    "limited_mean_FilteredGPUPower_W": 6.774434052757793,
+    "limited_TVS1_C": {
+      "min": 45.01,
+      "median": 45.07,
+      "max": 45.38
+    },
+    "limited_max_TCMz_C": 113.56,
+    "scope": "FilteredGPUPower is the AGX driver property in mW; TVS1/TCMz from the macOS SMC reader in \u00b0C"
+  },
+  "presentation": {
+    "events": 476,
+    "events_per_second": 47.64945728772869,
+    "scope": "Wayland presentation feedback on simpledrm, not physical panel refresh"
+  },
+  "lim2": {
+    "load_seconds": 1200.0,
+    "sample_count": 1169,
+    "first_cooling_state_seconds": 359.0,
+    "regulated_window_seconds": [
+      359.0,
+      1199.0
+    ],
+    "regulated_samples": 819,
+    "TVS1_C": {
+      "min": 44.765,
+      "median": 44.981,
+      "max": 45.112
+    },
+    "regulated_mean_PP1b_W": 6.872723581196581,
+    "regulated_cooling_fraction": 0.4249084249084249,
+    "whole_run_mean_PP1b_W": 7.409762340461933,
+    "whole_run_max_TCMz_C": 89.531,
+    "draws": 65972,
+    "scope": "sample statistics, unweighted; missing seconds are not interpolated; PP1b is an SMC reading",
+    "max_cooling_state": 6,
+    "min_draws_per_second": 34.53
+  },
+  "macos_1h": {
+    "window_s": [
+      900,
+      3600
+    ],
+    "samples": 2594,
+    "TVS1_C": {
+      "min": 44.93,
+      "mean": 45.005628373168854,
+      "max": 45.16,
+      "pstdev": 0.033630410796668245
+    },
+    "TCMz_C": {
+      "min": 74.41,
+      "max": 98.5
+    },
+    "scope": "minutes 15-60 of the load; load start taken as the first SMC sample + 10 s"
+  },
+  "tg1": {
+    "load_seconds": 1800.1,
+    "draws": 107348,
+    "draws_per_second": {
+      "min": 59.32,
+      "max": 59.65,
+      "readings": 178
+    },
+    "load_samples": 1710,
+    "median_PP1b_W": 8.9450385,
+    "median_system_W": 22.01248,
+    "TCMz_C": {
+      "first": 59.109,
+      "max": 97.296,
+      "max_at_s": 1812.0,
+      "last": 97.296
+    },
+    "hottest_SoC_max_C": 97.296,
+    "GPU_Tg_columns": 18,
+    "GPU_Tg_raw_value_counts": {
+      "-4500": 15719,
+      "0": 4,
+      "100": 15723
+    },
+    "scope": "no thermal limit; load samples are those with PP1b above 1 W"
+  },
+  "ag1": {
+    "TVS1_C": {
+      "min": 33.486,
+      "max": 48.336,
+      "distinct_values": 649
+    },
+    "TVS1_first_45C_s": 227.0,
+    "budget_writes_mW": [
+      7000,
+      26250,
+      3500,
+      26250
+    ],
+    "phases": [
+      {
+        "setting": "boot",
+        "median_PP1b_W": 8.7038845,
+        "median_draws_per_second": 59.565,
+        "median_TVS1_C": 40.9755
+      },
+      {
+        "setting": "7000mW",
+        "median_PP1b_W": 8.8401565,
+        "median_draws_per_second": 59.575,
+        "median_TVS1_C": 44.707
+      },
+      {
+        "setting": "26250mW",
+        "median_PP1b_W": 8.946626,
+        "median_draws_per_second": 59.64,
+        "median_TVS1_C": 46.5325
+      },
+      {
+        "setting": "3500mW",
+        "median_PP1b_W": 9.015461,
+        "median_draws_per_second": 59.64,
+        "median_TVS1_C": 47.701
+      },
+      {
+        "setting": "26250mW",
+        "median_PP1b_W": 9.0468335,
+        "median_draws_per_second": 59.644999999999996,
+        "median_TVS1_C": 48.27
+      }
+    ],
+    "scope": "medians over the last 60 s of each 120 s phase"
+  },
+  "ag2": {
+    "phases": [
+      {
+        "setting": "boot",
+        "median_PP1b_W": 8.7347245,
+        "median_draws_per_second": 59.59,
+        "median_TVS1_C": 42.411
+      },
+      {
+        "setting": "cltm_limit=600",
+        "median_PP1b_W": 4.629738,
+        "median_draws_per_second": 47.465,
+        "median_TVS1_C": 43.366
+      },
+      {
+        "setting": "cltm_limit=1000",
+        "median_PP1b_W": 8.8586215,
+        "median_draws_per_second": 59.545,
+        "median_TVS1_C": 44.555
+      },
+      {
+        "setting": "ppm_limit=600",
+        "median_PP1b_W": 8.937453,
+        "median_draws_per_second": 59.64,
+        "median_TVS1_C": 46.561
+      },
+      {
+        "setting": "ppm_limit=0",
+        "median_PP1b_W": 8.9983265,
+        "median_draws_per_second": 59.64,
+        "median_TVS1_C": 47.5385
+      },
+      {
+        "setting": "cltm_limit=300",
+        "median_PP1b_W": 2.072886,
+        "median_draws_per_second": 32.38,
+        "median_TVS1_C": 45.111
+      },
+      {
+        "setting": "cltm_limit=1000",
+        "median_PP1b_W": 8.891791,
+        "median_draws_per_second": 59.65,
+        "median_TVS1_C": 45.3225
+      }
+    ],
+    "PP1b_W_after_switch": {
+      "phase 2, cltm_limit=600": [
+        8.765472,
+        4.848833,
+        4.720309,
+        4.710663
+      ],
+      "phase 3, cltm_limit=1000": [
+        4.629388,
+        6.12466,
+        8.557104,
+        8.61298
+      ],
+      "phase 6, cltm_limit=300": [
+        9.024849,
+        2.479775,
+        2.198484,
+        2.182949
+      ],
+      "phase 7, cltm_limit=1000": [
+        2.070125,
+        4.48403,
+        8.530276,
+        8.557845
+      ]
+    },
+    "scope": "medians over the last 45 s of each 90 s phase; PP1b_W_after_switch lists seconds 0-3"
+  },
+  "stk": {
+    "runs": 8,
+    "typical_fps": {
+      "min": 218,
+      "max": 220
+    },
+    "loop_seconds_at_stop": 415,
+    "first_stop": {
+      "sensor": "SoC_TCMz",
+      "C": 100.109
+    },
+    "max_TCMz_C": 100.328,
+    "first_TCMz_100C_after_start_s": 455.0,
+    "median_PP1b_W": 5.474002,
+    "median_system_W": 23.2662035,
+    "scope": "no thermal limit; benchmark loop timings from stk-bench.txt"
+  },
+  "lim1": {
+    "first_cooling_state_seconds": 398.0,
+    "TVS1_C": {
+      "min": 44.747,
+      "median": 44.924,
+      "max": 45.138
+    },
+    "max_cooling_state": 8,
+    "regulated_cooling_fraction": 0.3030690537084399,
+    "regulated_mean_PP1b_W": 7.231529985933504,
+    "whole_run_max_TCMz_C": 89.296,
+    "min_draws_per_second": 25.41
+  },
+  "display": {
+    "D4": {
+      "FIFO_error_lines": 1,
+      "firmware_brightness_values": [
+        0
+      ],
+      "mode": "2560x1600 at 60 Hz",
+      "initramfs_reached": true
+    },
+    "D5": {
+      "FIFO_error_lines": 1,
+      "firmware_brightness_values": [
+        9830400
+      ],
+      "mode": "2560x1600 at 60 Hz",
+      "initramfs_reached": true
+    },
+    "D6": {
+      "FIFO_error_lines": 1,
+      "firmware_brightness_values": [
+        9830400
+      ],
+      "mode": "2560x1600 at 60 Hz",
+      "initramfs_reached": true
+    },
+    "D7": {
+      "FIFO_error_lines": 0,
+      "firmware_brightness_values": [
+        9830400
+      ],
+      "mode": "2560x1600 at 60 Hz",
+      "initramfs_reached": true
+    },
+    "D8": {
+      "FIFO_error_lines": 0,
+      "firmware_brightness_values": [
+        9830400
+      ],
+      "mode": "2560x1600 at 60 Hz",
+      "initramfs_reached": true
+    }
+  },
+  "audio": {
+    "ceiling_dvc": 60,
+    "ceiling_dB": -30.0,
+    "PipeWire_format": "s24-32le 2ch 48000Hz",
+    "state": "SUSPENDED",
+    "scope": "23 October passive snapshot; this is not a playback or speaker-calibration test"
+  },
+  "idle": {
+    "aba-wfi4-1003": {
+      "samples_per_phase": 90,
+      "mean_system_W": {
+        "A1": 6.530654288888889,
+        "B": 11.800754566666667,
+        "A2": 6.507269677777778
+      },
+      "combined_A_W": 6.518961983333333,
+      "reduction_vs_B_percent": 44.75809198042893,
+      "restored": true
+    },
+    "aba-wfi5-1032": {
+      "samples_per_phase": 90,
+      "mean_system_W": {
+        "A1": 6.144489288888889,
+        "B": 9.171017444444445,
+        "A2": 6.089923511111111
+      },
+      "combined_A_W": 6.1172064,
+      "reduction_vs_B_percent": 33.29849782691626,
+      "restored": true
+    }
+  }
+}

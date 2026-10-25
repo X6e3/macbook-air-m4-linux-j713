@@ -1,0 +1,20 @@
+Running as unit: j713-patched-repro.service
+render node: /dev/dri/renderD128 (driver asahi 0.0.0)
+gbm backend: drm
+EGL 1.5 vendor: Mesa Project
+GL_VENDOR:   Mesa
+GL_RENDERER: Apple M4 (G16G B1)
+GL_VERSION:  OpenGL ES 3.0 Mesa 26.3.0-devel
+ASAHI_MESA_DEBUG: <unset>
+advertised modifier[0]: 0xc00000000000001 external=0
+advertised modifier[1]: 0x0 external=0
+compressed-only allocation rejected (errno=0)
+mixed-list allocation selected tiled: 0xc00000000000001
+PASS: modifier count/truncation, allocation selection, tiled import and compressed import rejection
+BEGIN: 273x273 RGBA8 glTexSubImage2D upload
+PASS: 1000 texture uploads; all 74529 pixels/frame match; GL error 0x0; 0.653 seconds
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 696ms
+             CPU time consumed: 695ms
+                   Memory peak: 20.2M (swap: 0B)

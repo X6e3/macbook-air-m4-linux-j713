@@ -1,0 +1,2 @@
+device: Apple M4, load for 900.0 s
+batches: 12152 in 900.1 s

@@ -1,0 +1,42 @@
+{
+  "D4": {
+    "image_sha256": "885bc092168115f203b165604286ee209ec4731476b60471ca1b3cae01bf7245",
+    "stage2_sha256": "f3427b6a61ae78771f0ca917486a8dc7e4f24c139af10e1fe02b14b4ab20eea3",
+    "dtb_sha256": "5e09de42d8bdcf43d9898fe9171c6b874d7f66732c139b12a15591e9852e02a0",
+    "kernel_initramfs_sha256": "a4b6ab3723fa8bfe7f92a29c730caef6dad1a4dcd57ebf4db5aab10e7841b655",
+    "arguments_redacted": "nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=dcp2-diag4-root2 x6e3.k=6a78f0c3 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target x6e3.esplog log_buf_len=8M appledrm.compact_trace=1",
+    "arguments_without_image_label_sha256": "e8ea971281d55bdafc183bc8d6a6b5411a21e8e5c36bed56493363520f3ec28d"
+  },
+  "D5": {
+    "image_sha256": "f2e7b16e9249b448a6f3c987d5a12ea05ea6479650bb978177373dad184d320c",
+    "stage2_sha256": "f3427b6a61ae78771f0ca917486a8dc7e4f24c139af10e1fe02b14b4ab20eea3",
+    "dtb_sha256": "5e09de42d8bdcf43d9898fe9171c6b874d7f66732c139b12a15591e9852e02a0",
+    "kernel_initramfs_sha256": "7eef90f5483381646d8c01a892f23a310e10258e1ba521665c93f3344726f92f",
+    "arguments_redacted": "nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=dcp2-diag5-root2 x6e3.k=d829c766 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target x6e3.esplog log_buf_len=8M appledrm.compact_trace=1",
+    "arguments_without_image_label_sha256": "4ae4093e3d3925e9d3694ade5d000268c6851622b3e9c7ced077d0dc7f46724d"
+  },
+  "D6": {
+    "image_sha256": "0aa781022b2c2190aa2dc76b5269c715551bb17278c211f3409dc224af154c00",
+    "stage2_sha256": "f3427b6a61ae78771f0ca917486a8dc7e4f24c139af10e1fe02b14b4ab20eea3",
+    "dtb_sha256": "5e09de42d8bdcf43d9898fe9171c6b874d7f66732c139b12a15591e9852e02a0",
+    "kernel_initramfs_sha256": "7eef90f5483381646d8c01a892f23a310e10258e1ba521665c93f3344726f92f",
+    "arguments_redacted": "nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=dcp2-diag6-root2 x6e3.k=d829c766 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target x6e3.esplog log_buf_len=8M appledrm.compact_trace=1 pd_ignore_unused",
+    "arguments_without_image_label_sha256": "552adbdea29824beafd6d63a1c9177637337332a56789bd44f11c4349ecb659f"
+  },
+  "D7": {
+    "image_sha256": "6d28bad2e4bebdda5696026b3b78e244886bfb49d233ed7f2507c10be184ed06",
+    "stage2_sha256": "f3427b6a61ae78771f0ca917486a8dc7e4f24c139af10e1fe02b14b4ab20eea3",
+    "dtb_sha256": "49184a9575c6f73aa84d94af3785ca7d92772f4002bd7780d07e2186ee6e0cdd",
+    "kernel_initramfs_sha256": "7eef90f5483381646d8c01a892f23a310e10258e1ba521665c93f3344726f92f",
+    "arguments_redacted": "nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=dcp2-diag7-root2 x6e3.k=d829c766 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target x6e3.esplog log_buf_len=8M appledrm.compact_trace=1",
+    "arguments_without_image_label_sha256": "4ae4093e3d3925e9d3694ade5d000268c6851622b3e9c7ced077d0dc7f46724d"
+  },
+  "D8": {
+    "image_sha256": "fd51869d5e459d3a2742b80b723bf5798d5efb7a9f241044f8702e8200fba83b",
+    "stage2_sha256": "f3427b6a61ae78771f0ca917486a8dc7e4f24c139af10e1fe02b14b4ab20eea3",
+    "dtb_sha256": "e9e93cfd424096cee55562d60c0150f041db3b4e2afb3d0dfb62a9b867e00ffd",
+    "kernel_initramfs_sha256": "7eef90f5483381646d8c01a892f23a310e10258e1ba521665c93f3344726f92f",
+    "arguments_redacted": "nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=dcp2-diag8-root2 x6e3.k=d829c766 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target x6e3.esplog log_buf_len=8M appledrm.compact_trace=1",
+    "arguments_without_image_label_sha256": "4ae4093e3d3925e9d3694ade5d000268c6851622b3e9c7ced077d0dc7f46724d"
+  }
+}

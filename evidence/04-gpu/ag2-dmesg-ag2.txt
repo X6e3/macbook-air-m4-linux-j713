@@ -1,0 +1,2 @@
+[  717.126615] asahi_m4 302600000.gpu: G16: AG2 CLTM limit 300 (region_c +0x8c)
+[  806.708443] asahi_m4 302600000.gpu: G16: AG2 CLTM limit 1000 (region_c +0x8c)

@@ -1,0 +1,1 @@
+/sys/module/snd_t8132_speaker/parameters/ceiling_dvc	60

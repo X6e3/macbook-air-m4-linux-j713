@@ -17,7 +17,7 @@ fig01: data/01-first-boot/dtb_diff.txt data/01-first-boot/boot_ab_summary.json f
 	$(PY) tools/rasterize.py figures/out/fig01-dark.svg figures/out/fig01-dark@2x.png 1920
 	$(PY) tools/update_readme.py fig01
 
-# Before every commit: identity scan, original first-boot bytes and the published evidence of sections 2 and 3.
+# Before every commit: identity scan and published evidence checks.
 data/02-input/mtp_summary.json: analysis/mtp.py evidence/02-input/manifest.json $(wildcard evidence/02-input/logs/*.txt)
 	$(PY) analysis/mtp.py
 
@@ -38,10 +38,15 @@ data/02-input/afe_summary.json: analysis/afe.py evidence/02-input/afe/manifest.j
 
 afe: data/02-input/afe_summary.json
 
+later-stages:
+	$(PY) analysis/later_stages.py
+
 check:
 	$(PY) tools/scan_identifiers.py
 	cd evidence/01-first-boot/logs && $(SHA) -c SHA256SUMS.original
 	cd evidence/02-input && $(SHA) -c SHA256SUMS
+	$(PY) analysis/boot_ab.py --check
+	$(PY) analysis/dtb_diff.py --check
 	$(PY) analysis/mtp.py --check
 	cd evidence/02-input/trackpad && $(SHA) -c SHA256SUMS
 	$(PY) analysis/trackpad.py --check
@@ -49,5 +54,6 @@ check:
 	$(PY) analysis/afe.py --check
 	cd evidence/03-wifi && $(SHA) -c SHA256SUMS
 	$(PY) analysis/wifi.py --check
+	$(PY) analysis/later_stages.py --check
 
-.PHONY: all fig01 mtp trackpad afe wifi check
+.PHONY: all fig01 mtp trackpad afe wifi later-stages check

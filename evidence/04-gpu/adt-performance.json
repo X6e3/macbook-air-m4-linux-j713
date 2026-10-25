@@ -1,0 +1,106 @@
+{
+  "source": "J713 sgx properties in retained IODeviceTree export; selected numeric rows only",
+  "original_sha256": "b85d464a61bcd5b64d6c5fc539b345c1f75d9fd487b1d15c0b8796088b7f4cee",
+  "encoding": "little-endian u32 frequency_hz, u32 voltage; voltage values retained without asserting electrical measurements",
+  "perf_state_count": 16,
+  "perf_state_table_count": 1,
+  "gpu_num_perf_states": 15,
+  "rows": [
+    {
+      "index": 0,
+      "frequency_hz": 0,
+      "core_voltage": 125,
+      "sram_voltage": 780
+    },
+    {
+      "index": 1,
+      "frequency_hz": 338000000,
+      "core_voltage": 615,
+      "sram_voltage": 780
+    },
+    {
+      "index": 2,
+      "frequency_hz": 618000000,
+      "core_voltage": 650,
+      "sram_voltage": 780
+    },
+    {
+      "index": 3,
+      "frequency_hz": 796000000,
+      "core_voltage": 685,
+      "sram_voltage": 780
+    },
+    {
+      "index": 4,
+      "frequency_hz": 836000000,
+      "core_voltage": 730,
+      "sram_voltage": 780
+    },
+    {
+      "index": 5,
+      "frequency_hz": 928000000,
+      "core_voltage": 730,
+      "sram_voltage": 780
+    },
+    {
+      "index": 6,
+      "frequency_hz": 952000000,
+      "core_voltage": 785,
+      "sram_voltage": 785
+    },
+    {
+      "index": 7,
+      "frequency_hz": 1056000000,
+      "core_voltage": 785,
+      "sram_voltage": 785
+    },
+    {
+      "index": 8,
+      "frequency_hz": 1053000000,
+      "core_voltage": 830,
+      "sram_voltage": 830
+    },
+    {
+      "index": 9,
+      "frequency_hz": 1170000000,
+      "core_voltage": 830,
+      "sram_voltage": 830
+    },
+    {
+      "index": 10,
+      "frequency_hz": 1152000000,
+      "core_voltage": 870,
+      "sram_voltage": 870
+    },
+    {
+      "index": 11,
+      "frequency_hz": 1278000000,
+      "core_voltage": 870,
+      "sram_voltage": 870
+    },
+    {
+      "index": 12,
+      "frequency_hz": 1204000000,
+      "core_voltage": 900,
+      "sram_voltage": 900
+    },
+    {
+      "index": 13,
+      "frequency_hz": 1338000000,
+      "core_voltage": 900,
+      "sram_voltage": 900
+    },
+    {
+      "index": 14,
+      "frequency_hz": 1326000000,
+      "core_voltage": 975,
+      "sram_voltage": 975
+    },
+    {
+      "index": 15,
+      "frequency_hz": 1470000000,
+      "core_voltage": 975,
+      "sram_voltage": 975
+    }
+  ]
+}

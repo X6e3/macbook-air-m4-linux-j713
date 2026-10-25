@@ -1,0 +1,70 @@
+{
+  "prepared": "2026-10-24",
+  "files": [
+    {
+      "file": "aba-wfi4-1003/power.txt",
+      "kind": "redacted copy",
+      "source_label": "power.txt",
+      "original_sha256": "d83996636622b65e0e654a7d51dcfe4a9e1d11866dc7417fd7516384f11b67f1",
+      "published_sha256": "d83996636622b65e0e654a7d51dcfe4a9e1d11866dc7417fd7516384f11b67f1",
+      "published_lines": 270,
+      "redactions": []
+    },
+    {
+      "file": "aba-wfi4-1003/run.log",
+      "kind": "redacted copy",
+      "source_label": "run.log",
+      "original_sha256": "57dbc208bf5f1fe902f4dad8f66a0a501c260a6e86484b6a4ecf84828d97adc2",
+      "published_sha256": "57dbc208bf5f1fe902f4dad8f66a0a501c260a6e86484b6a4ecf84828d97adc2",
+      "published_lines": 12,
+      "redactions": []
+    },
+    {
+      "file": "aba-wfi4-1003/snapshots.txt",
+      "kind": "redacted copy",
+      "source_label": "snapshots.txt",
+      "original_sha256": "211cfb33639c15f2ef0e4d16c79962345a990408017348e7937d69fa930a8610",
+      "published_sha256": "211cfb33639c15f2ef0e4d16c79962345a990408017348e7937d69fa930a8610",
+      "published_lines": 132,
+      "redactions": []
+    },
+    {
+      "file": "aba-wfi5-1032/power.txt",
+      "kind": "redacted copy",
+      "source_label": "power.txt",
+      "original_sha256": "e29020caa1a753fa83668300870870e47950361ff298006e29af42b7e87703f8",
+      "published_sha256": "e29020caa1a753fa83668300870870e47950361ff298006e29af42b7e87703f8",
+      "published_lines": 270,
+      "redactions": []
+    },
+    {
+      "file": "aba-wfi5-1032/run.log",
+      "kind": "redacted copy",
+      "source_label": "run.log",
+      "original_sha256": "31ddbcbe499dd499b6629e07304c3513b02f5c521d94b538a247c5f4ab2393dc",
+      "published_sha256": "31ddbcbe499dd499b6629e07304c3513b02f5c521d94b538a247c5f4ab2393dc",
+      "published_lines": 12,
+      "redactions": []
+    },
+    {
+      "file": "aba-wfi5-1032/snapshots.txt",
+      "kind": "redacted copy",
+      "source_label": "snapshots.txt",
+      "original_sha256": "a6293c38af896a8d4c8e0ebbc2ae023f00fc8d0eb39c51dbea7668217a2bdaad",
+      "published_sha256": "a6293c38af896a8d4c8e0ebbc2ae023f00fc8d0eb39c51dbea7668217a2bdaad",
+      "published_lines": 132,
+      "redactions": []
+    },
+    {
+      "file": "source-notes.md",
+      "kind": "engineering note or photograph transcription",
+      "published_sha256": "62920b73d0930ef48700b367ef7afc9f1306e3a66e7478c351e52540197057b2",
+      "published_lines": 31,
+      "prepared": "2026-10-24",
+      "redactions": [],
+      "updated": "2026-10-26",
+      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged"
+    }
+  ],
+  "updated": "2026-10-26"
+}

@@ -1,0 +1,11 @@
+L60: [    1.482762] j713-host kernel: Kernel command line: nohlt idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=gpu1-probe-root2 x6e3.k=ea9c7396 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target asahi_m4.probe_only=1
+L500: [    1.513410] j713-host kernel: asahi_m4 302600000.gpu: Apple M4 GPU recognized: ID=0x0a021100 counts=0x0011010a/0x00040404 clusters=0x10030302
+L502: [    1.513671] j713-host kernel: asahi_m4 302600000.gpu: Probe-only driver; GPU firmware execution is disabled
+L504: [    1.513923] j713-host kernel: asahi_m4 302600000.gpu: G16: boot firmware mBoot-18000.161.10
+L506: [    1.514181] j713-host kernel: asahi_m4 302600000.gpu: G16: ttbs 0x103fffb8000+0x4000
+L508: [    1.514457] j713-host kernel: asahi_m4 302600000.gpu: G16: pagetables 0x103fff78000+0x40000
+L510: [    1.514708] j713-host kernel: asahi_m4 302600000.gpu: G16: l2 0x103fff74000+0x4000
+L512: [    1.514958] j713-host kernel: asahi_m4 302600000.gpu: G16: handoff 0x103fff70000+0x4000
+L514: [    1.515209] j713-host kernel: asahi_m4 302600000.gpu: G16: firmware 0x10001e04000+0x13c000
+L516: [    1.515460] j713-host kernel: asahi_m4 302600000.gpu: G16: boot memory contract validated; firmware initialization pending
+L518: [    1.515714] j713-host kernel: asahi_m4 302600000.gpu: M4 source configuration: 18 register windows, mask=0x3ff, 10 steps, max-frequency=1470 MHz, max-power=23533 mW, period=8/200000 ms/clocks, objects=15796/16384/131072 bytes

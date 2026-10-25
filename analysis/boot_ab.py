@@ -16,6 +16,10 @@ section of each log and stops if the two disagree.
 
     python3 analysis/boot_ab.py
 """
+import argparse
+import hashlib
+import io
+import sys
 import csv
 import json
 import re
@@ -28,6 +32,29 @@ CONSOLE = "Console: switching to colour frame buffer device"
 TIMEOUT = "framebuffer: deferred probe timeout"
 ATTACH_FAIL = "pm_domain_attach_by_id(0) failed: -110"
 DISP_CPU_DTB = "c35fabb6"  # see data/01-first-boot/dtb_diff.txt: framebuffer power-domains -> disp_cpu
+
+if not __debug__:
+    raise SystemExit("Run verification without -O; assertions are evidence checks")
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--check', action='store_true')
+args = parser.parse_args()
+sys.path.insert(0, str(ROOT / 'analysis'))
+import fdt
+
+# Derive the framebuffer's domain from the actual DTB, not a hash-prefix label.
+domains = {}
+for path in (EV / 'dtb').glob('*.dtb'):
+    raw = path.read_bytes()
+    digest = hashlib.sha256(raw).hexdigest()
+    assert digest.startswith(path.stem), path
+    nodes = fdt.parse(raw)
+    handles = fdt.phandles(nodes)
+    import struct
+    refs = struct.unpack('>' + 'I' * (len(nodes['/chosen/framebuffer@0']['power-domains']) // 4), nodes['/chosen/framebuffer@0']['power-domains'])
+    labels = [handles[h][1] for h in refs]
+    selected = [v for v in labels if v in ('disp_cpu', 'disp_fe')]
+    assert len(selected) == 1, labels
+    domains[digest] = selected[0]
 
 parts = {r["variant"]: r for r in csv.DictReader((EV / "image-parts.csv").open())}
 
@@ -50,21 +77,33 @@ for n in range(1, 22):
     fb = float(field(t, "fbcon_at"))
     assert fb == dmesg_ts(t, CONSOLE), f"boot {n}: fbcon_at disagrees with its own dmesg"
     p = parts[v]
+    assert int(field(t, "pmgr_fail")) == t.split("\n== dmesg\n", 1)[1].count("Failed to reach power state"), f"boot {n}: PMGR count"
     rows.append({
         "boot": n, "variant": v,
         "dtb": p["dtb_sha256"][:8], "m1n1": p["m1n1_sha256"][:8], "kernel_initramfs": p["kernel_initramfs_sha256"][:8],
-        "fb_power_domain": "disp_cpu" if p["dtb_sha256"].startswith(DISP_CPU_DTB) else "disp_fe",
+        "fb_power_domain": domains[p["dtb_sha256"]],
         "console_s": fb,
         "deferred_probe_timeout_s": dmesg_ts(t, TIMEOUT),
         "attach_fail_110": dmesg_ts(t, ATTACH_FAIL) is not None,
         "pmgr_fail": int(field(t, "pmgr_fail")),
     })
 
-OUT.mkdir(parents=True, exist_ok=True)
-with (OUT / "boot_ab.csv").open("w", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=rows[0].keys(), lineterminator="\n")
-    w.writeheader()
-    w.writerows(rows)
+csv_buffer = io.StringIO()
+w = csv.DictWriter(csv_buffer, fieldnames=rows[0].keys(), lineterminator="\n")
+w.writeheader()
+w.writerows(rows)
+
+
+def emit(name, content):
+    path = OUT / name
+    if args.check:
+        if path.read_text() != content:
+            raise SystemExit(f"Stale derived data: {path.relative_to(ROOT)}")
+    else:
+        OUT.mkdir(parents=True, exist_ok=True)
+        path.write_text(content)
+
+emit('boot_ab.csv', csv_buffer.getvalue())
 
 
 def group(v):
@@ -95,6 +134,6 @@ summary = {
                      "changed_vs_v4": [k for k in ("dtb", "kernel_initramfs", "m1n1")
                                        if any(r[k] != rows[3][k] for r in later)]},
 }
-(OUT / "boot_ab_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+emit("boot_ab_summary.json", json.dumps(summary, indent=2) + "\n")
 print(json.dumps({k: summary[k] for k in ("ratio_v4ctl_over_v4", "pmgr_drop_v4ctl_to_v4",
                                          "v4ctl_deferred_probe_timeout_mean_s", "from_boot_12")}, indent=1))

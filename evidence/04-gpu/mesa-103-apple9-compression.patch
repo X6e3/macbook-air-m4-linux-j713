@@ -1,0 +1,98 @@
+--- a/src/gallium/drivers/asahi/agx_pipe.c
++++ b/src/gallium/drivers/asahi/agx_pipe.c
+@@ -197,6 +197,11 @@
+ 
+    assert(whandle->type == WINSYS_HANDLE_TYPE_FD);
+ 
++   /* Apple9's direct copy path cannot read or write compressed storage. */
++   if (agx_apple9_direct_render_enabled(dev) &&
++       whandle->modifier == DRM_FORMAT_MOD_APPLE_GPU_TILED_COMPRESSED)
++      return NULL;
++
+    rsc = CALLOC_STRUCT(agx_resource);
+    if (!rsc)
+       return NULL;
+@@ -447,6 +452,15 @@
+ static bool
+ agx_compression_allowed(const struct agx_resource *pres)
+ {
++   /* Apple9 staging uploads fall back to a CPU map if the direct GPU copy
++    * cannot handle the layout. Mapping compressed storage requires another
++    * staging blit, so allowing it here would recurse indefinitely.
++    */
++   if (agx_apple9_direct_render_enabled(agx_device(pres->base.screen))) {
++      rsrc_debug(pres, "No compression: unsupported by Apple9 copies\n");
++      return false;
++   }
++
+    /* Allow disabling compression for debugging */
+    if (agx_device(pres->base.screen)->debug & AGX_DBG_NOCOMPRESS) {
+       rsrc_debug(pres, "No compression: disabled\n");
+@@ -2615,22 +2629,26 @@
+                            int max, uint64_t *modifiers,
+                            unsigned int *external_only, int *out_count)
+ {
+-   int i;
+-
+-   if (max == 0) {
+-      *out_count = ARRAY_SIZE(agx_best_modifiers);
+-      return;
+-   }
+-
+-   for (i = 0; i < ARRAY_SIZE(agx_best_modifiers) && i < max; i++) {
+-      if (external_only)
+-         external_only[i] = 0;
+-
+-      modifiers[i] = agx_best_modifiers[i];
+-   }
+-
+-   /* Return the number of modifiers copied */
+-   *out_count = i;
++   const bool apple9 = agx_apple9_direct_render_enabled(agx_device(screen));
++   int count = 0;
++
++   for (unsigned i = 0; i < ARRAY_SIZE(agx_best_modifiers); ++i) {
++      uint64_t modifier = agx_best_modifiers[i];
++      if (apple9 && modifier == DRM_FORMAT_MOD_APPLE_GPU_TILED_COMPRESSED)
++         continue;
++
++      if (max != 0) {
++         if (count >= max)
++            break;
++         if (external_only)
++            external_only[count] = 0;
++         modifiers[count] = modifier;
++      }
++      count++;
++   }
++
++   /* Return the count for a query, or the number of modifiers copied. */
++   *out_count = count;
+ }
+ 
+ static bool
+@@ -2639,6 +2657,10 @@
+ {
+    if (external_only)
+       *external_only = false;
++
++   if (agx_apple9_direct_render_enabled(agx_device(screen)) &&
++       modifier == DRM_FORMAT_MOD_APPLE_GPU_TILED_COMPRESSED)
++      return false;
+ 
+    for (unsigned i = 0; i < ARRAY_SIZE(agx_best_modifiers); ++i) {
+       if (agx_best_modifiers[i] == modifier)
+--- a/src/gallium/drivers/asahi/agx_blit.c
++++ b/src/gallium/drivers/asahi/agx_blit.c
+@@ -1543,6 +1543,11 @@
+                     asahi_copy_texture(pctx, dst, dst_level, dstx, dsty, dstz,
+                                        src, src_level, src_box))
+          return;
++      /* Allocation, modifier queries and imports must exclude these layouts
++       * on Apple9: a CPU map would otherwise require another staging blit.
++       */
++      assert(!agx_resource(src)->layout.compressed);
++      assert(!agx_resource(dst)->layout.compressed);
+       util_resource_copy_region(pctx, dst, dst_level, dstx, dsty, dstz, src,
+                                  src_level, src_box);
+       return;

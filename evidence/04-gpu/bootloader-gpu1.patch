@@ -1,0 +1,55 @@
+diff --git a/src/kboot_gpu.c b/src/kboot_gpu.c
+index 4d5626e..bc5ad94 100644
+--- a/src/kboot_gpu.c
++++ b/src/kboot_gpu.c
+@@ -553,16 +553,36 @@ static int dt_set_gpu_t8132_perf(void *dt, int gpu, int sgx)
+         groups++;
+         first = last + 1;
+     }
+-    if (groups != 11)
+-        bail("ADT: GPU: expected eleven M4 voltage steps, found %u\n", groups);
+-
++    /*
++     * Mac mini (J773g): eleven steps, top 1578 MHz. MacBook Air (J713): the same ladder without the
++     * top step, ten steps ending at 1470 MHz. Anything else is not verified and still bails.
++     */
++    u32 top = groups - 1;
++    if (groups != 11 && !(groups == 10 && fdt32_to_cpu(freq_a[top]) == 1470))
++        bail("ADT: GPU: unsupported M4 voltage ladder (%u steps)\n", groups);
++
++    /*
++     * The Mac mini tables decode as rel_a = 100 * f * V^2 / (f * V^2 at the top step) and
++     * rel_b = frequency above step 3 as a percentage of the range up to the top step; both
++     * reproduce the Mac mini rows from the J713 ladder plus a 1578 MHz top step. The Mac mini keeps
++     * its measured rows; J713 derives its own. J713 maximum power: the Mac mini's own table puts its
++     * 1470 MHz step at 79% of 37237 mW, scaled by 8/10 active cores (lower for a fanless board).
++     */
+     static const u32 pwr_calib_a[] = {0, 8, 14, 21, 27, 36, 44, 54, 60, 79, 100};
+     static const u32 pwr_calib_b[] = {0, 0, 0, 0, 16, 33, 47, 61, 69, 86, 100};
+     fdt32_t rel_a[11], rel_b[11];
++    u32 f3 = fdt32_to_cpu(freq_a[3]), ftop = fdt32_to_cpu(freq_a[top]);
++    u32 vtop = fdt32_to_cpu(core_voltage[top]);
++    u64 dyn_top = (u64)ftop * vtop * vtop;
++    u32 max_power = groups == 11 ? 37237 : 37237 * pwr_calib_a[top] / 100 * 8 / 10;
+     for (u32 i = 0; i < groups; i++) {
+-        rel_a[i] = cpu_to_fdt32(pwr_calib_a[i]);
+-        rel_b[i] = cpu_to_fdt32(pwr_calib_b[i]);
++        u32 f = fdt32_to_cpu(freq_a[i]), v = fdt32_to_cpu(core_voltage[i]);
++        u32 a = groups == 11 ? pwr_calib_a[i] : (u32)(100 * (u64)f * v * v / dyn_top);
++        u32 b = groups == 11 ? pwr_calib_b[i] : (i <= 3 ? 0 : 100 * (f - f3) / (ftop - f3));
++        rel_a[i] = cpu_to_fdt32(a);
++        rel_b[i] = cpu_to_fdt32(b);
+     }
++    printf("FDT: GPU: %u voltage steps, top %u MHz, max power %u mW\n", groups, ftop, max_power);
+     size_t size = groups * sizeof(fdt32_t);
+     if (fdt_setprop(dt, gpu, "apple,m4-freq-a", freq_a, size) ||
+         fdt_setprop(dt, gpu, "apple,m4-freq-b", freq_b, size) ||
+@@ -572,7 +592,7 @@ static int dt_set_gpu_t8132_perf(void *dt, int gpu, int sgx)
+         fdt_setprop(dt, gpu, "apple,m4-memory-voltage", memory_voltage, size) ||
+         fdt_setprop(dt, gpu, "apple,m4-relative-a", rel_a, size) ||
+         fdt_setprop(dt, gpu, "apple,m4-relative-b", rel_b, size) ||
+-        fdt_setprop_u32(dt, gpu, "apple,m4-max-power-mw", 37237) ||
++        fdt_setprop_u32(dt, gpu, "apple,m4-max-power-mw", max_power) ||
+         fdt_setprop_u32(dt, gpu, "apple,m4-core-mask", 0x3ff))
+         return -1;
+     return 0;

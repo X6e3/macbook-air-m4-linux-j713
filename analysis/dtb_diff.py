@@ -7,6 +7,7 @@ change. Output goes to data/01-first-boot/dtb_diff.txt.
 
     python3 analysis/dtb_diff.py
 """
+import argparse
 import struct
 import sys
 from pathlib import Path
@@ -57,6 +58,9 @@ def show(v):
     return repr(v.rstrip(b"\0").decode(errors="replace"))
 
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--check', action='store_true')
+args = parser.parse_args()
 out = []
 for a, b, title in PAIRS:
     A, B = fdt.parse((DTB_DIR / f"{a}.dtb").read_bytes()), fdt.parse((DTB_DIR / f"{b}.dtb").read_bytes())
@@ -90,5 +94,10 @@ for a, b, title in PAIRS:
     out.extend(renumber)
     out.append("")
 
-(ROOT / "data/01-first-boot/dtb_diff.txt").write_text("\n".join(out))
+target = ROOT / "data/01-first-boot/dtb_diff.txt"
+if args.check:
+    if target.read_text() != "\n".join(out):
+        raise SystemExit("Stale DTB comparison: run analysis/dtb_diff.py")
+else:
+    target.write_text("\n".join(out))
 print("\n".join(out))

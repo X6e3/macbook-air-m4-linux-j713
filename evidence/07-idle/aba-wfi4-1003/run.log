@@ -1,0 +1,12 @@
+Running timer as unit: j713-aba-failsafe.timer
+Will run service as unit: j713-aba-failsafe.service
+10:03:14 failsafe armed (20 min, restores original values)
+10:03:14 A1: state1 disable=0 verified on all CPUs; settling 45s
+10:07:00 A1: done
+10:07:00 B: state1 disable=1 verified on all CPUs; settling 45s
+10:10:46 B: done
+10:10:47 A2: state1 disable=0 verified on all CPUs; settling 45s
+10:14:33 A2: done
+10:14:33 DONE
+10:14:33 RESTORE OK (readback matches original)
+10:14:33 failsafe cancelled

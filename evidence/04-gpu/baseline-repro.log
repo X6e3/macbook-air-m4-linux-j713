@@ -1,0 +1,17 @@
+Running as unit: j713-baseline-repro.service
+render node: /dev/dri/renderD128 (driver asahi 0.0.0)
+gbm backend: drm
+EGL 1.5 vendor: Mesa Project
+GL_VENDOR:   Mesa
+GL_RENDERER: Apple M4 (G16G B1)
+GL_VERSION:  OpenGL ES 3.0 Mesa 26.3.0-devel
+ASAHI_MESA_DEBUG: <unset>
+BEGIN: 273x273 RGBA8 glTexSubImage2D upload
+DRM_IOCTL_ASAHI_VM_BIND failed: Cannot allocate memory
+DRM_IOCTL_ASAHI_VM_BIND failed: Cannot allocate memory
+BO creation failed
+          Finished with result: core-dump
+Main processes terminated with: code=dumped, status=11/SEGV
+               Service runtime: 583ms
+             CPU time consumed: 489ms
+                   Memory peak: 1G (swap: 0B)
