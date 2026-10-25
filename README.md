@@ -3,7 +3,7 @@
 This repository documents my work on Linux support for the 13-inch
 M4 MacBook Air (2025, J713/T8132). It contains hardware investigations,
 test results, and the logs and scripts behind them. The device-tree and
-driver changes are in [`X6e3/j713-linux`](https://github.com/X6e3/j713-linux).
+driver changes go to [`X6e3/j713-linux`](https://github.com/X6e3/j713-linux), which I have not pushed yet.
 
 I started on 26 September 2026, building on Asahi Linux's m1n1, kernel
 drivers and documentation, and GravityLinux's M4 kernel, installer
@@ -12,12 +12,12 @@ and Mesa.
 As of 19 October 2026, Fedora 44 runs from the internal NVMe with all
 ten CPU cores online. KDE Plasma uses the M4 GPU for compositing,
 and the display controller (DCP) drives the internal display at
-2560×1600, 60 Hz. The full glmark2 suite completes, and games run with
+2560×1600, 60 Hz. The full glmark2-es2-wayland suite completes, and games run with
 hardware acceleration. The internal keyboard and trackpad, Wi-Fi,
 Bluetooth and both woofers also work.
 
-Suspend, power-off, the headphone jack, the microphones and the camera
-do not work yet. The full list is in
+Suspend has not been validated. Power-off restarts the machine, and the headphone jack,
+microphones and camera do not work yet. The full list is in
 [`docs/publication-status.md`](docs/publication-status.md).
 
 This is a development record, not an installer or a supported distribution.
@@ -29,7 +29,8 @@ For the first-night evidence, start with the [boot comparison](data/01-first-boo
 [device-tree comparison](data/01-first-boot/dtb_diff.txt), [image-part hashes](evidence/01-first-boot/image-parts.csv)
 and [original boot logs](evidence/01-first-boot/logs/). The [A1/B1/B2 MTP startup records](docs/02-input-mtp.md)
 follow in section 2, with the [trackpad firmware and HID investigation](docs/02-input-trackpad.md).
-Records for the GPU, the native display, audio and idle remain to be added.
+The [GPU](docs/04-gpu.md), [native display](docs/05-display.md), [stereo woofers](docs/06-audio.md) and
+[CPU idle](docs/07-idle.md) follow in sections 4–7.
 
 The [Wi-Fi account](docs/03-wifi.md) follows in section 3: PCIe/configuration, J713 firmware identity,
 the early-firmware layer and a real connection from Fedora.
@@ -105,8 +106,7 @@ is 0, but the kernel+initramfs changed in the same step (and m1n1 from boot 16),
 so that drop is not attributed to ATC2/3 alone.
 
 Data: `evidence/01-first-boot/logs/boot-1..21.txt`, `evidence/01-first-boot/image-parts.csv`, `evidence/01-first-boot/dtb/`.
-Code: `analysis/boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3, standard
-library only).
+Code: `analysis/boot_ab.py` → `figures/fig01_console_ab.py`. Reproduce: `make fig01` (Python 3 plus the PNG renderer described in [reproduction notes](docs/reproducing.md)).
 <!-- fig01:end -->
 
 ## 2. Keyboard and trackpad (28 September – 7 October 2026)
@@ -154,6 +154,45 @@ join-preference fallback, and provisioned the missing networking userspace. Reta
 DHCP routing, DNS and package downloads. The [full account](docs/03-wifi.md) links the failure/success records,
 archived build metadata and identifier-free photo observations. Regenerate its summary with `make wifi`.
 
+## 4. GPU rendering and the thermal limit (6–23 October 2026)
+
+J713's GPU table has ten voltage groups where the baseline expected eleven; the bootloader and kernel now
+handle that. A Mesa fix stopped a compressed-texture upload from allocating until it crashed: after it,
+1,000 uploads passed pixel checks and KWin ran on the M4, still presenting through simpledrm. Under sustained
+load nothing limited the GPU. A 30-minute stress run drew about 9 W and took the hottest SoC sensor to
+97.3 °C, still rising; SuperTuxKart reached 100.1 °C. On macOS this machine holds the SMC key TVS1 at 45 °C by
+lowering the GPU's power budget. Under Linux that budget did nothing, but the firmware's CLTM P-state limit
+worked within a second. A thermal zone on TVS1 now drives it: in a 20-minute run TVS1 stayed at
+44.77–45.11 °C once cooling engaged, the GPU averaged 6.87 W (macOS: 6.77 W) and the hottest SoC sensor peaked
+at 89.5 °C. Normal desktop use reaches 60 FPS, sometimes 61, and games run normally; the drop to about 30 FPS
+happens only under the synthetic stress load, and its cause is still open. The [full account](docs/04-gpu.md)
+links every run.
+
+## 5. Native internal display (18 October 2026)
+
+With the external controllers' aliases removed, the internal DCP started and Linux reached initramfs, but the
+screen stayed black. Starting 26.6-firmware panels at a nonzero brightness was not enough: the display PHY lost
+its power domain when simpledrm handed over. Marking the domain always-on brought the desktop up, and giving the
+domain to DCP kept it working without that. The panel runs a 2560×1600, 60 Hz mode below the 64-pixel notch of
+its 2560×1664 pixels. External displays stay disabled. The [D4–D8 account](docs/05-display.md) links the logs
+and the image-part hashes.
+
+## 6. Stereo woofers (18–19 October 2026)
+
+I started with the left woofer, then added the right one. The shared shutdown line and the DAPM routes had to
+be sorted out before the stereo card would open, and then the right amplifier reported a bad TDM clock. J713's
+own routing data and audio-coprocessor firmware showed a second MCA port and its register layout; with that
+port driven, I heard left and right on their own sides. Both woofers stay behind the tested −30 dB ceiling, and
+the tweeters, jack and microphones are not working. The [audio account](docs/06-audio.md) has the observations
+and the later PipeWire snapshot.
+
+## 7. CPU idle (7 October 2026)
+
+An opt-in, register-saving WFI path in `cpuidle-apple` lets idle CPUs wait instead of polling. I compared WFI
+on, off and on again within each boot: in wfi5 the two WFI phases averaged 6.117 W of system power against
+9.171 W while polling, 33.30% less. The path later ran alongside the native display. Suspend and frequency
+scaling are separate work. The [idle account](docs/07-idle.md) has both A/B/A runs.
+
 ## How this repository is organised
 
 ```
@@ -167,13 +206,15 @@ docs/       current support, known limits and the scope of the two repositories
 
 `make fig01` rebuilds Fig. 1 from `evidence/`. `make check` runs before every commit: it refuses
 device identifiers and secrets, checks that the first-boot logs match the original bytes, and verifies the
-published hashes, source lineage and derived summaries of sections 2 and 3.
+published hashes and derived summaries of sections 1–7. `make later-stages` recomputes the section 4–7
+results from their evidence.
 Boot images are not published: later initramfs layers contain vendor firmware. Their part hashes are
 in `evidence/01-first-boot/image-parts.csv`.
 
 ## License
 
-- Code (`analysis/`, `figures/*.py`, `tools/`, `Makefile`, `evidence/01-first-boot/init-busybox-v6`): MIT, see `LICENSE`.
+- Code (`analysis/`, `figures/*.py`, `tools/`, `Makefile`, `evidence/01-first-boot/init-busybox-v6`,
+  `evidence/04-gpu/stress-load.c`): MIT, see `LICENSE`.
 - Text, data, figures and photos (`README.md`, `docs/`, `data/`, `figures/out/`, `evidence/01-first-boot/photos/`,
   `evidence/01-first-boot/image-parts.csv`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - The DTBs in `evidence/01-first-boot/dtb/` are compiled from the GravityLinux and Asahi Linux device-tree sources for T8132
@@ -181,3 +222,9 @@ in `evidence/01-first-boot/image-parts.csv`.
 - The boot logs in `evidence/01-first-boot/logs/` are the machine's console output, published unchanged as evidence.
 - The section 2 logs are identity-redacted evidence copies with original/published hashes in their manifest. The source
   excerpt in `evidence/02-input/bootloader-context.txt` retains its original MIT license.
+- The section 4–7 machine-output files are evidence copies. Their manifests distinguish complete copies,
+  selected lines or columns, and identity substitutions. The observation and source notes are written records
+  under CC BY 4.0; photograph transcriptions do not include the original private images.
+
+Source patches retain upstream notices; see [GPU patch notices](evidence/04-gpu/THIRD_PARTY.md).
+For exact reproduction commands and archive limits, see [reproducing the analysis](docs/reproducing.md).
