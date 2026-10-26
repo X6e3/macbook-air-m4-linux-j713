@@ -3,7 +3,7 @@
 This repository documents my work on Linux support for the 13-inch
 M4 MacBook Air (2025, J713/T8132). It contains hardware investigations,
 test results, and the logs and scripts behind them. The device-tree and
-driver changes go to [`X6e3/j713-linux`](https://github.com/X6e3/j713-linux), which I have not pushed yet.
+driver changes are in [`X6e3/j713-linux`](https://github.com/X6e3/j713-linux).
 
 I started on 26 September 2026, building on Asahi Linux's m1n1, kernel
 drivers and documentation, and GravityLinux's M4 kernel, installer

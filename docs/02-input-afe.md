@@ -43,7 +43,7 @@ the multi-touch node's `power-sequence` is `function-afe-reset`, level 0, 50 ms,
 ## The fix
 
 N3 does what the ADT says, once, before it sends the firmware: the line goes low for 50 ms, then high for 50 ms
-([driver](https://github.com/X6e3/j713-linux/commit/34145116ac02f300a5e956c567fe004ede072ab6), [device tree](https://github.com/X6e3/j713-linux/commit/1ba89fda006e77e68ae64312356517a63b08e906)).
+([driver](https://github.com/X6e3/j713-linux/commit/a3ba2523d51efd72f3e9d2c63b51b68a75339ab1), [device tree](https://github.com/X6e3/j713-linux/commit/af44a1ed764f236d69568f4ddf0672f3290ae3db)).
 Nothing else changed.
 
 On the first boot after macOS the trackpad came up on the first attempt. The 124 ms between the

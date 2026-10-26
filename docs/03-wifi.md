@@ -50,7 +50,7 @@ files into the initramfs as a separate layer next to the unchanged base
 ([manifest](../evidence/03-wifi/early-firmware-manifest.txt), [build](../evidence/03-wifi/persist-build-manifest.txt),
 [checks](../evidence/03-wifi/early-layer-verification.json)).
 
-In the same step I added [Michael Reeves's RSSI-only fallback](https://github.com/X6e3/j713-linux/commit/30696b9c21f0593cfb6b653e8c85d36f0a7c4e5a) for a
+In the same step I added [Michael Reeves's RSSI-only fallback](https://github.com/X6e3/j713-linux/commit/af077a25b566d364f6a8c4a82a2319515da6f4ff) for a
 `join_pref` error the driver had shown; it keeps his authorship. That is two changes at once, so I do not credit
 the result to either one alone.
 

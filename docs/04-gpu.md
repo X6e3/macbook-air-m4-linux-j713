@@ -44,7 +44,7 @@ fits into that path.
 
 ## Matching kernel tables
 
-In [8b8cc0ff3cfe](https://github.com/X6e3/j713-linux/commit/8b8cc0ff3cfeb1f396ac3314a926d20cb1df169e),
+In [112ccab096d4](https://github.com/X6e3/j713-linux/commit/112ccab096d4ee4c84625231c8f4334673eb73b7),
 `ladder()` keeps arrays of capacity eleven but accepts an active length of 5–11, the same for every ladder.
 `Platform.states` records that length, validation reads only the active entries, and `top_frequency()` takes
 `freq_a[states - 1]`. The firmware builders use the same count: fields that were fixed at 10 become
@@ -149,8 +149,8 @@ after writing 1000 back it was above 8.5 W, both times. The PPM limit changed no
 ## The limiter
 
 The limiter connects the CLTM limit to Linux's thermal framework
-([37f8911e1b96](https://github.com/X6e3/j713-linux/commit/37f8911e1b969342e19725c21943e366fc29500c),
-[e4daceaff3bd](https://github.com/X6e3/j713-linux/commit/e4daceaff3bd7d42cf25d7ccadb941421321b12e)). A thermal
+([7945e7a1692b](https://github.com/X6e3/j713-linux/commit/7945e7a1692b82d17c35269ec3cee4aed26370ac),
+[03f9eeaebba4](https://github.com/X6e3/j713-linux/commit/03f9eeaebba478bc0994c0c87163dfb9710e8f55)). A thermal
 zone reads `TVS1` every second, with a passive trip at 45 °C and the step-wise governor. A small C cooling device
 holds the state the thermal core asks for. Before the Rust runtime publishes new GPU work, it reads that state
 and writes the limit to the firmware: state 0 writes 1000, no limit; state `s` writes `100 * (9 - s)`.
@@ -183,7 +183,7 @@ load was different. During LIM1 the desktop dropped to 1–2 FPS from the first 
 throttling. HIGH and REALTIME queue requests were clamped to MEDIUM, the same firmware class as applications, so
 I suspected KWin's frames were waiting behind the load.
 
-[0d8ec8f763c2](https://github.com/X6e3/j713-linux/commit/0d8ec8f763c230e6e9fd6b703bd6b80cdfed8c9f) lets a caller
+[69ab407a8c3a](https://github.com/X6e3/j713-linux/commit/69ab407a8c3ab32b3cb2aaa220e563f65d3d72b1) lets a caller
 with `CAP_SYS_NICE` that asks for HIGH or REALTIME use firmware class 1 and the scheduler's High priority; other
 callers stay at class 2 or 3. With that kernel, moving windows during the load showed up to 28–30 FPS.
 

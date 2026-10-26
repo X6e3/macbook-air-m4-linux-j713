@@ -34,14 +34,14 @@ dumped, the DART's error register read 0, so the trace does not show what raised
 
 ## A1: read before writing
 
-I read the nine dart-mtp DAPF entries [without writing anything](https://github.com/X6e3/j713-linux/commit/e52913a79073ebf881ca3b3c2c3752675849a109).
+I read the nine dart-mtp DAPF entries [without writing anything](https://github.com/X6e3/j713-linux/commit/3de21a2e536f4be556f49e90c1e9737858fe343f).
 [0 of 9](../evidence/02-input/logs/a1-kernel.txt#L385) matched the ADT. After RUN, the
 DART's interrupt line fired 100,005 times, Linux timed out waiting for MTP's endpoint map, and
 [wake returned -62](../evidence/02-input/logs/a1-kernel.txt#L460).
 
 ## B1: write the board's own rules
 
-Same image, [one change](https://github.com/X6e3/j713-linux/commit/0ebac09cb3bc4b2fe3edbc41030da73f2d6c9dd9): program the nine ADT rules at
+Same image, [one change](https://github.com/X6e3/j713-linux/commit/9f127e19ddbe270b3e66e75e7ac5a58d2e2672f4): program the nine ADT rules at
 0x394810000 before RUN, in the order m1n1 uses for t8110a.
 
 [8 of 9](../evidence/02-input/logs/b1-kernel.txt#L404) read back exactly. Rule 7's end came back as
@@ -54,7 +54,7 @@ returned -62 again. A [second boot](../evidence/02-input/logs/b1-repeat-kernel.t
 
 Both B1 boots still had a 10 ms delay between RUN and wake. We had added it in an earlier experiment to see
 whether timing mattered; the wide1 kernels carry it too. I kept the DAPF code,
-[removed the delay](https://github.com/X6e3/j713-linux/commit/48100bc278cf81b30c33aa501a40662e39473ebc) and touched nothing else.
+[removed the delay](https://github.com/X6e3/j713-linux/commit/cb738fe4f905f40b25e7d486c98656948bd4e1ef) and touched nothing else.
 
 [Wake returned 0](../evidence/02-input/logs/b2-kernel.txt#L413). MTP printed
 ["MTP Says Hello"](../evidence/02-input/logs/b2-kernel.txt#L414), the kernel registered the

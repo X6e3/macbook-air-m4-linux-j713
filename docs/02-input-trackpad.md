@@ -20,8 +20,8 @@ it, so the kernel used `hid-generic`.
 
 ## Two config symbols
 
-The decoder already existed. [`hid-magicmouse`](https://github.com/X6e3/j713-linux/blob/48100bc278cf81b30c33aa501a40662e39473ebc/drivers/hid/hid-magicmouse.c) handles this report, and
-[`hid-apple`](https://github.com/X6e3/j713-linux/blob/48100bc278cf81b30c33aa501a40662e39473ebc/drivers/hid/hid-apple.c) the keyboard side. I enabled both (B3):
+The decoder already existed. [`hid-magicmouse`](https://github.com/X6e3/j713-linux/blob/cb738fe4f905f40b25e7d486c98656948bd4e1ef/drivers/hid/hid-magicmouse.c) handles this report, and
+[`hid-apple`](https://github.com/X6e3/j713-linux/blob/cb738fe4f905f40b25e7d486c98656948bd4e1ef/drivers/hid/hid-apple.c) the keyboard side. I enabled both (B3):
 
 ```text
 CONFIG_HID_APPLE=y
@@ -36,7 +36,7 @@ unchanged.
 ## The first B3 boot: still no pointer
 
 libinput could not open the trackpad: `Operation now in progress`. Following the open path into the
-[DockChannel HID driver](https://github.com/X6e3/j713-linux/blob/48100bc278cf81b30c33aa501a40662e39473ebc/drivers/hid/dockchannel-hid/dockchannel-hid.c) showed where that came from: a previous start
+[DockChannel HID driver](https://github.com/X6e3/j713-linux/blob/cb738fe4f905f40b25e7d486c98656948bd4e1ef/drivers/hid/dockchannel-hid/dockchannel-hid.c) showed where that came from: a previous start
 was still marked as running. The real failure came earlier, and the [journal](../evidence/02-input/trackpad/journal-timeline.txt#L115)
 shows it:
 
@@ -71,9 +71,9 @@ The crash report is still open; it does not stop the next boot.
 
 ## October
 
-On 2 October I added a [bounded reset retry](https://github.com/X6e3/j713-linux/commit/8bfa2f66c594c9cb375f819704ead7ff971e23fd): up to three READY
+On 2 October I added a [bounded reset retry](https://github.com/X6e3/j713-linux/commit/3ef84e7cbcd64a54930a7d87ef18f458f95d9f76): up to three READY
 windows, with the existing reset states repeated between them. On 4 October I added
-[logging of the interface's GPIO declarations](https://github.com/X6e3/j713-linux/commit/148143f31346657372aef00ef211273a6b5fd0c7) to see what the
+[logging of the interface's GPIO declarations](https://github.com/X6e3/j713-linux/commit/08c88cc2ed18933bd5da3d6fd0e6c8e689af8d33) to see what the
 firmware announced. Neither fixed it. On 7 October one boot [still failed](../evidence/02-input/trackpad/afe-fail-20261007.txt#L105) after
 both retries while another [reached READY](../evidence/02-input/trackpad/afe-ready-20261007.txt#L104); their kernels differ, so they are
 not a controlled pair.

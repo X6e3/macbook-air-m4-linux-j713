@@ -6,9 +6,9 @@ Last updated: 26 October 2026.
 
 - **macbook-air-m4-linux-j713** (this repository) is the record: logs, device trees, analysis scripts and figures,
   one subsystem at a time. It contains no kernel source, no boot images and no firmware.
-- **[j713-linux](https://github.com/X6e3/j713-linux)** is the companion kernel repository. Its source series is
-  prepared locally on top of GravityLinux's M4 kernel (base `3b85d81f656a`), but has not been pushed as of
-  26 October. Commits by other authors keep their original authorship and messages.
+- **[j713-linux](https://github.com/X6e3/j713-linux)** is the companion kernel repository. Its first commit imports
+  GravityLinux's M4 kernel (base `3b85d81f656a`) unchanged, and the J713 series follows. Commits by other
+  authors keep their original authorship and messages.
 
 ## System status
 
@@ -44,12 +44,12 @@ revised thermal DTB. That kernel string alone does not identify the full source 
 
 ## Kernel source
 
-The runtime-source checkpoint is `e4daceaff3bd`, 36 commits on GravityLinux's M4
+The runtime-source checkpoint is `03f9eeaebba4`, 35 commits on GravityLinux's M4
 kernel. The first 19 reproduce the recorded audio0 baseline tree
-(`85fe15f109379e80e8a16e176abd7aaef0860236`). Three scope/documentation commits follow.
+(`ce4dee3c894ca7bcb8de99afee306851cf789e74`). Two scope commits follow.
 The next 11 add the GPU clamp, native display, AFE power sequence, SMC power-off,
 stereo woofers and `configs/j713-s2e.config`; that S2e source checkpoint is
-`122a53ed92cf`. Its recorded tree and configuration comparison matched the
+`9f1bdfa7baf3`. Its recorded tree and configuration comparison matched the
 19 October build.
 
 The last three runtime-source commits add the cooling device, privileged queue
