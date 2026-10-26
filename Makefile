@@ -41,6 +41,11 @@ afe: data/02-input/afe_summary.json
 later-stages:
 	$(PY) analysis/later_stages.py
 
+data/08-reboot/reboot_summary.json: analysis/reboot.py $(wildcard evidence/08-reboot/*)
+	$(PY) analysis/reboot.py
+
+reboot: data/08-reboot/reboot_summary.json
+
 check:
 	$(PY) tools/scan_identifiers.py
 	cd evidence/01-first-boot/logs && $(SHA) -c SHA256SUMS.original
@@ -55,5 +60,7 @@ check:
 	cd evidence/03-wifi && $(SHA) -c SHA256SUMS
 	$(PY) analysis/wifi.py --check
 	$(PY) analysis/later_stages.py --check
+	cd evidence/08-reboot && $(SHA) -c SHA256SUMS
+	$(PY) analysis/reboot.py --check
 
-.PHONY: all fig01 mtp trackpad afe wifi later-stages check
+.PHONY: all fig01 mtp trackpad afe wifi later-stages reboot check

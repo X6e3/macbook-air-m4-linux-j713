@@ -1,0 +1,37 @@
+2026-10-26 17:22:34 loop set up: 15 reboots, image 6boot-k1-root2
+2026-10-26 17:22:35 loop 0/15 boot=c49dfed8 tag=6boot-k1-root2 up=53.43s ntp=yes gpu_holders=14 wifi=connected | first boot of the loop
+2026-10-26 17:24:31 loop 1/15 boot=d219f9d4 tag=6boot-k1-root2 up=41.31s ntp=yes gpu_holders=14 wifi=connected | reboot from c49dfed8: 56s -> clean
+2026-10-26 17:26:31 loop 2/15 boot=6cff2408 tag=6boot-k1-root2 up=43.40s ntp=yes gpu_holders=14 wifi=connected | reboot from d219f9d4: 60s -> clean
+2026-10-26 17:28:27 loop set up: 15 reboots, image 6boot-k1-root2
+2026-10-26 18:35:33 loop 3/15 boot=575a5871 tag=6boot-k1-root2 up=32.16s ntp=yes gpu_holders=14 wifi=connected | first boot of the loop
+2026-10-26 18:37:32 loop 4/15 boot=e643ad22 tag=6boot-k1-root2 up=43.33s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 575a5871: 59s -> clean | prev_last: Journal stopped
+2026-10-26 18:38:45 loop 5/15 boot=c44eaf5f tag=6boot-k1-root2 up=43.19s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from e643ad22: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:39:57 loop 6/15 boot=9016d961 tag=6boot-k1-root2 up=41.26s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from c44eaf5f: 57s -> clean | prev_last: Journal stopped
+2026-10-26 18:41:08 loop 7/15 boot=cf5d8aa6 tag=6boot-k1-root2 up=41.28s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 9016d961: 56s -> clean | prev_last: Journal stopped
+2026-10-26 18:42:21 loop 8/15 boot=7cb269cf tag=6boot-k1-root2 up=43.33s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from cf5d8aa6: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:43:35 loop 9/15 boot=5b818d65 tag=6boot-k1-root2 up=43.33s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 7cb269cf: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:44:48 loop 10/15 boot=ae8e6d4c tag=6boot-k1-root2 up=43.23s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 5b818d65: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:45:59 loop 11/15 boot=b8d6626f tag=6boot-k1-root2 up=41.32s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=99% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from ae8e6d4c: 56s -> clean | prev_last: Journal stopped
+2026-10-26 18:47:14 loop 12/15 boot=bfd23ecf tag=6boot-k1-root2 up=43.26s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from b8d6626f: 60s -> clean | prev_last: Journal stopped
+2026-10-26 18:48:27 loop 13/15 boot=44fd4771 tag=6boot-k1-root2 up=43.28s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from bfd23ecf: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:49:40 loop 14/15 boot=2102e26a tag=6boot-k1-root2 up=43.15s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 44fd4771: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:50:53 loop 15/15 boot=ce25e61e tag=6boot-k1-root2 up=43.33s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 2102e26a: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:50:53 loop ended: all 15 reboots done
+2026-10-26 18:51:21 loop set up: 15 reboots, image 6boot-k1-root2
+2026-10-26 18:51:22 loop 0/15 boot=ce25e61e tag=6boot-k1-root2 up=71.99s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | first boot of the loop | prev_last: Journal stopped
+2026-10-26 18:52:35 loop 1/15 boot=612d9c9e tag=6boot-k1-root2 up=43.34s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from ce25e61e: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:53:48 loop 2/15 boot=9a3479fe tag=6boot-k1-root2 up=43.24s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 612d9c9e: 58s -> clean | prev_last: Journal stopped
+2026-10-26 18:55:00 loop 3/15 boot=b996b44b tag=6boot-k1-root2 up=41.15s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 9a3479fe: 57s -> clean | prev_last: Journal stopped
+2026-10-26 18:56:11 loop 4/15 boot=5716ac3f tag=6boot-k1-root2 up=41.27s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from b996b44b: 56s -> clean | prev_last: Journal stopped
+2026-10-26 18:57:22 loop 5/15 boot=4afec5de tag=6boot-k1-root2 up=41.19s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 5716ac3f: 56s -> clean | prev_last: Journal stopped
+2026-10-26 18:58:36 loop 6/15 boot=1217b637 tag=6boot-k1-root2 up=43.19s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=56C usb=1 kerr=10 prev_wdt=1 | reboot from 4afec5de: 59s -> clean | prev_last: Journal stopped
+2026-10-26 18:59:47 loop 7/15 boot=a427412a tag=6boot-k1-root2 up=41.42s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 1217b637: 56s -> clean | prev_last: Journal stopped
+2026-10-26 19:01:01 loop 8/15 boot=24e09391 tag=6boot-k1-root2 up=43.28s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from a427412a: 59s -> clean | prev_last: Journal stopped
+2026-10-26 19:02:15 loop 9/15 boot=d2ba2564 tag=6boot-k1-root2 up=43.26s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 24e09391: 58s -> clean | prev_last: Journal stopped
+2026-10-26 19:03:25 loop 10/15 boot=a943971d tag=6boot-k1-root2 up=41.22s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from d2ba2564: 55s -> clean | prev_last: Journal stopped
+2026-10-26 19:04:37 loop 11/15 boot=d6b29837 tag=6boot-k1-root2 up=41.27s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from a943971d: 56s -> clean | prev_last: Journal stopped
+2026-10-26 19:05:48 loop 12/15 boot=5d8f1694 tag=6boot-k1-root2 up=41.28s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from d6b29837: 56s -> clean | prev_last: Journal stopped
+2026-10-26 19:07:01 loop 13/15 boot=0009c5ca tag=6boot-k1-root2 up=43.33s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=56C usb=1 kerr=10 prev_wdt=1 | reboot from 5d8f1694: 58s -> clean | prev_last: Journal stopped
+2026-10-26 19:08:15 loop 14/15 boot=d9d1ba25 tag=6boot-k1-root2 up=43.13s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from 0009c5ca: 59s -> clean | prev_last: Journal stopped
+2026-10-26 19:09:29 loop 15/15 boot=84034cff tag=6boot-k1-root2 up=43.21s ntp=yes gpu_holders=14 wifi=connected ac=1 bat=100% hot=55C usb=1 kerr=10 prev_wdt=1 | reboot from d9d1ba25: 59s -> clean | prev_last: Journal stopped
+2026-10-26 19:09:29 loop ended: all 15 reboots done

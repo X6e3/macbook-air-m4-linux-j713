@@ -1,0 +1,25 @@
+2026-10-26 15:24:58 boot=1c2be3dc tag=6boot-k1-root2 up=63.50s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 15:25:12 boot=1c2be3dc tag=6boot-k1-root2 up=77.34s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 15:25:35 boot=43680812 tag=6boot-k1-root2 up=19.14s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 15:25:57 boot=67f342ec tag=6boot-k1-root2 up=18.08s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 15:26:33 boot=6ba593cb tag=6boot-k1-root2 up=33.12s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 15:28:35 boot=b5ef1633 tag=6boot-k1-root2 up=18.02s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 15:29:00 boot=387fd705 tag=6boot-k1-root2 up=21.29s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 15:29:20 boot=0e545bfd tag=6boot-k1-root2 up=16.88s records=0 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:04:58 boot=bcaa7981 tag=6boot-k1nogpu-root2 up=69.99s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:05:35 reboot mode=desktop@6boot-k1nogpu-root2 from=bcaa7981 stalled=no
+2026-10-26 17:05:35 boot=8a657f82 tag=6boot-k1nogpu-root2 up=33.70s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:06:20 reboot mode=desktop@6boot-k1nogpu-root2 from=8a657f82 stalled=no
+2026-10-26 17:06:20 boot=0272ee6f tag=6boot-k1nogpu-root2 up=25.85s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:06:47 reboot mode=desktop@6boot-k1nogpu-root2 from=0272ee6f stalled=no
+2026-10-26 17:06:47 boot=41f8ed15 tag=6boot-k1nogpu-root2 up=21.38s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:07:09 reboot mode=desktop@6boot-k1nogpu-root2 from=41f8ed15 stalled=no
+2026-10-26 17:07:10 boot=512c1afa tag=6boot-k1nogpu-root2 up=18.83s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:07:33 reboot mode=desktop@6boot-k1nogpu-root2 from=512c1afa stalled=no
+2026-10-26 17:07:33 boot=2c228c54 tag=6boot-k1nogpu-root2 up=19.99s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:07:59 reboot mode=desktop@6boot-k1nogpu-root2 from=2c228c54 stalled=yes
+2026-10-26 17:07:59 boot=ae1f87d6 tag=6boot-k1nogpu-root2 up=21.92s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:08:25 reboot mode=desktop@6boot-k1nogpu-root2 from=ae1f87d6 stalled=no
+2026-10-26 17:08:25 boot=b534dca4 tag=6boot-k1nogpu-root2 up=22.40s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1
+2026-10-26 17:08:51 reboot mode=desktop@6boot-k1nogpu-root2 from=b534dca4 stalled=no
+2026-10-26 17:08:51 boot=f69d48e3 tag=6boot-k1nogpu-root2 up=22.76s records=2 bt=apple,garden sku=X3 wifi=connected hci=1 speaker=2 tvs1=1

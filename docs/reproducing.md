@@ -8,7 +8,7 @@ standard library. Do not run them with `-O`: their assertions are the checks.
 make check
 python3 -I analysis/boot_ab.py
 python3 -I analysis/dtb_diff.py
-make mtp trackpad afe wifi later-stages
+make mtp trackpad afe wifi later-stages reboot
 python3 -I figures/fig01_console_ab.py
 make check
 ```
@@ -26,7 +26,7 @@ resolves the framebuffer power-domain reference in the real DTBs and compares th
 comparison resolves phandles before comparing. The A/B component equality is checked against the image-part
 manifest; the boot images are not published, so a reader cannot recompute those hashes.
 
-Sections 2–7 check each evidence file against its manifest and recompute the results and summaries. GPU table
+Sections 2–8 check each evidence file against its manifest and recompute the results and summaries. GPU table
 counts come from the selected ADT properties and display modes from DCP's selected-mode lines. Time columns are
 local to each test; the macOS and Linux runs are separate captures and are not synchronised.
 

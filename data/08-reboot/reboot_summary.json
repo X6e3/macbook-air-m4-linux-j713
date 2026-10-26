@@ -1,0 +1,92 @@
+{
+  "old_stage1": {
+    "object": "aec6f182",
+    "runs": {
+      "k1": {
+        "reboot from Linux": {
+          "starts": 1,
+          "stalled": 1
+        },
+        "cold start": {
+          "starts": 1,
+          "stalled": 0
+        }
+      },
+      "6boot-k1": {
+        "reboot from Linux": {
+          "starts": 7,
+          "stalled": 2
+        },
+        "cold start": {
+          "starts": 2,
+          "stalled": 0
+        }
+      },
+      "env": {
+        "reboot from Linux": {
+          "starts": 1,
+          "stalled": 1
+        },
+        "cold start": {
+          "starts": 2,
+          "stalled": 1
+        }
+      },
+      "nogpu": {
+        "reboot from Linux": {
+          "starts": 8,
+          "stalled": 1
+        },
+        "cold start": {
+          "starts": 1,
+          "stalled": 0
+        }
+      },
+      "dongle-free": {
+        "reboot from Linux": {
+          "starts": 3,
+          "stalled": 1
+        },
+        "cold start": {
+          "starts": 1,
+          "stalled": 0
+        }
+      }
+    },
+    "reboots_from_linux": {
+      "starts": 20,
+      "stalled": 6
+    },
+    "cold_starts": {
+      "starts": 7,
+      "stalled": 1
+    },
+    "all_starts": {
+      "starts": 27,
+      "stalled": 7
+    }
+  },
+  "traced_stage1": {
+    "object": "aecfdd4e",
+    "reboots_from_linux": {
+      "starts": 27,
+      "stalled": 0
+    },
+    "reboot_to_logged_boot_s": {
+      "min": 55,
+      "max": 60
+    }
+  },
+  "gpu": {
+    "on_6boot_k1": {
+      "starts": 7,
+      "stalled": 2
+    },
+    "off_nogpu_image": {
+      "starts": 8,
+      "stalled": 1
+    }
+  },
+  "reboots_fisher_one_sided_p": 0.00361,
+  "scope": "stage 1 cannot be seen from Linux; stalls without a log line are my notes"
+}

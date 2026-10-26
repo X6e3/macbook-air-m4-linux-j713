@@ -1,0 +1,75 @@
+{
+  "prepared": "2026-10-26",
+  "files": [
+    {
+      "file": "6k1-boots.log",
+      "kind": "unchanged copy",
+      "source_label": "boots.log",
+      "archive_path": "X63-R j713-diag/6k1/",
+      "original_sha256": "f05d74283e473953ab53d052e99beded0f72d1b8c5c925307823587002f7dec8",
+      "published_sha256": "f05d74283e473953ab53d052e99beded0f72d1b8c5c925307823587002f7dec8",
+      "published_lines": 25,
+      "redactions": [],
+      "run": "26 Oct 2026, 15:24–17:09 by the Linux clock; 6boot-K1 and the GPU-off image"
+    },
+    {
+      "file": "auto-boots.log",
+      "kind": "unchanged copy",
+      "source_label": "boots.log",
+      "archive_path": "X63-R j713-diag/auto/",
+      "original_sha256": "a6ef7001697cea450577f9974346957a6f946dbfbe5ebfd64ef485e210e53a40",
+      "published_sha256": "a6ef7001697cea450577f9974346957a6f946dbfbe5ebfd64ef485e210e53a40",
+      "published_lines": 37,
+      "redactions": [],
+      "run": "26 Oct 2026, 17:22–19:09, NTP-synced; dongle-free run, then two traced runs"
+    },
+    {
+      "file": "6k1.sh",
+      "kind": "archived test source",
+      "source_label": "6k1.sh",
+      "archive_path": "X63-R j713-diag/6k1/",
+      "original_sha256": "3e66820c20bed0491d3549631a983e5071e267f6d7c4593d450fb32b6345daba",
+      "published_sha256": "3e66820c20bed0491d3549631a983e5071e267f6d7c4593d450fb32b6345daba",
+      "published_lines": 130,
+      "redactions": []
+    },
+    {
+      "file": "reboot-loop.sh",
+      "kind": "archived test source",
+      "source_label": "reboot-loop.sh",
+      "archive_path": "X63-R j713-diag/auto/",
+      "original_sha256": "f43a945c1c6874e8733f7b4bac20f84363cffa4adf9b534b580e091b84f7a164",
+      "published_sha256": "f43a945c1c6874e8733f7b4bac20f84363cffa4adf9b534b580e091b84f7a164",
+      "published_lines": 93,
+      "redactions": [],
+      "note": "version that wrote the loop lines from 18:37 on"
+    },
+    {
+      "file": "stage1-trace.diff",
+      "kind": "unchanged archived source patch",
+      "source_label": "stage1-trace.diff",
+      "archive_path": "X63-R j713-stage1/",
+      "original_sha256": "a2a470eba4352bf50d7c2498aeda170e72ae5b5cb355aa3623f6bd997372ea42",
+      "published_sha256": "a2a470eba4352bf50d7c2498aeda170e72ae5b5cb355aa3623f6bd997372ea42",
+      "published_lines": 215,
+      "redactions": [],
+      "base": "m1n1 950e6b7 (MIT)"
+    },
+    {
+      "file": "observations.md",
+      "kind": "engineering note",
+      "published_sha256": "79f51a8010cf2435bc8d853e537e7b607683fdac56c5e958eb2bee6bdd7e40a9",
+      "published_lines": 24,
+      "prepared": "2026-10-26",
+      "redactions": []
+    },
+    {
+      "file": "source-notes.md",
+      "kind": "engineering note",
+      "published_sha256": "5fe412693f57f5060d046003efe8c66b913996160d8e9355f1b6d318b8407946",
+      "published_lines": 78,
+      "prepared": "2026-10-26",
+      "redactions": []
+    }
+  ]
+}

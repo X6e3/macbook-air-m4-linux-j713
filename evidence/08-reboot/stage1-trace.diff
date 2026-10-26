@@ -1,0 +1,215 @@
+diff --git a/config.h b/config.h
+index d826a0b..03b4a26 100644
+--- a/config.h
++++ b/config.h
+@@ -5,6 +5,9 @@
+ 
+ // Enable framebuffer console
+ #define USE_FB
++
++// J713: stage-1 trace on the screen (reboot stall hunt, 26 Oct 2026)
++#define J713_TRACE
+ // Disable framebuffer console unless verbose boot is enabled
+ //#define FB_SILENT_MODE
+ // Initialize USB early and break into proxy if device is opened within this time (sec)
+diff --git a/data/bootlogo_128.bin b/data/bootlogo_128.bin
+index 9885be0..4adc37c 100644
+Binary files a/data/bootlogo_128.bin and b/data/bootlogo_128.bin differ
+diff --git a/data/bootlogo_256.bin b/data/bootlogo_256.bin
+index 140e7e5..246b488 100644
+Binary files a/data/bootlogo_256.bin and b/data/bootlogo_256.bin differ
+diff --git a/data/bootlogo_48.bin b/data/bootlogo_48.bin
+index dd61704..21e2e7d 100644
+Binary files a/data/bootlogo_48.bin and b/data/bootlogo_48.bin differ
+diff --git a/src/chainload.c b/src/chainload.c
+index 8807aac..0757819 100644
+--- a/src/chainload.c
++++ b/src/chainload.c
+@@ -3,6 +3,7 @@
+ #include "../build/build_cfg.h"
+ 
+ #include "chainload.h"
++#include "j713_trace.h"
+ #include "adt.h"
+ #include "malloc.h"
+ #include "memory.h"
+@@ -121,13 +122,17 @@ int chainload_load(const char *spec, char **vars, size_t var_cnt)
+     size_t size;
+     int ret;
+ 
++    J713T("chainload %s: nvme_init", spec);
+     if (!nvme_init()) {
+         printf("chainload: NVME init failed\n");
+         return -1;
+     }
+ 
++    J713T("nvme up; loading the image");
+     ret = rust_load_image(spec, &image, &size);
++    J713T("load returned %d; nvme_shutdown", ret);
+     nvme_shutdown();
++    J713T("nvme down");
+     if (ret < 0)
+         return ret;
+ 
+diff --git a/src/main.c b/src/main.c
+index d4e828c..bac9eaa 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -4,6 +4,7 @@
+ #include "../build/build_tag.h"
+ 
+ #include "../config.h"
++#include "j713_trace.h"
+ 
+ #include "adt.h"
+ #include "aic.h"
+@@ -177,12 +178,19 @@ void m1n1_main(void)
+ #else
+     fb_set_active(true);
+ #endif
++#ifdef J713_TRACE
++    fb_set_active(true);
++    J713T("J713 stage-1 trace, m1n1 %s, display %d", m1n1_version, (int)cur_boot_args.video.display);
++#endif
+ #endif
+ 
++    J713T("cpufreq_fixup");
+     cpufreq_fixup();
++    J713T("sep_init");
+     sep_init();
+ #endif
+ 
++    J713T("init complete; run_actions");
+     printf("Initialization complete.\n");
+ 
+     run_actions();
+@@ -193,12 +201,17 @@ void m1n1_main(void)
+ 
+     printf("Preparing to run next stage at %p...\n", next_stage.entry);
+ 
++    J713T("next stage at %p: nvme_shutdown", next_stage.entry);
+     nvme_shutdown();
++    J713T("exception_shutdown");
+     exception_shutdown();
+ #ifndef BRINGUP
++    J713T("usb_iodev_shutdown");
+     usb_iodev_shutdown();
++    J713T("display_shutdown");
+     display_shutdown(DCP_SLEEP_IF_EXTERNAL);
+ #ifdef USE_FB
++    J713T("fb_shutdown, mmu_shutdown, then jump (last stage-1 line)");
+     fb_shutdown(next_stage.restore_logo);
+ #endif
+     mmu_shutdown();
+diff --git a/src/nvme.c b/src/nvme.c
+index 5ced2c7..1d13452 100644
+--- a/src/nvme.c
++++ b/src/nvme.c
+@@ -4,6 +4,7 @@
+ #include "assert.h"
+ #include "malloc.h"
+ #include "nvme.h"
++#include "j713_trace.h"
+ #include "pmgr.h"
+ #include "rtkit.h"
+ #include "sart.h"
+@@ -358,6 +359,7 @@ bool nvme_init(void)
+     ioq.adminq = false;
+     adminq.adminq = true;
+ 
++    J713T("nvme: asc_init");
+     nvme_asc = asc_init("/arm-io/ans");
+     if (!nvme_asc)
+         goto out_ioq;
+@@ -370,9 +372,11 @@ bool nvme_init(void)
+     if (!nvme_rtkit)
+         goto out_sart;
+ 
++    J713T("nvme: rtkit_boot");
+     if (!rtkit_boot(nvme_rtkit))
+         goto out_rtkit;
+ 
++    J713T("nvme: wait for boot status");
+     if (poll32(nvme_base + NVME_BOOT_STATUS, 0xffffffff, NVME_BOOT_STATUS_OK, USEC_PER_SEC) < 0) {
+         printf("nvme: ANS did not boot correctly.\n");
+         goto out_shutdown;
+@@ -387,6 +391,7 @@ bool nvme_init(void)
+     write64_lo_hi(nvmmu_base + NVMMU_IOSQ_BASE, (u64)ioq.tcbs);
+ 
+     /* setup admin queue */
++    J713T("nvme: controller disable");
+     if (!nvme_ctrl_disable()) {
+         printf("nvme: timeout while waiting for CSTS.RDY to clear\n");
+         goto out_shutdown;
+@@ -394,6 +399,7 @@ bool nvme_init(void)
+     write64_lo_hi(nvme_base + NVME_ASQ, (u64)adminq.cmds);
+     write64_lo_hi(nvme_base + NVME_ACQ, (u64)adminq.cqes);
+     write32(nvme_base + NVME_AQA, ((NVME_QUEUE_SIZE - 1) << 16) | (NVME_QUEUE_SIZE - 1));
++    J713T("nvme: controller enable");
+     if (!nvme_ctrl_enable()) {
+         printf("nvme: timeout while waiting for CSTS.RDY to be set\n");
+         goto out_disable_ctrl;
+@@ -403,6 +409,7 @@ bool nvme_init(void)
+     struct nvme_command cmd;
+ 
+     memset(&cmd, 0, sizeof(cmd));
++    J713T("nvme: create queues");
+     cmd.opcode = NVME_ADMIN_CMD_CREATE_CQ;
+     cmd.prp1 = (u64)ioq.cqes;
+     cmd.cdw10 = 1; // cq id
+@@ -512,6 +519,7 @@ fail:
+ 
+ void nvme_shutdown(void)
+ {
++    J713T("nvme_shutdown: begin");
+     if (!nvme_initialized) {
+         // nvme_ensure_shutdown();
+         return;
+diff --git a/src/rtkit.c b/src/rtkit.c
+index ef148d4..c7b33fa 100644
+--- a/src/rtkit.c
++++ b/src/rtkit.c
+@@ -3,6 +3,7 @@
+ #include "../config.h"
+ 
+ #include "rtkit.h"
++#include "j713_trace.h"
+ #include "adt.h"
+ #include "asc.h"
+ #include "dart.h"
+@@ -495,6 +496,7 @@ bool rtkit_start_ep(rtkit_dev_t *rtk, u8 ep)
+ 
+ bool rtkit_boot(rtkit_dev_t *rtk)
+ {
++    J713T("rtkit_boot: begin");
+     struct asc_message msg;
+ 
+     /* boot the IOP if it isn't already */
+@@ -716,6 +718,7 @@ bool rtkit_quiesce(rtkit_dev_t *rtk)
+ 
+ bool rtkit_sleep(rtkit_dev_t *rtk)
+ {
++    J713T("rtkit_sleep: begin");
+     int ret = rtkit_switch_power_state(rtk, RTKIT_POWER_SLEEP);
+     if (ret < 0)
+         return ret;
+diff --git a/src/sep.c b/src/sep.c
+index 7a40fef..e22a8b7 100644
+--- a/src/sep.c
++++ b/src/sep.c
+@@ -4,6 +4,7 @@
+ 
+ #include "asc.h"
+ #include "sep.h"
++#include "j713_trace.h"
+ #include "types.h"
+ #include "utils.h"
+ 
+@@ -22,6 +23,7 @@ static asc_dev_t *sep_asc = NULL;
+ 
+ int sep_init(void)
+ {
++    J713T("sep_init: begin");
+     if (!sep_asc)
+         sep_asc = asc_init("/arm-io/sep");
+     if (!sep_asc)

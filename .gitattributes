@@ -16,3 +16,4 @@ evidence/05-display/d6-kernel.txt -whitespace
 evidence/05-display/d7-kernel.txt -whitespace
 evidence/05-display/d8-kernel.txt -whitespace
 evidence/05-display/n1-stk.log -whitespace
+evidence/08-reboot/stage1-trace.diff -whitespace
