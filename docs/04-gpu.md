@@ -111,7 +111,8 @@ I ran a Metal load on macOS on J713 and logged the GPU driver's properties and t
 [SMC columns](../evidence/04-gpu/macos-smc.txt)). 488 s into the load, `MaxGPUAbsolutePower` fell from 26,250 to
 6,246 mW. In that second the SMC key `TVS1` read 45.02 °C. For the rest of the load the budget moved between
 3,479 and 24,155 mW, `TVS1` stayed between 45.01 and 45.38 °C, and the driver's filtered GPU power averaged
-6.77 W. `CLTMPerfMax` stayed at 65,536 throughout.
+6.77 W. `CLTMPerfMax` stayed at 65,536 throughout. The driver does not list these values in `ioreg`; it returns
+them when asked by name, and I took the names from its code.
 
 A one-hour run the day before had no AGX columns, but it covered a longer stretch
 ([SMC log](../evidence/04-gpu/macos-1h-smc.txt), [run](../evidence/04-gpu/macos-1h-load.txt),
@@ -125,7 +126,8 @@ die sensor: `TCMz` reached 113.6 °C while macOS was limiting.
 
 Next I tested two things under Linux: whether `TVS1` can be read without macOS, and whether the firmware
 responds to the same budget. The AG1 kernel added the TVS sensors and a debug knob that writes the budget field at
-`region_c + 0x88`.
+`region_c + 0x88`. I took that field, and the P-state limit at `+0x8c` used below, from the macOS GPU driver's
+code; the measurements here are what tested them.
 
 `TVS1` was live: 33.5 to 48.3 °C over the run, 649 distinct values, past 45 °C at +227 s
 ([sensors](../evidence/04-gpu/ag1-sensors.txt)). The budget was not. The kernel logged every write, 7,000, 26,250,

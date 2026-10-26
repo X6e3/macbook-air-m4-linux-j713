@@ -193,6 +193,26 @@ on, off and on again within each boot: in wfi5 the two WFI phases averaged 6.117
 9.171 W while polling, 33.30% less. The path later ran alongside the native display. Suspend and frequency
 scaling are separate work. The [idle account](docs/07-idle.md) has both A/B/A runs.
 
+## How I worked
+
+I use this MacBook Air as my everyday machine for embedded and kernel work. Some of the tools that work needs have no
+macOS support, and a ThinkPad was outside my budget, so I set out to make Linux run on the machine I already had.
+
+I do board-level repair work and had worked on M4 MacBook Airs before; the hardware judgement I brought to this
+project comes from that work.
+
+I led this work. The machine I developed on is the J713 itself. I installed and tested the boot images on my own
+machine, and photographed or saved the results, including failures. I worked with an AI assistant in conversation,
+step by step: we talked through each problem, argued about the next step, and wrote the patches, scripts and these
+notes together, while I chose the direction and checked the results on the hardware.
+
+The technical results documented here are supported by logs, photos or measurements. `make check` verifies the
+evidence hashes and recomputes the derived numbers from the raw logs. Where a fact came from Apple firmware or driver
+code rather than from the machine's behaviour, the section says so. What does not work is listed in the [status
+table](docs/publication-status.md).
+
+If you have a J713 and try any of this, please open an issue and tell me what you see, including what fails.
+
 ## How this repository is organised
 
 ```

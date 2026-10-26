@@ -40,7 +40,7 @@ revised thermal DTB. That kernel string alone does not identify the full source 
 | CPU frequency scaling | Not active | The driver is built as a module, and no kernel modules are installed (checked on 18 October 2026). |
 | Reboot | Working | |
 | Power-off | Restarts instead | Power-off goes through the SMC. The restart is consistent with the driver's documented behaviour when the PMU shutdown flag is missing; the flag itself has not been read back. Setting that flag means writing PMU NVMEM, and that work is parked. Before 18 October, power-off hung. |
-| RTC | Not active | The device tree lacks the RTC's PMU NVMEM description. The PMU research is parked. |
+| RTC | Not active | The device tree lacks the RTC's PMU NVMEM description. The PMU research is parked. The time is still right in normal use, because NTP sets it once Wi-Fi connects; before that it starts wrong, as the panel clock in the 27 September desktop photo shows. |
 
 ## Kernel source
 
