@@ -20,7 +20,7 @@ Suspend has not been validated. Power-off restarts the machine, and the headphon
 microphones and camera do not work yet. The full list is in
 [`docs/publication-status.md`](docs/publication-status.md).
 
-This is a development record, not an installer or a supported distribution.
+There is no installer yet.
 
 Each section below says what I observed, what I changed and held constant, how I tested it, and what the result does
 and does not show. The logs, device trees and scripts behind every figure are in this repository.
