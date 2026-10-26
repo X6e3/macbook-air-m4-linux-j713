@@ -38,7 +38,7 @@ revised thermal DTB. That kernel string alone does not identify the full source 
 | Suspend | Not validated | |
 | CPU idle | Experimental, opt-in | WFI through a J713 path added to Asahi's cpuidle-apple driver, enabled with `cpuidle_apple.j713_deepwfi=1`. It also works alongside the native display. |
 | CPU frequency scaling | Not active | The driver is built as a module, and no kernel modules are installed (checked on 18 October 2026). |
-| Reboot | Working | |
+| Reboot | Working; one failure seen | On 26 October 2026, during a Wi-Fi firmware test, a reboot from Linux stopped at the first-stage boot logo. The second stage normally follows in under two seconds; after about 20 seconds it had not, and I powered the Mac off. The next cold start booted normally with the same image and files. The test had changed only the Wi-Fi board type in the device tree and the names of the Wi-Fi firmware files. The cause is unknown. |
 | Power-off | Restarts instead | Power-off goes through the SMC. The restart is consistent with the driver's documented behaviour when the PMU shutdown flag is missing; the flag itself has not been read back. Setting that flag means writing PMU NVMEM, and that work is parked. Before 18 October, power-off hung. |
 | RTC | Not active | The device tree lacks the RTC's PMU NVMEM description. The PMU research is parked. The time is still right in normal use, because NTP sets it once Wi-Fi connects; before that it starts wrong, as the panel clock in the 27 September desktop photo shows. |
 
