@@ -181,8 +181,9 @@ and the image-part hashes.
 
 I started with the left woofer, then added the right one. The shared shutdown line and the DAPM routes had to
 be sorted out before the stereo card would open, and then the right amplifier reported a bad TDM clock. J713's
-own routing data and audio-coprocessor firmware showed a second MCA port and its register layout; with that
-port driven, I heard left and right on their own sides. Both woofers stay behind the tested −30 dB ceiling, and
+own routing data asked for a second MCA port; with a second unit mapped `0x100` above the first and that port
+driven, I heard left and right on their own sides, and a window dump and a blind stride test on 27 October
+confirmed the layout. Both woofers stay behind the tested −30 dB ceiling, and
 the tweeters, jack and microphones are not working. The [audio account](docs/06-audio.md) has the observations
 and the later PipeWire snapshot.
 
