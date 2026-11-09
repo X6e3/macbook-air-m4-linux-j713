@@ -82,28 +82,17 @@
     ]
   },
   "macos": {
-    "first_budget_change_t": 1792682335.0,
-    "initial_budget": 26250.0,
-    "changed_budget": 6246.0,
-    "same_second_TVS1_C": 45.02,
-    "CLTMPerfMax_values": [
-      65536.0
-    ],
-    "first_budget_change_after_load_start_s": 488.0,
-    "limited_samples": 417,
-    "limited_budget_mW": {
-      "min": 3479.0,
-      "median": 7026.0,
-      "max": 24155.0
-    },
-    "limited_mean_FilteredGPUPower_W": 6.774434052757793,
-    "limited_TVS1_C": {
-      "min": 45.01,
+    "load_seconds": 900,
+    "samples": 867,
+    "TVS1_first_at_45C_after_load_start_s": 486.0,
+    "held_samples": 398,
+    "held_TVS1_C": {
+      "min": 45.0,
       "median": 45.07,
       "max": 45.38
     },
-    "limited_max_TCMz_C": 113.56,
-    "scope": "FilteredGPUPower is the AGX driver property in mW; TVS1/TCMz from the macOS SMC reader in \u00b0C"
+    "held_max_TCMz_C": 113.56,
+    "scope": "macOS SMC reader in degrees C; held = from the first TVS1 reading at or above 45.0 to the end of the 900 s load"
   },
   "presentation": {
     "events": 476,

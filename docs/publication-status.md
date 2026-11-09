@@ -26,7 +26,7 @@ revised thermal DTB. That kernel string alone does not identify the full source 
 | Desktop | Working | KDE Plasma on the internal display. In normal use the counter reaches 60 FPS, sometimes 61; games run normally. The approximately 30 FPS observation was under the synthetic GPU stress load. |
 | Internal display | Working | Through DCP: 2560×1600 at 60 Hz below the 64-pixel notch; physical panel 2560×1664. The DCP node now holds the display PHY's power domain, so the PHY is no longer switched off after boot. The driver started 26.6-firmware panels at zero brightness; the series starts them at 30%. |
 | GPU rendering | Working, local Mesa fix | KWin renders on the M4 GPU (`Apple M4 (G16G B1)`), and glmark2-es2-wayland completed its full suite on the native display. Mesa is GravityLinux's `26.3.0~devel-103` with a local fix for compressed textures, installed by replacing one library file rather than as a package; a Mesa package update would overwrite it. |
-| GPU thermal control | Tested in LIM2 | A thermal zone uses SMC TVS1 at 45 °C and the GPU firmware's CLTM P-state limit, with the lowest allowed cap P3. From the first nonzero cooling state through the end of the 20-minute run, TVS1 measured 44.77–45.11 °C. [Section 4](04-gpu.md) defines the sample window and links the raw evidence. |
+| GPU thermal control | Tested in LIM2 | A thermal zone uses SMC TVS1 at 45 °C and the P-state limit word at `region_c + 0x8c`, with the lowest allowed cap P3. From the first nonzero cooling state through the end of the 20-minute run, TVS1 measured 44.77–45.11 °C. [Section 4](04-gpu.md) defines the sample window and links the raw evidence. |
 | External displays | Not working | The external display controllers (dcpext) stay disabled: when the bootloader enabled them, the boot stalled. |
 | Keyboard and trackpad | Working | The trackpad repeatedly failed to start its analog front end (AFE) on the first Linux boot after macOS. The underlying AFE state was not directly measured. The series now applies the AFE power sequence from the device's ADT before sending firmware; the trackpad started on the first attempt in both cold boots after macOS tested on 18 October 2026. At shutdown, the MTP coprocessor can leave a crash report that Linux does not fully parse; shutdown still completes. |
 | Wi-Fi | Working | |
@@ -44,16 +44,17 @@ revised thermal DTB. That kernel string alone does not identify the full source 
 
 ## Kernel source
 
-The runtime-source checkpoint is `03f9eeaebba4`, 35 commits on GravityLinux's M4
+The runtime-source checkpoint is `90ea22e57db4`, 34 commits on GravityLinux's M4
 kernel. The first 19 reproduce the recorded audio0 baseline tree
 (`ce4dee3c894ca7bcb8de99afee306851cf789e74`). Two scope commits follow.
 The next 11 add the GPU clamp, native display, AFE power sequence, SMC power-off,
 stereo woofers and `configs/j713-s2e.config`; that S2e source checkpoint is
-`9f1bdfa7baf3`. Its recorded tree and configuration comparison matched the
+`2f45f687d9b5`. Its recorded tree and configuration comparison matched the
 19 October build.
 
-The last three runtime-source commits add the cooling device, privileged queue
-priority and the TVS1 thermal DT. KWin's actual queue class was not recorded in
+The last two runtime-source commits add the cooling device and the TVS1 thermal
+DT. The LIM2 build carried one more change, a privileged queue priority that later
+builds do not carry. KWin's actual queue class was not recorded in
 LIM2, so the priority change is not treated as a measured explanation for desktop
 FPS. The approximately 30 FPS observation was specific to the synthetic stress workload;
 normal desktop use reaches 60–61 FPS on the counter, and games run normally. I have not yet built and booted

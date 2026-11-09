@@ -106,53 +106,50 @@ loop `TCMz` reached 100.1 °C and my test script's safety stop closed the game
 
 ## What macOS does on this machine
 
-I ran a Metal load on macOS on J713 and logged the GPU driver's properties and the SMC together
-([run](../evidence/04-gpu/macos-load.txt), [AGX columns](../evidence/04-gpu/macos-agx.txt),
-[SMC columns](../evidence/04-gpu/macos-smc.txt)). 488 s into the load, `MaxGPUAbsolutePower` fell from 26,250 to
-6,246 mW. In that second the SMC key `TVS1` read 45.02 °C. For the rest of the load the budget moved between
-3,479 and 24,155 mW, `TVS1` stayed between 45.01 and 45.38 °C, and the driver's filtered GPU power averaged
-6.77 W. `CLTMPerfMax` stayed at 65,536 throughout. The driver does not list these values in `ioreg`; it returns
-them when asked by name, and I took the names from its code.
+I ran a 900-second Metal load on macOS on J713 and logged the SMC with it
+([run](../evidence/04-gpu/macos-load.txt), [SMC columns](../evidence/04-gpu/macos-smc.txt)). The SMC key `TVS1`
+reached 45.0 °C 486 s into the load and stayed between 45.00 and 45.38 °C until the load ended.
 
-A one-hour run the day before had no AGX columns, but it covered a longer stretch
+A one-hour run the day before covered a longer stretch
 ([SMC log](../evidence/04-gpu/macos-1h-smc.txt), [run](../evidence/04-gpu/macos-1h-load.txt),
 [script](../evidence/04-gpu/macos-1h-run.sh)). From minute 15 to minute 60, `TVS1` stayed between 44.93 and
 45.16 °C, mean 45.01, while `TCMz` moved between 74.4 and 98.5 °C.
 
-So on this machine macOS holds `TVS1` at 45 °C by moving the GPU's power budget. It does not chase the hottest
-die sensor: `TCMz` reached 113.6 °C while macOS was limiting.
+So on this machine macOS holds `TVS1` at 45 °C under a sustained GPU load. It does not chase the hottest die
+sensor: `TCMz` reached 113.6 °C while `TVS1` was held.
 
 ## Finding a limit that works on Linux
 
-Next I tested two things under Linux: whether `TVS1` can be read without macOS, and whether the firmware
-responds to the same budget. The AG1 kernel added the TVS sensors and a debug knob that writes the budget field at
-`region_c + 0x88`. I took that field, and the P-state limit at `+0x8c` used below, from the macOS GPU driver's
-code; the measurements here are what tested them.
+Next I tested two things under Linux: whether `TVS1` can be read without macOS, and which of the GPU's power
+words the firmware responds to. At boot, Gravity's G16 driver writes the GPU's maximum power to `region_c + 0x84`
+and 1000 to `+0x88`, `+0x8c` and `+0x98`. The AG1 kernel added the TVS sensors and a debug knob that writes the
+word at `+0x88`, which I first treated as a power budget in milliwatts.
 
 `TVS1` was live: 33.5 to 48.3 °C over the run, 649 distinct values, past 45 °C at +227 s
 ([sensors](../evidence/04-gpu/ag1-sensors.txt)). The budget was not. The kernel logged every write, 7,000, 26,250,
 3,500 and 26,250 mW ([kernel messages](../evidence/04-gpu/ag1-dmesg-ag1.txt), [phases](../evidence/04-gpu/ag1-phases.txt)),
 and in every phase the GPU drew 8.70–9.05 W at 59.6 draws/s ([log](../evidence/04-gpu/ag1-load.txt)).
 
-AG2 tried the two P-state limits next to it, written in P-state ×100 ([phases](../evidence/04-gpu/ag2-phases.txt),
+AG2 tried the words at `+0x8c` and `+0x90` as P-state limits, written as P-state ×100; with ten P-states, 1000
+reads as no limit ([phases](../evidence/04-gpu/ag2-phases.txt),
 [sensors](../evidence/04-gpu/ag2-sensors.txt), [log](../evidence/04-gpu/ag2-load.txt),
 [kernel messages](../evidence/04-gpu/ag2-dmesg-ag2.txt)). Medians over the last 45 s of each 90 s phase:
 
 | Setting | GPU power (`PP1b`) | draws/s |
 | --- | ---: | ---: |
 | Boot values | 8.73 W | 59.6 |
-| CLTM limit 600 (`+0x8c`) | 4.63 W | 47.5 |
-| CLTM limit 300 | 2.07 W | 32.4 |
-| PPM limit 600 (`+0x90`) | 8.94 W | 59.6 |
+| `+0x8c` = 600 | 4.63 W | 47.5 |
+| `+0x8c` = 300 | 2.07 W | 32.4 |
+| `+0x90` = 600 | 8.94 W | 59.6 |
 
-The CLTM limit worked, and fast. One second after writing 600, `PP1b` had dropped from 8.77 to 4.85 W; two seconds
-after writing 1000 back it was above 8.5 W, both times. The PPM limit changed nothing.
+The limit at `+0x8c` worked, and fast. One second after writing 600, `PP1b` had dropped from 8.77 to 4.85 W; two
+seconds after writing 1000 back it was above 8.5 W, both times. Writing `+0x90` changed nothing.
 
 ## The limiter
 
-The limiter connects the CLTM limit to Linux's thermal framework
-([7945e7a1692b](https://github.com/X6e3/j713-linux/commit/7945e7a1692b82d17c35269ec3cee4aed26370ac),
-[03f9eeaebba4](https://github.com/X6e3/j713-linux/commit/03f9eeaebba478bc0994c0c87163dfb9710e8f55)). A thermal
+The limiter connects the limit at `+0x8c` to Linux's thermal framework
+([12bffb3103b2](https://github.com/X6e3/j713-linux/commit/12bffb3103b224feec9bb47f141f11167c985f5e),
+[90ea22e57db4](https://github.com/X6e3/j713-linux/commit/90ea22e57db4340957715a012ab9b859d3199ffb)). A thermal
 zone reads `TVS1` every second, with a passive trip at 45 °C and the step-wise governor. A small C cooling device
 holds the state the thermal core asks for. Before the Rust runtime publishes new GPU work, it reads that state
 and writes the limit to the firmware: state 0 writes 1000, no limit; state `s` writes `100 * (9 - s)`.
@@ -165,17 +162,17 @@ so the lowest cap is P3.
 
 [LIM2](../evidence/04-gpu/lim2-sensors.txt) ran the same 20-minute load, 65,972 draws with no GL error
 ([log](../evidence/04-gpu/lim2-load.txt)). Cooling first engaged at +359 s. From there to the end of the load,
-next to macOS while it was limiting:
+next to macOS once it held `TVS1`:
 
-| | LIM2 on Linux | macOS while limiting |
+| | LIM2 on Linux | macOS, Metal load |
 | --- | ---: | ---: |
-| `TVS1` | 44.77–45.11 °C, median 44.98 | 45.01–45.38 °C |
-| Mean GPU power | 6.87 W (`PP1b`) | 6.77 W (filtered GPU power) |
+| `TVS1` | 44.77–45.11 °C, median 44.98 | 45.00–45.38 °C |
+| Mean GPU power | 6.87 W (`PP1b`) | not recorded |
 | Highest `TCMz` | 89.5 °C, whole load | 113.6 °C |
 | Worst 10 s | 34.5 draws/s (LIM1: 25.4) | |
 
-The cooling device was active in 42.5% of those samples. Linux gets to about the same average power by
-alternating full speed with capped episodes; macOS holds a lower budget the whole time. Without a limit,
+The cooling device was active in 42.5% of those samples: Linux holds `TVS1` by alternating full speed with
+capped episodes. Without a limit,
 `TCMz` had reached 97.3 °C in TG1 and 100.1 °C in SuperTuxKart.
 
 ## The desktop under that load
@@ -185,9 +182,9 @@ load was different. During LIM1 the desktop dropped to 1–2 FPS from the first 
 throttling. HIGH and REALTIME queue requests were clamped to MEDIUM, the same firmware class as applications, so
 I suspected KWin's frames were waiting behind the load.
 
-[69ab407a8c3a](https://github.com/X6e3/j713-linux/commit/69ab407a8c3ab32b3cb2aaa220e563f65d3d72b1) lets a caller
-with `CAP_SYS_NICE` that asks for HIGH or REALTIME use firmware class 1 and the scheduler's High priority; other
-callers stay at class 2 or 3. With that kernel, moving windows during the load showed up to 28–30 FPS.
+The LIM2 kernel carried a queue-priority change that lets a caller with `CAP_SYS_NICE` that asks for HIGH or
+REALTIME use firmware class 1 and the scheduler's High priority; other callers stay at class 2 or 3. With that
+kernel, moving windows during the load showed up to 28–30 FPS. Later builds do not carry the change.
 
 I have not shown that the priority change caused it. Reading Gravity's Mesa afterwards, its OpenGL context path
 asks the kernel only for LOW or MEDIUM; HIGH and REALTIME are a TODO there (see the
@@ -197,22 +194,25 @@ record has neither KWin's queue class nor the hash of the Mesa library it loaded
 ## What this does and does not show
 
 1470 MHz is the top of the table, not a clock I measured, and the 23,533 mW maximum is a scaled estimate that
-never bound under these loads. Under Linux the firmware ignored both the budget at `+0x88` and the PPM limit at
-`+0x90`; I do not know why yet.
+never bound under these loads. AG1's writes to `+0x88` (3,500 to 26,250) and AG2's 600 at `+0x90` changed nothing.
+On 27 October a dose test (O2) lowered each word the driver sets, and the two next to them, one at a time under
+full load: `+0x88`, `+0x8c` and `+0x98` act as the same limit, with no effect from 900 up, and `+0x84`, `+0x90`
+and `+0x94` do nothing
+([7187959dc040](https://github.com/X6e3/j713-linux/commit/7187959dc04073b2f928d9d324d61717517ac055)). So AG1's
+values were all above the range where `+0x88` acts.
 
 The limiter has two weak points I know of. It writes the limit when the runtime publishes new GPU work, not on a
 timer of its own, and a failed write is only logged. The thermal zone also points at hwmon channel 5, which is
 `TVS1` only as long as every sensor before it registers. I tested it with one synthetic load for 20 minutes;
 games, suspend and other workloads with the limiter on are not covered yet.
 
-macOS ran a Metal load and Linux an OpenGL one, and the two power columns are different readings, the driver's
-filtered GPU power and the SMC's `PP1b`, so I compare them only roughly. The 1–2 → 28–30 FPS change is what I saw
+macOS ran a Metal load and Linux an OpenGL one, so I compare the two only roughly. The 1–2 → 28–30 FPS change is what I saw
 at the machine; its cause is not established. The Mesa fix is a copied library, not a package.
 
 Apple wrote the firmware. The G16 driver, its firmware interface and the Mesa driver are GravityLinux's, on top of
 Asahi's work, and Linux's thermal framework runs the control loop. My part was the J713 side: the ten-group table
-and the kernel's handling of it, isolating the Mesa copy failure, finding how macOS limits this GPU and which
-field works under Linux, and the limiter's design and tests.
+and the kernel's handling of it, isolating the Mesa copy failure, measuring what macOS holds on this machine,
+finding which word works under Linux, and the limiter's design and tests.
 
 ## Evidence
 
@@ -226,7 +226,7 @@ field works under Linux, and the limiter's design and tests.
   SuperTuxKart [runs](../evidence/04-gpu/stk-bench.txt), [sensors](../evidence/04-gpu/stk-sensors.txt) and
   [start time](../evidence/04-gpu/stk-start.txt).
 - macOS: [run](../evidence/04-gpu/macos-load.txt), [start time](../evidence/04-gpu/macos-load-start.txt),
-  [AGX columns](../evidence/04-gpu/macos-agx.txt), [SMC columns](../evidence/04-gpu/macos-smc.txt); one-hour run
+  [SMC columns](../evidence/04-gpu/macos-smc.txt); one-hour run
   [SMC log](../evidence/04-gpu/macos-1h-smc.txt), [run](../evidence/04-gpu/macos-1h-load.txt) and
   [script](../evidence/04-gpu/macos-1h-run.sh).
 - Budget and limits: AG1 [sensors](../evidence/04-gpu/ag1-sensors.txt), [phases](../evidence/04-gpu/ag1-phases.txt),

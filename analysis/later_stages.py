@@ -102,14 +102,20 @@ def calculate():
                                  'min_MHz': min(r['frequency_hz'] for r in g)//1000000,
                                  'max_MHz': max(r['frequency_hz'] for r in g)//1000000}
                                 for g in groups]}
-    mac = table('04-gpu', 'macos-agx.txt')
-    smc = {r['t']: r for r in table('04-gpu', 'macos-smc.txt')}
-    first_change = next(r for r in mac if r['MaxGPUAbsolutePower'] != mac[0]['MaxGPUAbsolutePower'])
-    result['macos'] = {'first_budget_change_t': first_change['t'],
-                       'initial_budget': mac[0]['MaxGPUAbsolutePower'],
-                       'changed_budget': first_change['MaxGPUAbsolutePower'],
-                       'same_second_TVS1_C': smc[first_change['t']]['TVS1'],
-                       'CLTMPerfMax_values': sorted({r['CLTMPerfMax'] for r in mac})}
+    mac_start = int(read('04-gpu', 'macos-load-start.txt'))
+    assert 'load for 900.0 s' in read('04-gpu', 'macos-load.txt')
+    mac_load = [r for r in table('04-gpu', 'macos-smc.txt') if mac_start <= r['t'] < mac_start + 900]
+    first_45 = next(r for r in mac_load if r['TVS1'] >= 45.0)
+    mac_held = [r for r in mac_load if r['t'] >= first_45['t']]
+    result['macos'] = {
+        'load_seconds': 900, 'samples': len(mac_load),
+        'TVS1_first_at_45C_after_load_start_s': first_45['t'] - mac_start,
+        'held_samples': len(mac_held),
+        'held_TVS1_C': {'min': min(r['TVS1'] for r in mac_held),
+                        'median': statistics.median(r['TVS1'] for r in mac_held),
+                        'max': max(r['TVS1'] for r in mac_held)},
+        'held_max_TCMz_C': max(r['TCMz'] for r in mac_held),
+        'scope': 'macOS SMC reader in degrees C; held = from the first TVS1 reading at or above 45.0 to the end of the 900 s load'}
 
     assert '10 steps, max-frequency=1470 MHz, max-power=23533 mW' in read('04-gpu', 'probe.txt')
     assert 'Cannot allocate memory' in read('04-gpu', 'baseline-repro.log')
@@ -151,21 +157,6 @@ def calculate():
     }
     result['lim2'].update(regulation('lim2', samples, start))
 
-    mac_start = int(read('04-gpu', 'macos-load-start.txt'))
-    assert 'load for 900.0 s' in read('04-gpu', 'macos-load.txt')
-    limited = [r for r in mac if r['MaxGPUAbsolutePower'] < mac[0]['MaxGPUAbsolutePower']]
-    result['macos'].update({
-        'first_budget_change_after_load_start_s': first_change['t'] - mac_start,
-        'limited_samples': len(limited),
-        'limited_budget_mW': {'min': min(r['MaxGPUAbsolutePower'] for r in limited),
-                              'median': statistics.median(r['MaxGPUAbsolutePower'] for r in limited),
-                              'max': max(r['MaxGPUAbsolutePower'] for r in limited)},
-        'limited_mean_FilteredGPUPower_W': statistics.mean(r['FilteredGPUPower'] for r in limited)/1000,
-        'limited_TVS1_C': {'min': min(smc[r['t']]['TVS1'] for r in limited if r['t'] in smc),
-                           'median': statistics.median(smc[r['t']]['TVS1'] for r in limited if r['t'] in smc),
-                           'max': max(smc[r['t']]['TVS1'] for r in limited if r['t'] in smc)},
-        'limited_max_TCMz_C': max(smc[r['t']]['TCMz'] for r in limited if r['t'] in smc),
-        'scope': 'FilteredGPUPower is the AGX driver property in mW; TVS1/TCMz from the macOS SMC reader in °C'})
 
     assert '10 s idle, then N s' in read('04-gpu', 'macos-1h-run.sh')
     assert 'load for 3605.0 s' in read('04-gpu', 'macos-1h-load.txt')

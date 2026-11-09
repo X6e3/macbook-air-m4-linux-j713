@@ -160,10 +160,10 @@ J713's GPU table has ten voltage groups where the baseline expected eleven; the 
 handle that. A Mesa fix stopped a compressed-texture upload from allocating until it crashed: after it,
 1,000 uploads passed pixel checks and KWin ran on the M4, still presenting through simpledrm. Under sustained
 load nothing limited the GPU. A 30-minute stress run drew about 9 W and took the hottest SoC sensor to
-97.3 °C, still rising; SuperTuxKart reached 100.1 °C. On macOS this machine holds the SMC key TVS1 at 45 °C by
-lowering the GPU's power budget. Under Linux that budget did nothing, but the firmware's CLTM P-state limit
-worked within a second. A thermal zone on TVS1 now drives it: in a 20-minute run TVS1 stayed at
-44.77–45.11 °C once cooling engaged, the GPU averaged 6.87 W (macOS: 6.77 W) and the hottest SoC sensor peaked
+97.3 °C, still rising; SuperTuxKart reached 100.1 °C. On macOS this machine holds the SMC key TVS1 at 45 °C
+under a sustained GPU load. Under Linux, the P-state limit word at `region_c + 0x8c`, one of the power words
+Gravity's G16 driver sets at boot, worked within a second. A thermal zone on TVS1 now drives it: in a 20-minute
+run TVS1 stayed at 44.77–45.11 °C once cooling engaged, the GPU averaged 6.87 W and the hottest SoC sensor peaked
 at 89.5 °C. Normal desktop use reaches 60 FPS, sometimes 61, and games run normally; the drop to about 30 FPS
 happens only under the synthetic stress load, and its cause is still open. The [full account](docs/04-gpu.md)
 links every run.

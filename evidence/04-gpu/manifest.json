@@ -165,29 +165,14 @@
       "redactions": []
     },
     {
-      "file": "macos-agx.txt",
-      "kind": "selected columns, original units",
-      "source_label": "agx.txt",
-      "columns": [
-        "t",
-        "MaxGPUAbsolutePower",
-        "FilteredGPUPower",
-        "CLTMPerfMax"
-      ],
-      "original_sha256": "7c6656bb3fe03e6e4d660e0151fa5626de2c11e5113e38134309f7a9822edb07",
-      "published_sha256": "3a8bed307f9d1481be9fecaa8786ed3ff9a4ad65a3934e5dd313130410828513",
-      "published_lines": 991,
-      "redactions": []
-    },
-    {
       "file": "source-notes.md",
       "kind": "engineering note or photograph transcription",
-      "published_sha256": "0abfcee5272b631c59cd92a7d948005fbd95d2047c335929d55d463750c12dde",
+      "published_sha256": "444c80a3d091d78425f0def7572fb9b3c7b443c8c707e42c82e0daaf61d931e8",
       "published_lines": 87,
       "prepared": "2026-10-24",
       "redactions": [],
-      "updated": "2026-10-26",
-      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged; 26 Oct: Mesa context-priority note added"
+      "updated": "2026-11-10",
+      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged; 26 Oct: Mesa context-priority note added; 10 Nov: macOS comparison from the SMC log only, macos-agx.txt withdrawn; kernel references moved to the current j713-linux history"
     },
     {
       "file": "adt-performance.json",
