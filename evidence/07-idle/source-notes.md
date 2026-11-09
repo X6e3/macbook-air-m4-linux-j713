@@ -26,6 +26,6 @@ measurement of register retention on the device.
 
 ## Implementation locations
 
-Kernel runtime-source revision `03f9eeaebba478bc0994c0c87163dfb9710e8f55`; baseline `3b85d81f656af14d0fc4bea3eef87fe040c424f9`. The links below point at fixed source revisions.
+Kernel runtime-source revision `90ea22e57db4340957715a012ab9b859d3199ffb`; baseline `3b85d81f656af14d0fc4bea3eef87fe040c424f9`. The links below point at fixed source revisions.
 
-- [`drivers/cpuidle/cpuidle-apple.c`](https://github.com/X6e3/j713-linux/blob/03f9eeaebba478bc0994c0c87163dfb9710e8f55/drivers/cpuidle/cpuidle-apple.c): j713_cpu_save_wfi(), j713_enter_wfi(), j713_enter_poll() and registration.
+- [`drivers/cpuidle/cpuidle-apple.c`](https://github.com/X6e3/j713-linux/blob/90ea22e57db4340957715a012ab9b859d3199ffb/drivers/cpuidle/cpuidle-apple.c): j713_cpu_save_wfi(), j713_enter_wfi(), j713_enter_poll() and registration.

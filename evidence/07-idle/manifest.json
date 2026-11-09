@@ -58,12 +58,12 @@
     {
       "file": "source-notes.md",
       "kind": "engineering note or photograph transcription",
-      "published_sha256": "0861570871d73ed024d169e649a85f3caab9228f8986a27e022fa0a684a42f23",
+      "published_sha256": "b6ca0bf83742e5e5feda64046f27a979a5886054578ab2c60a31b5b4185a9d29",
       "published_lines": 31,
       "prepared": "2026-10-24",
       "redactions": [],
-      "updated": "2026-10-26",
-      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged"
+      "updated": "2026-11-10",
+      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged; 10 Nov: kernel references moved to the current j713-linux history"
     }
   ],
   "updated": "2026-10-26"

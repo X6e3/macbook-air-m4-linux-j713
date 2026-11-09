@@ -21,14 +21,14 @@ The later DT-only comparisons reuse the same rebuilt kernel bytes.
 
 ## Implementation locations
 
-Kernel runtime-source revision `03f9eeaebba478bc0994c0c87163dfb9710e8f55`; baseline `3b85d81f656af14d0fc4bea3eef87fe040c424f9`. The links below point at fixed source revisions.
+Kernel runtime-source revision `90ea22e57db4340957715a012ab9b859d3199ffb`; baseline `3b85d81f656af14d0fc4bea3eef87fe040c424f9`. The links below point at fixed source revisions.
 
-- [`drivers/gpu/drm/apple/dcp.c`](https://github.com/X6e3/j713-linux/blob/03f9eeaebba478bc0994c0c87163dfb9710e8f55/drivers/gpu/drm/apple/dcp.c): firmware endpoint startup, notch and panel properties.
-- [`drivers/gpu/drm/apple/parser.c`](https://github.com/X6e3/j713-linux/blob/03f9eeaebba478bc0994c0c87163dfb9710e8f55/drivers/gpu/drm/apple/parser.c): mode active-height and sync adjustment for notch.
-- [`drivers/gpu/drm/apple/iomfb_template.c`](https://github.com/X6e3/j713-linux/blob/03f9eeaebba478bc0994c0c87163dfb9710e8f55/drivers/gpu/drm/apple/iomfb_template.c): res_is_main_display(), first brightness update, swap rectangle notch offset.
-- [`drivers/gpu/drm/apple/apple_drv.c`](https://github.com/X6e3/j713-linux/blob/03f9eeaebba478bc0994c0c87163dfb9710e8f55/drivers/gpu/drm/apple/apple_drv.c): conflicting framebuffer removal, DRM registration and client setup.
-- [`drivers/pmdomain/core.c`](https://github.com/X6e3/j713-linux/blob/03f9eeaebba478bc0994c0c87163dfb9710e8f55/drivers/pmdomain/core.c): unused worker versus of_genpd_sync_state().
-- [`arch/arm64/boot/dts/apple/t8132-j713.dts`](https://github.com/X6e3/j713-linux/blob/03f9eeaebba478bc0994c0c87163dfb9710e8f55/arch/arm64/boot/dts/apple/t8132-j713.dts): DCP power-domain consumer, internal path and panel description.
+- [`drivers/gpu/drm/apple/dcp.c`](https://github.com/X6e3/j713-linux/blob/90ea22e57db4340957715a012ab9b859d3199ffb/drivers/gpu/drm/apple/dcp.c): firmware endpoint startup, notch and panel properties.
+- [`drivers/gpu/drm/apple/parser.c`](https://github.com/X6e3/j713-linux/blob/90ea22e57db4340957715a012ab9b859d3199ffb/drivers/gpu/drm/apple/parser.c): mode active-height and sync adjustment for notch.
+- [`drivers/gpu/drm/apple/iomfb_template.c`](https://github.com/X6e3/j713-linux/blob/90ea22e57db4340957715a012ab9b859d3199ffb/drivers/gpu/drm/apple/iomfb_template.c): res_is_main_display(), first brightness update, swap rectangle notch offset.
+- [`drivers/gpu/drm/apple/apple_drv.c`](https://github.com/X6e3/j713-linux/blob/90ea22e57db4340957715a012ab9b859d3199ffb/drivers/gpu/drm/apple/apple_drv.c): conflicting framebuffer removal, DRM registration and client setup.
+- [`drivers/pmdomain/core.c`](https://github.com/X6e3/j713-linux/blob/90ea22e57db4340957715a012ab9b859d3199ffb/drivers/pmdomain/core.c): unused worker versus of_genpd_sync_state().
+- [`arch/arm64/boot/dts/apple/t8132-j713.dts`](https://github.com/X6e3/j713-linux/blob/90ea22e57db4340957715a012ab9b859d3199ffb/arch/arm64/boot/dts/apple/t8132-j713.dts): DCP power-domain consumer, internal path and panel description.
 
 The base includes Josh Rodd's J715/26.6.2 panel support (`1a0bfae9821e`) and the existing Asahi/Gravity
 DCP architecture. D8 logs a 64-pixel notch, a firmware surface height of 1664 and the adjusted 1600-line DRM
