@@ -83,12 +83,12 @@
     {
       "file": "source-notes.md",
       "kind": "engineering note or photograph transcription",
-      "published_sha256": "ae6a9ee634832bb29300e61d761b41623a1cac5527c4e4cfa87dc49f255704ee",
+      "published_sha256": "f6cbb410aa93c67592f3dd94071a381f00fe743c1054dce41dad54340c65670d",
       "published_lines": 36,
       "prepared": "2026-10-24",
       "redactions": [],
-      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged",
-      "updated": "2026-10-26"
+      "reviewed": "2026-10-25; authored source notes expanded, raw machine outputs unchanged; 10 Nov: MCA layout described from S2e and the 27 Oct O1 dump and blind stride A/B; kernel references moved to the current j713-linux history",
+      "updated": "2026-11-10"
     }
   ],
   "updated": "2026-10-26"

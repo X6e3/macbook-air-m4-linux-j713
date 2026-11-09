@@ -34,14 +34,17 @@ The stereo card then registered, but the right amplifier reported a fault. Diagn
 I went back to J713's own macOS routing data. The speaker's clock and transmit masks were `3`, selecting ports
 0 and 1. The Mac mini's one-port arrangement was not enough for this board.
 
-The ADT does not describe the MCA layout in enough detail, so I looked in J713's audio-coprocessor firmware for
-the register groups. Its clock, sync and port units are `0x100` apart, not the `0xc000` cluster stride assumed
-before, and port 1 uses the pad registers at `0x2160`, `0x2164` and `0x2168`.
+The ADT does not describe the MCA layout in enough detail, and the single `0xc000` cluster assumed before had left
+the right amplifiers with a bad clock. S2e maps a second unit `0x100` above the first: clock/sync/port units at
+`0x2000 + n*0x100`, serializers at `0x6000 + n*0x100`, the number of units taken from the clock list. Unit 0
+supplies the DMA stream, and unit 1 drives port 1 through its registers at `0x2160`, `0x2164` and `0x2168`, where
+the right amplifiers sit. With S2e I heard the left and right test tones on their own sides, then desktop sounds
+and music ([observations](../evidence/06-audio/observations.md)).
 
-The T8132 MCA mapping now follows that layout: clock/sync/port units at `0x2000 + n*0x100`, serializers at
-`0x6000 + n*0x100`, and the number of units taken from the clock list. Unit 0 supplies the DMA stream and unit 1
-drives the second pad port. With S2e I heard the left and right test tones on their own sides, then desktop
-sounds and music ([observations](../evidence/06-audio/observations.md)).
+On 27 October I checked that layout on the machine itself with a test kernel (O1). A dump of the whole MCA window
+shows the block at `0x2000` repeating every `0x100`, six times, and reads from `0x8c00` on stall the bus. In a blind
+A/B against `0x80`, `0x200`, `0x400` and `0xc000`, only `0x100` played both woofers without an amplifier fault
+([30970c659133](https://github.com/X6e3/j713-linux/commit/30970c65913333a6a4f0951515268b892e63f040)).
 
 ## From samples to amplifier slots
 
