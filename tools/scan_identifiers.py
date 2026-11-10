@@ -38,6 +38,7 @@ ALLOW = {
     ("e-mail", "modprobe@drm.service"): "systemd template unit name in archived boot output, not an e-mail address",
     ("e-mail", "modprobe@efi_pstore.service"): "systemd template unit name in archived boot output, not an e-mail address",
     ("e-mail", "modprobe@fuse.service"): "systemd template unit name in archived boot output, not an e-mail address",
+    ("e-mail", "systemd-coredump@0-1-15354_1255-0.service"): "systemd template unit name in the section 10 journal excerpt, not an e-mail address",
     ("e-mail", "giometti@linux.it"): "kernel pps_core copyright banner in dmesg, public text",
 }
 

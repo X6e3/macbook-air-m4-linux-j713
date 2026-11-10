@@ -1,0 +1,104 @@
+{
+  "dxt5_bytes_per_texture": 1398128,
+  "rgba8_full_chain_bytes": 5603328,
+  "rgba8_over_dxt5": 4.01,
+  "tl1": {
+    "scenarios": {
+      "A": {
+        "single_level_created": "upload_level_00_begin",
+        "single_level_destroyed": "delete_begin",
+        "full_chain_created": "upload_level_01_begin",
+        "full_chain_destroyed": "delete_begin"
+      },
+      "B": {
+        "single_level_created": "upload_level_00_begin",
+        "single_level_destroyed": "delete_begin",
+        "full_chain_created": "upload_level_01_begin",
+        "full_chain_destroyed": "delete_begin"
+      },
+      "C": {
+        "single_level_created": "upload_level_00_begin",
+        "single_level_destroyed": "draw_begin",
+        "full_chain_created": "upload_level_01_begin",
+        "full_chain_destroyed": "context_destroy_begin"
+      },
+      "D": {
+        "single_level_created": "upload_level_00_begin",
+        "single_level_destroyed": "draw_begin",
+        "full_chain_created": "upload_level_01_begin",
+        "full_chain_destroyed": "context_destroy_begin"
+      },
+      "E": {
+        "single_level_created": "upload_level_00_begin",
+        "single_level_destroyed": "draw_begin",
+        "full_chain_created": "upload_level_01_begin",
+        "full_chain_destroyed": "context_destroy_begin"
+      },
+      "O": {
+        "single_level_created": "upload_level_00_begin",
+        "single_level_destroyed": "draw_begin",
+        "full_chain_created": "upload_level_01_begin",
+        "full_chain_destroyed": "context_destroy_begin"
+      },
+      "V": {
+        "single_level_created": "upload_level_00_begin",
+        "single_level_destroyed": "draw_begin",
+        "full_chain_created": "upload_level_01_begin",
+        "full_chain_destroyed": "context_destroy_begin"
+      }
+    },
+    "white_texture_readback": "255,255,255,255"
+  },
+  "tl2": {
+    "A": {
+      "textures": 32,
+      "drawn": 0,
+      "max_level_set_first": false,
+      "single_level_created": 32,
+      "single_level_live_at_checkpoint": 32,
+      "full_chain_live_at_checkpoint": 32,
+      "live_MiB": 299.0,
+      "pixel": "0,0,0,255"
+    },
+    "B": {
+      "textures": 32,
+      "drawn": 1,
+      "max_level_set_first": false,
+      "single_level_created": 32,
+      "single_level_live_at_checkpoint": 31,
+      "full_chain_live_at_checkpoint": 32,
+      "live_MiB": 295.0,
+      "pixel": "255,255,255,255"
+    },
+    "C": {
+      "textures": 32,
+      "drawn": 16,
+      "max_level_set_first": false,
+      "single_level_created": 32,
+      "single_level_live_at_checkpoint": 16,
+      "full_chain_live_at_checkpoint": 32,
+      "live_MiB": 235.0,
+      "pixel": "255,255,255,255"
+    },
+    "D": {
+      "textures": 32,
+      "drawn": 32,
+      "max_level_set_first": false,
+      "single_level_created": 32,
+      "single_level_live_at_checkpoint": 0,
+      "full_chain_live_at_checkpoint": 32,
+      "live_MiB": 171.0,
+      "pixel": "255,255,255,255"
+    },
+    "E": {
+      "textures": 32,
+      "drawn": 0,
+      "max_level_set_first": true,
+      "single_level_created": 0,
+      "single_level_live_at_checkpoint": 0,
+      "full_chain_live_at_checkpoint": 32,
+      "live_MiB": 171.0,
+      "pixel": "0,0,0,255"
+    }
+  }
+}

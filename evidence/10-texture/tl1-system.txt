@@ -1,0 +1,6 @@
+2026-10-28T08:53:50+03:00
+Linux x6e3-j713-fedora 7.1.13-x6e3-rel3 #1 SMP PREEMPT Wed Oct 28 07:57:59 +03 2026 aarch64 GNU/Linux
+mesa-dri-drivers-26.3.0~devel-103.gravity.x6e3.1.fc44.aarch64
+mesa-libEGL-26.3.0~devel-103.gravity.x6e3.1.fc44.aarch64
+package mesa-libGLES is not installed
+ASAHI_MESA_DEBUG=resource

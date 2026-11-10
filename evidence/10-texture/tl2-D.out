@@ -1,0 +1,9 @@
+scenario=D
+textures=32
+draw_count=32
+maxlevel=0
+renderer=Apple M4 (G16G B1)
+version=OpenGL ES 3.0 Mesa 26.3.0-devel
+s3tc_extension=yes
+pixel_rgba=255,255,255,255
+done=1

@@ -1,0 +1,168 @@
+Game is Xonotic using base gamedir data
+gamename for server filtering: Xonotic
+Xonotic Linux 00:00:00 Jul 25 2025 - release
+Current nice level is below the soft limit - cannot use niceness
+Skeletal animation uses generic code path (SSE not compiled in)
+DPSOFTRAST not available (SSE2 not compiled in)
+Failed to init SDL joystick subsystem: 
+execing quake.rc
+execing default.cfg
+execing xonotic-common.cfg
+execing xonotic-client.cfg
+execing sRGB-disable.cfg
+execing binds-xonotic.cfg
+execing effects-normal.cfg
+execing crosshairs.cfg
+execing gamemodes-client.cfg
+execing notifications.cfg
+execing _hud_common.cfg
+execing _hud_descriptions.cfg
+execing hud_luma.cfg
+execing xonotic-server.cfg
+execing testing.cfg
+execing balance-xonotic.cfg
+execing bal-wep-xonotic.cfg
+execing physicsX.cfg
+execing turrets.cfg
+execing vehicles.cfg
+execing gamemodes-server.cfg
+execing ctfscoring-samual.cfg
+execing mutators.cfg
+execing randomitems-xonotic.cfg
+execing monsters.cfg
+execing minigames.cfg
+execing physics.cfg
+execing cdtracks.cfg
+execing commands.cfg
+execing config.cfg
+"maxplayers" set to "16"
+execing data/campaign.cfg
+execing config_update.cfg
+execing font-xolonium.cfg
+client: program is not loaded
+execing autoexec/empty.cfg
+execing autoexec.cfg
+execing post-config.cfg
+Client using an automatically assigned port
+Client opened a socket on address 0.0.0.0:0
+Client opened a socket on address [0:0:0:0:0:0:0:0]:0
+Linked against SDL version 2.32.56
+Using SDL library version 2.32.72
+GL_VENDOR: Mesa
+GL_RENDERER: Apple M4 (G16G B1)
+GL_VERSION: 3.3 (Compatibility Profile) Mesa 26.3.0-devel
+vid.support.arb_multisample 1
+vid.support.gl20shaders 1
+NOTE: requested 1x AA, got 0x AA
+Video Mode: fullscreen 1920x1200x32x0.00hz
+S_Startup: initializing sound output format: 48000Hz, 16 bit, 2 channels...
+Wanted audio Specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Obtained audio specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Sound format: 48000Hz, 2 channels, 16 bits per sample
+CDAudio_Init: No CD in player.
+Can't get initial CD volume
+CD Audio Initialized
+VID_Restart: changing from fullscreen 1920x1200x32bpp, to fullscreen 1920x1200x32bpp.
+Linked against SDL version 2.32.56
+Using SDL library version 2.32.72
+GL_VENDOR: Mesa
+GL_RENDERER: Apple M4 (G16G B1)
+GL_VERSION: 3.3 (Compatibility Profile) Mesa 26.3.0-devel
+vid.support.arb_multisample 1
+vid.support.gl20shaders 1
+NOTE: requested 1x AA, got 0x AA
+Video Mode: fullscreen 1920x1200x32x0.00hz
+S_Startup: initializing sound output format: 48000Hz, 16 bit, 2 channels...
+Wanted audio Specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Obtained audio specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Sound format: 48000Hz, 2 channels, 16 bits per sample
+S_Startup: extra sound time = 24000
+Switching to map warfare
+"maxplayers" set to "16"
+Server using port 26000
+Server listening on address 0.0.0.0:26000
+Server listening on address [0:0:0:0:0:0:0:0]:26000
+Connection accepted to local:1
+<-- server to client keepalive
+
+Server: Xonotic build 00:00:00 Jul 25 2025 - release (progs 59552 crc)
+
+<===================================>
+
+[1;33mWarfare[m
+unconnected changed name to Toxic
+x6e3U is connecting...
+[1;33m[mx6e3U[1;34m connected[m
+[1;33m[mToxic[1;34m connected[m
+[1;33m[mDeath[1;34m connected[m
+[1;33m[mResurrection[1;34m connected[m
+[1;33m[mMystery[1;34m connected[m
+[1;33m[mThunderstorm[1;34m connected[m
+unconnected changed name to Death
+unconnected changed name to Resurrection
+unconnected changed name to Mystery
+unconnected changed name to Thunderstorm
+[1;33m[mx6e3U[1;34m is now playing[m
+x6e3U[1;31m drew first blood! [m
+Toxic[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Death[1;31m slapped [mMystery[1;31m around a bit with a large Shotgun[m
+Death[1;31m slapped [mThunderstorm[1;31m around a bit with a large Shotgun[m
+Toxic[1;31m slapped [mResurrection[1;31m around a bit with a large Shotgun[m
+Toxic[1;31m slapped [mDeath[1;31m around a bit with a large Shotgun, ending their 2 frag spree[m
+Mystery[1;31m slapped [mToxic[1;31m around a bit with a large Shotgun, ending their 2 frag spree[m
+Resurrection[1;31m slapped [mThunderstorm[1;31m around a bit with a large Shotgun[m
+Mystery[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Toxic[1;31m slapped [mx6e3U[1;31m around a bit with a large Shotgun, ending their 2 frag spree[m
+Death[1;31m slapped [mResurrection[1;31m around a bit with a large Shotgun[m
+Death[1;31m slapped [mToxic[1;31m around a bit with a large Shotgun[m
+Death[1;31m ate [mResurrection[1;31m's Mortar grenade, ending their 2 frag spree[m
+Thunderstorm[1;31m got too close to [mToxic[1;31m's rocket[m
+Mystery[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Toxic[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Thunderstorm[1;31m slapped [mResurrection[1;31m around a bit with a large Shotgun[m
+Mystery[1;31m slapped [mx6e3U[1;31m around a bit with a large Shotgun, ending their 2 frag spree[m
+Mystery[1;31m slapped [mThunderstorm[1;31m around a bit with a large Shotgun[m
+Mystery[1;31m made a TRIPLE FRAG! [m
+Mystery[1;31m slapped [mDeath[1;31m around a bit with a large Shotgun[m
+Mystery[1;31m ate [mx6e3U[1;31m's Mortar grenade, ending their 3 frag spree[m
+Resurrection[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Thunderstorm[1;31m slapped [mToxic[1;31m around a bit with a large Shotgun[m
+x6e3U[1;31m made a TRIPLE FRAG! [m
+Thunderstorm[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Toxic[1;31m slapped [mx6e3U[1;31m around a bit with a large Shotgun, ending their 3 frag spree[m
+Resurrection[1;31m slapped [mDeath[1;31m around a bit with a large Shotgun[m
+Toxic[1;31m slapped [mResurrection[1;31m around a bit with a large Shotgun[m
+Toxic[1;31m was gunned down by [mMystery[1;31m's Shotgun, ending their 2 frag spree[m
+Mystery[1;31m was gunned down by [mThunderstorm[1;31m's Shotgun[m
+Toxic[1;31m slapped [mThunderstorm[1;31m around a bit with a large Shotgun[m
+Toxic[1;31m slapped [mResurrection[1;31m around a bit with a large Shotgun[m
+Death[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Toxic[1;31m ate [mx6e3U[1;31m's Mortar grenade, ending their 2 frag spree[m
+x6e3U[1;31m made a TRIPLE FRAG! [m
+Mystery[1;31m ate [mx6e3U[1;31m's Mortar grenade[m
+Toxic[1;31m slapped [mx6e3U[1;31m around a bit with a large Shotgun, ending their 3 frag spree[m
+Death[1;31m slapped [mResurrection[1;31m around a bit with a large Shotgun[m
+Toxic[1;31m slapped [mThunderstorm[1;31m around a bit with a large Shotgun[m
+]quit 
+Client "x6e3U" dropped
+Client "Toxic" dropped
+Client "Death" dropped
+Client "Resurrection" dropped
+Client "Mystery" dropped
+Client "Thunderstorm" dropped

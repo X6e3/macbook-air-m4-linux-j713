@@ -1,0 +1,208 @@
+Game is Xonotic using base gamedir data
+gamename for server filtering: Xonotic
+Xonotic Linux 00:00:00 Jul 25 2025 - release
+Current nice level is below the soft limit - cannot use niceness
+Skeletal animation uses generic code path (SSE not compiled in)
+DPSOFTRAST not available (SSE2 not compiled in)
+Failed to init SDL joystick subsystem: 
+execing quake.rc
+execing default.cfg
+execing xonotic-common.cfg
+execing xonotic-client.cfg
+execing sRGB-disable.cfg
+execing binds-xonotic.cfg
+execing effects-normal.cfg
+execing crosshairs.cfg
+execing gamemodes-client.cfg
+execing notifications.cfg
+execing _hud_common.cfg
+execing _hud_descriptions.cfg
+execing hud_luma.cfg
+execing xonotic-server.cfg
+execing testing.cfg
+execing balance-xonotic.cfg
+execing bal-wep-xonotic.cfg
+execing physicsX.cfg
+execing turrets.cfg
+execing vehicles.cfg
+execing gamemodes-server.cfg
+execing ctfscoring-samual.cfg
+execing mutators.cfg
+execing randomitems-xonotic.cfg
+execing monsters.cfg
+execing minigames.cfg
+execing physics.cfg
+execing cdtracks.cfg
+execing commands.cfg
+execing config.cfg
+"maxplayers" set to "16"
+execing data/campaign.cfg
+execing config_update.cfg
+execing font-xolonium.cfg
+client: program is not loaded
+execing autoexec/empty.cfg
+execing autoexec.cfg
+execing post-config.cfg
+Client using an automatically assigned port
+Client opened a socket on address 0.0.0.0:0
+Client opened a socket on address [0:0:0:0:0:0:0:0]:0
+Linked against SDL version 2.32.56
+Using SDL library version 2.32.72
+[1mTotal[0m: 0 B, 0 BOs
+
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 1281x800x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x444000 CS:0x0 Base=0x2fffb90000 Size=0x444000 Meta=0x0/0x0 (Shared resource) SA fd:-1(-1) B:10800a H:8/8 @ 0x72093d0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: z32_float 1281x800x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x444000 CS:0x0 Base=0x2fff748000 Size=0x444000 Meta=0x0/0x0 (Depth/stencil buffer) fd:-1(-1) B:8001 H:9/9 @ 0x7458790
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: s8_uint 1281x800x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x134000 CS:0x0 Base=0x2fff610000 Size=0x134000 Meta=0x0/0x0 (Depth/stencil buffer) fd:-1(-1) B:8001 H:a/a @ 0x7458a70
+GL_VENDOR: Mesa
+GL_RENDERER: Apple M4 (G16G B1)
+GL_VERSION: 3.3 (Compatibility Profile) Mesa 26.3.0-devel
+vid.support.arb_multisample 1
+vid.support.gl20shaders 1
+[xonotic-sdl] New: r8_unorm 1048576x1x1 1L 0/1M 1S M:0 LINR  S:0x100000 LS:0x100000 CS:0x0 Base=0x1000088c000 Size=0x100000 Meta=0x0/0x0 (Index buffer) LO WB fd:-1(-1) B:8070 H:e/e @ 0x7465260
+NOTE: requested 1x AA, got 0x AA
+Video Mode: window 1281x800x32x0.00hz
+[xonotic-sdl] New: r8_unorm 524288x1x1 1L 0/1M 1S M:0 LINR  S:0x80000 LS:0x80000 CS:0x0 Base=0x100009b8000 Size=0x80000 Meta=0x0/0x0 (Vertex buffer) LO WB fd:-1(-1) B:8010 H:15/15 @ 0x749c150
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 1x1x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff5c4000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:16/16 @ 0x749a360
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 1x1x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff5bc000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:17/17 @ 0x749ce00
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 1x1x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff5b4000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:18/18 @ 0x749e630
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 1x1x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff5ac000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:19/19 @ 0x74d9b60
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 16x16x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff5a4000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1a/1a @ 0x74ae740
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 16x16x1 1L 4/5M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff59c000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1b/1b @ 0x74af2e0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 1x1x1 6L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff580000 Size=0x18000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1c/1c @ 0x74afaa0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 64x64x1 6L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2fff564000 Size=0x18000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1d/1d @ 0x74b0260
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 256x256x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x40000 CS:0x0 Base=0x2fff520000 Size=0x40000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1e/1e @ 0x74e0d40
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 80 KiB, mapped 80 KiB, 5 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mRender target[0m: 544 KiB, mapped 544 KiB, 9 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mShared resource[0m: 4.3 MiB, 1 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mTotal[0m: 21.4 MiB, mapped 11.4 MiB, 30 BOs
+
+[xonotic-sdl] New: r8g8b8a8_unorm 480x480x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x100000 CS:0x0 Base=0x2fff41c000 Size=0x100000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1f/1f @ 0x74925e0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 1024x1024x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x400000 CS:0x0 Base=0x2fff018000 Size=0x400000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:20/20 @ 0x7493360
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 480x480x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x100000 CS:0x0 Base=0x2ffef14000 Size=0x100000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:21/21 @ 0x7775100
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 448x448x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0xc4000 CS:0x0 Base=0x2ffee4c000 Size=0xc4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:22/22 @ 0x78ea610
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 416x416x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0xc4000 CS:0x0 Base=0x2ffed84000 Size=0xc4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:23/23 @ 0x78b9fc0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 576x576x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x144000 CS:0x0 Base=0x2ffec3c000 Size=0x144000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:24/24 @ 0x78ba910
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 224x224x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x40000 CS:0x0 Base=0x2ffebf8000 Size=0x40000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:25/25 @ 0x7b37600
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 320x320x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x64000 CS:0x0 Base=0x2ffeb90000 Size=0x64000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:26/26 @ 0x7ac8ed0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 672x672x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x1e4000 CS:0x0 Base=0x2ffe9a8000 Size=0x1e4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:27/27 @ 0x7ac97d0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 736x736x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x240000 CS:0x0 Base=0x2ffe764000 Size=0x240000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:28/28 @ 0x74717d0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 928x928x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x384000 CS:0x0 Base=0x2ffe3dc000 Size=0x384000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:29/29 @ 0x7acc100
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 1088x1088x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x484000 CS:0x0 Base=0x2ffdf54000 Size=0x484000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2a/2a @ 0x7aca420
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 1248x1248x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x640000 CS:0x0 Base=0x2ffd910000 Size=0x640000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2b/2b @ 0x7aca700
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 1440x1440x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x844000 CS:0x0 Base=0x2ffd0c8000 Size=0x844000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2c/2c @ 0x7ad1e00
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 544x544x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x144000 CS:0x0 Base=0x2ffcf80000 Size=0x144000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2d/2d @ 0x7ad0c80
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 224x224x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x40000 CS:0x0 Base=0x2ffcf3c000 Size=0x40000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2e/2e @ 0x81e0c60
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 320x320x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x64000 CS:0x0 Base=0x2ffced4000 Size=0x64000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2f/2f @ 0x81921b0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 416x416x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0xc4000 CS:0x0 Base=0x2ffce0c000 Size=0xc4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:30/30 @ 0x81929f0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 480x480x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x100000 CS:0x0 Base=0x2ffcd08000 Size=0x100000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:31/31 @ 0x8193280
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 576x576x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x144000 CS:0x0 Base=0x2ffcbc0000 Size=0x144000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:32/32 @ 0x8193c50
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 672x672x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x1e4000 CS:0x0 Base=0x2ffc9d8000 Size=0x1e4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:33/33 @ 0x8194460
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 736x736x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x240000 CS:0x0 Base=0x2ffc794000 Size=0x240000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:34/34 @ 0x8194cf0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 928x928x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x384000 CS:0x0 Base=0x2ffc40c000 Size=0x384000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:35/35 @ 0x8195940
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 1088x1088x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x484000 CS:0x0 Base=0x2ffbf84000 Size=0x484000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:36/36 @ 0x81965f0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 1248x1248x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x640000 CS:0x0 Base=0x2ffb940000 Size=0x640000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:37/37 @ 0x81973d0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 1440x1440x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x844000 CS:0x0 Base=0x2ffb0f8000 Size=0x844000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:38/38 @ 0x8197c40
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 544x544x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x144000 CS:0x0 Base=0x2ffafb0000 Size=0x144000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:39/39 @ 0x8198d50
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 2048x1024x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x800000 CS:0x0 Base=0x2ffa7ac000 Size=0x800000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:3a/3a @ 0x74aef00
+[xonotic-sdl] Get handle: 0x72093d0 (FD 25/658)
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 32x1x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa7a4000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:3d/3d @ 0x8f27ff0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 64x64x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa79c000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:3e/3e @ 0x8f29480
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 32x32x32 1L 0/1M 1S M:c00000000000001 GPU MZ PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa718000 Size=0x80000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:a H:3f/3f @ 0x8f90650
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 32x32x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa710000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:40/40 @ 0x8f902d0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 16x16x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa708000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:41/41 @ 0x8f8d3f0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 16x16x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa700000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:42/42 @ 0x8f26ab0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 16x16x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa6f8000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:43/43 @ 0x8f88f10
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 16x16x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa6f0000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:44/44 @ 0x8f28ab0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 16x16x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa6e8000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:45/45 @ 0x8f8d9f0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 16x16x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffa6e0000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:46/46 @ 0x8f87f30
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8a8_unorm 2048x2048x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x1000000 CS:0x0 Base=0x2ff96dc000 Size=0x1000000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:47/47 @ 0x8f97db0
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: r8g8b8x8_unorm 16x64x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ff96d4000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:48/48 @ 0x8f92e70
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 128x128x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x10000 CS:0x0 Base=0x2ff96c0000 Size=0x10000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:49/49 @ 0x8e93160
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 128x128x1 1L 7/8M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x18000 CS:0x0 Base=0x2ff96a4000 Size=0x18000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:4a/4a @ 0x8e910a0
+S_Startup: initializing sound output format: 48000Hz, 16 bit, 2 channels...
+Wanted audio Specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Obtained audio specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Sound format: 48000Hz, 2 channels, 16 bits per sample
+CDAudio_Init: No CD in player.
+Can't get initial CD volume
+CD Audio Initialized
+[xonotic-sdl] No compression: unsupported by Apple9 copies
+[xonotic-sdl] New: b8g8r8a8_unorm 1281x800x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x444000 CS:0x0 Base=0x2ff925c000 Size=0x444000 Meta=0x0/0x0 (Shared resource) SA fd:-1(-1) B:10800a H:4b/4b @ 0x8f2d8e0
+[xonotic-sdl] Destroy: b8g8r8a8_unorm 1281x800x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x444000 CS:0x0 Base=0x2fffb90000 Size=0x444000 Meta=0x0/0x0 (Shared resource) SH SA fd:24(658) B:10800a H:8/8 @ 0x72093d0
+[xonotic-sdl] Get handle: 0x8f2d8e0 (FD 58/659)

@@ -1,0 +1,185 @@
+[00:13:53.050468] {mesa egl swrast display queue}  -> wl_display#1.get_registry(new id wl_registry#2)
+[00:13:53.050504] {mesa egl swrast display queue}  -> wl_display#1.sync(new id wl_callback#3)
+[00:13:53.055376] {Display Queue} wl_display#1.delete_id(3)
+[00:13:53.055402] {mesa egl swrast display queue} wl_registry#2.global(1, "wl_compositor", 6)
+[00:13:53.055411] {mesa egl swrast display queue} wl_registry#2.global(3, "zwp_tablet_manager_v2", 2)
+[00:13:53.055417] {mesa egl swrast display queue} wl_registry#2.global(4, "zwp_keyboard_shortcuts_inhibit_manager_v1", 1)
+[00:13:53.055425] {mesa egl swrast display queue} wl_registry#2.global(5, "xdg_session_manager_v1", 1)
+[00:13:53.055431] {mesa egl swrast display queue} wl_registry#2.global(6, "zxdg_decoration_manager_v1", 2)
+[00:13:53.055436] {mesa egl swrast display queue} wl_registry#2.global(7, "wp_viewporter", 1)
+[00:13:53.055442] {mesa egl swrast display queue} wl_registry#2.global(8, "wp_security_context_manager_v1", 1)
+[00:13:53.055448] {mesa egl swrast display queue} wl_registry#2.global(9, "wp_fractional_scale_manager_v1", 1)
+[00:13:53.055454] {mesa egl swrast display queue} wl_registry#2.global(10, "wl_shm", 2)
+[00:13:53.055462] {mesa egl swrast display queue}  -> wl_registry#2.bind(10, "wl_shm", 1, new id [unknown]#4)
+[00:13:53.055470] {mesa egl swrast display queue} wl_registry#2.global(11, "wl_seat", 10)
+[00:13:53.055475] {mesa egl swrast display queue} wl_registry#2.global(12, "zwp_pointer_gestures_v1", 3)
+[00:13:53.055481] {mesa egl swrast display queue} wl_registry#2.global(13, "zwp_pointer_constraints_v1", 1)
+[00:13:53.055486] {mesa egl swrast display queue} wl_registry#2.global(14, "zwp_relative_pointer_manager_v1", 1)
+[00:13:53.055492] {mesa egl swrast display queue} wl_registry#2.global(15, "wl_data_device_manager", 3)
+[00:13:53.055498] {mesa egl swrast display queue} wl_registry#2.global(16, "ext_data_control_manager_v1", 1)
+[00:13:53.055503] {mesa egl swrast display queue} wl_registry#2.global(17, "wp_cursor_shape_manager_v1", 2)
+[00:13:53.055508] {mesa egl swrast display queue} wl_registry#2.global(18, "zwp_primary_selection_device_manager_v1", 1)
+[00:13:53.055514] {mesa egl swrast display queue} wl_registry#2.global(19, "org_kde_kwin_idle", 1)
+[00:13:53.055519] {mesa egl swrast display queue} wl_registry#2.global(20, "zwp_idle_inhibit_manager_v1", 1)
+[00:13:53.055525] {mesa egl swrast display queue} wl_registry#2.global(21, "ext_idle_notifier_v1", 2)
+[00:13:53.055530] {mesa egl swrast display queue} wl_registry#2.global(22, "org_kde_plasma_shell", 8)
+[00:13:53.055536] {mesa egl swrast display queue} wl_registry#2.global(23, "org_kde_kwin_appmenu_manager", 2)
+[00:13:53.055542] {mesa egl swrast display queue} wl_registry#2.global(24, "org_kde_kwin_server_decoration_palette_manager", 1)
+[00:13:53.055548] {mesa egl swrast display queue} wl_registry#2.global(26, "org_kde_plasma_virtual_desktop_management", 4)
+[00:13:53.055554] {mesa egl swrast display queue} wl_registry#2.global(28, "org_kde_kwin_shadow_manager", 2)
+[00:13:53.055559] {mesa egl swrast display queue} wl_registry#2.global(29, "org_kde_kwin_dpms_manager", 1)
+[00:13:53.055565] {mesa egl swrast display queue} wl_registry#2.global(30, "org_kde_kwin_server_decoration_manager", 1)
+[00:13:53.055570] {mesa egl swrast display queue} wl_registry#2.global(31, "kde_output_management_v2", 21)
+[00:13:53.055576] {mesa egl swrast display queue} wl_registry#2.global(32, "kde_output_device_registry_v2", 23)
+[00:13:53.055581] {mesa egl swrast display queue} wl_registry#2.global(33, "zxdg_output_manager_v1", 3)
+[00:13:53.055587] {mesa egl swrast display queue} wl_registry#2.global(34, "wl_subcompositor", 1)
+[00:13:53.055593] {mesa egl swrast display queue} wl_registry#2.global(35, "zxdg_exporter_v2", 1)
+[00:13:53.055598] {mesa egl swrast display queue} wl_registry#2.global(36, "zxdg_importer_v2", 1)
+[00:13:53.055604] {mesa egl swrast display queue} wl_registry#2.global(37, "zwp_input_method_v1", 1)
+[00:13:53.055609] {mesa egl swrast display queue} wl_registry#2.global(39, "xdg_activation_v1", 1)
+[00:13:53.055615] {mesa egl swrast display queue} wl_registry#2.global(41, "wp_content_type_manager_v1", 1)
+[00:13:53.055621] {mesa egl swrast display queue} wl_registry#2.global(42, "wp_tearing_control_manager_v1", 1)
+[00:13:53.055627] {mesa egl swrast display queue} wl_registry#2.global(43, "xdg_toplevel_drag_manager_v1", 1)
+[00:13:53.055633] {mesa egl swrast display queue} wl_registry#2.global(44, "xdg_toplevel_icon_manager_v1", 1)
+[00:13:53.055638] {mesa egl swrast display queue} wl_registry#2.global(45, "kde_screen_edge_manager_v1", 1)
+[00:13:53.055644] {mesa egl swrast display queue} wl_registry#2.global(46, "frog_color_management_factory_v1", 1)
+[00:13:53.055649] {mesa egl swrast display queue} wl_registry#2.global(47, "wp_presentation", 2)
+[00:13:53.055655] {mesa egl swrast display queue}  -> wl_registry#2.bind(47, "wp_presentation", 1, new id [unknown]#5)
+[00:13:53.055664] {mesa egl swrast display queue} wl_registry#2.global(48, "wp_color_manager_v1", 2)
+[00:13:53.055669] {mesa egl swrast display queue} wl_registry#2.global(49, "xdg_wm_dialog_v1", 1)
+[00:13:53.055675] {mesa egl swrast display queue} wl_registry#2.global(50, "kde_external_brightness_v1", 3)
+[00:13:53.055680] {mesa egl swrast display queue} wl_registry#2.global(51, "wp_alpha_modifier_v1", 1)
+[00:13:53.055686] {mesa egl swrast display queue} wl_registry#2.global(52, "wl_fixes", 1)
+[00:13:53.055692] {mesa egl swrast display queue}  -> wl_registry#2.bind(52, "wl_fixes", 1, new id [unknown]#6)
+[00:13:53.055699] {mesa egl swrast display queue} wl_registry#2.global(53, "wp_fifo_manager_v1", 1)
+[00:13:53.055704] {mesa egl swrast display queue} wl_registry#2.global(54, "wp_single_pixel_buffer_manager_v1", 1)
+[00:13:53.055710] {mesa egl swrast display queue} wl_registry#2.global(55, "xdg_toplevel_tag_manager_v1", 1)
+[00:13:53.055716] {mesa egl swrast display queue} wl_registry#2.global(56, "wp_color_representation_manager_v1", 1)
+[00:13:53.055721] {mesa egl swrast display queue} wl_registry#2.global(57, "wp_pointer_warp_v1", 1)
+[00:13:53.055726] {mesa egl swrast display queue} wl_registry#2.global(58, "ext_background_effect_manager_v1", 1)
+[00:13:53.055732] {mesa egl swrast display queue} wl_registry#2.global(60, "zwp_linux_dmabuf_v1", 5)
+[00:13:53.055737] {mesa egl swrast display queue} wl_registry#2.global(61, "wp_linux_drm_syncobj_manager_v1", 1)
+[00:13:53.055743] {mesa egl swrast display queue} wl_registry#2.global(62, "zwp_input_panel_v1", 1)
+[00:13:53.055748] {mesa egl swrast display queue} wl_registry#2.global(63, "xdg_wm_base", 6)
+[00:13:53.055753] {mesa egl swrast display queue} wl_registry#2.global(64, "zwlr_layer_shell_v1", 5)
+[00:13:53.055759] {mesa egl swrast display queue} wl_registry#2.global(65, "org_kde_kwin_keystate", 5)
+[00:13:53.055765] {mesa egl swrast display queue} wl_registry#2.global(66, "wl_output", 4)
+[00:13:53.055770] {mesa egl swrast display queue} wl_registry#2.global(67, "wp_drm_lease_device_v1", 1)
+[00:13:53.055776] {mesa egl swrast display queue} wl_registry#2.global(68, "kde_output_order_v1", 1)
+[00:13:53.055781] {mesa egl swrast display queue} wl_registry#2.global(69, "zwp_text_input_manager_v2", 1)
+[00:13:53.055787] {mesa egl swrast display queue} wl_registry#2.global(70, "zwp_text_input_manager_v3", 2)
+[00:13:53.055793] {mesa egl swrast display queue} wl_registry#2.global(72, "org_kde_kwin_slide_manager", 1)
+[00:13:53.055798] {mesa egl swrast display queue} wl_registry#2.global(73, "xdg_system_bell_v1", 1)
+[00:13:53.055803] {mesa egl swrast display queue} wl_callback#3.done(18291)
+[00:13:53.055811] {mesa egl swrast display queue}  -> wl_display#1.sync(new id wl_callback#3)
+[00:13:53.057740] {Display Queue} wl_display#1.delete_id(3)
+[00:13:53.057759] {mesa egl swrast display queue} wl_shm#4.format(0)
+[00:13:53.057766] {mesa egl swrast display queue} wl_shm#4.format(1)
+[00:13:53.057771] {mesa egl swrast display queue} wl_shm#4.format(1448434008)
+[00:13:53.057776] {mesa egl swrast display queue} wl_shm#4.format(808669761)
+[00:13:53.057781] {mesa egl swrast display queue} wl_shm#4.format(808669784)
+[00:13:53.057785] {mesa egl swrast display queue} wl_shm#4.format(808665665)
+[00:13:53.057791] {mesa egl swrast display queue} wl_shm#4.format(808665688)
+[00:13:53.057796] {mesa egl swrast display queue} wl_shm#4.format(942948929)
+[00:13:53.057801] {mesa egl swrast display queue} wl_shm#4.format(942948952)
+[00:13:53.057806] {mesa egl swrast display queue} wl_shm#4.format(875710274)
+[00:13:53.057811] {mesa egl swrast display queue} wl_shm#4.format(875710290)
+[00:13:53.057816] {mesa egl swrast display queue} wp_presentation#5.clock_id(1)
+[00:13:53.057821] {mesa egl swrast display queue} wl_callback#3.done(18291)
+[00:13:53.107313] {mesa egl swrast display queue}  -> wp_presentation#5.destroy()
+[00:13:53.107330] {mesa egl swrast display queue}  -> wl_fixes#6.destroy_registry(wl_registry#2)
+[00:13:53.107335] {mesa egl swrast display queue}  -> wl_fixes#6.destroy()
+MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+GBM platform:
+EGL API version: 1.5
+EGL vendor string: Mesa Project
+EGL version string: 1.5
+EGL client APIs: OpenGL OpenGL_ES 
+OpenGL core profile vendor: Mesa
+OpenGL core profile renderer: Apple M4 (G16G B1)
+OpenGL core profile version: 3.3 (Core Profile) Mesa 26.3.0-devel
+OpenGL core profile shading language version: 3.30
+OpenGL compatibility profile vendor: Mesa
+OpenGL compatibility profile renderer: Apple M4 (G16G B1)
+OpenGL compatibility profile version: 3.3 (Compatibility Profile) Mesa 26.3.0-devel
+OpenGL compatibility profile shading language version: 3.30
+OpenGL ES profile vendor: Mesa
+OpenGL ES profile renderer: Apple M4 (G16G B1)
+OpenGL ES profile version: OpenGL ES 3.0 Mesa 26.3.0-devel
+OpenGL ES profile shading language version: OpenGL ES GLSL ES 3.00
+
+Wayland platform:
+EGL API version: 1.5
+EGL vendor string: Mesa Project
+EGL version string: 1.5
+EGL client APIs: OpenGL OpenGL_ES 
+OpenGL core profile vendor: Mesa
+OpenGL core profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL core profile version: 4.6 (Core Profile) Mesa 26.3.0-devel
+OpenGL core profile shading language version: 4.60
+OpenGL compatibility profile vendor: Mesa
+OpenGL compatibility profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL compatibility profile version: 4.6 (Compatibility Profile) Mesa 26.3.0-devel
+OpenGL compatibility profile shading language version: 4.60
+OpenGL ES profile vendor: Mesa
+OpenGL ES profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL ES profile version: OpenGL ES 3.2 Mesa 26.3.0-devel
+OpenGL ES profile shading language version: OpenGL ES GLSL ES 3.20
+
+X11 platform:
+EGL API version: 1.5
+EGL vendor string: Mesa Project
+EGL version string: 1.5
+EGL client APIs: OpenGL OpenGL_ES 
+OpenGL core profile vendor: Mesa
+OpenGL core profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL core profile version: 4.6 (Core Profile) Mesa 26.3.0-devel
+OpenGL core profile shading language version: 4.60
+OpenGL compatibility profile vendor: Mesa
+OpenGL compatibility profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL compatibility profile version: 4.6 (Compatibility Profile) Mesa 26.3.0-devel
+OpenGL compatibility profile shading language version: 4.60
+OpenGL ES profile vendor: Mesa
+OpenGL ES profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL ES profile version: OpenGL ES 3.2 Mesa 26.3.0-devel
+OpenGL ES profile shading language version: OpenGL ES GLSL ES 3.20
+
+Surfaceless platform:
+EGL API version: 1.5
+EGL vendor string: Mesa Project
+EGL version string: 1.5
+EGL client APIs: OpenGL OpenGL_ES 
+OpenGL core profile vendor: Mesa
+OpenGL core profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL core profile version: 4.6 (Core Profile) Mesa 26.3.0-devel
+OpenGL core profile shading language version: 4.60
+OpenGL compatibility profile vendor: Mesa
+OpenGL compatibility profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL compatibility profile version: 4.6 (Compatibility Profile) Mesa 26.3.0-devel
+OpenGL compatibility profile shading language version: 4.60
+OpenGL ES profile vendor: Mesa
+OpenGL ES profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL ES profile version: OpenGL ES 3.2 Mesa 26.3.0-devel
+OpenGL ES profile shading language version: OpenGL ES GLSL ES 3.20
+
+Device platform:
+Device #0:
+
+Platform Device platform:
+EGL API version: 1.5
+EGL vendor string: Mesa Project
+EGL version string: 1.5
+EGL client APIs: OpenGL OpenGL_ES 
+OpenGL core profile vendor: Mesa
+OpenGL core profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL core profile version: 4.6 (Core Profile) Mesa 26.3.0-devel
+OpenGL core profile shading language version: 4.60
+OpenGL compatibility profile vendor: Mesa
+OpenGL compatibility profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL compatibility profile version: 4.6 (Compatibility Profile) Mesa 26.3.0-devel
+OpenGL compatibility profile shading language version: 4.60
+OpenGL ES profile vendor: Mesa
+OpenGL ES profile renderer: llvmpipe (LLVM 22.1.8, 128 bits)
+OpenGL ES profile version: OpenGL ES 3.2 Mesa 26.3.0-devel
+OpenGL ES profile shading language version: OpenGL ES GLSL ES 3.20
+

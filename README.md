@@ -31,7 +31,8 @@ and [original boot logs](evidence/01-first-boot/logs/). The [A1/B1/B2 MTP startu
 follow in section 2, with the [trackpad firmware and HID investigation](docs/02-input-trackpad.md).
 The [GPU](docs/04-gpu.md), [native display](docs/05-display.md), [stereo woofers](docs/06-audio.md) and
 [CPU idle](docs/07-idle.md) follow in sections 4–7, the [reboot stalls](docs/08-reboot.md) in section 8, and the
-[27 October measurements](docs/09-measurements.md) of the MCA layout, the speaker sides and the GPU limit in section 9.
+[27 October measurements](docs/09-measurements.md) of the MCA layout, the speaker sides and the GPU limit in section 9,
+and [Xonotic, the crash on REL2 and compressed textures](docs/10-xonotic.md) in section 10.
 
 The [Wi-Fi account](docs/03-wifi.md) follows in section 3: PCIe/configuration, J713 firmware identity,
 the early-firmware layer and a real connection from Fedora.
@@ -213,6 +214,16 @@ channel on its own side in 10 of 12 trials. An hour-long dose test found that th
 limit, from 1.75 W at 250 to no limit from 900 up. The [measurement account](docs/09-measurements.md) has the trials,
 the failed runs and what is still open.
 
+## 10. Xonotic and the crash on REL2 (28 October 2026)
+
+I played Xonotic on and off for hours on REL2, on the GPU at about 250–410 FPS, until the game dropped out and KWin
+failed. The journal I saved shows why: the GPU driver copied its list of buffer mappings into every job in
+physically contiguous memory, and with a few thousand buffers an order-4 allocation failed. REL3 keeps those lists
+in kvmalloc memory, and on REL3 a full match finished. Mesa's buffer dump showed the game holding up to 8.0 GiB; two
+controlled tests show that Mesa stores DXT textures decompressed, at four times their size, and with the default
+filter keeps an extra copy of each until it is first drawn. The [Xonotic account](docs/10-xonotic.md) has the crash,
+the fix and both tests.
+
 ## How I worked
 
 I use this MacBook Air as my everyday machine for embedded and kernel work. Some of the tools that work needs have no
@@ -246,8 +257,9 @@ docs/       current support, known limits and the scope of the two repositories
 
 `make fig01` rebuilds Fig. 1 from `evidence/`. `make check` runs before every commit: it refuses
 device identifiers and secrets, checks that the first-boot logs match the original bytes, and verifies the
-published hashes and derived summaries of sections 1–9. `make later-stages` recomputes the section 4–7
-results from their evidence, `make reboot` the section 8 tallies and `make measurements` the section 9 results.
+published hashes and derived summaries of sections 1–10. `make later-stages` recomputes the section 4–7
+results from their evidence, `make reboot` the section 8 tallies, `make measurements` the section 9 results, and
+`make xonotic` and `make texture` the section 10 results.
 Boot images are not published: later initramfs layers contain vendor firmware. Their part hashes are
 in `evidence/01-first-boot/image-parts.csv`.
 

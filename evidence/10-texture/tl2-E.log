@@ -1,0 +1,183 @@
+TL2 ns=3299713705127 stage=egl_begin
+TL2 ns=3299750688498 stage=egl_end
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 64x64x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffffd0000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:8/8 @ 0xfdce030
+[tl2] New: r8_unorm 1048576x1x1 1L 0/1M 1S M:0 LINR  S:0x100000 LS:0x100000 CS:0x0 Base=0x1000088c000 Size=0x100000 Meta=0x0/0x0 (Index buffer) LO WB fd:-1(-1) B:8070 H:c/c @ 0x106c36c0
+TL2 ns=3299763577278 stage=setup_end
+TL2 ns=3299764260791 stage=upload_begin
+TL2 ns=3299764264957 stage=texture_00_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2fffa30000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:13/13 @ 0x106f7d40
+TL2 ns=3299777423128 stage=texture_00_end
+TL2 ns=3299777426836 stage=texture_01_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2fff4d4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:14/14 @ 0x106b2fe0
+TL2 ns=3299790403920 stage=texture_01_end
+TL2 ns=3299790406087 stage=texture_02_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffef78000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:15/15 @ 0x106cd130
+TL2 ns=3299803205711 stage=texture_02_end
+TL2 ns=3299803207878 stage=texture_03_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffea1c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:16/16 @ 0x106f0990
+TL2 ns=3299816051996 stage=texture_03_end
+TL2 ns=3299816054080 stage=texture_04_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffe4c0000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:17/17 @ 0x106ae8b0
+TL2 ns=3299828850581 stage=texture_04_end
+TL2 ns=3299828852556 stage=texture_05_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffdf64000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:18/18 @ 0x10720420
+TL2 ns=3299841650514 stage=texture_05_end
+TL2 ns=3299841652514 stage=texture_06_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffda08000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:19/19 @ 0x10690270
+TL2 ns=3299854500925 stage=texture_06_end
+TL2 ns=3299854503092 stage=texture_07_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffd4ac000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1a/1a @ 0x106ea2b0
+TL2 ns=3299867282800 stage=texture_07_end
+TL2 ns=3299867284883 stage=texture_08_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffcf50000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1b/1b @ 0x106ef320
+TL2 ns=3299880104901 stage=texture_08_end
+TL2 ns=3299880106776 stage=texture_09_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffc9f4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1c/1c @ 0x1069acf0
+TL2 ns=3299892883109 stage=texture_09_end
+TL2 ns=3299892884942 stage=texture_10_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffc498000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1d/1d @ 0x106a0d70
+TL2 ns=3299905714836 stage=texture_10_end
+TL2 ns=3299905717169 stage=texture_11_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffbf3c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1e/1e @ 0x106a2de0
+TL2 ns=3299918571246 stage=texture_11_end
+TL2 ns=3299918575556 stage=texture_12_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffb9e0000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1f/1f @ 0x106a3e40
+TL2 ns=3299931338704 stage=texture_12_end
+TL2 ns=3299931340454 stage=texture_13_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffb484000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:20/20 @ 0x11821080
+TL2 ns=3299944178240 stage=texture_13_end
+TL2 ns=3299944180115 stage=texture_14_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffaf28000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:21/21 @ 0x11977240
+TL2 ns=3299957007591 stage=texture_14_end
+TL2 ns=3299957009549 stage=texture_15_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffa9cc000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:22/22 @ 0x11acd450
+TL2 ns=3299969802674 stage=texture_15_end
+TL2 ns=3299969806258 stage=texture_16_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffa470000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:23/23 @ 0x11c23660
+TL2 ns=3299982609193 stage=texture_16_end
+TL2 ns=3299982611109 stage=texture_17_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff9f14000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:24/24 @ 0x11d79870
+TL2 ns=3299995413692 stage=texture_17_end
+TL2 ns=3299995415609 stage=texture_18_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff99b8000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:25/25 @ 0x11ecfa80
+TL2 ns=3300008252894 stage=texture_18_end
+TL2 ns=3300008254769 stage=texture_19_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff945c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:26/26 @ 0x12025c90
+TL2 ns=3300021102972 stage=texture_19_end
+TL2 ns=3300021104680 stage=texture_20_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff8f00000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:27/27 @ 0x1217bea0
+TL2 ns=3300033903698 stage=texture_20_end
+TL2 ns=3300033905573 stage=texture_21_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff89a4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:28/28 @ 0x122d20b0
+TL2 ns=3300046736923 stage=texture_21_end
+TL2 ns=3300046738882 stage=texture_22_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff8448000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:29/29 @ 0x124282c0
+TL2 ns=3300059564900 stage=texture_22_end
+TL2 ns=3300059567043 stage=texture_23_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff7eec000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2a/2a @ 0x1257e4d0
+TL2 ns=3300072383269 stage=texture_23_end
+TL2 ns=3300072385269 stage=texture_24_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff7990000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2b/2b @ 0x126d46e0
+TL2 ns=3300085184936 stage=texture_24_end
+TL2 ns=3300085186644 stage=texture_25_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff7434000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2c/2c @ 0x1282a8f0
+TL2 ns=3300097935792 stage=texture_25_end
+TL2 ns=3300097937375 stage=texture_26_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff6ed8000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2d/2d @ 0x12980b00
+TL2 ns=3300110742002 stage=texture_26_end
+TL2 ns=3300110743810 stage=texture_27_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff697c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2e/2e @ 0x12ad6d10
+TL2 ns=3300123540935 stage=texture_27_end
+TL2 ns=3300123542976 stage=texture_28_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff6420000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2f/2f @ 0x12c2cf20
+TL2 ns=3300136379388 stage=texture_28_end
+TL2 ns=3300136381263 stage=texture_29_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff5ec4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:30/30 @ 0x12d83130
+TL2 ns=3300149139787 stage=texture_29_end
+TL2 ns=3300149141745 stage=texture_30_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff5968000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:31/31 @ 0x12ed9340
+TL2 ns=3300161926412 stage=texture_30_end
+TL2 ns=3300161928454 stage=texture_31_begin
+[tl2] No compression: unsupported by Apple9 copies
+[tl2] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff540c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:32/32 @ 0x1302f550
+TL2 ns=3300174725953 stage=texture_31_end
+TL2 ns=3300174727453 stage=upload_end
+TL2 ns=3300174728370 stage=draw_batch_begin
+TL2 ns=3300174729245 stage=draw_batch_end
+TL2 ns=3300174730078 stage=finish_before_checkpoint_begin
+TL2 ns=3300174740221 stage=finish_before_checkpoint_end
+TL2 ns=3300174741054 stage=checkpoint_before_delete
+TL2 ns=3300174741804 stage=readback_begin
+TL2 ns=3300174780572 stage=readback_end
+TL2 ns=3300174781697 stage=delete_begin
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2fffa30000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:13/13 @ 0x106f7d40
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2fff4d4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:14/14 @ 0x106b2fe0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffef78000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:15/15 @ 0x106cd130
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffea1c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:16/16 @ 0x106f0990
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffe4c0000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:17/17 @ 0x106ae8b0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffdf64000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:18/18 @ 0x10720420
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffda08000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:19/19 @ 0x10690270
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffd4ac000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1a/1a @ 0x106ea2b0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffcf50000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1b/1b @ 0x106ef320
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffc9f4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1c/1c @ 0x1069acf0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffc498000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1d/1d @ 0x106a0d70
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffbf3c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1e/1e @ 0x106a2de0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffb9e0000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:1f/1f @ 0x106a3e40
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffb484000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:20/20 @ 0x11821080
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffaf28000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:21/21 @ 0x11977240
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffa9cc000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:22/22 @ 0x11acd450
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ffa470000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:23/23 @ 0x11c23660
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff9f14000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:24/24 @ 0x11d79870
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff99b8000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:25/25 @ 0x11ecfa80
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff945c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:26/26 @ 0x12025c90
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff8f00000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:27/27 @ 0x1217bea0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff89a4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:28/28 @ 0x122d20b0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff8448000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:29/29 @ 0x124282c0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff7eec000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2a/2a @ 0x1257e4d0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff7990000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2b/2b @ 0x126d46e0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff7434000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2c/2c @ 0x1282a8f0
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff6ed8000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2d/2d @ 0x12980b00
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff697c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2e/2e @ 0x12ad6d10
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff6420000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:2f/2f @ 0x12c2cf20
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff5ec4000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:30/30 @ 0x12d83130
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff5968000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:31/31 @ 0x12ed9340
+TL2 ns=3300174975428 stage=delete_end
+TL2 ns=3300174976303 stage=finish_after_delete_begin
+TL2 ns=3300174982595 stage=finish_after_delete_end
+TL2 ns=3300174994195 stage=context_destroy_begin
+[tl2] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2ff540c000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:32/32 @ 0x1302f550
+[tl2] Destroy: r8g8b8a8_unorm 64x64x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffffd0000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:8/8 @ 0xfdce030
+[tl2] Destroy: r8_unorm 1048576x1x1 1L 0/1M 1S M:0 LINR  S:0x100000 LS:0x100000 CS:0x0 Base=0x1000088c000 Size=0x100000 Meta=0x0/0x0 (Index buffer) LO WB fd:-1(-1) B:8070 H:c/c @ 0x106c36c0
+TL2 ns=3300175795740 stage=context_destroy_end

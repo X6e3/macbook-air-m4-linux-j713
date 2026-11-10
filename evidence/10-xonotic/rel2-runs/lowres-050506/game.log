@@ -1,0 +1,771 @@
+Game is Xonotic using base gamedir data
+gamename for server filtering: Xonotic
+Xonotic Linux 00:00:00 Jul 25 2025 - release
+Current nice level is below the soft limit - cannot use niceness
+Skeletal animation uses generic code path (SSE not compiled in)
+DPSOFTRAST not available (SSE2 not compiled in)
+Failed to init SDL joystick subsystem: 
+execing quake.rc
+execing default.cfg
+execing xonotic-common.cfg
+execing xonotic-client.cfg
+execing sRGB-disable.cfg
+execing binds-xonotic.cfg
+execing effects-normal.cfg
+execing crosshairs.cfg
+execing gamemodes-client.cfg
+execing notifications.cfg
+execing _hud_common.cfg
+execing _hud_descriptions.cfg
+execing hud_luma.cfg
+execing xonotic-server.cfg
+execing testing.cfg
+execing balance-xonotic.cfg
+execing bal-wep-xonotic.cfg
+execing physicsX.cfg
+execing turrets.cfg
+execing vehicles.cfg
+execing gamemodes-server.cfg
+execing ctfscoring-samual.cfg
+execing mutators.cfg
+execing randomitems-xonotic.cfg
+execing monsters.cfg
+execing minigames.cfg
+execing physics.cfg
+execing cdtracks.cfg
+execing commands.cfg
+execing config.cfg
+"maxplayers" set to "16"
+execing data/campaign.cfg
+execing config_update.cfg
+execing font-xolonium.cfg
+client: program is not loaded
+execing autoexec/empty.cfg
+execing autoexec.cfg
+execing post-config.cfg
+Client using an automatically assigned port
+Client opened a socket on address 0.0.0.0:0
+Client opened a socket on address [0:0:0:0:0:0:0:0]:0
+Linked against SDL version 2.32.56
+Using SDL library version 2.32.72
+[1mTotal[0m: 0 B, 0 BOs
+
+GL_VENDOR: Mesa
+GL_RENDERER: Apple M4 (G16G B1)
+GL_VERSION: 3.3 (Compatibility Profile) Mesa 26.3.0-devel
+vid.support.arb_multisample 1
+vid.support.gl20shaders 1
+NOTE: requested 1x AA, got 0x AA
+Video Mode: window 1281x800x32x0.00hz
+S_Startup: initializing sound output format: 48000Hz, 16 bit, 2 channels...
+Wanted audio Specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Obtained audio specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Sound format: 48000Hz, 2 channels, 16 bits per sample
+CDAudio_Init: No CD in player.
+Can't get initial CD volume
+CD Audio Initialized
+Warning: Could not expand $
+Warning: Could not expand $MON
+Can not send command "kill", not connected.
+Warning: Could not expand $MON
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 176 KiB, mapped 176 KiB, 11 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.3 MiB, mapped 1.3 MiB, 5 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 111.4 MiB, mapped 111.4 MiB, 68 BOs
+[1mTotal[0m: 137.9 MiB, mapped 123.8 MiB, 101 BOs
+
+Unknown command "journalctl"
+Warning: Could not expand $B
+Unknown command ">"
+Unknown command "sync"
+Warning: Could not expand $RC
+Exit code: $RC 
+Warning: Could not expand $B
+Logs: $B 
+execing font-xolonium.cfg
+client: program is not loaded
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 304 KiB, mapped 304 KiB, 19 BOs
+[1mBatch pool[0m: 512 KiB, mapped 512 KiB, 2 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mUnused (BO cache)[0m: 2.0 MiB, mapped 2.0 MiB, 6 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 12.8 MiB, 3 BOs
+[1mRender target[0m: 152.4 MiB, mapped 152.4 MiB, 71 BOs
+[1mTotal[0m: 184.2 MiB, mapped 166.0 MiB, 115 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mBatch low VA pool[0m: 512 KiB, mapped 512 KiB, 2 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mApple9 batch context state[0m: 512 KiB, mapped 512 KiB, 2 BOs
+[1mBatch pool[0m: 1.0 MiB, mapped 1.0 MiB, 4 BOs
+[1mEncoder[0m: 1.0 MiB, mapped 1.0 MiB, 2 BOs
+[1mUnused (BO cache)[0m: 1.0 MiB, mapped 1.0 MiB, 3 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 154.9 MiB, mapped 154.9 MiB, 89 BOs
+[1mTotal[0m: 183.1 MiB, mapped 169.0 MiB, 135 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mBatch low VA pool[0m: 512 KiB, mapped 512 KiB, 2 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mBatch pool[0m: 2.0 MiB, mapped 2.0 MiB, 8 BOs
+[1mUnused (BO cache)[0m: 4.6 MiB, mapped 4.6 MiB, 14 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 155.1 MiB, mapped 155.1 MiB, 93 BOs
+[1mTotal[0m: 186.1 MiB, mapped 172.0 MiB, 151 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mBatch low VA pool[0m: 512 KiB, mapped 512 KiB, 2 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mBatch pool[0m: 2.0 MiB, mapped 2.0 MiB, 8 BOs
+[1mUnused (BO cache)[0m: 3.5 MiB, mapped 3.5 MiB, 12 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 155.2 MiB, mapped 155.2 MiB, 94 BOs
+[1mTotal[0m: 186.1 MiB, mapped 172.0 MiB, 151 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mBatch pool[0m: 768 KiB, mapped 768 KiB, 3 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mUnused (BO cache)[0m: 5.4 MiB, mapped 5.4 MiB, 26 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 154.8 MiB, mapped 154.8 MiB, 86 BOs
+[1mTotal[0m: 186.1 MiB, mapped 172.0 MiB, 151 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mBatch pool[0m: 768 KiB, mapped 768 KiB, 3 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mUnused (BO cache)[0m: 5.4 MiB, mapped 5.4 MiB, 26 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 154.8 MiB, mapped 154.8 MiB, 86 BOs
+[1mTotal[0m: 186.1 MiB, mapped 172.0 MiB, 151 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mBatch pool[0m: 768 KiB, mapped 768 KiB, 3 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mUnused (BO cache)[0m: 6.0 MiB, mapped 6.0 MiB, 19 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 154.8 MiB, mapped 154.8 MiB, 86 BOs
+[1mTotal[0m: 185.7 MiB, mapped 171.7 MiB, 143 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mBatch pool[0m: 768 KiB, mapped 768 KiB, 3 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mUnused (BO cache)[0m: 6.1 MiB, mapped 6.1 MiB, 20 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 154.8 MiB, mapped 154.8 MiB, 86 BOs
+[1mTotal[0m: 185.8 MiB, mapped 171.8 MiB, 144 BOs
+
+Switching to map dance
+"maxplayers" set to "16"
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mUnused (BO cache)[0m: 5.8 MiB, mapped 5.8 MiB, 20 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 177.0 MiB, mapped 177.0 MiB, 102 BOs
+[1mTotal[0m: 208.3 MiB, mapped 194.2 MiB, 159 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mUnused (BO cache)[0m: 3.6 MiB, mapped 3.6 MiB, 11 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 451.6 MiB, mapped 451.6 MiB, 299 BOs
+[1mTotal[0m: 480.6 MiB, mapped 466.5 MiB, 347 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 320 KiB, mapped 320 KiB, 20 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mVertex buffer[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mIndex buffer[0m: 1.0 MiB, mapped 1.0 MiB, 1 BOs
+[1mUnused (BO cache)[0m: 3.3 MiB, mapped 3.3 MiB, 10 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 647.9 MiB, mapped 647.9 MiB, 405 BOs
+[1mTotal[0m: 676.6 MiB, mapped 662.6 MiB, 452 BOs
+
+Server using port 26000
+Server listening on address 0.0.0.0:26000
+Server listening on address [0:0:0:0:0:0:0:0]:26000
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mIndex buffer[0m: 1.9 MiB, mapped 1.9 MiB, 17 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mVertex buffer[0m: 7.9 MiB, mapped 7.9 MiB, 17 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mRender target[0m: 789.6 MiB, mapped 789.6 MiB, 500 BOs
+[1mTotal[0m: 824.5 MiB, mapped 810.5 MiB, 575 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.0 MiB, mapped 1.0 MiB, 3 BOs
+[1mIndex buffer[0m: 2.9 MiB, mapped 2.9 MiB, 51 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 15.2 MiB, mapped 15.2 MiB, 51 BOs
+[1mRender target[0m: 1.1 GiB, mapped 1.1 GiB, 596 BOs
+[1mTotal[0m: 1.1 GiB, mapped 1.1 GiB, 738 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.0 MiB, mapped 1.0 MiB, 3 BOs
+[1mIndex buffer[0m: 3.0 MiB, mapped 3.0 MiB, 53 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 15.2 MiB, mapped 15.2 MiB, 53 BOs
+[1mRender target[0m: 1.5 GiB, mapped 1.5 GiB, 632 BOs
+[1mTotal[0m: 1.5 GiB, mapped 1.5 GiB, 778 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mIndex buffer[0m: 3.5 MiB, mapped 3.5 MiB, 88 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 16.5 MiB, mapped 16.5 MiB, 88 BOs
+[1mRender target[0m: 1.8 GiB, mapped 1.8 GiB, 848 BOs
+[1mTotal[0m: 1.8 GiB, mapped 1.8 GiB, 1065 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mIndex buffer[0m: 4.0 MiB, mapped 4.0 MiB, 104 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 19.2 MiB, mapped 19.2 MiB, 104 BOs
+[1mRender target[0m: 2.1 GiB, mapped 2.1 GiB, 905 BOs
+[1mTotal[0m: 2.2 GiB, mapped 2.2 GiB, 1154 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mIndex buffer[0m: 4.2 MiB, mapped 4.2 MiB, 107 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 20.4 MiB, mapped 20.4 MiB, 107 BOs
+[1mRender target[0m: 2.5 GiB, mapped 2.5 GiB, 924 BOs
+[1mTotal[0m: 2.5 GiB, mapped 2.5 GiB, 1179 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mIndex buffer[0m: 4.4 MiB, mapped 4.4 MiB, 114 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 22.0 MiB, mapped 22.0 MiB, 114 BOs
+[1mRender target[0m: 2.8 GiB, mapped 2.8 GiB, 946 BOs
+[1mTotal[0m: 2.9 GiB, mapped 2.9 GiB, 1215 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.0 MiB, mapped 1.0 MiB, 3 BOs
+[1mIndex buffer[0m: 4.9 MiB, mapped 4.9 MiB, 129 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 26.0 MiB, mapped 26.0 MiB, 129 BOs
+[1mRender target[0m: 3.2 GiB, mapped 3.2 GiB, 1009 BOs
+[1mTotal[0m: 3.2 GiB, mapped 3.2 GiB, 1307 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mIndex buffer[0m: 5.3 MiB, mapped 5.3 MiB, 146 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 28.1 MiB, mapped 28.1 MiB, 146 BOs
+[1mRender target[0m: 3.5 GiB, mapped 3.5 GiB, 1086 BOs
+[1mTotal[0m: 3.6 GiB, mapped 3.6 GiB, 1419 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 5.6 MiB, mapped 5.6 MiB, 156 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 29.6 MiB, mapped 29.6 MiB, 156 BOs
+[1mRender target[0m: 3.9 GiB, mapped 3.9 GiB, 1114 BOs
+[1mTotal[0m: 3.9 GiB, mapped 3.9 GiB, 1467 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 6.3 MiB, mapped 6.3 MiB, 198 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 33.3 MiB, mapped 33.3 MiB, 198 BOs
+[1mRender target[0m: 4.2 GiB, mapped 4.2 GiB, 1322 BOs
+[1mTotal[0m: 4.3 GiB, mapped 4.2 GiB, 1759 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 6.6 MiB, mapped 6.6 MiB, 215 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 34.5 MiB, mapped 34.5 MiB, 215 BOs
+[1mRender target[0m: 4.5 GiB, mapped 4.5 GiB, 1458 BOs
+[1mTotal[0m: 4.6 GiB, mapped 4.6 GiB, 1929 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 6.8 MiB, mapped 6.8 MiB, 222 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 35.2 MiB, mapped 35.2 MiB, 222 BOs
+[1mRender target[0m: 4.8 GiB, mapped 4.8 GiB, 1488 BOs
+[1mTotal[0m: 4.9 GiB, mapped 4.8 GiB, 1973 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 6.8 MiB, mapped 6.8 MiB, 223 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 35.8 MiB, mapped 35.8 MiB, 223 BOs
+[1mRender target[0m: 5.1 GiB, mapped 5.1 GiB, 1507 BOs
+[1mTotal[0m: 5.2 GiB, mapped 5.2 GiB, 1994 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.0 MiB, mapped 1.0 MiB, 3 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.1 MiB, mapped 7.1 MiB, 227 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 38.2 MiB, mapped 38.2 MiB, 227 BOs
+[1mRender target[0m: 5.4 GiB, mapped 5.4 GiB, 1534 BOs
+[1mTotal[0m: 5.4 GiB, mapped 5.4 GiB, 2028 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.0 MiB, mapped 1.0 MiB, 3 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.1 MiB, mapped 7.1 MiB, 227 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 38.2 MiB, mapped 38.2 MiB, 227 BOs
+[1mRender target[0m: 5.7 GiB, mapped 5.7 GiB, 1564 BOs
+[1mTotal[0m: 5.8 GiB, mapped 5.8 GiB, 2058 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.2 MiB, mapped 7.2 MiB, 230 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 38.6 MiB, mapped 38.6 MiB, 230 BOs
+[1mRender target[0m: 6.1 GiB, mapped 6.1 GiB, 1600 BOs
+[1mTotal[0m: 6.2 GiB, mapped 6.2 GiB, 2101 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.3 MiB, mapped 7.3 MiB, 236 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 39.3 MiB, mapped 39.3 MiB, 236 BOs
+[1mRender target[0m: 6.5 GiB, mapped 6.5 GiB, 1620 BOs
+[1mTotal[0m: 6.5 GiB, mapped 6.5 GiB, 2133 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.3 MiB, mapped 7.3 MiB, 236 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 39.3 MiB, mapped 39.3 MiB, 236 BOs
+[1mRender target[0m: 6.9 GiB, mapped 6.9 GiB, 1643 BOs
+[1mTotal[0m: 7.0 GiB, mapped 6.9 GiB, 2156 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.5 MiB, mapped 7.5 MiB, 242 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 40.1 MiB, mapped 40.1 MiB, 242 BOs
+[1mRender target[0m: 7.3 GiB, mapped 7.3 GiB, 1664 BOs
+[1mTotal[0m: 7.3 GiB, mapped 7.3 GiB, 2189 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.5 MiB, mapped 7.5 MiB, 245 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 40.4 MiB, mapped 40.4 MiB, 245 BOs
+[1mRender target[0m: 7.6 GiB, mapped 7.6 GiB, 1684 BOs
+[1mTotal[0m: 7.7 GiB, mapped 7.7 GiB, 2215 BOs
+
+[1mTimestamp buffer[0m: 16 KiB, 1 BOs
+[1mScratch page[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mPrintf/abort[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mZero page[0m: 16 KiB, 1 BOs
+[1mRodata[0m: 16 KiB, mapped 16 KiB, 1 BOs
+[1mBatch low VA pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mInternal programs[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mBatch pool[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 batch context state[0m: 256 KiB, mapped 256 KiB, 1 BOs
+[1mApple9 compiled shader[0m: 352 KiB, mapped 352 KiB, 22 BOs
+[1mEncoder[0m: 512 KiB, mapped 512 KiB, 1 BOs
+[1mUnused (BO cache)[0m: 1.2 MiB, mapped 1.2 MiB, 4 BOs
+[1mDepth/stencil buffer[0m: 5.5 MiB, 2 BOs
+[1mIndex buffer[0m: 7.6 MiB, mapped 7.6 MiB, 248 BOs
+[1mApple9 shader entries[0m: 8.0 MiB, mapped 8.0 MiB, 1 BOs
+[1mShared resource[0m: 8.5 MiB, 2 BOs
+[1mVertex buffer[0m: 40.8 MiB, mapped 40.8 MiB, 248 BOs
+[1mRender target[0m: 8.0 GiB, mapped 8.0 GiB, 1709 BOs
+[1mTotal[0m: 8.1 GiB, mapped 8.1 GiB, 2246 BOs
+
+DRM_IOCTL_ASAHI_SUBMIT render failed: Cannot allocate memory (1281x800 tile 32x32 layers 1 samples 1)

@@ -1,0 +1,58 @@
+TL1 ns=2915012502010 stage=egl_begin
+TL1 ns=2915054927490 stage=egl_end
+[tl1] No compression: unsupported by Apple9 copies
+[tl1] New: r8g8b8a8_unorm 64x64x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffffd0000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:8/8 @ 0x3840e030
+TL1 ns=2915057465376 stage=setup_end
+TL1 ns=2915061030447 stage=upload_begin
+TL1 ns=2915061033614 stage=upload_level_00_begin
+[tl1] No compression: unsupported by Apple9 copies
+[tl1] New: r8g8b8a8_unorm 1024x1024x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x400000 CS:0x0 Base=0x2fffbcc000 Size=0x400000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:9/9 @ 0x38c408d0
+TL1 ns=2915092807017 stage=upload_level_00_end
+TL1 ns=2915092809684 stage=upload_level_01_begin
+[tl1] No compression: unsupported by Apple9 copies
+[tl1] New: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2fff670000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:a/a @ 0x38c40bb0
+TL1 ns=2915101012428 stage=upload_level_01_end
+TL1 ns=2915101014486 stage=upload_level_02_begin
+TL1 ns=2915102930583 stage=upload_level_02_end
+TL1 ns=2915102931625 stage=upload_level_03_begin
+TL1 ns=2915103397741 stage=upload_level_03_end
+TL1 ns=2915103398825 stage=upload_level_04_begin
+TL1 ns=2915103502587 stage=upload_level_04_end
+TL1 ns=2915103503545 stage=upload_level_05_begin
+TL1 ns=2915103526938 stage=upload_level_05_end
+TL1 ns=2915103527855 stage=upload_level_06_begin
+TL1 ns=2915103534397 stage=upload_level_06_end
+TL1 ns=2915103535230 stage=upload_level_07_begin
+TL1 ns=2915103538855 stage=upload_level_07_end
+TL1 ns=2915103539688 stage=upload_level_08_begin
+TL1 ns=2915103542230 stage=upload_level_08_end
+TL1 ns=2915103543397 stage=upload_level_09_begin
+TL1 ns=2915103545647 stage=upload_level_09_end
+TL1 ns=2915103546605 stage=upload_level_10_begin
+TL1 ns=2915103548830 stage=upload_level_10_end
+TL1 ns=2915103549955 stage=upload_end
+TL1 ns=2915103550789 stage=post_upload_finish_begin
+TL1 ns=2915103561414 stage=post_upload_finish_end
+TL1 ns=2915103562247 stage=draw_begin
+[tl1] New: r8_unorm 1048576x1x1 1L 0/1M 1S M:0 LINR  S:0x100000 LS:0x100000 CS:0x0 Base=0x10000850000 Size=0x100000 Meta=0x0/0x0 (Index buffer) LO WB fd:-1(-1) B:8070 H:c/c @ 0x38c43390
+[tl1] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x400000 CS:0x0 Base=0x2fffbcc000 Size=0x400000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:9/9 @ 0x38c408d0
+TL1 ns=2915112089228 stage=draw_end
+TL1 ns=2915112092203 stage=post_draw_finish_begin
+TL1 ns=2915119726504 stage=post_draw_finish_end
+TL1 ns=2915119731796 stage=readback_begin
+TL1 ns=2915119769814 stage=readback_end
+TL1 ns=2915119771147 stage=delete_begin
+TL1 ns=2915119774939 stage=delete_end
+TL1 ns=2915119775814 stage=post_delete_finish_begin
+TL1 ns=2915119782665 stage=post_delete_finish_end
+TL1 ns=2915119783582 stage=other_objects_delete_begin
+TL1 ns=2915119794082 stage=other_objects_delete_end
+TL1 ns=2915119794915 stage=context_unbind_begin
+TL1 ns=2915119802498 stage=context_unbind_end
+TL1 ns=2915119803207 stage=context_destroy_begin
+[tl1] Destroy: r8g8b8a8_unorm 1024x1024x1 1L 10/11M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x558000 CS:0x0 Base=0x2fff670000 Size=0x558000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:a/a @ 0x38c40bb0
+[tl1] Destroy: r8g8b8a8_unorm 64x64x1 1L 0/1M 1S M:c00000000000001 GPU PL  S:0x0 LS:0x4000 CS:0x0 Base=0x2ffffd0000 Size=0x4000 Meta=0x0/0x0 (Render target) fd:-1(-1) B:800a H:8/8 @ 0x3840e030
+[tl1] Destroy: r8_unorm 1048576x1x1 1L 0/1M 1S M:0 LINR  S:0x100000 LS:0x100000 CS:0x0 Base=0x10000850000 Size=0x100000 Meta=0x0/0x0 (Index buffer) LO WB fd:-1(-1) B:8070 H:c/c @ 0x38c43390
+TL1 ns=2915121972088 stage=context_destroy_end
+TL1 ns=2915121974129 stage=egl_terminate_begin
+TL1 ns=2915123881494 stage=egl_terminate_end

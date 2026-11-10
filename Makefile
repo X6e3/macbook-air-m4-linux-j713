@@ -49,6 +49,16 @@ reboot: data/08-reboot/reboot_summary.json
 measurements:
 	$(PY) analysis/measurements.py
 
+data/10-texture/texture_summary.json: analysis/texture.py $(wildcard evidence/10-texture/*)
+	$(PY) analysis/texture.py
+
+texture: data/10-texture/texture_summary.json
+
+data/10-xonotic/xonotic_summary.json: analysis/xonotic.py $(wildcard evidence/10-xonotic/*/*)
+	$(PY) analysis/xonotic.py
+
+xonotic: data/10-xonotic/xonotic_summary.json
+
 check:
 	$(PY) tools/scan_identifiers.py
 	cd evidence/01-first-boot/logs && $(SHA) -c SHA256SUMS.original
@@ -67,5 +77,9 @@ check:
 	$(PY) analysis/reboot.py --check
 	cd evidence/09-measurements && $(SHA) -c SHA256SUMS > /dev/null
 	$(PY) analysis/measurements.py --check
+	cd evidence/10-texture && $(SHA) -c SHA256SUMS > /dev/null
+	$(PY) analysis/texture.py --check
+	cd evidence/10-xonotic && $(SHA) -c SHA256SUMS > /dev/null
+	$(PY) analysis/xonotic.py --check
 
-.PHONY: all fig01 mtp trackpad afe wifi later-stages reboot measurements check
+.PHONY: all fig01 mtp trackpad afe wifi later-stages reboot measurements texture xonotic check

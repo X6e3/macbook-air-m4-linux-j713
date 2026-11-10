@@ -1,0 +1,440 @@
+Oct 28 01:27:52.338672 x6e3-j713-fedora kernel: Linux version 7.1.13-x6e3-rel2 (x6e3@lima-build) (gcc (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2), GNU ld version 2.46.1-1.fc44) #1 SMP PREEMPT Wed Oct 28 01:58:41 +03 2026
+Oct 28 01:27:52.341447 x6e3-j713-fedora kernel: Memory: 15944608K/16166640K available (23744K kernel code, 6962K rwdata, 17168K rodata, 4160K init, 837K bss, 176640K reserved, 32768K cma-reserved)
+Oct 28 03:01:36.501571 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:01:36.501588 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:02:11.694919 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:02:11.694985 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:06:59.898021 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:06:59.898090 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:08:15.318769 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:08:15.318828 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:08:36.284821 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:08:36.284843 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:19:49.882193 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:19:49.882215 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:38:27.886633 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:38:27.886699 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:50:09.854328 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:50:09.854377 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:51:27.502467 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 03:51:27.502490 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:00:30.069746 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:00:30.069794 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:02:06.661104 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:02:06.661126 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:02:56.411000 x6e3-j713-fedora audit[15329]: ANOM_ABEND auid=1000 uid=1000 gid=1000 ses=2 pid=15329 comm="xonotic-sdl" exe="/mnt/x63r/games/xonotic/root/usr/bin/xonotic-sdl" sig=6 res=1
+Oct 28 04:02:56.653682 x6e3-j713-fedora kernel: xonotic-sdl: page allocation failure: order:4, mode:0x40cc0(GFP_KERNEL|__GFP_COMP), nodemask=(null),cpuset=/,mems_allowed=0
+Oct 28 04:02:56.644423 x6e3-j713-fedora systemd-coredump[15354]: Process 15329 (xonotic-sdl) of user 1000 terminated abnormally with signal 6/ABRT, processing...
+Oct 28 04:02:56.658766 x6e3-j713-fedora kernel: CPU: 9 UID: 1000 PID: 15329 Comm: xonotic-sdl Tainted: G S                  7.1.13-x6e3-rel2 #1 PREEMPT 
+Oct 28 04:02:56.659638 x6e3-j713-fedora kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+Oct 28 04:02:56.659698 x6e3-j713-fedora kernel: Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+Oct 28 04:02:56.660849 x6e3-j713-fedora kernel: Call trace:
+Oct 28 04:02:56.660890 x6e3-j713-fedora kernel:  show_stack+0x18/0x24 (C)
+Oct 28 04:02:56.660927 x6e3-j713-fedora kernel:  dump_stack_lvl+0x60/0x80
+Oct 28 04:02:56.660985 x6e3-j713-fedora kernel:  dump_stack+0x18/0x24
+Oct 28 04:02:56.661466 x6e3-j713-fedora kernel:  warn_alloc+0x128/0x1a4
+Oct 28 04:02:56.661866 x6e3-j713-fedora kernel:  __alloc_frozen_pages_noprof+0x99c/0x12c4
+Oct 28 04:02:56.661921 x6e3-j713-fedora kernel:  alloc_pages_mpol+0x68/0x1a0
+Oct 28 04:02:56.661976 x6e3-j713-fedora kernel:  alloc_frozen_pages_noprof+0x44/0xa8
+Oct 28 04:02:56.662369 x6e3-j713-fedora kernel:  ___kmalloc_large_node+0xd0/0xf4
+Oct 28 04:02:56.662408 x6e3-j713-fedora kernel:  __kmalloc_large_node_noprof+0x2c/0x178
+Oct 28 04:02:56.662669 x6e3-j713-fedora kernel:  __kmalloc_node_track_caller_noprof+0x428/0x54c
+Oct 28 04:02:56.663061 x6e3-j713-fedora kernel:  krealloc_node_align_noprof+0x180/0x314
+Oct 28 04:02:56.671035 x6e3-j713-fedora kernel:  rust_helper_krealloc_node_align+0x10/0x1c
+Oct 28 04:02:56.671588 x6e3-j713-fedora kernel:  _RNvMs0_NtNtCs92zarvN9p1L_6kernel5alloc4kvecINtB5_3VecNtNtCsexuedBhJUBl_8asahi_m47g16_drm7MappingNtNtB7_9allocator7KmallocE4pushBT_+0x78/0x148
+Oct 28 04:02:56.671636 x6e3-j713-fedora kernel:  _RNvNvXsh_NtCsexuedBhJUBl_8asahi_m47g16_drmNtB7_6DriverNtNtNtCs92zarvN9p1L_6kernel3drm6driver6Driver6IOCTLS12ASAHI_SUBMIT+0x1048/0x15d0
+Oct 28 04:02:56.671958 x6e3-j713-fedora kernel:  drm_ioctl_kernel+0xc0/0x130
+Oct 28 04:02:56.672383 x6e3-j713-fedora kernel:  drm_ioctl+0x1fc/0x4b4
+Oct 28 04:02:56.672420 x6e3-j713-fedora kernel:  __arm64_sys_ioctl+0x2ec/0xb00
+Oct 28 04:02:56.673192 x6e3-j713-fedora kernel:  invoke_syscall.constprop.0+0x48/0xe4
+Oct 28 04:02:56.673841 x6e3-j713-fedora kernel:  do_el0_svc+0xa8/0xbc
+Oct 28 04:02:56.673867 x6e3-j713-fedora kernel:  el0_svc+0x40/0x170
+Oct 28 04:02:56.673903 x6e3-j713-fedora kernel:  el0t_64_sync_handler+0xa0/0xe4
+Oct 28 04:02:56.673933 x6e3-j713-fedora kernel:  el0t_64_sync+0x198/0x19c
+Oct 28 04:02:56.673962 x6e3-j713-fedora kernel: Mem-Info:
+Oct 28 04:02:56.673984 x6e3-j713-fedora kernel: active_anon:17454 inactive_anon:298747 isolated_anon:0
+Oct 28 04:02:56.674021 x6e3-j713-fedora kernel: Node 0 active_anon:279264kB inactive_anon:4779952kB active_file:43536kB inactive_file:25520kB unevictable:9754640kB isolated(anon):0kB isolated(file):0kB mapped:424144kB dirty:64kB writeback:176kB shmem:10466528kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:753664kB kernel_stack:22880kB pagetables:34416kB sec_pagetables:752kB all_unreclaimable? no Balloon:0kB gpu_active:0kB gpu_reclaim:0kB
+Oct 28 04:02:56.674078 x6e3-j713-fedora kernel: Node 0 DMA free:547872kB boost:393216kB min:573440kB low:618496kB high:663552kB reserved_highatomic:0KB free_highatomic:0KB active_anon:279264kB inactive_anon:4779952kB active_file:43536kB inactive_file:25520kB unevictable:9754640kB writepending:240kB zspages:0kB present:16166640kB managed:15998208kB mlocked:288kB bounce:0kB free_pcp:512kB local_pcp:0kB free_cma:28640kB
+Oct 28 04:02:56.674115 x6e3-j713-fedora kernel: lowmem_reserve[]: 0 0 0 0
+Oct 28 04:02:56.674149 x6e3-j713-fedora kernel: Node 0 DMA: 819*16kB (UME) 259*32kB (MC) 1580*64kB (MC) 1099*128kB (MEC) 449*256kB (MEC) 139*512kB (MEC) 51*1024kB (MC) 9*2048kB (MC) 1*4096kB (M) 1*8192kB (C) 1*16384kB (C) 0*32768kB = 548624kB
+Oct 28 04:02:56.674190 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+Oct 28 04:02:56.674218 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=32768kB
+Oct 28 04:02:56.674707 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+Oct 28 04:02:56.674736 x6e3-j713-fedora kernel: 658550 total pagecache pages
+Oct 28 04:02:56.675410 x6e3-j713-fedora kernel: 0 pages in swap cache
+Oct 28 04:02:56.676649 x6e3-j713-fedora kernel: Free swap  = 0kB
+Oct 28 04:02:56.676682 x6e3-j713-fedora kernel: Total swap = 0kB
+Oct 28 04:02:56.676716 x6e3-j713-fedora kernel: 1010415 pages RAM
+Oct 28 04:02:56.676738 x6e3-j713-fedora kernel: 0 pages HighMem/MovableOnly
+Oct 28 04:02:56.676771 x6e3-j713-fedora kernel: 10527 pages reserved
+Oct 28 04:02:56.676809 x6e3-j713-fedora kernel: 2048 pages cma reserved
+Oct 28 04:02:56.676835 x6e3-j713-fedora kernel: 0 pages hwpoisoned
+Oct 28 04:02:56.676873 x6e3-j713-fedora kernel: Memory cgroup min protection 0kB -- low protection 0kB
+Oct 28 04:02:56.677610 x6e3-j713-fedora kernel: audit: type=1701 audit(1793149376.411:1377): auid=1000 uid=1000 gid=1000 ses=2 pid=15329 comm="xonotic-sdl" exe="/mnt/x63r/games/xonotic/root/usr/bin/xonotic-sdl" sig=6 res=1
+Oct 28 04:02:56.914043 x6e3-j713-fedora kernel: systemd-coredum invoked oom-killer: gfp_mask=0xcc0(GFP_KERNEL), order=0, oom_score_adj=500
+Oct 28 04:02:56.975971 x6e3-j713-fedora kernel: CPU: 6 UID: 0 PID: 15355 Comm: systemd-coredum Tainted: G S                  7.1.13-x6e3-rel2 #1 PREEMPT 
+Oct 28 04:02:57.009734 x6e3-j713-fedora kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+Oct 28 04:02:57.011447 x6e3-j713-fedora kernel: Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+Oct 28 04:02:57.012467 x6e3-j713-fedora kernel: Call trace:
+Oct 28 04:02:57.012486 x6e3-j713-fedora kernel:  show_stack+0x18/0x24 (C)
+Oct 28 04:02:57.013123 x6e3-j713-fedora kernel:  dump_stack_lvl+0x60/0x80
+Oct 28 04:02:57.013154 x6e3-j713-fedora kernel:  dump_stack+0x18/0x24
+Oct 28 04:02:57.014147 x6e3-j713-fedora kernel:  dump_header+0x40/0x170
+Oct 28 04:02:57.014652 x6e3-j713-fedora kernel:  oom_kill_process+0x21c/0x298
+Oct 28 04:02:57.015188 x6e3-j713-fedora kernel:  out_of_memory+0x21c/0x580
+Oct 28 04:02:57.015204 x6e3-j713-fedora kernel:  __alloc_frozen_pages_noprof+0x10f4/0x12c4
+Oct 28 04:02:57.015912 x6e3-j713-fedora kernel:  alloc_pages_mpol+0x68/0x1a0
+Oct 28 04:02:57.015926 x6e3-j713-fedora kernel:  alloc_frozen_pages_noprof+0x44/0xa8
+Oct 28 04:02:57.016385 x6e3-j713-fedora kernel:  alloc_pages_noprof+0x10/0x28
+Oct 28 04:02:57.016824 x6e3-j713-fedora kernel:  get_free_pages_noprof+0x14/0x40
+Oct 28 04:02:57.016838 x6e3-j713-fedora kernel:  environ_read+0x64/0x21c
+Oct 28 04:02:57.018043 x6e3-j713-fedora kernel:  vfs_read+0xc4/0x384
+Oct 28 04:02:57.018435 x6e3-j713-fedora kernel:  ksys_read+0x64/0x100
+Oct 28 04:02:57.018799 x6e3-j713-fedora kernel:  __arm64_sys_read+0x18/0x24
+Oct 28 04:02:57.018818 x6e3-j713-fedora kernel:  invoke_syscall.constprop.0+0x48/0xe4
+Oct 28 04:02:57.019182 x6e3-j713-fedora kernel:  do_el0_svc+0xa8/0xbc
+Oct 28 04:02:57.019194 x6e3-j713-fedora kernel:  el0_svc+0x40/0x170
+Oct 28 04:02:57.019467 x6e3-j713-fedora kernel:  el0t_64_sync_handler+0xa0/0xe4
+Oct 28 04:02:57.019485 x6e3-j713-fedora kernel:  el0t_64_sync+0x198/0x19c
+Oct 28 04:02:57.019494 x6e3-j713-fedora kernel: Mem-Info:
+Oct 28 04:02:57.019506 x6e3-j713-fedora kernel: active_anon:17454 inactive_anon:298749 isolated_anon:0
+Oct 28 04:02:57.020162 x6e3-j713-fedora kernel: Node 0 active_anon:279264kB inactive_anon:4779984kB active_file:42944kB inactive_file:33600kB unevictable:9755664kB isolated(anon):0kB isolated(file):560kB mapped:438560kB dirty:688kB writeback:896kB shmem:10467584kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:753664kB kernel_stack:22912kB pagetables:34544kB sec_pagetables:752kB all_unreclaimable? no Balloon:0kB gpu_active:0kB gpu_reclaim:0kB
+Oct 28 04:02:57.020184 x6e3-j713-fedora kernel: Node 0 DMA free:533536kB boost:405504kB min:585728kB low:630784kB high:675840kB reserved_highatomic:0KB free_highatomic:0KB active_anon:279264kB inactive_anon:4779984kB active_file:42944kB inactive_file:33600kB unevictable:9755664kB writepending:544kB zspages:0kB present:16166640kB managed:15998208kB mlocked:288kB bounce:0kB free_pcp:1328kB local_pcp:0kB free_cma:28640kB
+Oct 28 04:02:57.020202 x6e3-j713-fedora kernel: lowmem_reserve[]: 0 0 0 0
+Oct 28 04:02:57.020212 x6e3-j713-fedora kernel: Node 0 DMA: 424*16kB (UM) 153*32kB (MC) 1494*64kB (MC) 1094*128kB (MEC) 450*256kB (MEC) 139*512kB (MEC) 51*1024kB (MC) 9*2048kB (MC) 1*4096kB (M) 1*8192kB (C) 1*16384kB (C) 0*32768kB = 533024kB
+Oct 28 04:02:57.020225 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+Oct 28 04:02:57.020237 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=32768kB
+Oct 28 04:02:57.020248 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+Oct 28 04:02:57.021004 x6e3-j713-fedora kernel: 659195 total pagecache pages
+Oct 28 04:02:57.021017 x6e3-j713-fedora kernel: 0 pages in swap cache
+Oct 28 04:02:57.022080 x6e3-j713-fedora kernel: Free swap  = 0kB
+Oct 28 04:02:57.022094 x6e3-j713-fedora kernel: Total swap = 0kB
+Oct 28 04:02:57.022110 x6e3-j713-fedora kernel: 1010415 pages RAM
+Oct 28 04:02:57.022124 x6e3-j713-fedora kernel: 0 pages HighMem/MovableOnly
+Oct 28 04:02:57.022802 x6e3-j713-fedora kernel: 10527 pages reserved
+Oct 28 04:02:57.022818 x6e3-j713-fedora kernel: 2048 pages cma reserved
+Oct 28 04:02:57.022827 x6e3-j713-fedora kernel: 0 pages hwpoisoned
+Oct 28 04:02:57.022837 x6e3-j713-fedora kernel: Memory cgroup min protection 0kB -- low protection 0kB
+Oct 28 04:02:57.023292 x6e3-j713-fedora kernel: Tasks state (memory values in pages):
+Oct 28 04:02:57.024336 x6e3-j713-fedora kernel: [  pid  ]   uid  tgid total_vm      rss rss_anon rss_file rss_shmem pgtables_bytes swapents oom_score_adj name
+Oct 28 04:02:57.032836 x6e3-j713-fedora kernel: [    535]  1000   535    10009      203      198        5         0   163840        0           200 kwin_wayland_wr
+Oct 28 04:02:57.032846 x6e3-j713-fedora kernel: [    539]  1000   539   122526    14218     5190     1611      7417   901120        0           200 kwin_wayland
+Oct 28 04:02:57.042735 x6e3-j713-fedora kernel: [  15329]  1000 15329   734136    81981    81955        9        17  5832704        0           200 xonotic-sdl
+Oct 28 04:02:57.043964 x6e3-j713-fedora kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/system.slice/system-systemd\x2dcoredump.slice/systemd-coredump@0-1-15354_1255-0.service,task=systemd-coredum,pid=15355,uid=0
+Oct 28 04:02:57.043978 x6e3-j713-fedora kernel: Out of memory: Killed process 15355 (systemd-coredum) total-vm:14880kB, anon-rss:1104kB, file-rss:4016kB, shmem-rss:0kB, UID:0 pgtables:112kB oom_score_adj:500
+Oct 28 04:04:18.584717 x6e3-j713-fedora sudo[15392]:     x6e3 : TTY=pts/1 ; PWD=/mnt/x63r/j713-diag/kwin-lat ; USER=root ; COMMAND=/usr/sbin/journalctl -k -b -n 180 --no-pager
+Oct 28 04:04:18.580000 x6e3-j713-fedora audit[15392]: AUDIT1123 pid=15392 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D6E20313830202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/1 res=success'
+Oct 28 04:04:18.589616 x6e3-j713-fedora kernel: audit: type=1123 audit(1793149458.580:1386): pid=15392 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D6E20313830202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/1 res=success'
+Oct 28 04:05:45.582785 x6e3-j713-fedora sudo[15485]:     x6e3 : TTY=pts/1 ; PWD=/mnt/x63r/j713-diag/kwin-lat ; USER=root ; COMMAND=/usr/sbin/journalctl -k -b --since '2026-10-28 04:02:50' --until '2026-10-28 04:02:57' --no-pager
+Oct 28 04:05:45.580000 x6e3-j713-fedora audit[15485]: AUDIT1123 pid=15485 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D2D73696E636520323032362D31302D32382030343A30323A3530202D2D756E74696C20323032362D31302D32382030343A30323A3537202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/1 res=success'
+Oct 28 04:05:45.586047 x6e3-j713-fedora kernel: audit: type=1123 audit(1793149545.580:1428): pid=15485 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D2D73696E636520323032362D31302D32382030343A30323A3530202D2D756E74696C20323032362D31302D32382030343A30323A3537202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/1 res=success'
+Oct 28 04:08:49.187711 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:08:49.187734 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:09:39.441000 x6e3-j713-fedora audit[15649]: ANOM_ABEND auid=1000 uid=1000 gid=1000 ses=2 pid=15649 comm="xonotic-sdl" exe="/mnt/x63r/games/xonotic/root/usr/bin/xonotic-sdl" sig=6 res=1
+Oct 28 04:09:39.463645 x6e3-j713-fedora kernel: xonotic-sdl: page allocation failure: order:4, mode:0x40cc0(GFP_KERNEL|__GFP_COMP), nodemask=(null),cpuset=/,mems_allowed=0
+Oct 28 04:09:39.462200 x6e3-j713-fedora systemd-coredump[15687]: Process 15649 (xonotic-sdl) of user 1000 terminated abnormally with signal 6/ABRT, processing...
+Oct 28 04:09:39.480497 x6e3-j713-fedora kernel: CPU: 8 UID: 1000 PID: 15649 Comm: xonotic-sdl Tainted: G S                  7.1.13-x6e3-rel2 #1 PREEMPT 
+Oct 28 04:09:39.484384 x6e3-j713-fedora kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+Oct 28 04:09:39.484437 x6e3-j713-fedora kernel: Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+Oct 28 04:09:39.484686 x6e3-j713-fedora kernel: Call trace:
+Oct 28 04:09:39.484727 x6e3-j713-fedora kernel:  show_stack+0x18/0x24 (C)
+Oct 28 04:09:39.484760 x6e3-j713-fedora kernel:  dump_stack_lvl+0x60/0x80
+Oct 28 04:09:39.484813 x6e3-j713-fedora kernel:  dump_stack+0x18/0x24
+Oct 28 04:09:39.484840 x6e3-j713-fedora kernel:  warn_alloc+0x128/0x1a4
+Oct 28 04:09:39.485125 x6e3-j713-fedora kernel:  __alloc_frozen_pages_noprof+0x99c/0x12c4
+Oct 28 04:09:39.485162 x6e3-j713-fedora kernel:  alloc_pages_mpol+0x68/0x1a0
+Oct 28 04:09:39.485296 x6e3-j713-fedora kernel:  alloc_frozen_pages_noprof+0x44/0xa8
+Oct 28 04:09:39.485325 x6e3-j713-fedora kernel:  ___kmalloc_large_node+0xd0/0xf4
+Oct 28 04:09:39.485513 x6e3-j713-fedora kernel:  __kmalloc_large_node_noprof+0x2c/0x178
+Oct 28 04:09:39.485541 x6e3-j713-fedora kernel:  __kmalloc_node_track_caller_noprof+0x428/0x54c
+Oct 28 04:09:39.486193 x6e3-j713-fedora kernel:  krealloc_node_align_noprof+0x180/0x314
+Oct 28 04:09:39.486383 x6e3-j713-fedora kernel:  rust_helper_krealloc_node_align+0x10/0x1c
+Oct 28 04:09:39.486441 x6e3-j713-fedora kernel:  _RNvMs0_NtNtCs92zarvN9p1L_6kernel5alloc4kvecINtB5_3VecNtNtCsexuedBhJUBl_8asahi_m47g16_drm7MappingNtNtB7_9allocator7KmallocE4pushBT_+0x78/0x148
+Oct 28 04:09:39.486981 x6e3-j713-fedora kernel:  _RNvNvXsh_NtCsexuedBhJUBl_8asahi_m47g16_drmNtB7_6DriverNtNtNtCs92zarvN9p1L_6kernel3drm6driver6Driver6IOCTLS12ASAHI_SUBMIT+0x1048/0x15d0
+Oct 28 04:09:39.487185 x6e3-j713-fedora kernel:  drm_ioctl_kernel+0xc0/0x130
+Oct 28 04:09:39.487215 x6e3-j713-fedora kernel:  drm_ioctl+0x1fc/0x4b4
+Oct 28 04:09:39.487248 x6e3-j713-fedora kernel:  __arm64_sys_ioctl+0x2ec/0xb00
+Oct 28 04:09:39.487277 x6e3-j713-fedora kernel:  invoke_syscall.constprop.0+0x48/0xe4
+Oct 28 04:09:39.487310 x6e3-j713-fedora kernel:  do_el0_svc+0xa8/0xbc
+Oct 28 04:09:39.487338 x6e3-j713-fedora kernel:  el0_svc+0x40/0x170
+Oct 28 04:09:39.487362 x6e3-j713-fedora kernel:  el0t_64_sync_handler+0xa0/0xe4
+Oct 28 04:09:39.487417 x6e3-j713-fedora kernel:  el0t_64_sync+0x198/0x19c
+Oct 28 04:09:39.487448 x6e3-j713-fedora kernel: Mem-Info:
+Oct 28 04:09:39.487474 x6e3-j713-fedora kernel: active_anon:17462 inactive_anon:296418 isolated_anon:0
+Oct 28 04:09:39.487529 x6e3-j713-fedora kernel: Node 0 active_anon:279392kB inactive_anon:4742688kB active_file:433744kB inactive_file:24656kB unevictable:9523392kB isolated(anon):0kB isolated(file):0kB mapped:753920kB dirty:144kB writeback:0kB shmem:10224336kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:589824kB kernel_stack:22816kB pagetables:34672kB sec_pagetables:816kB all_unreclaimable? no Balloon:0kB gpu_active:0kB gpu_reclaim:0kB
+Oct 28 04:09:39.487581 x6e3-j713-fedora kernel: Node 0 DMA free:430160kB boost:278528kB min:458752kB low:503808kB high:548864kB reserved_highatomic:0KB free_highatomic:0KB active_anon:279392kB inactive_anon:4742688kB active_file:433744kB inactive_file:24656kB unevictable:9523392kB writepending:128kB zspages:0kB present:16166640kB managed:15998208kB mlocked:288kB bounce:0kB free_pcp:800kB local_pcp:0kB free_cma:0kB
+Oct 28 04:09:39.487621 x6e3-j713-fedora kernel: lowmem_reserve[]: 0 0 0 0
+Oct 28 04:09:39.488071 x6e3-j713-fedora kernel: Node 0 DMA: 260*16kB (UM) 237*32kB (M) 1787*64kB (ME) 565*128kB (ME) 280*256kB (ME) 136*512kB (ME) 52*1024kB (M) 15*2048kB (M) 2*4096kB (M) 0*8192kB 0*16384kB 0*32768kB = 431904kB
+Oct 28 04:09:39.488103 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+Oct 28 04:09:39.488266 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=32768kB
+Oct 28 04:09:39.488298 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+Oct 28 04:09:39.488329 x6e3-j713-fedora kernel: 667813 total pagecache pages
+Oct 28 04:09:39.488370 x6e3-j713-fedora kernel: 0 pages in swap cache
+Oct 28 04:09:39.488404 x6e3-j713-fedora kernel: Free swap  = 0kB
+Oct 28 04:09:39.488441 x6e3-j713-fedora kernel: Total swap = 0kB
+Oct 28 04:09:39.488472 x6e3-j713-fedora kernel: 1010415 pages RAM
+Oct 28 04:09:39.488492 x6e3-j713-fedora kernel: 0 pages HighMem/MovableOnly
+Oct 28 04:09:39.488512 x6e3-j713-fedora kernel: 10527 pages reserved
+Oct 28 04:09:39.489156 x6e3-j713-fedora kernel: 2048 pages cma reserved
+Oct 28 04:09:39.489178 x6e3-j713-fedora kernel: 0 pages hwpoisoned
+Oct 28 04:09:39.489436 x6e3-j713-fedora kernel: Memory cgroup min protection 0kB -- low protection 0kB
+Oct 28 04:09:39.489464 x6e3-j713-fedora kernel: audit: type=1701 audit(1793149779.441:1467): auid=1000 uid=1000 gid=1000 ses=2 pid=15649 comm="xonotic-sdl" exe="/mnt/x63r/games/xonotic/root/usr/bin/xonotic-sdl" sig=6 res=1
+Oct 28 04:09:46.341903 x6e3-j713-fedora systemd-coredump[15688]: Process 15649 (xonotic-sdl) of user 1000 dumped core.
+                                                                 #11 0x00000000004b0ad4 R_Mesh_Draw (xonotic-sdl + 0xb0ad4)
+                                                                 #12 0x00000000004e00ac RSurf_DrawBatch (xonotic-sdl + 0xe00ac)
+                                                                 #13 0x00000000004e083c R_DrawModelTextureSurfaceList.lto_priv.0 (xonotic-sdl + 0xe083c)
+                                                                 #14 0x00000000004e439c R_DrawModelSurfaces (xonotic-sdl + 0xe439c)
+                                                                 #15 0x00000000004d7044 R_RenderScene (xonotic-sdl + 0xd7044)
+                                                                 #16 0x00000000004d1eb4 R_RenderView (xonotic-sdl + 0xd1eb4)
+                                                                 #17 0x000000000047cae0 VM_CL_R_RenderScene.lto_priv.0 (xonotic-sdl + 0x7cae0)
+                                                                 #18 0x000000000059280c CLVM_ExecuteProgram (xonotic-sdl + 0x19280c)
+                                                                 #19 0x0000000000461734 SCR_DrawScreen.lto_priv.0 (xonotic-sdl + 0x61734)
+                                                                 #20 0x000000000046b828 CL_UpdateScreen (xonotic-sdl + 0x6b828)
+                                                                 #21 0x00000000004f0a7c Host_Main (xonotic-sdl + 0xf0a7c)
+                                                                 #22 0x0000000000404890 main (xonotic-sdl + 0x4890)
+                                                                 #25 0x0000000000404a30 _start (xonotic-sdl + 0x4a30)
+Oct 28 04:10:58.513000 x6e3-j713-fedora audit[15768]: AUDIT1123 pid=15768 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D2D73696E636520323032362D31302D32382030343A30393A3030202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/2 res=success'
+Oct 28 04:10:58.517721 x6e3-j713-fedora sudo[15768]:     x6e3 : TTY=pts/2 ; PWD=/mnt/x63r/j713-diag/kwin-lat ; USER=root ; COMMAND=/usr/sbin/journalctl -k -b --since '2026-10-28 04:09:00' --no-pager
+Oct 28 04:10:58.524199 x6e3-j713-fedora kernel: audit: type=1123 audit(1793149858.513:1478): pid=15768 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D2D73696E636520323032362D31302D32382030343A30393A3030202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/2 res=success'
+Oct 28 04:12:16.091617 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:12:16.091679 x6e3-j713-fedora plasmashell[667]: Failed to find service for Unity Launcher "xonotic-sdl.desktop"
+Oct 28 04:12:50.330010 x6e3-j713-fedora kwin_wayland_wrapper[539]: DRM_IOCTL_ASAHI_SUBMIT render failed: Input/output error (2560x1600 tile 32x32 layers 1 samples 1)
+Oct 28 04:12:50.318000 x6e3-j713-fedora audit[539]: ANOM_ABEND auid=1000 uid=1000 gid=1000 ses=2 pid=539 comm="kwin_wayland" exe="/usr/bin/kwin_wayland" sig=6 res=1
+Oct 28 04:12:50.358000 x6e3-j713-fedora audit[15873]: ANOM_ABEND auid=1000 uid=1000 gid=1000 ses=2 pid=15873 comm="xonotic-sdl" exe="/mnt/x63r/games/xonotic/root/usr/bin/xonotic-sdl" sig=11 res=1
+Oct 28 04:12:50.426059 x6e3-j713-fedora kernel: xonotic-sdl: page allocation failure: order:4, mode:0x40cc0(GFP_KERNEL|__GFP_COMP), nodemask=(null),cpuset=/,mems_allowed=0
+Oct 28 04:12:50.362679 x6e3-j713-fedora systemd-coredump[15904]: Process 539 (kwin_wayland) of user 1000 terminated abnormally with signal 6/ABRT, processing...
+Oct 28 04:12:50.430492 x6e3-j713-fedora kernel: CPU: 8 UID: 1000 PID: 15873 Comm: xonotic-sdl Tainted: G S                  7.1.13-x6e3-rel2 #1 PREEMPT 
+Oct 28 04:12:50.371243 x6e3-j713-fedora systemd-coredump[15905]: Process 15873 (xonotic-sdl) of user 1000 terminated abnormally with signal 11/SEGV, processing...
+Oct 28 04:12:50.431419 x6e3-j713-fedora kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+Oct 28 04:12:50.455753 x6e3-j713-fedora kernel: Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+Oct 28 04:12:50.459367 x6e3-j713-fedora kernel: Call trace:
+Oct 28 04:12:50.462210 x6e3-j713-fedora kernel:  show_stack+0x18/0x24 (C)
+Oct 28 04:12:50.462881 x6e3-j713-fedora kernel:  dump_stack_lvl+0x60/0x80
+Oct 28 04:12:50.466672 x6e3-j713-fedora kernel:  dump_stack+0x18/0x24
+Oct 28 04:12:50.468308 x6e3-j713-fedora kernel:  warn_alloc+0x128/0x1a4
+Oct 28 04:12:50.470274 x6e3-j713-fedora kernel:  __alloc_frozen_pages_noprof+0x99c/0x12c4
+Oct 28 04:12:50.470307 x6e3-j713-fedora kernel:  alloc_pages_mpol+0x68/0x1a0
+Oct 28 04:12:50.470357 x6e3-j713-fedora kernel:  alloc_frozen_pages_noprof+0x44/0xa8
+Oct 28 04:12:50.470386 x6e3-j713-fedora kernel:  ___kmalloc_large_node+0xd0/0xf4
+Oct 28 04:12:50.470412 x6e3-j713-fedora kernel:  __kmalloc_large_node_noprof+0x2c/0x178
+Oct 28 04:12:50.470440 x6e3-j713-fedora kernel:  __kmalloc_node_track_caller_noprof+0x428/0x54c
+Oct 28 04:12:50.471066 x6e3-j713-fedora kernel:  krealloc_node_align_noprof+0x180/0x314
+Oct 28 04:12:50.471108 x6e3-j713-fedora kernel:  rust_helper_krealloc_node_align+0x10/0x1c
+Oct 28 04:12:50.471193 x6e3-j713-fedora kernel:  _RNvMs0_NtNtCs92zarvN9p1L_6kernel5alloc4kvecINtB5_3VecNtNtCsexuedBhJUBl_8asahi_m47g16_drm7MappingNtNtB7_9allocator7KmallocE4pushBT_+0x78/0x148
+Oct 28 04:12:50.471232 x6e3-j713-fedora kernel:  _RNvMs1_NtCsexuedBhJUBl_8asahi_m47g16_drmNtB5_2Vm5unmap+0xd0/0x34c
+Oct 28 04:12:50.472508 x6e3-j713-fedora kernel:  _RNvXsi_NtCsexuedBhJUBl_8asahi_m47g16_drmNtB5_6BufferNtNtNtCs92zarvN9p1L_6kernel3drm3gem12DriverObject5close+0x15c/0x228
+Oct 28 04:12:50.472746 x6e3-j713-fedora kernel:  drm_gem_object_release_handle+0x3c/0xdc
+Oct 28 04:12:50.473436 x6e3-j713-fedora kernel:  drm_gem_handle_delete+0x64/0xb8
+Oct 28 04:12:50.473475 x6e3-j713-fedora kernel:  drm_gem_close_ioctl+0x34/0x40
+Oct 28 04:12:50.474262 x6e3-j713-fedora kernel:  drm_ioctl_kernel+0xc0/0x130
+Oct 28 04:12:50.474301 x6e3-j713-fedora kernel:  drm_ioctl+0x1fc/0x4b4
+Oct 28 04:12:50.474337 x6e3-j713-fedora kernel:  __arm64_sys_ioctl+0x2ec/0xb00
+Oct 28 04:12:50.474365 x6e3-j713-fedora kernel:  invoke_syscall.constprop.0+0x48/0xe4
+Oct 28 04:12:50.474406 x6e3-j713-fedora kernel:  do_el0_svc+0xa8/0xbc
+Oct 28 04:12:50.474438 x6e3-j713-fedora kernel:  el0_svc+0x40/0x170
+Oct 28 04:12:50.474463 x6e3-j713-fedora kernel:  el0t_64_sync_handler+0xa0/0xe4
+Oct 28 04:12:50.474514 x6e3-j713-fedora kernel:  el0t_64_sync+0x198/0x19c
+Oct 28 04:12:50.474540 x6e3-j713-fedora kernel: Mem-Info:
+Oct 28 04:12:50.474566 x6e3-j713-fedora kernel: active_anon:17461 inactive_anon:297561 isolated_anon:0
+Oct 28 04:12:50.474600 x6e3-j713-fedora kernel: Node 0 active_anon:279376kB inactive_anon:4760976kB active_file:54528kB inactive_file:51136kB unevictable:9804224kB isolated(anon):0kB isolated(file):0kB mapped:480064kB dirty:128kB writeback:0kB shmem:10528096kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:983040kB kernel_stack:22848kB pagetables:34656kB sec_pagetables:864kB all_unreclaimable? no Balloon:0kB gpu_active:0kB gpu_reclaim:0kB
+Oct 28 04:12:50.474634 x6e3-j713-fedora kernel: Node 0 DMA free:489984kB boost:356352kB min:536576kB low:581632kB high:626688kB reserved_highatomic:0KB free_highatomic:0KB active_anon:279376kB inactive_anon:4760976kB active_file:54528kB inactive_file:51136kB unevictable:9804224kB writepending:128kB zspages:0kB present:16166640kB managed:15998208kB mlocked:288kB bounce:0kB free_pcp:144kB local_pcp:0kB free_cma:28640kB
+Oct 28 04:12:50.474671 x6e3-j713-fedora kernel: lowmem_reserve[]: 0 0 0 0
+Oct 28 04:12:50.474719 x6e3-j713-fedora kernel: Node 0 DMA: 150*16kB (UM) 102*32kB (MC) 1549*64kB (MC) 975*128kB (MEC) 357*256kB (MEC) 134*512kB (MC) 51*1024kB (MC) 10*2048kB (MC) 1*4096kB (M) 1*8192kB (C) 1*16384kB (C) 0*32768kB = 490976kB
+Oct 28 04:12:50.474744 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+Oct 28 04:12:50.474772 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=32768kB
+Oct 28 04:12:50.474797 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+Oct 28 04:12:50.474818 x6e3-j713-fedora kernel: 664645 total pagecache pages
+Oct 28 04:12:50.474849 x6e3-j713-fedora kernel: 0 pages in swap cache
+Oct 28 04:12:50.474871 x6e3-j713-fedora kernel: Free swap  = 0kB
+Oct 28 04:12:50.474902 x6e3-j713-fedora kernel: Total swap = 0kB
+Oct 28 04:12:50.474964 x6e3-j713-fedora kernel: 1010415 pages RAM
+Oct 28 04:12:50.474999 x6e3-j713-fedora kernel: 0 pages HighMem/MovableOnly
+Oct 28 04:12:50.475020 x6e3-j713-fedora kernel: 10527 pages reserved
+Oct 28 04:12:50.475066 x6e3-j713-fedora kernel: 2048 pages cma reserved
+Oct 28 04:12:50.475094 x6e3-j713-fedora kernel: 0 pages hwpoisoned
+Oct 28 04:12:50.475115 x6e3-j713-fedora kernel: Memory cgroup min protection 0kB -- low protection 0kB
+Oct 28 04:12:50.475145 x6e3-j713-fedora kernel: asahi_m4: G16: failed to unbind closed GEM object: ENOMEM
+Oct 28 04:12:50.476203 x6e3-j713-fedora kernel: audit: type=1701 audit(1793149970.318:1517): auid=1000 uid=1000 gid=1000 ses=2 pid=539 comm="kwin_wayland" exe="/usr/bin/kwin_wayland" sig=6 res=1
+Oct 28 04:12:50.476242 x6e3-j713-fedora kernel: audit: type=1701 audit(1793149970.358:1518): auid=1000 uid=1000 gid=1000 ses=2 pid=15873 comm="xonotic-sdl" exe="/mnt/x63r/games/xonotic/root/usr/bin/xonotic-sdl" sig=11 res=1
+Oct 28 04:12:50.477739 x6e3-j713-fedora kernel: systemd-coredum invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=0
+Oct 28 04:12:50.477788 x6e3-j713-fedora kernel: CPU: 7 UID: 0 PID: 15905 Comm: systemd-coredum Tainted: G S                  7.1.13-x6e3-rel2 #1 PREEMPT 
+Oct 28 04:12:50.477820 x6e3-j713-fedora kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+Oct 28 04:12:50.477846 x6e3-j713-fedora kernel: Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+Oct 28 04:12:50.477867 x6e3-j713-fedora kernel: Call trace:
+Oct 28 04:12:50.477886 x6e3-j713-fedora kernel:  show_stack+0x18/0x24 (C)
+Oct 28 04:12:50.477910 x6e3-j713-fedora kernel:  dump_stack_lvl+0x60/0x80
+Oct 28 04:12:50.477954 x6e3-j713-fedora kernel:  dump_stack+0x18/0x24
+Oct 28 04:12:50.477984 x6e3-j713-fedora kernel:  dump_header+0x40/0x170
+Oct 28 04:12:50.478014 x6e3-j713-fedora kernel:  oom_kill_process+0x21c/0x298
+Oct 28 04:12:50.478476 x6e3-j713-fedora kernel:  out_of_memory+0x21c/0x580
+Oct 28 04:12:50.478500 x6e3-j713-fedora kernel:  __alloc_frozen_pages_noprof+0x10f4/0x12c4
+Oct 28 04:12:50.480099 x6e3-j713-fedora kernel:  alloc_pages_mpol+0x68/0x1a0
+Oct 28 04:12:50.480122 x6e3-j713-fedora kernel:  alloc_frozen_pages_noprof+0x44/0xa8
+Oct 28 04:12:50.480149 x6e3-j713-fedora kernel:  alloc_pages_noprof+0x10/0x28
+Oct 28 04:12:50.480193 x6e3-j713-fedora kernel:  __pte_alloc+0x38/0x118
+Oct 28 04:12:50.480219 x6e3-j713-fedora kernel:  __handle_mm_fault+0x1210/0x18e8
+Oct 28 04:12:50.480244 x6e3-j713-fedora kernel:  handle_mm_fault+0xa4/0x2b8
+Oct 28 04:12:50.480273 x6e3-j713-fedora kernel:  do_page_fault+0x398/0x740
+Oct 28 04:12:50.480321 x6e3-j713-fedora kernel:  do_translation_fault+0x4c/0x60
+Oct 28 04:12:50.480351 x6e3-j713-fedora kernel:  do_mem_abort+0x40/0x9c
+Oct 28 04:12:50.480376 x6e3-j713-fedora kernel:  el0_da+0x38/0xc8
+Oct 28 04:12:50.480400 x6e3-j713-fedora kernel:  el0t_64_sync_handler+0xd0/0xe4
+Oct 28 04:12:50.480428 x6e3-j713-fedora kernel:  el0t_64_sync+0x198/0x19c
+Oct 28 04:12:50.480448 x6e3-j713-fedora kernel: Mem-Info:
+Oct 28 04:12:50.480469 x6e3-j713-fedora kernel: active_anon:17461 inactive_anon:297691 isolated_anon:0
+Oct 28 04:12:50.480501 x6e3-j713-fedora kernel: Node 0 active_anon:279376kB inactive_anon:4763056kB active_file:26240kB inactive_file:39632kB unevictable:9804224kB isolated(anon):0kB isolated(file):0kB mapped:427744kB dirty:32kB writeback:0kB shmem:10528096kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:983040kB kernel_stack:22880kB pagetables:34704kB sec_pagetables:864kB all_unreclaimable? no Balloon:0kB gpu_active:0kB gpu_reclaim:0kB
+Oct 28 04:12:50.480544 x6e3-j713-fedora kernel: Node 0 DMA free:522272kB boost:405504kB min:585728kB low:630784kB high:675840kB reserved_highatomic:0KB free_highatomic:0KB active_anon:279376kB inactive_anon:4763056kB active_file:26240kB inactive_file:39632kB unevictable:9804224kB writepending:32kB zspages:0kB present:16166640kB managed:15998208kB mlocked:288kB bounce:0kB free_pcp:1328kB local_pcp:0kB free_cma:28640kB
+Oct 28 04:12:50.480573 x6e3-j713-fedora kernel: lowmem_reserve[]: 0 0 0 0
+Oct 28 04:12:50.480599 x6e3-j713-fedora kernel: Node 0 DMA: 129*16kB (M) 27*32kB (MC) 2012*64kB (MC) 979*128kB (MC) 372*256kB (MEC) 135*512kB (MC) 51*1024kB (MC) 10*2048kB (MC) 1*4096kB (M) 1*8192kB (C) 1*16384kB (C) 0*32768kB = 522736kB
+Oct 28 04:12:50.480630 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+Oct 28 04:12:50.480655 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=32768kB
+Oct 28 04:12:50.480684 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+Oct 28 04:12:50.480709 x6e3-j713-fedora kernel: 662201 total pagecache pages
+Oct 28 04:12:50.480738 x6e3-j713-fedora kernel: 0 pages in swap cache
+Oct 28 04:12:50.480770 x6e3-j713-fedora kernel: Free swap  = 0kB
+Oct 28 04:12:50.480797 x6e3-j713-fedora kernel: Total swap = 0kB
+Oct 28 04:12:50.480816 x6e3-j713-fedora kernel: 1010415 pages RAM
+Oct 28 04:12:50.482386 x6e3-j713-fedora kernel: 0 pages HighMem/MovableOnly
+Oct 28 04:12:50.482414 x6e3-j713-fedora kernel: 10527 pages reserved
+Oct 28 04:12:50.482434 x6e3-j713-fedora kernel: 2048 pages cma reserved
+Oct 28 04:12:50.482460 x6e3-j713-fedora kernel: 0 pages hwpoisoned
+Oct 28 04:12:50.482491 x6e3-j713-fedora kernel: Memory cgroup min protection 0kB -- low protection 0kB
+Oct 28 04:12:50.482512 x6e3-j713-fedora kernel: Tasks state (memory values in pages):
+Oct 28 04:12:50.482548 x6e3-j713-fedora kernel: [  pid  ]   uid  tgid total_vm      rss rss_anon rss_file rss_shmem pgtables_bytes swapents oom_score_adj name
+Oct 28 04:12:50.487048 x6e3-j713-fedora kernel: [    535]  1000   535    10009      203      198        5         0   163840        0           200 kwin_wayland_wr
+Oct 28 04:12:50.487077 x6e3-j713-fedora kernel: [    539]  1000   539   124585    15283     5360      699      9224   917504        0           200 kwin_wayland
+Oct 28 04:12:50.491314 x6e3-j713-fedora kernel: [  15873]  1000 15873   730260    76534    75955      562        17  5799936        0           200 xonotic-sdl
+Oct 28 04:12:50.496909 x6e3-j713-fedora systemd-coredump[15906]: Resource limits disable core dumping for process 539 (kwin_wayland).
+Oct 28 04:12:50.497910 x6e3-j713-fedora systemd-coredump[15906]: Process 539 (kwin_wayland) of user 1000 terminated abnormally without generating a coredump.
+Oct 28 04:12:50.521924 x6e3-j713-fedora kwin_wayland_wrapper[609]: (EE) failed to read Wayland events: Connection reset by peer
+Oct 28 04:12:51.246933 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.246933 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.246933 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.246933 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.250617 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.250617 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.250617 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.250617 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.262412 x6e3-j713-fedora kwin_wayland[15944]: Failed to open drm node : No such file or directory
+Oct 28 04:12:51.262419 x6e3-j713-fedora kwin_wayland[15944]: couldn't find dev node for drm device 
+Oct 28 04:12:51.360473 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.360473 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.360473 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.360473 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.367273 x6e3-j713-fedora kwin_wayland[15944]: No backend specified, automatically choosing drm
+Oct 28 04:12:51.386180 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.386180 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.386180 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.386180 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.408469 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.408469 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.408469 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.408469 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.409309 x6e3-j713-fedora kwin_wayland_wrapper[15944]: MESA: error: ZINK: failed to choose pdev
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: MESA: error: ZINK: failed to choose pdev
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.534785 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.450955 x6e3-j713-fedora kwin_wayland[15944]: Failed to open drm node : No such file or directory
+Oct 28 04:12:51.450961 x6e3-j713-fedora kwin_wayland[15944]: couldn't find dev node for drm device 
+Oct 28 04:12:51.526194 x6e3-j713-fedora kwin_wayland[15944]: Failed to open drm node : No such file or directory
+Oct 28 04:12:51.526199 x6e3-j713-fedora kwin_wayland[15944]: couldn't find dev node for drm device 
+Oct 28 04:12:51.544079 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.544079 x6e3-j713-fedora kwin_wayland_wrapper[15944]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.544079 x6e3-j713-fedora kwin_wayland_wrapper[15944]: BO creation failed
+Oct 28 04:12:51.544079 x6e3-j713-fedora kwin_wayland_wrapper[15944]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.545139 x6e3-j713-fedora kwin_wayland[15944]: Could not find edid for connector DrmConnector(id=57, gpu="/dev/dri/card1", name="eDP-1", connection="Connected", countMode=1)
+Oct 28 04:12:51.916887 x6e3-j713-fedora kwin_wayland_wrapper[16001]: Main linux-dmabuf device has no render node
+Oct 28 04:12:51.916887 x6e3-j713-fedora kwin_wayland_wrapper[16001]: EGL setup failed, disabling glamor
+Oct 28 04:12:51.916887 x6e3-j713-fedora kwin_wayland_wrapper[16001]: Failed to initialize glamor, falling back to sw
+Oct 28 04:12:51.925301 x6e3-j713-fedora kwin_wayland_wrapper[16001]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.925301 x6e3-j713-fedora kwin_wayland_wrapper[16001]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.925368 x6e3-j713-fedora kwin_wayland_wrapper[16001]: BO creation failed
+Oct 28 04:12:51.925368 x6e3-j713-fedora kwin_wayland_wrapper[16001]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.928959 x6e3-j713-fedora kwin_wayland_wrapper[16001]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.928959 x6e3-j713-fedora kwin_wayland_wrapper[16001]: DRM_IOCTL_ASAHI_VM_BIND failed: Input/output error
+Oct 28 04:12:51.928959 x6e3-j713-fedora kwin_wayland_wrapper[16001]: BO creation failed
+Oct 28 04:12:51.928959 x6e3-j713-fedora kwin_wayland_wrapper[16001]: Failed to reserve compact Apple9 shader entries
+Oct 28 04:12:51.959823 x6e3-j713-fedora kwin_wayland_wrapper[16009]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Oct 28 04:12:51.959823 x6e3-j713-fedora kwin_wayland_wrapper[16009]: > Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+Oct 28 04:12:51.959823 x6e3-j713-fedora kwin_wayland_wrapper[16009]: >                   Using F23, ignoring XF86TouchpadOff
+Oct 28 04:12:51.959823 x6e3-j713-fedora kwin_wayland_wrapper[16009]: > Warning:          Symbol map for key <FK23> redefined
+Oct 28 04:12:51.959823 x6e3-j713-fedora kwin_wayland_wrapper[16009]: >                   Using last definition for conflicting fields
+Oct 28 04:12:51.959823 x6e3-j713-fedora kwin_wayland_wrapper[16009]: > Warning:          Symbol map for key <FK24> redefined
+Oct 28 04:12:51.959823 x6e3-j713-fedora kwin_wayland_wrapper[16009]: >                   Using last definition for conflicting fields
+Oct 28 04:12:51.962117 x6e3-j713-fedora kwin_wayland_wrapper[16009]: Errors from xkbcomp are not fatal to the X server
+Oct 28 04:12:52.177746 x6e3-j713-fedora kwin_wayland_wrapper[16021]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+Oct 28 04:12:52.177746 x6e3-j713-fedora kwin_wayland_wrapper[16021]: > Warning:          Unsupported maximum keycode 709, clipping.
+Oct 28 04:12:52.177746 x6e3-j713-fedora kwin_wayland_wrapper[16021]: >                   X11 cannot support keycodes above 255.
+Oct 28 04:12:52.178324 x6e3-j713-fedora kwin_wayland_wrapper[16021]: > Warning:          Virtual modifier Hyper multiply defined
+Oct 28 04:12:52.178324 x6e3-j713-fedora kwin_wayland_wrapper[16021]: >                   Using 0, ignoring 0
+Oct 28 04:12:52.178324 x6e3-j713-fedora kwin_wayland_wrapper[16021]: > Warning:          Virtual modifier ScrollLock multiply defined
+Oct 28 04:12:52.178324 x6e3-j713-fedora kwin_wayland_wrapper[16021]: >                   Using 0, ignoring 0
+Oct 28 04:12:52.179731 x6e3-j713-fedora kwin_wayland_wrapper[16021]: Errors from xkbcomp are not fatal to the X server
+Oct 28 04:12:52.189650 x6e3-j713-fedora kwin_wayland[15944]: Failed to load overview: "qrc:/qt/qml/org/kde/kwin/overview/qml/Main.qml:15:1: module \"org.kde.milou\" is not installed\n"
+Oct 28 04:12:56.251254 x6e3-j713-fedora systemd-coredump[15907]: Removed old coredump core.xonotic-sdl.1000.9e87a5f020a14a029a09e2bfa30e1f85.15649.1793149779000000.zst.
+Oct 28 04:12:56.391010 x6e3-j713-fedora systemd-coredump[15907]: Process 15873 (xonotic-sdl) of user 1000 dumped core.
+                                                                 #6  0x00000000004afc10 GL_Clear.constprop.0 (xonotic-sdl + 0xafc10)
+                                                                 #7  0x000000000045ec54 SCR_DrawLoadingScreen_SharedSetup (xonotic-sdl + 0x5ec54)
+                                                                 #8  0x0000000000463a40 SCR_UpdateLoadingScreen (xonotic-sdl + 0x63a40)
+                                                                 #9  0x000000000053a62c Mod_LoadModel.isra.0 (xonotic-sdl + 0x13a62c)
+                                                                 #10 0x00000000005c2c78 SV_ModelIndex (xonotic-sdl + 0x1c2c78)
+                                                                 #11 0x00000000005ec994 VM_SV_precache_model.lto_priv.0 (xonotic-sdl + 0x1ec994)
+                                                                 #12 0x000000000059b68c SVVM_ExecuteProgram (xonotic-sdl + 0x19b68c)
+                                                                 #13 0x00000000005df5d8 SV_Physics (xonotic-sdl + 0x1df5d8)
+                                                                 #14 0x00000000005c7648 SV_SpawnServer (xonotic-sdl + 0x1c7648)
+                                                                 #15 0x00000000004ff6d0 Host_Map_f.lto_priv.0 (xonotic-sdl + 0xff6d0)
+                                                                 #16 0x0000000000487b34 Cmd_ExecuteString (xonotic-sdl + 0x87b34)
+                                                                 #17 0x0000000000488388 Cbuf_Execute (xonotic-sdl + 0x88388)
+                                                                 #18 0x00000000004f007c Host_Main (xonotic-sdl + 0xf007c)
+                                                                 #19 0x0000000000404890 main (xonotic-sdl + 0x4890)
+                                                                 #22 0x0000000000404a30 _start (xonotic-sdl + 0x4a30)
+Oct 28 04:13:12.146290 x6e3-j713-fedora kwin_wayland[15944]: QDBusConnection: couldn't handle call to Teardown, no slot matched
+Oct 28 04:13:12.146298 x6e3-j713-fedora kwin_wayland[15944]: QDBusConnection: couldn't handle call to Teardown, no slot matched
+Oct 28 04:13:12.146311 x6e3-j713-fedora kwin_wayland[15944]: Could not find slot Krunner1Adaptor::Teardown
+Oct 28 04:14:23.017962 x6e3-j713-fedora kwin_wayland[15944]: This plugin does not support grabbing the keyboard
+Oct 28 04:14:36.823366 x6e3-j713-fedora kwin_wayland[15944]: Libinput: event2  - Logitech USB Receiver: client bug: event processing lagging behind by 26ms, your system is too slow
+Oct 28 04:15:11.181032 x6e3-j713-fedora kwin_wayland[15944]: Libinput: event0  - Apple MTP multi-touch: kernel bug: Touch jump detected and discarded.
+Oct 28 04:18:25.475469 x6e3-j713-fedora sudo[17446]:     x6e3 : TTY=pts/3 ; PWD=/mnt/x63r/j713-diag/kwin-lat ; USER=root ; COMMAND=/usr/sbin/journalctl -k -b --no-pager
+Oct 28 04:18:25.471000 x6e3-j713-fedora audit[17446]: AUDIT1123 pid=17446 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/3 res=success'
+Oct 28 04:18:25.478208 x6e3-j713-fedora kernel: audit: type=1123 audit(1793150305.471:1546): pid=17446 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D6B202D62202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/3 res=success'
+Oct 28 04:20:17.530278 x6e3-j713-fedora sudo[17604]:     x6e3 : TTY=pts/3 ; PWD=/mnt/x63r/j713-diag/kwin-lat ; USER=root ; COMMAND=/usr/sbin/journalctl -b --since '2026-10-28 03:50:00' -o short-precise --no-pager
+Oct 28 04:20:17.528000 x6e3-j713-fedora audit[17604]: AUDIT1123 pid=17604 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D62202D2D73696E636520323032362D31302D32382030333A35303A3030202D6F2073686F72742D70726563697365202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/3 res=success'
+Oct 28 04:20:17.534153 x6e3-j713-fedora kernel: audit: type=1123 audit(1793150417.528:1586): pid=17604 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D62202D2D73696E636520323032362D31302D32382030333A35303A3030202D6F2073686F72742D70726563697365202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/3 res=success'
+Oct 28 04:26:35.334740 x6e3-j713-fedora kwin_wayland[15944]: Libinput: event0  - Apple MTP multi-touch: kernel bug: Touch jump detected and discarded.
+Oct 28 04:29:35.398822 x6e3-j713-fedora sudo[18242]:     x6e3 : TTY=pts/3 ; PWD=/mnt/x63r/j713-diag/kwin-lat ; USER=root ; COMMAND=/usr/sbin/journalctl -b -o short-precise --no-pager
+Oct 28 04:29:35.396000 x6e3-j713-fedora audit[18242]: AUDIT1123 pid=18242 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D62202D6F2073686F72742D70726563697365202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/3 res=success'
+Oct 28 04:29:35.402093 x6e3-j713-fedora kernel: audit: type=1123 audit(1793150975.396:1633): pid=18242 uid=1000 auid=1000 ses=2 msg='cwd="/mnt/x63r/j713-diag/kwin-lat" cmd=6A6F75726E616C63746C202D62202D6F2073686F72742D70726563697365202D2D6E6F2D7061676572 exe="/usr/bin/sudo" terminal=pts/3 res=success'

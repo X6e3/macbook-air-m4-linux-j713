@@ -1,0 +1,8 @@
+tl1_scenario=D
+size=1024
+renderer=Apple M4 (G16G B1)
+version=OpenGL ES 3.0 Mesa 26.3.0-devel
+s3tc_extension=yes
+levels=11
+dxt5_bytes_per_texture=1398128
+done=1

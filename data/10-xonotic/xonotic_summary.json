@@ -1,0 +1,257 @@
+{
+  "journal": {
+    "launches": [
+      "03:01",
+      "03:02",
+      "03:06",
+      "03:08",
+      "03:19",
+      "03:38",
+      "03:50",
+      "03:51",
+      "04:00",
+      "04:02",
+      "04:08",
+      "04:12"
+    ],
+    "failures": [
+      {
+        "time": "04:02:56",
+        "process": "xonotic-sdl",
+        "order": "order:4",
+        "unevictable_GiB": 9.3,
+        "shmem_GiB": 9.98,
+        "free_GiB": 0.52,
+        "min_GiB": 0.55
+      },
+      {
+        "time": "04:09:39",
+        "process": "xonotic-sdl",
+        "order": "order:4",
+        "unevictable_GiB": 9.08,
+        "shmem_GiB": 9.75,
+        "free_GiB": 0.41,
+        "min_GiB": 0.44
+      },
+      {
+        "time": "04:12:50",
+        "process": "xonotic-sdl",
+        "order": "order:4",
+        "unevictable_GiB": 9.35,
+        "shmem_GiB": 10.04,
+        "free_GiB": 0.47,
+        "min_GiB": 0.51
+      }
+    ],
+    "oom_killer": [
+      [
+        "04:02:56",
+        "systemd-coredum",
+        "order=0"
+      ],
+      [
+        "04:12:50",
+        "systemd-coredum",
+        "order=0"
+      ]
+    ],
+    "terminations": [
+      [
+        "04:02:56",
+        "xonotic-sdl",
+        "6/ABRT"
+      ],
+      [
+        "04:09:39",
+        "xonotic-sdl",
+        "6/ABRT"
+      ],
+      [
+        "04:12:50",
+        "kwin_wayland",
+        "6/ABRT"
+      ],
+      [
+        "04:12:50",
+        "xonotic-sdl",
+        "11/SEGV"
+      ]
+    ],
+    "saved_with_journalctl": [
+      "04:04",
+      "04:05",
+      "04:10",
+      "04:18",
+      "04:20",
+      "04:29"
+    ],
+    "kernel": "7.1.13-x6e3-rel2",
+    "memory_GiB": 15.4,
+    "kwin_render_failed": [
+      "04:12:50",
+      "DRM_IOCTL_ASAHI_SUBMIT render failed: Input/output error (2560x1600 tile 32x32 layers 1 samples 1)"
+    ],
+    "unbind_failed": [
+      "04:12:50",
+      "G16: failed to unbind closed GEM object: ENOMEM"
+    ],
+    "kwin_restart_vm_bind_failures": 34
+  },
+  "games": {
+    "engine.log": {
+      "renderer": [
+        "llvmpipe (LLVM 22.1.8, 128 bits)"
+      ],
+      "video_modes": [
+        "fullscreen 1920x1200x32x0.00hz",
+        "fullscreen 2560x1600x32x0.00hz"
+      ],
+      "maps": [
+        "boil"
+      ],
+      "bots": [
+        "Hellfire",
+        "Mystery",
+        "Eureka",
+        "Gator",
+        "Sensible"
+      ],
+      "mine": []
+    },
+    "zink-test.log": {
+      "renderer": [
+        "zink Vulkan 1.4(llvmpipe (LLVM 22.1.8, 128 bits) (MESA_LLVMPIPE))"
+      ],
+      "video_modes": [
+        "fullscreen 1920x1200x32x0.00hz"
+      ],
+      "maps": [
+        "boil"
+      ],
+      "bots": [
+        "Mystery",
+        "Dominator",
+        "Eureka",
+        "Airhead",
+        "Toxic"
+      ],
+      "mine": []
+    },
+    "wayland-test.log": {
+      "renderer": [
+        "llvmpipe (LLVM 22.1.8, 128 bits)"
+      ],
+      "video_modes": [
+        "fullscreen 1920x1200x32x0.00hz"
+      ],
+      "maps": [],
+      "bots": [],
+      "mine": []
+    },
+    "xonotic-agx-gameplay.log": {
+      "renderer": [
+        "Apple M4 (G16G B1)"
+      ],
+      "video_modes": [
+        "fullscreen 1920x1200x32x0.00hz"
+      ],
+      "maps": [
+        "warfare"
+      ],
+      "bots": [
+        "Toxic",
+        "Death",
+        "Resurrection",
+        "Mystery",
+        "Thunderstorm"
+      ],
+      "mine": [
+        "x6e3U drew first blood!",
+        "x6e3U made a TRIPLE FRAG!"
+      ]
+    }
+  },
+  "reruns": {
+    "lowres-050506": {
+      "maps": [
+        "dance"
+      ],
+      "video_modes": [
+        "window 1281x800x32x0.00hz"
+      ],
+      "dumps": 34,
+      "available_GiB_first_min": [
+        10.3,
+        0.91
+      ],
+      "render_target_first_MiB": [
+        111.4,
+        68
+      ],
+      "render_target_peak_MiB": [
+        8192.0,
+        1709
+      ],
+      "total_at_peak_MiB": [
+        8294.4,
+        2246
+      ],
+      "kernel_failure": [
+        "05:05:41",
+        "xonotic-sdl",
+        "order:4",
+        "7.1.13-x6e3-rel2"
+      ]
+    },
+    "rt-owner-051419": {
+      "maps": [],
+      "video_modes": [
+        "window 1281x800x32x0.00hz"
+      ],
+      "dumps": 1,
+      "available_GiB_first_min": [
+        9.77,
+        9.46
+      ],
+      "render_target_first_MiB": [
+        0.5,
+        9
+      ],
+      "render_target_peak_MiB": [
+        0.5,
+        9
+      ],
+      "total_at_peak_MiB": [
+        21.4,
+        30
+      ],
+      "events": "STOP 05:14:49"
+    },
+    "rt-test-051702": {
+      "maps": [
+        "boil"
+      ],
+      "video_modes": [
+        "window 1281x800x32x0.00hz"
+      ],
+      "dumps": 25,
+      "available_GiB_first_min": [
+        9.93,
+        3.93
+      ],
+      "render_target_first_MiB": [
+        77.5,
+        37
+      ],
+      "render_target_peak_MiB": [
+        4915.2,
+        1444
+      ],
+      "total_at_peak_MiB": [
+        4915.2,
+        1927
+      ],
+      "events": "Safety stop: 05:17:28"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+Game is Xonotic using base gamedir data
+gamename for server filtering: Xonotic
+Xonotic Linux 00:00:00 Jul 25 2025 - release
+Current nice level is below the soft limit - cannot use niceness
+Skeletal animation uses generic code path (SSE not compiled in)
+DPSOFTRAST not available (SSE2 not compiled in)
+Failed to init SDL joystick subsystem: 
+execing quake.rc
+execing default.cfg
+execing xonotic-common.cfg
+execing xonotic-client.cfg
+execing sRGB-disable.cfg
+execing binds-xonotic.cfg
+execing effects-normal.cfg
+execing crosshairs.cfg
+execing gamemodes-client.cfg
+execing notifications.cfg
+execing _hud_common.cfg
+execing _hud_descriptions.cfg
+execing hud_luma.cfg
+execing xonotic-server.cfg
+execing testing.cfg
+execing balance-xonotic.cfg
+execing bal-wep-xonotic.cfg
+execing physicsX.cfg
+execing turrets.cfg
+execing vehicles.cfg
+execing gamemodes-server.cfg
+execing ctfscoring-samual.cfg
+execing mutators.cfg
+execing randomitems-xonotic.cfg
+execing monsters.cfg
+execing minigames.cfg
+execing physics.cfg
+execing cdtracks.cfg
+execing commands.cfg
+execing config.cfg
+"maxplayers" set to "16"
+execing data/campaign.cfg
+execing config_update.cfg
+execing font-xolonium.cfg
+client: program is not loaded
+execing autoexec/empty.cfg
+execing autoexec.cfg
+execing post-config.cfg
+Client using an automatically assigned port
+Client opened a socket on address 0.0.0.0:0
+Client opened a socket on address [0:0:0:0:0:0:0:0]:0
+Linked against SDL version 2.32.56
+Using SDL library version 2.32.72
+GL_VENDOR: Mesa
+GL_RENDERER: llvmpipe (LLVM 22.1.8, 128 bits)
+GL_VERSION: 4.6 (Compatibility Profile) Mesa 26.3.0-devel
+vid.support.arb_multisample 1
+vid.support.gl20shaders 1
+NOTE: requested 1x AA, got 0x AA
+Video Mode: fullscreen 1920x1200x32x0.00hz
+S_Startup: initializing sound output format: 48000Hz, 16 bit, 2 channels...
+Wanted audio Specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Obtained audio specification:
+	Channels  : 2
+	Format    : 0x8010
+	Frequency : 48000
+	Samples   : 2048
+Sound format: 48000Hz, 2 channels, 16 bits per sample
+CDAudio_Init: No CD in player.
+Can't get initial CD volume
+CD Audio Initialized
+]quit 

@@ -1,0 +1,63 @@
+Oct 28 05:05:41.833239 x6e3-j713-fedora kernel: xonotic-sdl: page allocation failure: order:4, mode:0x40cc0(GFP_KERNEL|__GFP_COMP), nodemask=(null),cpuset=/,mems_allowed=0
+Oct 28 05:05:41.833277 x6e3-j713-fedora kernel: CPU: 9 UID: 1000 PID: 6435 Comm: xonotic-sdl Tainted: G S                  7.1.13-x6e3-rel2 #1 PREEMPT 
+Oct 28 05:05:41.833294 x6e3-j713-fedora kernel: Tainted: [S]=CPU_OUT_OF_SPEC
+Oct 28 05:05:41.833312 x6e3-j713-fedora kernel: Hardware name: Apple MacBook Air (13-inch, M4, 2025) (DT)
+Oct 28 05:05:41.833322 x6e3-j713-fedora kernel: Call trace:
+Oct 28 05:05:41.833335 x6e3-j713-fedora kernel:  show_stack+0x18/0x24 (C)
+Oct 28 05:05:41.833350 x6e3-j713-fedora kernel:  dump_stack_lvl+0x60/0x80
+Oct 28 05:05:41.833365 x6e3-j713-fedora kernel:  dump_stack+0x18/0x24
+Oct 28 05:05:41.833614 x6e3-j713-fedora kernel:  warn_alloc+0x128/0x1a4
+Oct 28 05:05:41.833892 x6e3-j713-fedora kernel:  __alloc_frozen_pages_noprof+0x99c/0x12c4
+Oct 28 05:05:41.833907 x6e3-j713-fedora kernel:  alloc_pages_mpol+0x68/0x1a0
+Oct 28 05:05:41.833919 x6e3-j713-fedora kernel:  alloc_frozen_pages_noprof+0x44/0xa8
+Oct 28 05:05:41.833934 x6e3-j713-fedora kernel:  ___kmalloc_large_node+0xd0/0xf4
+Oct 28 05:05:41.833946 x6e3-j713-fedora kernel:  __kmalloc_large_node_noprof+0x2c/0x178
+Oct 28 05:05:41.833961 x6e3-j713-fedora kernel:  __kmalloc_node_track_caller_noprof+0x428/0x54c
+Oct 28 05:05:41.833975 x6e3-j713-fedora kernel:  krealloc_node_align_noprof+0x180/0x314
+Oct 28 05:05:41.833987 x6e3-j713-fedora kernel:  rust_helper_krealloc_node_align+0x10/0x1c
+Oct 28 05:05:41.834000 x6e3-j713-fedora kernel:  _RNvMs0_NtNtCs92zarvN9p1L_6kernel5alloc4kvecINtB5_3VecNtNtCsexuedBhJUBl_8asahi_m47g16_drm7MappingNtNtB7_9allocator7KmallocE4pushBT_+0x78/0x148
+Oct 28 05:05:41.834118 x6e3-j713-fedora kernel:  _RNvNvXsh_NtCsexuedBhJUBl_8asahi_m47g16_drmNtB7_6DriverNtNtNtCs92zarvN9p1L_6kernel3drm6driver6Driver6IOCTLS12ASAHI_SUBMIT+0x1048/0x15d0
+Oct 28 05:05:41.834132 x6e3-j713-fedora kernel:  drm_ioctl_kernel+0xc0/0x130
+Oct 28 05:05:41.834144 x6e3-j713-fedora kernel:  drm_ioctl+0x1fc/0x4b4
+Oct 28 05:05:41.834157 x6e3-j713-fedora kernel:  __arm64_sys_ioctl+0x2ec/0xb00
+Oct 28 05:05:41.834170 x6e3-j713-fedora kernel:  invoke_syscall.constprop.0+0x48/0xe4
+Oct 28 05:05:41.834182 x6e3-j713-fedora kernel:  do_el0_svc+0xa8/0xbc
+Oct 28 05:05:41.834197 x6e3-j713-fedora kernel:  el0_svc+0x40/0x170
+Oct 28 05:05:41.834209 x6e3-j713-fedora kernel:  el0t_64_sync_handler+0xa0/0xe4
+Oct 28 05:05:41.834223 x6e3-j713-fedora kernel:  el0t_64_sync+0x198/0x19c
+Oct 28 05:05:41.834241 x6e3-j713-fedora kernel: Mem-Info:
+Oct 28 05:05:41.834256 x6e3-j713-fedora kernel: active_anon:6291 inactive_anon:286655 isolated_anon:0
+                                                 active_file:52379 inactive_file:20610 isolated_file:0
+                                                 unevictable:561904 dirty:5 writeback:0
+                                                 slab_reclaimable:3290 slab_unreclaimable:5654
+                                                 mapped:59685 shmem:592337 pagetables:2164
+                                                 sec_pagetables:52 bounce:0
+                                                 kernel_misc_reclaimable:0
+                                                 free:38412 free_pcp:0 free_cma:1790
+Oct 28 05:05:41.834274 x6e3-j713-fedora kernel: Node 0 active_anon:100656kB inactive_anon:4586480kB active_file:838064kB inactive_file:329760kB unevictable:8990464kB isolated(anon):0kB isolated(file):0kB mapped:954960kB dirty:80kB writeback:0kB shmem:9477392kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:524288kB kernel_stack:23168kB pagetables:34624kB sec_pagetables:832kB all_unreclaimable? yes Balloon:0kB gpu_active:0kB gpu_reclaim:0kB
+Oct 28 05:05:41.834298 x6e3-j713-fedora kernel: Node 0 DMA free:614592kB boost:405504kB min:585728kB low:630784kB high:675840kB reserved_highatomic:0KB free_highatomic:0KB active_anon:100656kB inactive_anon:4586480kB active_file:838064kB inactive_file:329760kB unevictable:8990464kB writepending:80kB zspages:0kB present:16166640kB managed:15998224kB mlocked:288kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:28640kB
+Oct 28 05:05:41.834314 x6e3-j713-fedora kernel: lowmem_reserve[]: 0 0 0 0
+Oct 28 05:05:41.834326 x6e3-j713-fedora kernel: Node 0 DMA: 4967*16kB (UME) 1478*32kB (MEC) 702*64kB (UMEC) 271*128kB (UMEC) 124*256kB (MEC) 87*512kB (MEC) 43*1024kB (MEC) 15*2048kB (UMC) 5*4096kB (UM) 3*8192kB (UMC) 1*16384kB (C) 6*32768kB (M) = 615472kB
+Oct 28 05:05:41.834342 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+Oct 28 05:05:41.834356 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=32768kB
+Oct 28 05:05:41.834368 x6e3-j713-fedora kernel: Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+Oct 28 05:05:41.834380 x6e3-j713-fedora kernel: 665382 total pagecache pages
+Oct 28 05:05:41.834397 x6e3-j713-fedora kernel: 0 pages in swap cache
+Oct 28 05:05:41.834405 x6e3-j713-fedora kernel: Free swap  = 0kB
+Oct 28 05:05:41.834413 x6e3-j713-fedora kernel: Total swap = 0kB
+Oct 28 05:05:41.834426 x6e3-j713-fedora kernel: 1010415 pages RAM
+Oct 28 05:05:41.834438 x6e3-j713-fedora kernel: 0 pages HighMem/MovableOnly
+Oct 28 05:05:41.834449 x6e3-j713-fedora kernel: 10526 pages reserved
+Oct 28 05:05:41.834460 x6e3-j713-fedora kernel: 2048 pages cma reserved
+Oct 28 05:05:41.834471 x6e3-j713-fedora kernel: 0 pages hwpoisoned
+Oct 28 05:05:41.834483 x6e3-j713-fedora kernel: Memory cgroup min protection 0kB -- low protection 0kB
+Oct 28 05:05:41.834491 x6e3-j713-fedora kernel: audit: type=1701 audit(1793153141.826:411): auid=1000 uid=1000 gid=1000 ses=2 pid=6435 comm="xonotic-sdl" exe="/mnt/x63r/games/xonotic/root/usr/bin/xonotic-sdl" sig=6 res=1
+Oct 28 05:05:41.841246 x6e3-j713-fedora kernel: audit: type=1334 audit(1793153141.834:412): prog-id=133 op=LOAD
+Oct 28 05:05:41.841305 x6e3-j713-fedora kernel: audit: type=1334 audit(1793153141.834:413): prog-id=134 op=LOAD
+Oct 28 05:05:41.842248 x6e3-j713-fedora kernel: audit: type=1334 audit(1793153141.834:414): prog-id=135 op=LOAD
+Oct 28 05:05:41.842285 x6e3-j713-fedora kernel: audit: type=1130 audit(1793153141.838:415): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-coredump@1-4097-6585_556-0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Oct 28 05:05:48.182165 x6e3-j713-fedora kernel: audit: type=1131 audit(1793153148.174:416): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-coredump@1-4097-6585_556-0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Oct 28 05:05:48.249247 x6e3-j713-fedora kernel: audit: type=1334 audit(1793153148.242:417): prog-id=135 op=UNLOAD
+Oct 28 05:05:48.249307 x6e3-j713-fedora kernel: audit: type=1334 audit(1793153148.242:418): prog-id=134 op=UNLOAD
+Oct 28 05:05:48.249347 x6e3-j713-fedora kernel: audit: type=1334 audit(1793153148.242:419): prog-id=133 op=UNLOAD
+Oct 28 05:05:49.649250 x6e3-j713-fedora kernel: nvme-apple 4c5cc0000.nvme: RTKit: syslog message: slc_wl_manager.c:267: New coldest block 1494 PEC 1608 flow 1 hottestPEC 1622
