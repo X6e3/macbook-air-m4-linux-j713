@@ -122,8 +122,8 @@ links each observation to the retained kernel exports and the corresponding sour
 | Record | DAPF readback | MTP result |
 | --- | --- | --- |
 | [A1](evidence/02-input/logs/a1-kernel.txt) | 0/9 before programming | Endpoint-map timeout; wake -62; IRQ count 100005 at return |
-| [B1](evidence/02-input/logs/b1-kernel.txt) and [repeat](evidence/02-input/logs/b1-repeat-kernel.txt) | 8/9 after programming | Protocol v12, then IOP power ACK timeout; wake -62 |
-| [B2](evidence/02-input/logs/b2-kernel.txt) | 8/9 after programming | Wake 0, MTP Says Hello, keyboard ready; trackpad firmware still missing in this boot |
+| [B1](evidence/02-input/logs/b1-kernel.txt) and [repeat](evidence/02-input/logs/b1-repeat-kernel.txt) | 8/9 exact after programming; rule 7 differs only in end's fixed low bits | Protocol v12, then IOP power ACK timeout; wake -62 |
+| [B2](evidence/02-input/logs/b2-kernel.txt) | 8/9 exact after programming; rule 7 differs only in end's fixed low bits | Wake 0, MTP Says Hello, keyboard ready; trackpad firmware still missing in this boot |
 
 These are complete archived kernel-export copies with identity substitutions, not newly run tests.
 The [manifest](evidence/02-input/manifest.json) records original/published hashes and the redactions.

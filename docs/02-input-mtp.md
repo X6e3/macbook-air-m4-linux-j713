@@ -45,10 +45,19 @@ Same image, [one change](https://github.com/X6e3/j713-linux/commit/9f127e19ddbe2
 0x394810000 before RUN, in the order m1n1 uses for t8110a.
 
 [8 of 9](../evidence/02-input/logs/b1-kernel.txt#L404) read back exactly. Rule 7's end came back as
-0x390eee003 instead of 0x390eee000; I do not know what the low bits mean. The interrupt storm was gone.
+0x390eee003 instead of 0x390eee000. The interrupt storm was gone.
 MTP said hello for the first time and agreed on [RTKit protocol 12](../evidence/02-input/logs/b1-kernel.txt#L407).
 Then it [timed out waiting for the IOP power ACK](../evidence/02-input/logs/b1-kernel.txt#L414), and wake
 returned -62 again. A [second boot](../evidence/02-input/logs/b1-repeat-kernel.txt) did the same.
+
+When I first wrote this I did not know what rule 7's low bits meant. On 10 November I looked at them in the
+rules as read before programming: nine rules in each of four boots
+([A1](../evidence/02-input/logs/a1-kernel.txt#L375), [B1](../evidence/02-input/logs/b1-kernel.txt#L374),
+[its repeat](../evidence/02-input/logs/b1-repeat-kernel.txt#L374), [B2](../evidence/02-input/logs/b2-kernel.txt#L374)).
+Start and end mostly differed from one boot to the next, but in all 36 readings the two lowest bits of start
+were 0 and those of end were 1. The DAPF seems to keep addresses in 4-byte words with the end included, so it shows the last byte of
+the word, and 0x390eee000 and 0x390eee003 name the same word. Rule 7 is then very likely the rule the ADT gives:
+all nine rules were in place, eight of them bit for bit.
 
 ## B2: remove one more thing
 

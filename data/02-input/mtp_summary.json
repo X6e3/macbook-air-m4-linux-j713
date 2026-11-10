@@ -66,9 +66,16 @@
           }
         ]
       },
+      "dapf_before_low_bits": {
+        "rules": 9,
+        "first_line": 375,
+        "start_low_bits_00": 9,
+        "end_low_bits_11": 9
+      },
       "dapf_after": null,
       "rule7_end_written": null,
       "rule7_end_readback": null,
+      "rule7_end_same_4_byte_word": null,
       "wake": {
         "return": -62,
         "trace_time_us": 1152241,
@@ -157,6 +164,12 @@
           }
         ]
       },
+      "dapf_before_low_bits": {
+        "rules": 9,
+        "first_line": 374,
+        "start_low_bits_00": 9,
+        "end_low_bits_11": 9
+      },
       "dapf_after": {
         "matches": 8,
         "entries": 9,
@@ -221,6 +234,7 @@
           "0x390eee003"
         ]
       },
+      "rule7_end_same_4_byte_word": true,
       "wake": {
         "return": -62,
         "trace_time_us": 1152281,
@@ -314,6 +328,12 @@
           }
         ]
       },
+      "dapf_before_low_bits": {
+        "rules": 9,
+        "first_line": 374,
+        "start_low_bits_00": 9,
+        "end_low_bits_11": 9
+      },
       "dapf_after": {
         "matches": 8,
         "entries": 9,
@@ -378,6 +398,7 @@
           "0x390eee003"
         ]
       },
+      "rule7_end_same_4_byte_word": true,
       "wake": {
         "return": -62,
         "trace_time_us": 1152283,
@@ -471,6 +492,12 @@
           }
         ]
       },
+      "dapf_before_low_bits": {
+        "rules": 9,
+        "first_line": 374,
+        "start_low_bits_00": 9,
+        "end_low_bits_11": 9
+      },
       "dapf_after": {
         "matches": 8,
         "entries": 9,
@@ -535,6 +562,7 @@
           "0x390eee003"
         ]
       },
+      "rule7_end_same_4_byte_word": true,
       "wake": {
         "return": 0,
         "trace_time_us": 120974,
@@ -570,6 +598,11 @@
       "multitouch_ready": null
     }
   ],
+  "dapf_unprogrammed_low_bits": {
+    "rules": 36,
+    "start_low_bits_00": 36,
+    "end_low_bits_11": 36
+  },
   "wide1": [
     {
       "id": "wide1-1",

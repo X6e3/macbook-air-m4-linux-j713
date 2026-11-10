@@ -70,17 +70,36 @@ def summarize(entry):
             raise ValueError(f"{entry['id']}: DAPF result disagrees with its rule lines")
         return {'matches': count, 'entries': 9, 'result_line': result['line'], 'rules': found}
 
+    def low_bits(tag):
+        """The two lowest bits of start and end in each rule as read before anything was written."""
+        found = []
+        for n, text in enumerate(lines, 1):
+            match = re.search(re.escape(tag) + r' dapf\[(\d+)\] .*start=(0x[0-9a-f]+) end=(0x[0-9a-f]+)', text) \
+                if MTP in text else None
+            if match:
+                found.append({'line': n, 'start': int(match[2], 16) & 3, 'end': int(match[3], 16) & 3})
+        if len(found) != 9:
+            raise ValueError(f"{entry['id']}: expected nine unprogrammed rules, found {len(found)}")
+        return {'rules': len(found), 'first_line': found[0]['line'],
+                'start_low_bits_00': sum(x['start'] == 0 for x in found),
+                'end_low_bits_11': sum(x['end'] == 3 for x in found)}
+
     before = rules('A1', 'A1:') if entry['id'] == 'a1' else rules('B1: pre-write', 'B1: pre-write')
+    before_low_bits = low_bits('A1' if entry['id'] == 'a1' else 'B1: pre-write')
     after = rules('B1: post-write', 'B1: post-write')
     written_end = find(r'write rule\[7\].* end=(0x[0-9a-f]+)', MTP)
     read_end = find(r'post-write dapf\[7\].* end=(0x[0-9a-f]+)', MTP)
+    same_word = None
+    if written_end and read_end:
+        same_word = int(written_end['groups'][0], 16) >> 2 == int(read_end['groups'][0], 16) >> 2
     firmware = find(r'Direct firmware load for apple/tpmtfw-j713.bin failed with error (-?\d+)', HID)
     return {
         'id': entry['id'], 'file': entry['file'], 'line_count': len(lines),
         'kernel': {'release': release['groups'][0], 'line': release['line']},
         'variant': {'value': variant['groups'][0], 'line': variant['line']},
-        'dapf_before': before, 'dapf_after': after,
+        'dapf_before': before, 'dapf_before_low_bits': before_low_bits, 'dapf_after': after,
         'rule7_end_written': written_end, 'rule7_end_readback': read_end,
+        'rule7_end_same_4_byte_word': same_word,
         'wake': {'return': int(wake['groups'][0]), 'trace_time_us': int(wake['groups'][1]),
                  'dart_irq_count': int(wake['groups'][2]), 'line': wake['line']},
         'mtp_protocol': protocol, 'timeout': timeout,
@@ -133,14 +152,20 @@ def main():
     manifest = json.loads((EV / 'manifest.json').read_text())
     if [x['id'] for x in manifest['logs']] != ['a1', 'b1', 'b1-repeat', 'b2']:
         raise ValueError('Unexpected experiment selection/order')
+    logs = [summarize(x) for x in manifest['logs']]
+    low = [x['dapf_before_low_bits'] for x in logs]
     result = {'schema': 1, 'scope': 'Archived MTP startup observations; not a new hardware test',
-              'logs': [summarize(x) for x in manifest['logs']],
+              'logs': logs,
+              'dapf_unprogrammed_low_bits': {
+                  'rules': sum(x['rules'] for x in low),
+                  'start_low_bits_00': sum(x['start_low_bits_00'] for x in low),
+                  'end_low_bits_11': sum(x['end_low_bits_11'] for x in low)},
               'wide1': [survey(x) for x in manifest['survey_logs']]}
     if args.check:
         if json.loads(OUT.read_text()) != result:
             raise ValueError('Saved MTP summary is stale; run make mtp')
         n = len(manifest['logs']) + len(manifest['survey_logs'])
-        print(f'MTP: {n} log hashes, lineage, DAPF readback counts, wide1 timing and saved summary match')
+        print(f'MTP: {n} log hashes, lineage, DAPF readback counts and low bits, wide1 timing and saved summary match')
     else:
         OUT.parent.mkdir(parents=True, exist_ok=True)
         OUT.write_text(json.dumps(result, indent=2) + '\n')
