@@ -18,4 +18,4 @@
   - `all-events.log`: `98afe31dac60c84aeb40db7f505153415f0cfbd06079f0ed505c24be654be93f`
 - The excerpt leaves out the two kernel lines at 04:12:50 that name the application the out-of-memory killer
   stopped, with that application's other messages. It was not Xonotic, KWin or part of the desktop shell.
-- Times are Fedora's local time (UTC+3). Sizes in the journal are in kB and converted with 1 GiB = 1,048,576 kB.
+- Times are the machine's local time, as the journal printed them. Sizes in the journal are in kB and converted with 1 GiB = 1,048,576 kB.
