@@ -12,9 +12,11 @@ too. On public servers the regulars beat me soundly.
 ## Software rendering first, then the GPU
 
 The first launches, between 03:01 and 03:08, drew on the CPU: the game logs name `llvmpipe` as the renderer, once
-through zink. A setting I had used forced software rendering. With it switched off the game ran on the GPU, and the
-log that ends at 03:55 names `Apple M4 (G16G B1)`. On llvmpipe I saw 5–28 FPS; on the GPU, at 1920×1200 full screen,
-the frame rate stayed at about 250–410 FPS. Neither figure was logged.
+through zink. In the first weeks, when the desktop still ran on llvmpipe ([section 4](04-gpu.md)), I had set Mesa to
+render in software for safety. Part of that setting was still in place, and the game picked it up. Once I flipped
+that one value the game ran on the GPU, and the log that ends at 03:55 names `Apple M4 (G16G B1)`. On llvmpipe I saw
+5–28 FPS; on the GPU, at 1920×1200 full screen, the frame rate stayed at about 250–410 FPS. Neither figure was
+logged.
 
 The game logs have two maps from those hours ([game logs](../evidence/10-xonotic/game/)): boil against five bots on
 llvmpipe, and warfare against five bots on the GPU, where the log has me drawing first blood and making a triple
