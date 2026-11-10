@@ -67,10 +67,18 @@ Each run started with a side check that was not blind: a voice said "Front Left"
 where I heard it. "Front Left" came from the right. By ear I was not sure at first; I caught myself doubting what I
 heard.
 
-I tried a phone next ([phone recordings](../evidence/09-measurements/sides/phone/)). With an app that logs the sound
-level, I held the phone 55 mm from one edge, the width of three fingers, which I checked with calipers, played the
-left noise and the right noise, then did the same at the other edge. The phone did not separate the sides: its
-levels are uncalibrated, and where the two noises can be told apart in the recordings they differ by 0.4 to 4.6 dB.
+I tried a phone next, with an app that logs the sound level ([recordings](../evidence/09-measurements/sides/phone/),
+[photos](../evidence/09-measurements/sides/phone/photos/)). I laid it flat on the desk at the left corner, level with
+the hinge and 55 mm from the edge, the width of three fingers, which I checked with calipers. I played the left noise
+and then the right noise, and did the same at the right corner. I did it first on macOS, as a reference, and there
+the phone told the sides apart: at the left corner the left noise was 2.8 dB louder than the right one, at the right corner the
+right noise 3.6 dB louder than the left one. Then on O12b, with the phone at the same two places, each recording holds
+one clear burst, the left noise, at almost the same level at both corners (−57.7 and −58.1 dB); the right noise never
+rose 4 dB above the room. On Linux the phone could not say where the sound came from. The levels are uncalibrated, so
+only differences within one recording mean anything.
+
+(Corrected on 10 November. The first version of this paragraph mixed the macOS reference with the Linux recordings
+and gave 0.4 to 4.6 dB: one of the macOS exports holds only its last segment, and I had split it by the wrong times.)
 
 The amplifiers were not the cause. Each reads back the slot it was given: the left woofer's amplifier (`0x38`)
 slot 0, the right one's (`0x3b`) slot 1 ([register dump](../evidence/09-measurements/sides/regs-20261027-191026.txt)).
@@ -137,7 +145,7 @@ check` verifies it.
 - Stride: [complete run](../evidence/09-measurements/stride/), [earlier runs](../evidence/09-measurements/stride/earlier/).
 - Sides: [register dump](../evidence/09-measurements/sides/regs-20261027-191026.txt),
   [two-burst test](../evidence/09-measurements/sides/lr-blind/), [one-burst test](../evidence/09-measurements/sides/lr-one/),
-  [phone recordings](../evidence/09-measurements/sides/phone/).
+  [phone recordings](../evidence/09-measurements/sides/phone/) and [photos](../evidence/09-measurements/sides/phone/photos/).
 - Dose: [run](../evidence/09-measurements/dose/).
 - [Source notes](../evidence/09-measurements/source-notes.md), [manifest](../evidence/09-measurements/manifest.json),
   [summary](../data/09-measurements/measurements_summary.json).

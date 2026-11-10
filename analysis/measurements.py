@@ -124,22 +124,59 @@ def sides():
             'one_burst_answers_by_channel': per, 'faults': 0}
 
 
+PHONE_BIN = 0.5    # s: burst detection works on half-second medians
+PHONE_RISE = 4.0   # dB above the room that counts as a burst
+
+
+def phone_bursts(samples):
+    """The loud stretches of one recording: half-second medians at least PHONE_RISE above the room (the median
+    of the quietest third of the bins), joined across one quiet bin, at least 1.5 s long."""
+    bins = {}
+    for t, db in samples:
+        bins.setdefault(int(t / PHONE_BIN), []).append(db)
+    med = {k: statistics.median(v) for k, v in bins.items()}
+    room = statistics.median(sorted(med.values())[:max(1, len(med) // 3)])
+    runs = []
+    for k in sorted(k for k in med if med[k] >= room + PHONE_RISE):
+        if runs and k - runs[-1][-1] <= 2:
+            runs[-1].append(k)
+        else:
+            runs.append([k])
+    bursts = []
+    for r in runs:
+        lo, hi = r[0] * PHONE_BIN, (r[-1] + 1) * PHONE_BIN
+        if hi - lo >= 1.5:
+            bursts.append({'from_s': lo, 'to_s': hi,
+                           'median_dB': round(statistics.median(db for t, db in samples if lo <= t < hi), 1)})
+    return round(room, 1), bursts
+
+
 def phone():
+    """Each export's samples, the stretch of the recording they cover, and the noise bursts in them. The app
+    exports at most about the last 20 s: the 18:07 export holds only its last segment."""
+    meta = {l.split(',')[0]: dict(zip(('system', 'phone', 'played'), l.split(',')[1:]))
+            for l in read('sides/phone/recordings.csv').splitlines()[1:] if l}
     out = {}
     for amp in sorted(DIR.glob('sides/phone/*-amplitudes.csv')):
         stem = amp.name[:-len('-amplitudes.csv')]
-        a = [tuple(map(float, l.split(','))) for l in amp.read_text().splitlines()[1:] if l]
+        rows = [tuple(map(float, l.split(','))) for l in amp.read_text().splitlines()[1:] if l]
+        a = [(t, db) for t, db in rows if not math.isnan(db)]
         ev = [l.split(',') for l in (DIR / f'sides/phone/{stem}-events.csv').read_text().splitlines()[1:] if l]
         starts = [float(e[1]) for e in ev if e[0] == 'START']
         stops = [float(e[1]) for e in ev if e[0] == 'PAUSE']
-        segs = []
-        for s, e in zip(starts, stops):
-            v = [db for t, db in a if s <= t <= e]
-            if v:
-                segs.append({'from_s': round(s, 1), 'to_s': round(e, 1), 'median_dB': round(statistics.median(v), 1),
-                             'max_dB': round(max(v), 1)})
-        out[stem] = segs
-    return {'recordings': out, 'scope': 'phone microphone, calibration offset 0 dB: relative levels, not SPL'}
+        recorded = sum(e - s for s, e in zip(starts, stops))
+        span = rows[-1][0] - rows[0][0]
+        if abs(span - recorded) < 1:
+            holds = 'the whole recording'
+        else:
+            assert abs(span - (stops[-1] - starts[-1])) < 1, stem
+            holds = 'its last segment only'
+        room, bursts = phone_bursts(a)
+        out[stem] = {**meta[stem], 'recorded_s': round(recorded, 1), 'samples_s': round(span, 1),
+                     'samples_hold': holds, 'room_dB': room, 'bursts': bursts, 'last_level_dB': round(a[-1][1], 1)}
+    assert set(out) == set(meta), sorted(set(out) ^ set(meta))
+    return {'recordings': out, 'burst_rule': f'{PHONE_BIN} s medians >= room + {PHONE_RISE} dB, >= 1.5 s',
+            'scope': 'phone microphone, calibration offset 0 dB: relative levels, not SPL'}
 
 
 def dose():

@@ -1,5 +1,5 @@
 {
-  "evidence_files": 205,
+  "evidence_files": 208,
   "map": {
     "chunks": 35,
     "second_read_identical": true,
@@ -97,51 +97,86 @@
   },
   "phone": {
     "recordings": {
-      "phone-1-1805": [
-        {
-          "from_s": 0.0,
-          "to_s": 11.8,
-          "median_dB": -56.2,
-          "max_dB": -51.6
-        },
-        {
-          "from_s": 11.8,
-          "to_s": 20.7,
-          "median_dB": -55.8,
-          "max_dB": -54.4
-        }
-      ],
-      "phone-2-1807": [
-        {
-          "from_s": 0.0,
-          "to_s": 11.8,
-          "median_dB": -58.3,
-          "max_dB": -53.2
-        },
-        {
-          "from_s": 11.8,
-          "to_s": 20.7,
-          "median_dB": -53.7,
-          "max_dB": -53.1
-        }
-      ],
-      "phone-3-1828-left": [
-        {
-          "from_s": 0.0,
-          "to_s": 18.0,
-          "median_dB": -60.8,
-          "max_dB": -55.7
-        }
-      ],
-      "phone-4-1829-right": [
-        {
-          "from_s": 0.0,
-          "to_s": 17.4,
-          "median_dB": -60.6,
-          "max_dB": -55.6
-        }
-      ]
+      "phone-1-1805": {
+        "system": "macOS 27 (afplay)",
+        "phone": "left corner",
+        "played": "noise-left then noise-right",
+        "recorded_s": 20.7,
+        "samples_s": 20.5,
+        "samples_hold": "the whole recording",
+        "room_dB": -60.0,
+        "bursts": [
+          {
+            "from_s": 3.5,
+            "to_s": 9.0,
+            "median_dB": -52.6
+          },
+          {
+            "from_s": 13.5,
+            "to_s": 17.5,
+            "median_dB": -55.4
+          }
+        ],
+        "last_level_dB": -61.3
+      },
+      "phone-2-1807": {
+        "system": "macOS 27 (afplay)",
+        "phone": "right corner",
+        "played": "noise-left then noise-right",
+        "recorded_s": 40.3,
+        "samples_s": 19.5,
+        "samples_hold": "its last segment only",
+        "room_dB": -62.1,
+        "bursts": [
+          {
+            "from_s": 3.0,
+            "to_s": 7.0,
+            "median_dB": -57.2
+          },
+          {
+            "from_s": 10.5,
+            "to_s": 16.0,
+            "median_dB": -53.6
+          }
+        ],
+        "last_level_dB": -60.3
+      },
+      "phone-3-1828-left": {
+        "system": "O12b (pw-play)",
+        "phone": "left corner",
+        "played": "noise-left then noise-right",
+        "recorded_s": 18.0,
+        "samples_s": 17.9,
+        "samples_hold": "the whole recording",
+        "room_dB": -62.8,
+        "bursts": [
+          {
+            "from_s": 1.5,
+            "to_s": 7.0,
+            "median_dB": -57.7
+          }
+        ],
+        "last_level_dB": -61.9
+      },
+      "phone-4-1829-right": {
+        "system": "O12b (pw-play)",
+        "phone": "right corner",
+        "played": "noise-left then noise-right",
+        "recorded_s": 17.4,
+        "samples_s": 17.3,
+        "samples_hold": "the whole recording",
+        "room_dB": -62.5,
+        "bursts": [
+          {
+            "from_s": 4.0,
+            "to_s": 6.0,
+            "median_dB": -58.1
+          }
+        ],
+        "last_level_dB": -62.7
+      }
     },
+    "burst_rule": "0.5 s medians >= room + 4.0 dB, >= 1.5 s",
     "scope": "phone microphone, calibration offset 0 dB: relative levels, not SPL"
   },
   "dose": {

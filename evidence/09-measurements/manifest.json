@@ -2266,9 +2266,29 @@
     {
       "file": "source-notes.md",
       "kind": "engineering note",
-      "published_sha256": "fbd027f98d81abd856a6f3589bb23667e7c2c8eddd995601e8dc63cd2a77a722",
-      "published_lines": 30,
+      "published_sha256": "a31d8f121e33eb19de8384a8e209a86588bfeef2a01dc71e66a119f921597044",
+      "published_lines": 38,
       "prepared": "2026-11-10",
+      "redactions": []
+    },
+    {
+      "file": "sides/phone/photos/macos-1808-phone-right.jpeg",
+      "kind": "photo; the Exif block (pixel size only) and an empty Photoshop block removed, image data unchanged",
+      "source_label": "Image 2.jpeg",
+      "archive_path": "phone photo, copied to the Mac (Desktop)",
+      "original_sha256": "f0fb2635cd7d522379e1b38ad3ced03d8e3c51d8d41f59fc02d395c4eb7141ae",
+      "published_sha256": "58dc1bc257b9afd348fd0829c32892b6350c71d26d7f62ddc048f69b073698ec",
+      "published_lines": 4889,
+      "redactions": []
+    },
+    {
+      "file": "sides/phone/photos/macos-1808-phone-left.jpeg",
+      "kind": "photo; the Exif block (pixel size only) and an empty Photoshop block removed, image data unchanged",
+      "source_label": "Image.jpeg",
+      "archive_path": "phone photo, copied to the Mac (Desktop)",
+      "original_sha256": "931bcf4b0fac5b28b7d4cfbad4f672a51e75b047693c7c836778f6aaeaf4e921",
+      "published_sha256": "87b494ef25aec689e107973d4d806dd504fe03b3a7f2530b4309be82ab446ced",
+      "published_lines": 3942,
       "redactions": []
     }
   ]

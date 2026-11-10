@@ -20,9 +20,17 @@ The `x6e3.v` tag in each `system.txt` names the image that ran.
   my reviews of them (`verdict-review.txt`, written on the Mac the same evening; the device's `verdict.txt` is kept
   as it was written).
 - `sides/phone/`: four recordings from the Audio Amplitude app on an iPhone (Apple iPhone16,2, iOS 27.2,
-  app 1.2.1), 18:05–18:29, before the LR1 fix. Each export is a spreadsheet; its sound-level sheet and its start and
-  pause events are published as CSV with the values unchanged. The app's calibration offset was 0 dB, so the levels
-  are relative. The device sheet holds no identifier beyond the model and the iOS version.
+  app 1.2.1), 18:04–18:29. The first two are the reference on macOS (played with `afplay`), the last two are O12b
+  before the LR1 fix (played with `pw-play`); `recordings.csv` says where the phone lay and what was played.
+  `phone-1-1805` and `phone-2-1807` are two exports of one recording. The app exports about the last 20 s, so the
+  18:05 export holds the left-corner part and the 18:07 export only its last segment, the right-corner part. Each
+  export is a spreadsheet; its sound-level sheet and its start and pause events are published as CSV with the values
+  unchanged. The app's calibration offset was 0 dB, so the levels are relative. The device sheet holds no identifier
+  beyond the model and the iOS version.
+- `sides/phone/photos/`: two photos of the setup, taken with the same phone on macOS right after the reference:
+  the phone at the right corner, then at the left one. The app still shows the last level of the 18:07 export,
+  −60.3 dB. The files carry no camera, time or location data; 18:08 is when they were created on the Mac, and the
+  phone's clock in them reads 18:07 and 18:08.
 - `dose/`: `o-gpu.sh dose`, 01:36, an hour under `gl-burn` with the thermal zone off. `phases.txt` lists each
   phase's start and setting, `pauses.txt` the seconds the load stood still, `seed.txt` the order's seed.
 
