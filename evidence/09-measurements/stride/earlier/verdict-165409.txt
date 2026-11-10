@@ -1,0 +1,17 @@
+side check: "Front Left" heard right, "Front Right" heard -
+trial kind  stride units  channel 1 (left amps)  channel 2 (right amps)  faults
+    1    A   0x100     0  heard                  silent                  0
+    2    B   0x400     0  silent                 silent                  0
+    3    A   0x100     0  silent                 silent                  0
+    4    B  0xc000     0  no speaker card  
+    5    A   0x100     0  silent                 silent                  0
+    6    C   0x100     1  no speaker card  
+    7    A   0x100     0  silent                 silent                  0
+    8    B   0x200     0  silent                 silent                  0
+    9    A   0x100     0  silent                 silent                  0
+   10    B    0x80     0  silent                 silent                  0
+   11    A   0x100     0  silent                 silent                  0
+A (0x100): both channels heard in every trial, no fault: NO
+B: no other stride gets both channels heard without a fault: yes
+C (A with one unit): channel 2 silent (a fault on the right amplifiers is expected): NO
+NOT PASSED

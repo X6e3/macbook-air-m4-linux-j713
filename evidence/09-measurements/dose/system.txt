@@ -1,0 +1,20 @@
+Linux [HOST] 7.1.13-x6e3-o12b #1 SMP PREEMPT Tue Oct 27 00:39:13 +03 2026 aarch64 GNU/Linux
+idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=6boot-o12b-root2 x6e3.k=16158df0 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target cpuidle_apple.j713_deepwfi=1 x6e3.esplog snd_t8132_speaker.ceiling_dvc=60
+hwmon: /sys/class/hwmon/hwmon2 (macsmc_hwmon)
+cooling: /sys/class/thermal/cooling_device0 zone: /sys/class/thermal/thermal_zone1 mode: enabled
+GPU OPP tables (name, entries): none found
+live_84 before: 23533
+live_88 before: 1000
+live_8c before: 1000
+live_90 before: 0
+live_94 before: 0
+live_98 before: 1000
+region_c_changed before: 0 first: 4294967295
+live_84 after: 23533
+live_88 after: 1000
+live_8c after: 1000
+live_90 after: 0
+live_94 after: 0
+live_98 after: 1000
+region_c_changed after: 0 first: 4294967295
+zone mode after: enabled

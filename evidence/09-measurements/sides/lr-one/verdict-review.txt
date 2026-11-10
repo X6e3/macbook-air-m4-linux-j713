@@ -1,0 +1,11 @@
+Review of verdict.txt (written on the Mac, 27 Oct; verdict.txt is kept as the device wrote it)
+
+Kernel LR1 (amp 0x38 on slot 1, 0x3b on slot 0; system.txt confirms CFG3 0x11 / 0x00).
+10 of 12 trials normal: channel 1 at the Esc end 5 of 6, channel 2 at the Touch ID end 5 of 6. The two others
+(trial 9: channel 1, no rebind; trial 11: channel 2, rebind) show no pattern by channel, rebind or position.
+P(>= 10 of 12 | guessing) = 0.019. No fault, no kernel message, no bind error.
+
+Before LR1 the same path played channel 1 at the Touch ID end (ab side check; lr-blind leaning swapped), so LR1
+flipped the mapping as intended. The strict rule (>= 11 of 12) says MIXED: by ear it cannot tell listening errors
+from an occasional start that lands the other way round. That needs a sensor (phone at one corner, or the internal
+microphone once it works), not more listening.

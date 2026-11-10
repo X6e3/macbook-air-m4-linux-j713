@@ -1,0 +1,6 @@
+[   67.571548] O1 trial 6
+[   68.074132] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   68.074384] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   68.074663] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0xc000
+[   68.074768] apple-mca 393600000.i2s: O1 test: 1 units at stride 0xc000
+[   68.074925] j773g-speaker speaker-audio: ASoC: CPU DAI mca-i2s-1 not registered

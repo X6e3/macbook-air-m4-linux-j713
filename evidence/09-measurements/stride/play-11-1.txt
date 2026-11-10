@@ -1,0 +1,1 @@
+Playing raw data '/mnt/x63r/j713-diag/o12b/result-o-mca-ab-20261027-171835/sound-1.raw' : Signed 24 bit Little Endian, Rate 48000 Hz, Stereo

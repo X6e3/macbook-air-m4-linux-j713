@@ -1,0 +1,4 @@
+renderer: Apple M4 (G16G B1)
+version: OpenGL ES 3.0 Mesa 26.3.0-devel
+load: 2560x1600, 1024 FMA x4 per pixel, for 1 s
+done: 60 draws in 1.1 s, GL error 0x0

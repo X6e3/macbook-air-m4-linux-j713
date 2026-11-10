@@ -1,0 +1,6 @@
+[   92.242494] O1 trial 11
+[   92.744565] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   92.744813] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   92.745117] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   92.745246] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   92.788658] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB

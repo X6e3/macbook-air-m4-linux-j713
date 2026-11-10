@@ -30,7 +30,8 @@ For the first-night evidence, start with the [boot comparison](data/01-first-boo
 and [original boot logs](evidence/01-first-boot/logs/). The [A1/B1/B2 MTP startup records](docs/02-input-mtp.md)
 follow in section 2, with the [trackpad firmware and HID investigation](docs/02-input-trackpad.md).
 The [GPU](docs/04-gpu.md), [native display](docs/05-display.md), [stereo woofers](docs/06-audio.md) and
-[CPU idle](docs/07-idle.md) follow in sections 4–7, and the [reboot stalls](docs/08-reboot.md) in section 8.
+[CPU idle](docs/07-idle.md) follow in sections 4–7, the [reboot stalls](docs/08-reboot.md) in section 8, and the
+[27 October measurements](docs/09-measurements.md) of the MCA layout, the speaker sides and the GPU limit in section 9.
 
 The [Wi-Fi account](docs/03-wifi.md) follows in section 3: PCIe/configuration, J713 firmware identity,
 the early-firmware layer and a real connection from Fedora.
@@ -202,6 +203,16 @@ rebuild of the same first stage with on-screen tracing then went through 27 rebo
 open: the control without the trace comes next. The [reboot account](docs/08-reboot.md) lists every suspect, the
 test that ruled it out and what is still unknown.
 
+## 9. Measuring the layout, the sides and the GPU limit (27 October 2026)
+
+By 26 October two parts of the work rested on values I had not fully measured on this machine, so on 27 October I
+tested them on J713 itself. A dump of the MCA's register window shows six blocks `0x100` apart, and in a blind test
+only `0x100` played both woofers without an amplifier fault. The listening tests also showed that left and right
+were crossed. A kernel that gives each amplifier the other slot fixed it, and a one-burst blind test then put each
+channel on its own side in 10 of 12 trials. An hour-long dose test found that three `region_c` words act as one GPU
+limit, from 1.75 W at 250 to no limit from 900 up. The [measurement account](docs/09-measurements.md) has the trials,
+the failed runs and what is still open.
+
 ## How I worked
 
 I use this MacBook Air as my everyday machine for embedded and kernel work. Some of the tools that work needs have no
@@ -235,15 +246,16 @@ docs/       current support, known limits and the scope of the two repositories
 
 `make fig01` rebuilds Fig. 1 from `evidence/`. `make check` runs before every commit: it refuses
 device identifiers and secrets, checks that the first-boot logs match the original bytes, and verifies the
-published hashes and derived summaries of sections 1–8. `make later-stages` recomputes the section 4–7
-results from their evidence, `make reboot` the section 8 tallies.
+published hashes and derived summaries of sections 1–9. `make later-stages` recomputes the section 4–7
+results from their evidence, `make reboot` the section 8 tallies and `make measurements` the section 9 results.
 Boot images are not published: later initramfs layers contain vendor firmware. Their part hashes are
 in `evidence/01-first-boot/image-parts.csv`.
 
 ## License
 
 - Code (`analysis/`, `figures/*.py`, `tools/`, `Makefile`, `evidence/01-first-boot/init-busybox-v6`,
-  `evidence/04-gpu/stress-load.c`, `evidence/08-reboot/*.sh`): MIT, see `LICENSE`.
+  `evidence/04-gpu/stress-load.c`, `evidence/08-reboot/*.sh`, the scripts and `gl-burn.c` in `evidence/09-measurements/`):
+  MIT, see `LICENSE`.
 - Text, data, figures and photos (`README.md`, `docs/`, `data/`, `figures/out/`, `evidence/01-first-boot/photos/`,
   `evidence/01-first-boot/image-parts.csv`): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - The DTBs in `evidence/01-first-boot/dtb/` are compiled from the GravityLinux and Asahi Linux device-tree sources for T8132
@@ -251,7 +263,7 @@ in `evidence/01-first-boot/image-parts.csv`.
 - The boot logs in `evidence/01-first-boot/logs/` are the machine's console output, published unchanged as evidence.
 - The section 2 logs are identity-redacted evidence copies with original/published hashes in their manifest. The source
   excerpt in `evidence/02-input/bootloader-context.txt` retains its original MIT license.
-- The section 4–8 machine-output files are evidence copies. Their manifests distinguish complete copies,
+- The section 4–9 machine-output files are evidence copies. Their manifests distinguish complete copies,
   selected lines or columns, and identity substitutions. The observation and source notes are written records
   under CC BY 4.0; photograph transcriptions do not include the original private images.
 

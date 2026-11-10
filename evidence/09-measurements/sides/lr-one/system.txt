@@ -1,0 +1,5 @@
+7.1.13-x6e3-lr1
+x6e3.v=6boot-lr1-root2
+ceiling_dvc=20
+0-0038: 000a: 1a 000c: 11 
+0-003b: 000a: 1a 000c: 00 

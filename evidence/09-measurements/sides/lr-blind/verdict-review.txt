@@ -1,0 +1,17 @@
+Review of verdict.txt (written on the Mac, 27 Oct; verdict.txt is kept as the device wrote it)
+
+The verdict rule only called the answers inconclusive when normal/swapped followed the burst order in every trial.
+It did not catch a partial answer habit, and that is what the answers show:
+
+  answer pair "r l" (first burst right, second left): 8 of 10 trials
+  answer pair "l r":                                   2 of 10 trials (trials 3 and 8, both order 21)
+
+  order 12 (channel 1 first): r l in 5 of 5 -> swapped 5 of 5
+  order 21 (channel 2 first): r l in 3 of 5 -> normal; l r in 2 of 5 -> swapped
+
+Every "normal" trial is an "r l" answer, the habitual pair. Both trials that broke the habit were order 21 and both
+read swapped. Fixed swap plus the habit explains all 10 trials; no swap plus the habit leaves trials 3 and 8
+unexplained; a start-dependent mapping is not needed to explain any trial. No fault or kernel message in any trial.
+
+Reviewed verdict: INCONCLUSIVE between FIXED SWAP and START-DEPENDENT, leaning FIXED SWAP. The two-burst design
+lets an order habit pass as a channel effect. Next: side/lr-one.sh, one burst per start, so no order exists.

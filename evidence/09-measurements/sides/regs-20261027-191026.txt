@@ -1,0 +1,130 @@
+Tue Oct 27 19:10:26 +03 2026
+7.1.13-x6e3-o12b
+x6e3.v=6boot-o12b-root2
+
+== sound cards
+ 0 [T8132Speaker   ]: T8132Speaker - T8132Speaker
+                      T8132Speaker
+
+== card 0: ASI1 controls
+numid=10,iface=MIXER,name='Left Woofer ASI1 Sel'
+  ; type=ENUMERATED,access=r-------,values=1,items=4
+  ; Item #0 'I2C offset'
+  ; Item #1 'Left'
+  ; Item #2 'Right'
+  ; Item #3 'LeftRightDiv2'
+  : values=1
+numid=2,iface=MIXER,name='Left Woofer Amp Gain Volume'
+  ; type=INTEGER,access=r----R--,values=1,min=0,max=20,step=0
+--
+numid=13,iface=MIXER,name='Right Woofer ASI1 Sel'
+  ; type=ENUMERATED,access=r-------,values=1,items=4
+  ; Item #0 'I2C offset'
+  ; Item #1 'Left'
+  ; Item #2 'Right'
+  ; Item #3 'LeftRightDiv2'
+  : values=1
+numid=6,iface=MIXER,name='Right Woofer Amp Gain Volume'
+  ; type=INTEGER,access=r----R--,values=1,min=0,max=20,step=0
+
+== 0-0038  (CFG0 08=08 CFG1 09=02 CFG2 0a=1a CFG3 0c=00)
+   ASI1 source : Left
+   left slot   : 0
+   right slot  : 0
+   I2C offset  : 0
+
+== 0-003b  (CFG0 08=08 CFG1 09=02 CFG2 0a=1a CFG3 0c=11)
+   ASI1 source : Left
+   left slot   : 1
+   right slot  : 1
+   I2C offset  : 3
+
+== device tree: speaker amplifiers
+amplifier@38: prefix 'Left Woofer'
+amplifier@3b: prefix 'Right Woofer'
+amplifier@38: prefix 'Left Woofer'
+amplifier@3b: prefix 'Right Woofer'
+
+== full register dumps
+-- /sys/kernel/debug/regmap/0-0038/registers
+0000: ff
+0001: 00
+0002: 9a
+0003: 00
+0004: 21
+0005: 41
+0006: 00
+0007: 20
+0008: 08
+0009: 02
+000a: 1a
+000b: 80
+000c: 00
+000d: 13
+000e: 42
+000f: 40
+0010: 04
+0011: 05
+0012: 06
+0013: 08
+0014: 0a
+0015: 00
+0016: 12
+0017: 0c
+0018: 00
+0019: 0d
+001a: c8
+001b: 22
+001c: 32
+001d: 01
+001e: 32
+001f: 02
+0020: 22
+0021: 83
+0022: 2d
+0023: 80
+0024: 02
+0025: 06
+0026: 32
+0027: 46
+-- /sys/kernel/debug/regmap/0-003b/registers
+0000: ff
+0001: 00
+0002: 9a
+0003: 00
+0004: 21
+0005: 41
+0006: 00
+0007: 20
+0008: 08
+0009: 02
+000a: 1a
+000b: 80
+000c: 11
+000d: 13
+000e: 42
+000f: 40
+0010: 04
+0011: 05
+0012: 06
+0013: 08
+0014: 0a
+0015: 00
+0016: 12
+0017: 0c
+0018: 00
+0019: 0d
+001a: c8
+001b: 22
+001c: 32
+001d: 01
+001e: 32
+001f: 02
+0020: 22
+0021: 83
+0022: 2d
+0023: 80
+0024: 02
+0025: 06
+0026: 32
+0027: 46

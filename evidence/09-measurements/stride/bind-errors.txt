@@ -1,0 +1,2 @@
+/mnt/x63r/j713-diag/o12b/o-mca.sh: line 77: echo: write error: Resource temporarily unavailable
+/mnt/x63r/j713-diag/o12b/o-mca.sh: line 77: echo: write error: Resource temporarily unavailable

@@ -42,7 +42,8 @@ the right amplifiers sit. With S2e I heard the left and right test tones on thei
 and music ([observations](../evidence/06-audio/observations.md)).
 
 On 27 October I checked that layout on the machine itself with a test kernel (O1). A dump of the whole MCA window
-shows the block at `0x2000` repeating every `0x100`, six times, and reads from `0x8c00` on stall the bus. In a blind
+shows six blocks `0x100` apart from `0x2000`, each with the same register at `+0x04`, and reads from `0x8c00` on
+stall the bus ([section 9](09-measurements.md)). In a blind
 A/B against `0x80`, `0x200`, `0x400` and `0xc000`, only `0x100` played both woofers without an amplifier fault
 ([30970c659133](https://github.com/X6e3/j713-linux/commit/30970c65913333a6a4f0951515268b892e63f040)).
 

@@ -1,0 +1,17 @@
+trial kind stride units card tone1 heard1 tone2 heard2 faults
+1 left   froze - - - - -
+2 out   0 1 right 2 left 0
+3 stride   0 1 right 2 left 0
+4 0x4000,   0 1 right 2 left 0
+5 its   0 2 left 1 right 0
+6 unit   0 1 both 2 left 0
+7 1   0 2 right 1 left 0
+8 serializer   0 2 left 1 right 0
+9 at   0 2 left 1 right 0
+10 0xa000   0 2 left 1 right 0
+11 is   0 1 left 2 left 0
+12 past   0 2 left 1 right 0
+13 the   0 1 left 2 right 0
+14 readable   0 1 left 2 right 0
+15 end   0 2 left 1 right 0
+16 0x8c00   0 2 left 1 right 0

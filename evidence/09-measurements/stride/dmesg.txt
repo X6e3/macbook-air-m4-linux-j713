@@ -1,0 +1,93 @@
+[   31.761786] audit: type=1103 audit(1793110715.541:144): pid=1092 uid=0 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_rootok acct="x6e3" exe="/usr/bin/runuser" hostname=[HOST] addr=? terminal=/dev/pts/2 res=success'
+[   31.765575] audit: type=1105 audit(1793110715.545:145): pid=1092 uid=0 auid=1000 ses=2 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_unix acct="x6e3" exe="/usr/bin/runuser" hostname=[HOST] addr=? terminal=/dev/pts/2 res=success'
+[   31.812373] audit: type=1106 audit(1793110715.593:146): pid=1092 uid=0 auid=1000 ses=2 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_unix acct="x6e3" exe="/usr/bin/runuser" hostname=[HOST] addr=? terminal=/dev/pts/2 res=success'
+[   31.812397] audit: type=1104 audit(1793110715.593:147): pid=1092 uid=0 auid=1000 ses=2 msg='op=PAM:setcred grantors=pam_rootok acct="x6e3" exe="/usr/bin/runuser" hostname=[HOST] addr=? terminal=/dev/pts/2 res=success'
+[   32.157960] O1 trial 1
+[   32.660620] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   32.660876] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   32.661163] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   32.661312] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   32.705263] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   36.138570] audit: type=1131 audit(1793110719.917:148): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   36.231522] audit: type=1334 audit(1793110720.013:149): prog-id=27 op=UNLOAD
+[   42.171767] O1 trial 2
+[   42.674399] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   42.674648] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   42.674936] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   42.675040] apple-mca 393600000.i2s: O1 test: 1 units at stride 0x100
+[   42.675200] j773g-speaker speaker-audio: ASoC: CPU DAI mca-i2s-1 not registered
+[   52.785613] O1 trial 3
+[   53.287693] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   53.287932] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   53.288215] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   53.288344] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   53.332724] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   60.867273] O1 trial 4
+[   61.369099] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   61.369205] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   61.369332] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x200
+[   61.369380] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x200
+[   61.412623] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   61.501555] tas2764 0-003b: protection fault check: reg 0x42 = 0x04, latches 04 00 00 00 00 06
+[   61.501568] j773g-speaker speaker-audio: speaker fault: amp-fault; amplifiers shut down until reboot
+[   61.503691] j773g-speaker speaker-audio: ASoC error (-5): at snd_soc_pcm_component_copy() on speaker-audio
+[   61.503732] tas2764 0-0038: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   61.503744] tas2764 0-003b: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   61.556728] O1 trial 5
+[   62.058913] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   62.059158] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   62.059442] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   62.059603] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   62.102449] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   67.571548] O1 trial 6
+[   68.074132] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   68.074384] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   68.074663] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0xc000
+[   68.074768] apple-mca 393600000.i2s: O1 test: 1 units at stride 0xc000
+[   68.074925] j773g-speaker speaker-audio: ASoC: CPU DAI mca-i2s-1 not registered
+[   78.190347] O1 trial 7
+[   78.692402] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   78.692629] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   78.692900] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   78.693018] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   78.737405] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   84.560520] O1 trial 8
+[   85.063190] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   85.063440] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   85.063720] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x80
+[   85.063846] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x80
+[   85.108391] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   85.182580] tas2764 0-003b: protection fault check: reg 0x42 = 0x04, latches 04 00 00 00 00 06
+[   85.182591] j773g-speaker speaker-audio: speaker fault: amp-fault; amplifiers shut down until reboot
+[   85.184646] j773g-speaker speaker-audio: ASoC error (-5): at snd_soc_pcm_component_copy() on speaker-audio
+[   85.184684] tas2764 0-0038: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   85.184695] tas2764 0-003b: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   85.247685] O1 trial 9
+[   85.749793] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   85.750041] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   85.750325] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   85.750435] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   85.794256] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   91.547908] O1 trial 10
+[   92.050033] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   92.050297] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   92.050585] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x400
+[   92.050696] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x400
+[   92.094549] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   92.182909] tas2764 0-003b: protection fault check: reg 0x42 = 0x04, latches 04 00 00 00 00 06
+[   92.182923] j773g-speaker speaker-audio: speaker fault: amp-fault; amplifiers shut down until reboot
+[   92.185856] tas2764 0-0038: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   92.185867] tas2764 0-003b: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   92.185871] j773g-speaker speaker-audio: ASoC error (-5): at snd_soc_pcm_component_prepare() on speaker-audio
+[   92.185894] tas2764 0-0038: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   92.185900] tas2764 0-003b: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   92.242494] O1 trial 11
+[   92.744565] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   92.744813] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   92.745117] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   92.745246] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   92.788658] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   98.656710] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   98.656963] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   98.657415] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   98.699857] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB

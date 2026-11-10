@@ -46,6 +46,9 @@ data/08-reboot/reboot_summary.json: analysis/reboot.py $(wildcard evidence/08-re
 
 reboot: data/08-reboot/reboot_summary.json
 
+measurements:
+	$(PY) analysis/measurements.py
+
 check:
 	$(PY) tools/scan_identifiers.py
 	cd evidence/01-first-boot/logs && $(SHA) -c SHA256SUMS.original
@@ -62,5 +65,7 @@ check:
 	$(PY) analysis/later_stages.py --check
 	cd evidence/08-reboot && $(SHA) -c SHA256SUMS
 	$(PY) analysis/reboot.py --check
+	cd evidence/09-measurements && $(SHA) -c SHA256SUMS > /dev/null
+	$(PY) analysis/measurements.py --check
 
-.PHONY: all fig01 mtp trackpad afe wifi later-stages reboot check
+.PHONY: all fig01 mtp trackpad afe wifi later-stages reboot measurements check

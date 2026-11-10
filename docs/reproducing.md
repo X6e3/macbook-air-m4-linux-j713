@@ -8,7 +8,7 @@ standard library. Do not run them with `-O`: their assertions are the checks.
 make check
 python3 -I analysis/boot_ab.py
 python3 -I analysis/dtb_diff.py
-make mtp trackpad afe wifi later-stages reboot
+make mtp trackpad afe wifi later-stages reboot measurements
 python3 -I figures/fig01_console_ab.py
 make check
 ```

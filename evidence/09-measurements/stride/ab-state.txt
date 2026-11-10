@@ -1,0 +1,24 @@
+seed 2126700185
+calibration right left (side check of run 20261027-170515)
+start 1
+done 1
+start 2
+done 2
+start 3
+done 3
+start 4
+done 4
+start 5
+done 5
+start 6
+done 6
+start 7
+done 7
+start 8
+done 8
+start 9
+done 9
+start 10
+done 10
+start 11
+done 11

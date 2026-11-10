@@ -1,0 +1,2 @@
+[ 4549.930583] asahi_m4 302600000.gpu: G16: O2 probe region_c +0x8c requested 850, applied 850 (cooling state 0)
+[ 4609.926194] asahi_m4 302600000.gpu: G16: O2 probe region_c +0x8c requested 4294967295, applied 1000 (cooling state 0)

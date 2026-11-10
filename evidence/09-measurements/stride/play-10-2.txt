@@ -1,0 +1,3 @@
+Playing raw data '/mnt/x63r/j713-diag/o12b/result-o-mca-ab-20261027-171835/sound-2.raw' : Signed 24 bit Little Endian, Rate 48000 Hz, Stereo
+underrun!!! (at least 0.021 ms long)
+aplay: xrun:1736: xrun: prepare error: Input/output error

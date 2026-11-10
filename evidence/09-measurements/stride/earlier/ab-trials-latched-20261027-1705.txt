@@ -1,0 +1,12 @@
+trial kind stride units card tone1 heard1 tone2 heard2 faults
+1 A 0x100 0 0 2 heard 1 heard 0
+2 B 0x200 0 0 2 play-error 1 skipped 2
+3 A 0x100 0 0 1 play-error 2 play-error 0
+4 B 0x400 0 0 1 play-error 2 play-error 0
+5 A 0x100 0 0 1 play-error 2 play-error 0
+6 B 0x80 0 0 2 play-error 1 play-error 0
+7 A 0x100 0 0 2 play-error 1 play-error 0
+8 B 0xc000 0 none - - - - -
+9 A 0x100 0 0 1 play-error 2 play-error 0
+10 C 0x100 1 none - - - - -
+11 A 0x100 0 0 2 play-error 1 play-error 0

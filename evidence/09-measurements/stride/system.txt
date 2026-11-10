@@ -1,0 +1,9 @@
+Linux [HOST] 7.1.13-x6e3-o12b #1 SMP PREEMPT Tue Oct 27 00:39:13 +03 2026 aarch64 GNU/Linux
+idle=nop arm64.nowfxt console=tty0 loglevel=7 ignore_loglevel x6e3.v=6boot-o12b-root2 x6e3.k=16158df0 root=UUID=[UUID] rootfstype=ext4 rootwait ro selinux=0 systemd.unit=multi-user.target cpuidle_apple.j713_deepwfi=1 x6e3.esplog snd_t8132_speaker.ceiling_dvc=20
+MCA 393600000.i2s, window 0xc000, driver groups start at 0x2000
+amplifiers: 0-0038
+0-003b
+ 0 [T8132Speaker   ]: T8132Speaker - T8132Speaker
+                      T8132Speaker
+sound 1: /usr/share/sounds/alsa/Front_Left.wav, 1.48 s
+sound 2: /usr/share/sounds/alsa/Front_Right.wav, 1.53 s

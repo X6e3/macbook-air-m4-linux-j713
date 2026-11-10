@@ -1,0 +1,264 @@
+{
+  "evidence_files": 205,
+  "map": {
+    "chunks": 35,
+    "second_read_identical": true,
+    "readable_bytes": "0x8c00",
+    "hung_at": "0x8c00",
+    "clock_blocks_with_word_0x04": [
+      "0x2000",
+      "0x2100",
+      "0x2200",
+      "0x2300",
+      "0x2400",
+      "0x2500"
+    ],
+    "clock_page_nonzero_after_0x2600": 0,
+    "unit1_port_words": {
+      "0x2160": "0xe",
+      "0x2164": "0x100",
+      "0x2168": "0x1"
+    },
+    "serializer_blocks_with_words_0x04_and_0x84": [
+      "0x6000",
+      "0x7000",
+      17
+    ],
+    "o1_period_of_driver_page": "0x100",
+    "o1_other_periods": [
+      "0x80",
+      "0x400"
+    ]
+  },
+  "stride": {
+    "trials": 11,
+    "A_0x100": [
+      "both heard",
+      "both heard",
+      "both heard",
+      "both heard",
+      "both heard",
+      "both heard"
+    ],
+    "B": {
+      "0x200": "amplifier fault",
+      "0xc000": "no speaker card",
+      "0x80": "amplifier fault",
+      "0x400": "amplifier fault"
+    },
+    "C_one_unit": "no speaker card",
+    "earlier_runs": {
+      "broken-20261027-0122": {
+        "left": 6,
+        "right": 9
+      },
+      "latched-20261027-1705": {
+        "heard": 2,
+        "play-error": 15,
+        "skipped": 1
+      },
+      "noplay-20261027-1654": {
+        "heard": 1,
+        "silent": 17
+      },
+      "noplay2-20261027-1703": {
+        "play-error": 18
+      }
+    }
+  },
+  "sides": {
+    "amplifier_CFG3_before_fix": {
+      "0-0038": "00",
+      "0-003b": "11"
+    },
+    "amplifier_CFG3_after_fix_LR1": {
+      "0-0038": "11",
+      "0-003b": "00"
+    },
+    "two_burst_trials": 10,
+    "two_burst_answer_pairs": {
+      "l r": 2,
+      "r l": 8
+    },
+    "one_burst_trials": 12,
+    "one_burst_normal": 10,
+    "one_burst_p_at_least_this_many_by_guessing": 0.019287109375,
+    "one_burst_answers_by_channel": {
+      "1": {
+        "l": 5,
+        "r": 1
+      },
+      "2": {
+        "l": 1,
+        "r": 5
+      }
+    },
+    "faults": 0
+  },
+  "phone": {
+    "recordings": {
+      "phone-1-1805": [
+        {
+          "from_s": 0.0,
+          "to_s": 11.8,
+          "median_dB": -56.2,
+          "max_dB": -51.6
+        },
+        {
+          "from_s": 11.8,
+          "to_s": 20.7,
+          "median_dB": -55.8,
+          "max_dB": -54.4
+        }
+      ],
+      "phone-2-1807": [
+        {
+          "from_s": 0.0,
+          "to_s": 11.8,
+          "median_dB": -58.3,
+          "max_dB": -53.2
+        },
+        {
+          "from_s": 11.8,
+          "to_s": 20.7,
+          "median_dB": -53.7,
+          "max_dB": -53.1
+        }
+      ],
+      "phone-3-1828-left": [
+        {
+          "from_s": 0.0,
+          "to_s": 18.0,
+          "median_dB": -60.8,
+          "max_dB": -55.7
+        }
+      ],
+      "phone-4-1829-right": [
+        {
+          "from_s": 0.0,
+          "to_s": 17.4,
+          "median_dB": -60.6,
+          "max_dB": -55.6
+        }
+      ]
+    },
+    "scope": "phone microphone, calibration offset 0 dB: relative levels, not SPL"
+  },
+  "dose": {
+    "phases": 69,
+    "pauses": 24,
+    "paused_s": 280,
+    "load_s": 3677.0,
+    "draws": 178772,
+    "A_median_PP1b_W": {
+      "min": 8.51,
+      "max": 8.83
+    },
+    "dose_PP1b_W": {
+      "+0x84=5883": [
+        8.78
+      ],
+      "+0x84=11766": [
+        8.74
+      ],
+      "+0x84=17649": [
+        8.8
+      ],
+      "+0x88=250": [
+        1.75
+      ],
+      "+0x88=500": [
+        3.69
+      ],
+      "+0x88=750": [
+        6.04
+      ],
+      "+0x8c=50": [
+        0.33
+      ],
+      "+0x8c=100": [
+        0.81
+      ],
+      "+0x8c=150": [
+        1.18
+      ],
+      "+0x8c=200": [
+        1.56
+      ],
+      "+0x8c=250": [
+        1.76
+      ],
+      "+0x8c=300": [
+        2.05
+      ],
+      "+0x8c=350": [
+        2.38
+      ],
+      "+0x8c=400": [
+        2.7
+      ],
+      "+0x8c=450": [
+        3.18
+      ],
+      "+0x8c=500": [
+        3.69
+      ],
+      "+0x8c=550": [
+        4.16
+      ],
+      "+0x8c=600": [
+        4.65
+      ],
+      "+0x8c=650": [
+        5.16
+      ],
+      "+0x8c=700": [
+        5.64
+      ],
+      "+0x8c=750": [
+        6.06
+      ],
+      "+0x8c=800": [
+        6.47
+      ],
+      "+0x8c=850": [
+        7.58
+      ],
+      "+0x8c=900": [
+        8.71
+      ],
+      "+0x8c=950": [
+        8.8
+      ],
+      "+0x90=250": [
+        8.8
+      ],
+      "+0x90=500": [
+        8.69
+      ],
+      "+0x90=750": [
+        8.74
+      ],
+      "+0x94=250": [
+        8.61
+      ],
+      "+0x94=500": [
+        8.75
+      ],
+      "+0x94=750": [
+        8.8
+      ],
+      "+0x98=250": [
+        1.76
+      ],
+      "+0x98=500": [
+        3.7
+      ],
+      "+0x98=750": [
+        6.04
+      ]
+    },
+    "region_c_changed_by_firmware": 0,
+    "scope": "median SMC PP1b over the last 25 s of load in each phase, paused seconds left out"
+  }
+}

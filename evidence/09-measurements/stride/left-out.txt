@@ -1,0 +1,1 @@
+left out: stride 0x4000, its unit 1 serializer at 0xa000 is past the readable end 0x8c00

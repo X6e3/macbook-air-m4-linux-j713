@@ -1,0 +1,18 @@
+side check: "Front Left" heard right, "Front Right" heard left
+trial kind  stride units  channel 1 (port 0 amp)  channel 2 (port 1 amp)  faults
+    1    A   0x100     0  heard                  heard                   0
+    2    B   0x200     0  skipped                play-error              2
+    3    A   0x100     0  play-error             play-error              0
+    4    B   0x400     0  play-error             play-error              0
+    5    A   0x100     0  play-error             play-error              0
+    6    B    0x80     0  play-error             play-error              0
+    7    A   0x100     0  play-error             play-error              0
+    8    B  0xc000     0  no speaker card  
+    9    A   0x100     0  play-error             play-error              0
+   10    C   0x100     1  no speaker card  
+   11    A   0x100     0  play-error             play-error              0
+A (0x100): both channels heard in every trial, no fault: NO
+B: no other stride gets both channels heard without a fault: yes
+C (A with one unit): no speaker card, or channel 2 silent: yes (the speaker card needs the second port's DAI, so one unit usually means no card)
+INVALID: the sound did not play in trial(s) 2, 3, 4, 5, 6, 7, 9, 11
+NOT PASSED

@@ -1,0 +1,20 @@
+trial rebind channel answer  mapping
+    1      1       1      l  normal
+    2      0       2      r  normal
+    3      1       1      l  normal
+    4      1       2      r  normal
+    5      0       1      l  normal
+    6      0       1      l  normal
+    7      1       1      l  normal
+    8      0       2      r  normal
+    9      0       1      r  swapped
+   10      0       2      r  normal
+   11      1       2      l  swapped
+   12      1       2      r  normal
+
+usable trials: 12 of 12; normal 10, swapped 2
+  channel 1: Esc (l) 5, Touch ID (r) 1
+  channel 2: Esc (l) 1, Touch ID (r) 5
+  rebind 0: normal 5, swapped 1
+  rebind 1: normal 5, swapped 1
+MIXED: no fixed mapping; see the channel and rebind counts

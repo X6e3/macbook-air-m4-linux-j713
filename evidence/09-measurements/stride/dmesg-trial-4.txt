@@ -1,0 +1,11 @@
+[   60.867273] O1 trial 4
+[   61.369099] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   61.369205] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   61.369332] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x200
+[   61.369380] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x200
+[   61.412623] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   61.501555] tas2764 0-003b: protection fault check: reg 0x42 = 0x04, latches 04 00 00 00 00 06
+[   61.501568] j773g-speaker speaker-audio: speaker fault: amp-fault; amplifiers shut down until reboot
+[   61.503691] j773g-speaker speaker-audio: ASoC error (-5): at snd_soc_pcm_component_copy() on speaker-audio
+[   61.503732] tas2764 0-0038: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1
+[   61.503744] tas2764 0-003b: ASoC error (-5): at snd_soc_dai_digital_mute() on tas2764 ASI1

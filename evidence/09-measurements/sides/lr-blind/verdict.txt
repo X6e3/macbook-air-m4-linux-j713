@@ -1,0 +1,18 @@
+trial rebind  order  first second  channel 1  channel 2  mapping
+    1      0     12      r      l          r          l  swapped
+    2      1     12      r      l          r          l  swapped
+    3      0     21      l      r          r          l  swapped
+    4      1     21      r      l          l          r  normal
+    5      1     12      r      l          r          l  swapped
+    6      1     12      r      l          r          l  swapped
+    7      0     12      r      l          r          l  swapped
+    8      0     21      l      r          r          l  swapped
+    9      0     21      r      l          l          r  normal
+   10      1     21      r      l          l          r  normal
+
+usable trials: 10 of 10; normal 3, swapped 7
+  order 12: normal 0, swapped 5
+  order 21: normal 3, swapped 2
+  rebind 0: normal 1, swapped 4
+  rebind 1: normal 2, swapped 3
+START-DEPENDENT: the same channel reached different speakers on different starts

@@ -1,0 +1,8 @@
+[   32.157960] O1 trial 1
+[   32.660620] tas2764 0-0038: supply SDZ not found, using dummy regulator
+[   32.660876] tas2764 0-003b: supply SDZ not found, using dummy regulator
+[   32.661163] apple-mca 393600000.i2s: O1 test: T8132 unit stride 0x100
+[   32.661312] apple-mca 393600000.i2s: O1 test: 2 units at stride 0x100
+[   32.705263] j773g-speaker speaker-audio: speaker limiter: ceiling -10.0 dB, 14451 mW peak, 900 mW continuous, ramp to -12.5 dB
+[   36.138570] audit: type=1131 audit(1793110719.917:148): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   36.231522] audit: type=1334 audit(1793110720.013:149): prog-id=27 op=UNLOAD

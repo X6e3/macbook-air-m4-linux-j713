@@ -14,6 +14,7 @@ dates are not experiment dates.
 | 19 October, S2e | `7.1.13-x6e3-s2`; `configs/j713-s2e.config`; explicit −30 dB boot argument | `2f45f687d9b586ae92419d0ec2a1692e04b536d4`, 32 commits above the Gravity base | Functional display/stereo checkpoint; speaker observations are distinct from the source comparison |
 | 23 October, LIM2 | `7.1.13-x6e3-pri1` with revised thermal DTB; 20-minute workload | `90ea22e57db4340957715a012ab9b859d3199ffb`, 34 commits above the base, plus a queue-priority change in that build only | TVS1 regulation in that workload; not the thermal behavior of S2e |
 | 23 October, audio snapshot | Driver parameter 60, suspended PipeWire stereo sink | Passive running-system readback | Effective ceiling parameter and userspace format; no additional playback test |
+| 27 October, O12b and LR1 | `7.1.13-x6e3-o12b`, a test kernel with measurement tools, in a −30 dB and a −10 dB image one byte apart; `7.1.13-x6e3-lr1` with the speaker slot change | LR1's slot change is [33948ddae209](https://github.com/X6e3/j713-linux/commit/33948ddae20966d190932836a37a5883d28fcc72) | MCA window map, blind stride test, side tests and the O2 dose test ([section 9](09-measurements.md)) |
 
 The 32 and 34 counts are commits above the imported Gravity base, including the configuration commits; the
 documentation commit after them changes no code. A kernel version
